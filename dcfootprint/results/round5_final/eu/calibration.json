@@ -1,0 +1,14 @@
+{
+  "region": "EU",
+  "account_year": 2023,
+  "tier": "country",
+  "n_countries_reporting": 21,
+  "n_countries_total": 27,
+  "n_reporting_dc": 770,
+  "n_estimated_dc": 2161,
+  "reported_energy_gwh": 14088.009999999998,
+  "pue_eu_assumed": 1.36,
+  "ci_mean_gco2_per_kwh": 237.7,
+  "reported_twh": 14.088,
+  "dc_coverage_reporting_over_estimated": 0.356
+}

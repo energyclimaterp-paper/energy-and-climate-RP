@@ -1,0 +1,72 @@
+# Dataset registry — path, native granularity, join key, role. Mirrors DATA.md
+# PART D/E/F (the on-disk reality + granularity + join keys). Paths relative to repo root.
+# `granularity` and `join_key` are ENFORCED by pandera schemas (validation/schemas.py).
+
+_root: "../data"        # repo-root/data
+
+facilities:
+  india:
+    path: "../datasets/india_dc_facilities/India_DC_Facilities_v0.xlsx"
+    granularity: facility            # point; NEEDS geocoding (no lat/lon yet)
+    join_key: [state, city]          # + operator for CEA match; alias resolver required
+    role: PRIMARY
+    caveat: "~77% of current operational MW; 40 uncosted; no coords"
+  atlas:
+    path: "../data/atlas/datacenters.parquet"
+    granularity: facility            # coords CITY-CENTROID (not siting-precise)
+    join_key: [latitude, longitude, name, city]
+    role: coords_gapfiller
+
+carbon:
+  ember:                              # PRIMARY sub-national monthly
+    path: "../data/ember"            # india/us/europe *_monthly_full_release_long_format.csv
+    granularity: {IN: state_month, US: state_month, EU: country_month}
+    variables: [CO2 intensity, Total generation, + fuel mix]
+    join_key: [zone_id, date]        # zone_id = ISO|state (IN/US) or ISO3 (EU)
+    role: PRIMARY
+  cea:                               # India national anchor/calibration
+    path: "../data/cea/CEA_Database_V22.xlsx"
+    granularity: all_india_annual    # GEF (Results sheet); plant-level Data sheet
+    role: anchor
+  egrid:                             # US cross-check
+    path: "../data/egrid/egrid2023_data_rev2.xlsx"
+    granularity: subregion_annual    # SRL23 (27 subregions) — NOT states
+    role: cross_check
+
+water_physical:
+  macknick:
+    path: "../data/macknick/Macknick2012_ERL.pdf"   # tables -> config/parameters.yaml ewif_coeff
+    granularity: per_generation_tech
+    role: PRIMARY_coeff
+  # scope-1 WUE/PUE: fleet-average provider values -> parameters.yaml (not a file)
+
+water_scarcity:
+  aware:                             # PRIMARY WEIGHT
+    path: "../data/aware/AWARE20_Native_CFs_geospatial.gpkg"
+    granularity: basin_monthly       # 11,661 basins; CF_Jan..CF_Dec + Basin_ID + geom
+    join_key: spatial                # facility lat/lon -> point-in-polygon -> Basin_ID
+    role: PRIMARY
+  aqueduct:                          # CROSS-CHECK only
+    path: "../data/aqueduct"
+    granularity: basin_static
+    join_key: pfaf_id                # ⚠️ DIFFERENT key from AWARE (0 overlap); NO geometry on disk
+    role: cross_check
+    caveat: "not spatially joinable without the Aqueduct GDB (not on disk); AWARE covers the weight"
+
+geo:
+  gadm:                              # facility -> state polygons
+    path: "../data/gadm"            # gadm41_IND.gpkg (ADM_1=41 states), gadm41_USA.gpkg
+    role: join_layer
+
+context:
+  cgwb: {path: "../data/cgwb", granularity: state_district, role: context}   # India groundwater
+  g3p:  {path: "../data/g3p",  granularity: basin_monthly,  role: context}   # TWS anomaly
+  gem:  {path: "../data/gem",  granularity: plant,          role: context}   # fossil-share
+
+inference:
+  mlperf: {path: "../data/mlperf/SOURCES.md", role: reference_factor}         # scalar, no bulk data
+
+policy:                              # ⚠️ analysis-only; source data NOT yet retrieved (DATA.md F4)
+  analysis: {path: "config/policy_sources.csv + config/legal_constraints.csv", role: reg_gap_frame}
+  eu_reg_2024_1364: {status: to_retrieve, role: eu_rule_text}
+  us_tracker: {status: to_retrieve, source: "datacenterbans.com", role: us_patchwork_structured}

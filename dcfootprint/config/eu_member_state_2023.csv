@@ -1,0 +1,28 @@
+country,est_n_dc,reporting_n_dc,reporting_share_pct,iso2_eu,reported_it_mw,reported_energy_gwh,reported_water_input_m3,source_table13,source_table24
+Austria,47,11,23,AT,16.14,111.1,6288.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Belgium,48,16,33,BE,236.13,1070.95,1240048.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Bulgaria,30,3,10,BG,4.11,20.14,4601.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Croatia,19,1,5,HR,0.88,7.71,280.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Cyprus,18,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Czechia,50,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Denmark,58,17,29,DK,193.74,731.28,330801.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Estonia,12,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Finland,72,25,35,FI,219.67,1091.18,8599.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+France,264,133,50,FR,1311.43,2416.9,399147.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Germany,456,335,73,DE,946.87,4608.53,1841262.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Greece,20,6,30,EL,1.78,36.9,4879.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Hungary,19,1,5,HU,0.53,6.52,0.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Ireland,123,18,15,IE,315.92,1411.76,626594.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Italy,178,23,13,IT,92.02,350.24,78351.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Latvia,25,1,4,LV,0.7,6.3,60.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Lithuania,18,3,17,LT,2.3,18.0,0.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Luxembourg,14,2,14,LU,11.2,53.22,12279.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Malta,8,1,13,MT,0.64,7.95,0.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Netherlands,192,85,44,NL,102.76,574.87,1356210.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Poland,87,36,41,PL,59.05,276.55,20359.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Portugal,42,4,10,PT,7.67,48.75,27919.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Romania,59,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Slovakia,13,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Slovenia,21,0,0,,,,,Table 13 (pdf p.25),no reporting DCs
+Spain,165,42,25,ES,101.03,603.63,214501.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)
+Sweden,103,7,7,SE,114.3,635.53,51213.0,Table 13 (pdf p.25),Table 24 (pdf pp.85-86)

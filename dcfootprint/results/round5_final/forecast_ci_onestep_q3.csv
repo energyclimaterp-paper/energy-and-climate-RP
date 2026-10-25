@@ -1,0 +1,433 @@
+zone_id,month,ci_hat,ci_hat_source
+Andaman and Nicobar,1,633.77,seasonal_naive
+Andaman and Nicobar,2,633.94,seasonal_naive
+Andaman and Nicobar,3,643.93,seasonal_naive
+Andaman and Nicobar,4,644.56,seasonal_naive
+Andaman and Nicobar,5,642.48,seasonal_naive
+Andaman and Nicobar,6,644.26,seasonal_naive
+Andaman and Nicobar,7,635.43,seasonal_naive
+Andaman and Nicobar,8,637.09,seasonal_naive
+Andaman and Nicobar,9,635.29,seasonal_naive
+Andaman and Nicobar,10,627.85,seasonal_naive
+Andaman and Nicobar,11,626.83,seasonal_naive
+Andaman and Nicobar,12,625.23,seasonal_naive
+Andhra Pradesh,1,646.06,seasonal_naive
+Andhra Pradesh,2,665.34,seasonal_naive
+Andhra Pradesh,3,663.64,seasonal_naive
+Andhra Pradesh,4,679.54,seasonal_naive
+Andhra Pradesh,5,671.32,seasonal_naive
+Andhra Pradesh,6,620.15,seasonal_naive
+Andhra Pradesh,7,567.33,seasonal_naive
+Andhra Pradesh,8,616.6,seasonal_naive
+Andhra Pradesh,9,632.75,seasonal_naive
+Andhra Pradesh,10,694.34,seasonal_naive
+Andhra Pradesh,11,686.61,seasonal_naive
+Andhra Pradesh,12,668.07,seasonal_naive
+Arunachal Pradesh,1,24.02,seasonal_naive
+Arunachal Pradesh,2,24.03,seasonal_naive
+Arunachal Pradesh,3,24.03,seasonal_naive
+Arunachal Pradesh,4,24.03,seasonal_naive
+Arunachal Pradesh,5,24.04,seasonal_naive
+Arunachal Pradesh,6,24.01,seasonal_naive
+Arunachal Pradesh,7,24.0,seasonal_naive
+Arunachal Pradesh,8,24.01,seasonal_naive
+Arunachal Pradesh,9,24.01,seasonal_naive
+Arunachal Pradesh,10,24.02,seasonal_naive
+Arunachal Pradesh,11,24.02,seasonal_naive
+Arunachal Pradesh,12,23.99,seasonal_naive
+Assam,1,651.58,seasonal_naive
+Assam,2,665.16,seasonal_naive
+Assam,3,625.17,seasonal_naive
+Assam,4,653.76,seasonal_naive
+Assam,5,647.32,seasonal_naive
+Assam,6,628.98,seasonal_naive
+Assam,7,630.77,seasonal_naive
+Assam,8,624.68,seasonal_naive
+Assam,9,568.28,seasonal_naive
+Assam,10,579.5,seasonal_naive
+Assam,11,598.0,seasonal_naive
+Assam,12,630.38,seasonal_naive
+Bihar,1,814.39,seasonal_naive
+Bihar,2,814.46,seasonal_naive
+Bihar,3,814.91,seasonal_naive
+Bihar,4,816.15,seasonal_naive
+Bihar,5,815.89,seasonal_naive
+Bihar,6,815.86,seasonal_naive
+Bihar,7,816.99,seasonal_naive
+Bihar,8,817.78,seasonal_naive
+Bihar,9,818.18,seasonal_naive
+Bihar,10,816.61,seasonal_naive
+Bihar,11,816.03,seasonal_naive
+Bihar,12,813.68,seasonal_naive
+Chandigarh,1,41.67,seasonal_naive
+Chandigarh,2,48.95,seasonal_naive
+Chandigarh,3,48.95,seasonal_naive
+Chandigarh,4,50.0,seasonal_naive
+Chandigarh,5,53.33,seasonal_naive
+Chandigarh,6,50.51,seasonal_naive
+Chandigarh,7,50.85,seasonal_naive
+Chandigarh,8,48.39,seasonal_naive
+Chandigarh,9,51.28,seasonal_naive
+Chandigarh,10,50.42,seasonal_naive
+Chandigarh,11,47.62,seasonal_naive
+Chandigarh,12,47.62,seasonal_naive
+Chhattisgarh,1,809.55,seasonal_naive
+Chhattisgarh,2,808.75,seasonal_naive
+Chhattisgarh,3,808.6,seasonal_naive
+Chhattisgarh,4,809.43,seasonal_naive
+Chhattisgarh,5,811.01,seasonal_naive
+Chhattisgarh,6,810.87,seasonal_naive
+Chhattisgarh,7,809.13,seasonal_naive
+Chhattisgarh,8,805.7,seasonal_naive
+Chhattisgarh,9,804.78,seasonal_naive
+Chhattisgarh,10,806.05,seasonal_naive
+Chhattisgarh,11,810.15,seasonal_naive
+Chhattisgarh,12,808.85,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,1,46.51,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,2,48.61,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,3,46.36,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,4,106.56,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,5,120.3,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,6,136.99,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,7,165.75,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,8,140.91,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,9,140.35,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,10,128.41,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,11,128.21,seasonal_naive
+Dadra and Nagar Haveli and Daman and Diu,12,137.93,seasonal_naive
+Delhi,1,433.94,seasonal_naive
+Delhi,2,418.66,seasonal_naive
+Delhi,3,336.74,seasonal_naive
+Delhi,4,352.77,seasonal_naive
+Delhi,5,411.45,seasonal_naive
+Delhi,6,416.71,seasonal_naive
+Delhi,7,400.75,seasonal_naive
+Delhi,8,447.37,seasonal_naive
+Delhi,9,436.29,seasonal_naive
+Delhi,10,439.41,seasonal_naive
+Delhi,11,393.84,seasonal_naive
+Delhi,12,402.2,seasonal_naive
+Goa,1,46.63,seasonal_naive
+Goa,2,46.63,seasonal_naive
+Goa,3,46.63,seasonal_naive
+Goa,4,46.63,seasonal_naive
+Goa,5,47.21,seasonal_naive
+Goa,6,47.21,seasonal_naive
+Goa,7,47.21,seasonal_naive
+Goa,8,47.21,seasonal_naive
+Goa,9,47.79,seasonal_naive
+Goa,10,47.79,seasonal_naive
+Goa,11,47.79,seasonal_naive
+Goa,12,47.79,seasonal_naive
+Gujarat,1,440.37,seasonal_naive
+Gujarat,2,479.11,seasonal_naive
+Gujarat,3,474.47,seasonal_naive
+Gujarat,4,522.54,seasonal_naive
+Gujarat,5,439.61,seasonal_naive
+Gujarat,6,480.77,seasonal_naive
+Gujarat,7,476.76,seasonal_naive
+Gujarat,8,424.99,seasonal_naive
+Gujarat,9,501.58,seasonal_naive
+Gujarat,10,572.0,seasonal_naive
+Gujarat,11,535.35,seasonal_naive
+Gujarat,12,501.14,seasonal_naive
+Haryana,1,801.12,seasonal_naive
+Haryana,2,792.19,seasonal_naive
+Haryana,3,780.75,seasonal_naive
+Haryana,4,784.82,seasonal_naive
+Haryana,5,780.86,seasonal_naive
+Haryana,6,781.68,seasonal_naive
+Haryana,7,785.92,seasonal_naive
+Haryana,8,788.49,seasonal_naive
+Haryana,9,774.04,seasonal_naive
+Haryana,10,774.03,seasonal_naive
+Haryana,11,766.23,seasonal_naive
+Haryana,12,774.55,seasonal_naive
+Himachal Pradesh,1,24.07,seasonal_naive
+Himachal Pradesh,2,24.06,seasonal_naive
+Himachal Pradesh,3,24.07,seasonal_naive
+Himachal Pradesh,4,24.06,seasonal_naive
+Himachal Pradesh,5,24.04,seasonal_naive
+Himachal Pradesh,6,24.03,seasonal_naive
+Himachal Pradesh,7,24.02,seasonal_naive
+Himachal Pradesh,8,24.01,seasonal_naive
+Himachal Pradesh,9,24.02,seasonal_naive
+Himachal Pradesh,10,24.04,seasonal_naive
+Himachal Pradesh,11,24.08,seasonal_naive
+Himachal Pradesh,12,24.07,seasonal_naive
+Jammu and Kashmir,1,23.99,seasonal_naive
+Jammu and Kashmir,2,24.0,seasonal_naive
+Jammu and Kashmir,3,24.0,seasonal_naive
+Jammu and Kashmir,4,24.0,seasonal_naive
+Jammu and Kashmir,5,24.0,seasonal_naive
+Jammu and Kashmir,6,24.0,seasonal_naive
+Jammu and Kashmir,7,24.0,seasonal_naive
+Jammu and Kashmir,8,24.0,seasonal_naive
+Jammu and Kashmir,9,24.0,seasonal_naive
+Jammu and Kashmir,10,24.0,seasonal_naive
+Jammu and Kashmir,11,24.01,seasonal_naive
+Jammu and Kashmir,12,23.99,seasonal_naive
+Jharkhand,1,818.39,seasonal_naive
+Jharkhand,2,814.88,seasonal_naive
+Jharkhand,3,817.34,seasonal_naive
+Jharkhand,4,816.68,seasonal_naive
+Jharkhand,5,818.55,seasonal_naive
+Jharkhand,6,818.87,seasonal_naive
+Jharkhand,7,817.99,seasonal_naive
+Jharkhand,8,815.7,seasonal_naive
+Jharkhand,9,811.65,seasonal_naive
+Jharkhand,10,799.84,seasonal_naive
+Jharkhand,11,815.7,seasonal_naive
+Jharkhand,12,814.18,seasonal_naive
+Karnataka,1,398.07,seasonal_naive
+Karnataka,2,422.54,seasonal_naive
+Karnataka,3,410.35,seasonal_naive
+Karnataka,4,427.9,seasonal_naive
+Karnataka,5,422.54,seasonal_naive
+Karnataka,6,417.43,seasonal_naive
+Karnataka,7,315.29,seasonal_naive
+Karnataka,8,322.74,seasonal_naive
+Karnataka,9,393.42,seasonal_naive
+Karnataka,10,461.97,seasonal_naive
+Karnataka,11,443.41,seasonal_naive
+Karnataka,12,438.27,seasonal_naive
+Kerala,1,31.32,seasonal_naive
+Kerala,2,28.39,seasonal_naive
+Kerala,3,30.36,seasonal_naive
+Kerala,4,29.43,seasonal_naive
+Kerala,5,28.45,seasonal_naive
+Kerala,6,29.72,seasonal_naive
+Kerala,7,28.29,seasonal_naive
+Kerala,8,27.05,seasonal_naive
+Kerala,9,31.23,seasonal_naive
+Kerala,10,29.32,seasonal_naive
+Kerala,11,31.31,seasonal_naive
+Kerala,12,31.2,seasonal_naive
+Ladakh,1,24.3,seasonal_naive
+Ladakh,2,23.91,seasonal_naive
+Ladakh,3,23.78,seasonal_naive
+Ladakh,4,23.7,seasonal_naive
+Ladakh,5,23.81,seasonal_naive
+Ladakh,6,23.93,seasonal_naive
+Ladakh,7,24.05,seasonal_naive
+Ladakh,8,24.07,seasonal_naive
+Ladakh,9,23.98,seasonal_naive
+Ladakh,10,24.0,seasonal_naive
+Ladakh,11,24.01,seasonal_naive
+Ladakh,12,23.89,seasonal_naive
+Lakshadweep,1,819.13,seasonal_naive
+Lakshadweep,2,817.99,seasonal_naive
+Lakshadweep,3,818.67,seasonal_naive
+Lakshadweep,4,818.65,seasonal_naive
+Lakshadweep,5,818.34,seasonal_naive
+Lakshadweep,6,817.66,seasonal_naive
+Lakshadweep,7,819.25,seasonal_naive
+Lakshadweep,8,819.37,seasonal_naive
+Lakshadweep,9,818.93,seasonal_naive
+Lakshadweep,10,817.48,seasonal_naive
+Lakshadweep,11,818.0,seasonal_naive
+Lakshadweep,12,819.19,seasonal_naive
+Madhya Pradesh,1,748.23,seasonal_naive
+Madhya Pradesh,2,732.56,seasonal_naive
+Madhya Pradesh,3,760.08,seasonal_naive
+Madhya Pradesh,4,761.12,seasonal_naive
+Madhya Pradesh,5,751.98,seasonal_naive
+Madhya Pradesh,6,732.95,seasonal_naive
+Madhya Pradesh,7,730.69,seasonal_naive
+Madhya Pradesh,8,689.5,seasonal_naive
+Madhya Pradesh,9,721.79,seasonal_naive
+Madhya Pradesh,10,744.52,seasonal_naive
+Madhya Pradesh,11,764.21,seasonal_naive
+Madhya Pradesh,12,762.2,seasonal_naive
+Maharashtra,1,665.68,seasonal_naive
+Maharashtra,2,670.14,seasonal_naive
+Maharashtra,3,686.55,seasonal_naive
+Maharashtra,4,692.46,seasonal_naive
+Maharashtra,5,655.51,seasonal_naive
+Maharashtra,6,650.02,seasonal_naive
+Maharashtra,7,620.78,seasonal_naive
+Maharashtra,8,627.61,seasonal_naive
+Maharashtra,9,654.8,seasonal_naive
+Maharashtra,10,683.54,seasonal_naive
+Maharashtra,11,677.09,seasonal_naive
+Maharashtra,12,674.03,seasonal_naive
+Manipur,1,25.19,seasonal_naive
+Manipur,2,25.32,seasonal_naive
+Manipur,3,26.34,seasonal_naive
+Manipur,4,26.38,seasonal_naive
+Manipur,5,27.34,seasonal_naive
+Manipur,6,27.99,seasonal_naive
+Manipur,7,25.4,seasonal_naive
+Manipur,8,24.34,seasonal_naive
+Manipur,9,24.16,seasonal_naive
+Manipur,10,24.28,seasonal_naive
+Manipur,11,24.53,seasonal_naive
+Manipur,12,24.58,seasonal_naive
+Meghalaya,1,24.15,seasonal_naive
+Meghalaya,2,24.03,seasonal_naive
+Meghalaya,3,24.11,seasonal_naive
+Meghalaya,4,23.92,seasonal_naive
+Meghalaya,5,24.08,seasonal_naive
+Meghalaya,6,24.04,seasonal_naive
+Meghalaya,7,23.98,seasonal_naive
+Meghalaya,8,24.01,seasonal_naive
+Meghalaya,9,24.03,seasonal_naive
+Meghalaya,10,24.02,seasonal_naive
+Meghalaya,11,24.01,seasonal_naive
+Meghalaya,12,23.93,seasonal_naive
+Mizoram,1,24.18,seasonal_naive
+Mizoram,2,24.25,seasonal_naive
+Mizoram,3,24.13,seasonal_naive
+Mizoram,4,24.08,seasonal_naive
+Mizoram,5,24.27,seasonal_naive
+Mizoram,6,24.21,seasonal_naive
+Mizoram,7,24.24,seasonal_naive
+Mizoram,8,24.28,seasonal_naive
+Mizoram,9,24.0,seasonal_naive
+Mizoram,10,24.15,seasonal_naive
+Mizoram,11,24.53,seasonal_naive
+Mizoram,12,24.41,seasonal_naive
+Nagaland,1,23.61,seasonal_naive
+Nagaland,2,24.06,seasonal_naive
+Nagaland,3,23.39,seasonal_naive
+Nagaland,4,23.66,seasonal_naive
+Nagaland,5,23.42,seasonal_naive
+Nagaland,6,24.17,seasonal_naive
+Nagaland,7,23.91,seasonal_naive
+Nagaland,8,23.98,seasonal_naive
+Nagaland,9,24.07,seasonal_naive
+Nagaland,10,24.0,seasonal_naive
+Nagaland,11,24.33,seasonal_naive
+Nagaland,12,23.77,seasonal_naive
+Odisha,1,764.6,seasonal_naive
+Odisha,2,760.88,seasonal_naive
+Odisha,3,771.04,seasonal_naive
+Odisha,4,760.46,seasonal_naive
+Odisha,5,758.97,seasonal_naive
+Odisha,6,750.29,seasonal_naive
+Odisha,7,705.04,seasonal_naive
+Odisha,8,674.37,seasonal_naive
+Odisha,9,710.02,seasonal_naive
+Odisha,10,707.03,seasonal_naive
+Odisha,11,761.34,seasonal_naive
+Odisha,12,773.92,seasonal_naive
+Puducherry,1,464.2,seasonal_naive
+Puducherry,2,467.97,seasonal_naive
+Puducherry,3,468.9,seasonal_naive
+Puducherry,4,469.3,seasonal_naive
+Puducherry,5,468.77,seasonal_naive
+Puducherry,6,469.96,seasonal_naive
+Puducherry,7,469.68,seasonal_naive
+Puducherry,8,469.44,seasonal_naive
+Puducherry,9,469.54,seasonal_naive
+Puducherry,10,468.51,seasonal_naive
+Puducherry,11,454.4,seasonal_naive
+Puducherry,12,469.76,seasonal_naive
+Punjab,1,680.24,seasonal_naive
+Punjab,2,626.65,seasonal_naive
+Punjab,3,653.18,seasonal_naive
+Punjab,4,673.9,seasonal_naive
+Punjab,5,639.82,seasonal_naive
+Punjab,6,631.76,seasonal_naive
+Punjab,7,589.36,seasonal_naive
+Punjab,8,626.84,seasonal_naive
+Punjab,9,612.82,seasonal_naive
+Punjab,10,656.16,seasonal_naive
+Punjab,11,696.2,seasonal_naive
+Punjab,12,674.28,seasonal_naive
+Rajasthan,1,475.46,seasonal_naive
+Rajasthan,2,474.78,seasonal_naive
+Rajasthan,3,444.97,seasonal_naive
+Rajasthan,4,424.56,seasonal_naive
+Rajasthan,5,424.56,seasonal_naive
+Rajasthan,6,425.41,seasonal_naive
+Rajasthan,7,422.12,seasonal_naive
+Rajasthan,8,423.75,seasonal_naive
+Rajasthan,9,451.4,seasonal_naive
+Rajasthan,10,470.33,seasonal_naive
+Rajasthan,11,482.75,seasonal_naive
+Rajasthan,12,459.49,seasonal_naive
+Sikkim,1,24.01,seasonal_naive
+Sikkim,2,23.99,seasonal_naive
+Sikkim,3,24.01,seasonal_naive
+Sikkim,4,24.0,seasonal_naive
+Sikkim,5,24.01,seasonal_naive
+Sikkim,6,24.0,seasonal_naive
+Sikkim,7,24.0,seasonal_naive
+Sikkim,8,24.0,seasonal_naive
+Sikkim,9,24.0,seasonal_naive
+Sikkim,10,24.0,seasonal_naive
+Sikkim,11,23.99,seasonal_naive
+Sikkim,12,23.96,seasonal_naive
+Tamil Nadu,1,470.99,seasonal_naive
+Tamil Nadu,2,512.77,seasonal_naive
+Tamil Nadu,3,531.4,seasonal_naive
+Tamil Nadu,4,585.97,seasonal_naive
+Tamil Nadu,5,533.64,seasonal_naive
+Tamil Nadu,6,455.07,seasonal_naive
+Tamil Nadu,7,398.07,seasonal_naive
+Tamil Nadu,8,426.07,seasonal_naive
+Tamil Nadu,9,421.73,seasonal_naive
+Tamil Nadu,10,530.63,seasonal_naive
+Tamil Nadu,11,538.12,seasonal_naive
+Tamil Nadu,12,513.25,seasonal_naive
+Telangana,1,699.96,seasonal_naive
+Telangana,2,689.69,seasonal_naive
+Telangana,3,713.44,seasonal_naive
+Telangana,4,717.88,seasonal_naive
+Telangana,5,713.42,seasonal_naive
+Telangana,6,703.62,seasonal_naive
+Telangana,7,723.76,seasonal_naive
+Telangana,8,691.35,seasonal_naive
+Telangana,9,716.22,seasonal_naive
+Telangana,10,709.81,seasonal_naive
+Telangana,11,728.97,seasonal_naive
+Telangana,12,719.55,seasonal_naive
+Tripura,1,489.63,seasonal_naive
+Tripura,2,489.6,seasonal_naive
+Tripura,3,489.63,seasonal_naive
+Tripura,4,489.61,seasonal_naive
+Tripura,5,489.6,seasonal_naive
+Tripura,6,489.61,seasonal_naive
+Tripura,7,489.59,seasonal_naive
+Tripura,8,489.79,seasonal_naive
+Tripura,9,489.77,seasonal_naive
+Tripura,10,489.59,seasonal_naive
+Tripura,11,489.96,seasonal_naive
+Tripura,12,489.58,seasonal_naive
+Uttar Pradesh,1,753.3,seasonal_naive
+Uttar Pradesh,2,746.99,seasonal_naive
+Uttar Pradesh,3,750.43,seasonal_naive
+Uttar Pradesh,4,760.54,seasonal_naive
+Uttar Pradesh,5,767.67,seasonal_naive
+Uttar Pradesh,6,771.37,seasonal_naive
+Uttar Pradesh,7,771.21,seasonal_naive
+Uttar Pradesh,8,773.35,seasonal_naive
+Uttar Pradesh,9,775.41,seasonal_naive
+Uttar Pradesh,10,770.42,seasonal_naive
+Uttar Pradesh,11,778.17,seasonal_naive
+Uttar Pradesh,12,775.66,seasonal_naive
+Uttarakhand,1,29.3,seasonal_naive
+Uttarakhand,2,30.08,seasonal_naive
+Uttarakhand,3,30.57,seasonal_naive
+Uttarakhand,4,72.58,seasonal_naive
+Uttarakhand,5,76.72,seasonal_naive
+Uttarakhand,6,52.64,seasonal_naive
+Uttarakhand,7,27.95,seasonal_naive
+Uttarakhand,8,25.93,seasonal_naive
+Uttarakhand,9,26.71,seasonal_naive
+Uttarakhand,10,28.23,seasonal_naive
+Uttarakhand,11,29.61,seasonal_naive
+Uttarakhand,12,60.14,seasonal_naive
+West Bengal,1,783.28,seasonal_naive
+West Bengal,2,786.61,seasonal_naive
+West Bengal,3,792.01,seasonal_naive
+West Bengal,4,788.89,seasonal_naive
+West Bengal,5,780.39,seasonal_naive
+West Bengal,6,773.86,seasonal_naive
+West Bengal,7,766.18,seasonal_naive
+West Bengal,8,766.47,seasonal_naive
+West Bengal,9,767.19,seasonal_naive
+West Bengal,10,777.26,seasonal_naive
+West Bengal,11,789.22,seasonal_naive
+West Bengal,12,786.23,seasonal_naive

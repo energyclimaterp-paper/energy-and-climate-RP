@@ -1,0 +1,249 @@
+# Account parameters — every assumption lives here, never hardcoded in modules.
+# Values sourced from the verified lit review + DATA.md PART E5. Each carries a
+# source + an uncertainty band (used by the Monte-Carlo in uncertainty/).
+
+# ⚠️ RED-TEAM R1: utilisation & PUE are the dominant assumed scalars — the account's
+# ABSOLUTE magnitude scales with them. Mitigations: (a) lead with RELATIVE/spatial
+# results (a *global* scalar cancels in ranking); (b) type-specific values below;
+# (c) calibrate the aggregate (account/calibrate.py). Because type-specific values do
+# NOT fully cancel, rankings are sensitivity-tested against the type mix (R1 residual).
+energy:
+  # E_IT = capacity_MW * utilisation * hours(month); E_grid = E_IT * PUE
+  utilisation:            # IT load factor (no per-facility data -> modeled, by type)
+    by_facility_type:
+      hyperscale: {default: 0.70, band: [0.55, 0.85]}
+      colocation: {default: 0.45, band: [0.30, 0.65]}
+      enterprise: {default: 0.40, band: [0.25, 0.60]}
+      unknown:    {default: 0.55, band: [0.40, 0.75]}   # fallback = global mid
+    source: "modeled (no per-facility utilisation dataset exists; DATA.md E4)"
+  pue:
+    by_facility_type:
+      hyperscale: {default: 1.2, band: [1.1, 1.4]}
+      colocation: {default: 1.6, band: [1.4, 1.9]}
+      enterprise: {default: 1.7, band: [1.5, 2.0]}
+      unknown:    {default: 1.55, band: [1.2, 1.9]}
+    by_operator:          # override where disclosed (fleet averages, DATA.md §D)
+      microsoft: 1.17
+      meta: 1.08
+      aws: 1.14
+      google: 1.09
+
+water_onsite:             # scope-1 WUE (L per kWh IT), fleet-average -> wide band
+  wue_default:
+    default: 1.9          # industry avg (Green Grid / DATA.md E5) — also the MC triangular mode
+    band: [0.7, 2.5]      # efficient (NREL 0.7) .. evaporative-cooling upper end 2.5
+    # Upper bound 2.5 L/kWh (decision 2026-09-27): Equinix, "What Is Water Usage Effectiveness
+    # (WUE) in Data Centers?" (blog, 2024-11-13): "0 L/kWh (with air cooling) or up to 2.5 L/kWh
+    # (with evaporative cooling)"; cf. Equinix 2025 Sustainability Report p.26: fleet WUE 0.91,
+    # evaporative sites 1.41. ISO/IEC 30134-9:2022 DEFINES WUE but sets no limits or targets.
+    # Replaces 9 L/kWh (Li et al. 2304.03271: on-site WUE 0.01-9 across sites/seasons, not an
+    # annual-average range).
+  wue_by_operator:
+    microsoft: 0.27
+    meta: 0.19
+    aws: 0.12
+    # google: publishes NO fleet WUE -> derive + flag (DATA.md §D)
+
+water_grid:               # scope-2 EWIF = sum(fuel_share * macknick_coeff)
+  macknick_source: "Macknick et al. 2012 ERL 7:045802 (data/macknick), recirculating consumption"
+  # fuel crosswalk Ember Variable -> Macknick tech (DATA.md F1). L/MWh consumption.
+  ewif_coeff_L_per_MWh:
+    Coal: 2600
+    Gas: 750             # NGCC recirculating
+    Nuclear: 2540
+    Bioenergy: 2600
+    Hydro: 17000         # reservoir evaporation (huge; flag/sensitivity)
+    Solar: 100           # PV
+    Wind: 0
+    Other Fossil: 1800   # default
+    Other Renewables: 500
+  note: "US coefficients applied to IN/EU -> representativeness caveat + sensitivity"
+  # Hydro's 17,000 L/MWh is reservoir evaporation attributed wholly to power; run-of-river
+  # and multi-purpose reservoirs argue for far less. The MC samples a multiplier on the hydro
+  # coefficient over this band (0 = no evaporation attributed to power, 1 = full Macknick).
+  hydro_multiplier_band: [0.0, 1.0]
+
+# Grid zone used for carbon CI, scope-2 EWIF and scope-2 scarcity (generation basins).
+# state    = Ember state-month generation mix (generation-based, NOT consumption; R2 caveat)
+# national = Ember India-total month (the pooled synchronous-grid reading)
+# CEA national-annual EF is kept only as a cross-check when data/cea/ is present.
+grid:
+  zone: state
+  # India carbon basis: generation = Ember state own-generation mix (R2 caveat); consumption =
+  # Electricity Maps regional flow-traced (import-adjusted) CI, which removes R2. Falls back to
+  # generation if the EM key/cache is absent. US/EU unaffected (EM covers India zones only).
+  carbon_basis: consumption
+  account_year: 2024
+  gem_path: "data/gem/Global-Integrated-Power-March-2026-II.xlsx"
+  gadm_path: "data/gadm/gadm41_IND.gpkg"     # GADM 4.1, layer ADM_ADM_1, field NAME_1
+  # GEM plant state of record = GADM from coordinates (io/gem.assign_state_of_record), except
+  # these reviewed cases from results/gem_gadm_state_mismatches.csv (decision 2026-09-27):
+  gem_state_overrides:
+    G100000800551: {state: Karnataka, note: "Vijaypura (Adani) II - GEM coordinates (26.84N 77.10E) fall in Rajasthan 911 km out; sister farms I/III are in Karnataka; coordinate error, label kept, coordinate NOT corrected"}
+    G100000108490: {state: Chhattisgarh, note: "Rawan Cement - GEM coordinates fall in Rajasthan 693 km out; coordinate error, label kept, coordinate NOT corrected"}
+    G100000833894: {state: Gujarat, note: "Gujarat (Adani) IV Hybrid - coordinates at Khavda, Gujarat; GEM label Rajasthan treated as the error"}
+  gem_state_ambiguous:
+    G100000601967: "Lower Sileru hydro - GEM Andhra Pradesh | GADM Telangana (8.8 km from the AP polygon); unresolved, no single-state assignment"
+  # GEM 'Type' -> Ember fuel (the Macknick coefficient key)
+  gem_type_to_fuel:
+    coal: Coal
+    oil/gas: Gas
+    nuclear: Nuclear
+    hydropower: Hydro
+    bioenergy: Bioenergy
+    utility-scale solar: Solar
+    wind: Wind
+    geothermal: Other Renewables
+
+inference:
+  # ⚠️ R13: this is a SCOPING sensitivity range, NOT per-facility attribution (no dataset
+  # separates inference per facility). Report the range; do not claim discrimination.
+  sectoral_share:
+    default: 0.85
+    band: [0.80, 0.90]
+    source: "LBNL/IEA ~80-90% operational (DATA.md §G)"
+
+scarcity:
+  method: "AWARE2.0 native monthly basin CF (data/aware gpkg); SEPARATE column, never blended"
+  # ⚠️ R3: scarcity-weighting is RIGOROUS only for scope-1 (on-site water, at the DC's own
+  # basin). Scope-2 (grid) water is consumed at the POWER PLANTS (pooled grid, other basins)
+  # -> it is NOT basin-localisable; weight scope-2 at the grid-region average, flagged coarse.
+  # => the defensible scarcity story leads with SCOPE-1; scope-2 scarcity is a bounded add-on.
+  scope1_weighting: basin_of_facility        # rigorous
+  scope2_weighting: grid_region_average      # coarse, flagged
+  # ⚠️ R9: AWARE CF=100 is the CAP (max scarcity / arid-undefined), not a plain value.
+  cap: 100
+  cap_semantics: "100 = capped max scarcity; io/aware.py flags capped & no-data basins"
+  drought_caveat: "AWARE = 12-month CLIMATOLOGY (no year) -> misses drought-year events (R10)"
+
+# ⚠️ R12: define the finding metric explicitly (rankings differ by metric).
+outputs:
+  primary_metric: scarcity_weighted_m3_per_year   # + cumulative-to-2030 (with L3)
+  secondary_metrics: [physical_m3_per_year, tco2_per_year, scarcity_weighted_m3_per_MW]
+  lead_result: spatial_distribution               # ROBUST CORE: basin burden ranking
+  absolutes_reported_as: calibrated_range         # never point estimates (R1)
+
+# ---------------------------------------------------------------------------
+# COUNTERFACTUAL LEVERS (L3 / G6) — each = a parameter transform on the account.
+# Values from engineering/industry lit (DATA.md E5). Verify exact values at build.
+levers:
+  mandatory_disclosure:
+    type: coverage
+    effect: "raises measured-coverage; models the *revealed* footprint vs current opacity"
+  coastal_seawater_siting:
+    type: wue_override
+    new_wue: 0.1          # seawater/WSAC: near-zero freshwater (periodic salt flush)
+    applies_to: "new/relocatable load in coastal zones"
+  zero_liquid_discharge:
+    type: recycle
+    recycle_fraction: 0.92    # closed-loop returns ~90-95% (DATA.md E5)
+    band: [0.90, 0.95]
+    applies_to: scope1        # on-site cooling water only; power-plant (scope-2) water is untouched
+  efficiency_standard:
+    type: pue_wue_cap
+    pue_cap: 1.3
+    wue_cap: 0.7          # NREL-efficient
+    tradeoff: "liquid/mechanical cooling: water down BUT PUE/energy/carbon up -> model both"
+
+regions:
+  tiering: {India: deep, US: solid, EU: light}
+  # ⚠️ R2: a DC consumes the POOLED regional/national grid, not its state's generation mix.
+  # -> carbon must be CONSUMPTION-based at the grid region, NOT state generation-CI.
+  carbon_working_source:
+    India: ember_state_monthly        # set by grid.zone; generation-based -> R2 caveat stated in results
+    India_pooled_alternative: ember_national_monthly   # grid.zone: national
+    India_crosscheck: cea_national_annual              # only if data/cea/ is present
+    US: egrid_subregion_annual        # eGRID subregion = the consumption grid; Ember-state = x-check
+    EU: ember_country_monthly         # no sub-national -> light tier
+  # => India sub-national NOVELTY rides on WATER (local), not carbon (regional). Stated.
+  comparison_unit: per_MW_and_basin_level   # ⚠️ R11: common normalised unit for the cross-region gradient
+
+# ---------------------------------------------------------------------------
+# Q3 ROUTING (L6) — stylised monthly environment.
+routing:
+  solver: price_decomposition   # price_decomposition (agents, routing/agents.py) | central_lp (verification)
+  flexible_share: 0.3       # fraction of load that can move between facilities
+  max_util: 0.90            # a facility can run up to this utilisation
+  V: 1.0                    # drift-plus-penalty weight (swept in v_sweep)
+  v_sweep: [0.1, 1.0, 10.0]
+  lambda: 1.0               # scarcity water vs carbon weight (both normalised to mean 1)
+  demand_noise: 0.05
+  seeds: 10
+  # Basin water budget R_hat_b(m), DECOUPLED from datacenter use and taken from AWARE 2.0
+  # (Seitfudem et al. 2025, doi:10.5281/zenodo.15133241):
+  #   R_hat_b(m) = alpha * max(AMD_b(m), 0) * area_b
+  # AMD = water available minus human consumption minus environmental water requirements
+  # (EWR), per area and month. alpha = 1 is the parameter-free headline: datacenters may not
+  # draw more than the water left after people and environmental flows; any draw in a month
+  # with AMD <= 0 is an overdraft. Smaller alpha = a smaller sector share (budget_sweep).
+  # Basin queues track SCOPE-1 water only (scope-2 is drawn at power-plant basins).
+  budget_alpha: 1.0
+  budget_sweep_alpha: [1.0, 0.01, 0.001, 0.0001]
+  aware_intermediate_path: "data/aware/AWARE20_Intermediate_Variables.xlsx"
+
+# ---------------------------------------------------------------------------
+# Q1 SITING (L7).
+siting:
+  new_facility_mw: 50       # size S of the hypothetical new facility
+  new_facility_type: colocation
+  weight_samples: 500
+  small_grid_twh: 10        # states generating < this (TWh/yr) are flagged: their own-generation CI is not what a DC would draw
+  # candidate cells = (state x AWARE basin) cells holding >=1 operating GEM plant,
+  # plus every cell that already holds a datacenter
+  # 2030/2050 scenarios: Aqueduct 4.0 0-5 water-stress scores (baseline bws_score vs future ws_x_s,
+  # bau/opt/pes x 2030/2050) as a fifth criterion; minimax regret over weights x scenarios.
+  # Scores not raw ratios: raw ws is capped at 1 and futures are bias-corrected to baseline (Kuzma et al. 2023 pp.10-11)
+  aqueduct_gdb_path: "data/aqueduct/Aq40_Y2023D07M05.gdb"
+  # 2030/2050 carbon (project/carbon_future.py): each zone's account-year CI x (official path in the
+  # scenario year / path in the account year). One central path per region, paired with every water
+  # pathway of that year. Fixed before the run (2026-10-14); see docs/data_sources.md.
+  carbon_future:
+    India:      # national only: same factor for every state
+      kind: national_path
+      source: "CEA National Electricity Plan 2022-32 Vol I (Generation), notified May 2023: average CO2 emission factor 0.548 (FY 2026-27) and 0.430 (FY 2031-32) kg CO2/kWh net"
+      points: {2026: 0.548, 2031: 0.430}    # keyed by FY start year (FY 2026-27 -> 2026)
+      base: cea_database                    # account-year value = CEA CO2 Baseline Database V22, FY starting in the account year
+      after_last: hold                      # no official path beyond FY 2031-32: held (stated in the report)
+    US:
+      kind: cambium_lrmer_states
+      path: "data/carbon_future/Cambium22_LRMER_states.xlsx"   # NREL Cambium 2022 LRMER workbook, states (Gagnon et al. 2023)
+      scenario: Mid-case
+      metric: "CO2 from Direct Combustion"  # direct, like Ember's CI
+    EU:
+      kind: eu_ref2020
+      path: "data/carbon_future/ref2020_energy-transport-ghg.xlsx"  # EU Reference Scenario 2020, country sheets
+      row_label: "Electricity and Steam production (tCO2/MWh)"     # carbon intensity indicator, <CC>_B sheets
+
+# ---------------------------------------------------------------------------
+# L8 UNCERTAINTY
+uncertainty:
+  # triangular = mode at the point estimate, support = the sourced band (a best estimate exists)
+  # uniform    = every value in the band equally likely (reported alongside as a sensitivity)
+  # WUE band is [0.7, 2.5] with mode 1.9 (see water_onsite.wue_default for sources).
+  distribution: triangular
+  n_samples: 4000
+
+# ---------------------------------------------------------------------------
+# REGIONS (L0/L1 inputs per region; the India block mirrors grid.* above)
+region_config:
+  India:
+    tier: facility
+    account_year: 2024
+    gem_countries: [India]
+    gadm_path: "data/gadm/gadm41_IND.gpkg"
+  US:
+    tier: facility
+    account_year: 2024
+    gem_countries: [United States]
+    gadm_path: "data/gadm/gadm41_USA.gpkg"
+    compute_atlas_path: "data/compute_atlas/facilities_v1.34.0.json"   # pinned release v1.34.0 (CC BY 4.0)
+  EU:
+    tier: country            # facility data confidential under Reg (EU) 2024/1364
+    account_year: 2023       # first EED reporting period covers calendar 2023
+    gem_countries: [Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland,
+                    France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta,
+                    Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden]
+    eu_eed_path: "dcfootprint/config/eu_member_state_2023.csv"   # rebuilt by experiments/extract_eu_tables.py
+    aware_country_path: "data/aware/AWARE20_Countries_and_Regions.xlsx"
+    aware_country_sheet: CFs_nonagri     # non-agricultural use = industrial/datacenter water
+

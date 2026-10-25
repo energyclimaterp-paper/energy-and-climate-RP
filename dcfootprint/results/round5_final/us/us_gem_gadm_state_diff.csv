@@ -1,0 +1,46 @@
+plant_id,plant,type,capacity_mw,latitude,longitude,gem_state,gadm_state,state,state_source,state_note
+G100001054205,Longview Fibre power station,bioenergy,20.0,46.103887,-122.918429,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100001054206,Longview Fibre power station,bioenergy,25.0,46.103887,-122.918429,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100001054222,Ryegate power station,bioenergy,21.5,44.2131,-72.0572,Vermont,New Hampshire,New Hampshire,gadm,GEM label: Vermont
+G100001054311,Nippon Dynawave Packaging Longview WA power station,bioenergy,31.4,46.1236,-122.9728,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100001055517,Deer Island Treatment Plant power station,bioenergy,17.5,42.353333,-70.96278,New Jersey,Massachusetts,Massachusetts,gadm,GEM label: New Jersey
+G100001055672,Nippon Dynawave Packaging Longview WA power station,bioenergy,18.0,46.1236,-122.9728,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100000403163,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100000403164,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100000403165,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100000403166,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100000403167,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100000403168,Big Sandy Peaker Plant,oil/gas,59.0,38.3441,-82.5938,West Virginia,Kentucky,Kentucky,gadm,GEM label: West Virginia
+G100001054037,Brentwood power station,oil/gas,47.0,40.78706,73.29341,New York,,New York,gem_label_outside_gadm,
+G100001054993,UCLA So Campus Cogen Project,oil/gas,44.9,34.0692,-118.4439,,California,California,gadm,GEM label: nan
+G100000815849,Gibbons CSG solar farm,utility-scale solar,2.0,38.1154,-75.2149,Maryland,,Maryland,gem_label_outside_gadm,
+G100001018924,KDC Solar CV Central MD Regional Transit solar project,utility-scale solar,2.0,39.3299,-78.0069,Maryland,West Virginia,West Virginia,gadm,GEM label: Maryland
+G100001018926,KDC Solar CV O'Donnell Property LLC solar project,utility-scale solar,2.0,39.3302,-78.0082,Maryland,West Virginia,West Virginia,gadm,GEM label: Maryland
+G100000838636,Kayak solar farm,utility-scale solar,74.5,30.4151,-86.4233,Florida,,Florida,gem_label_outside_gadm,
+G100001019210,Sanford -NY solar project,utility-scale solar,4.9,42.1028,-75.4845,Maine,New York,New York,gadm,GEM label: Maine
+G100001019082,THD Quicksilver - MDC Perth Amboy solar project,utility-scale solar,2.5,40.55,-74.25,New Jersey,,New Jersey,gem_label_outside_gadm,
+G100000908832,Block Island wind farm,wind,30.0,41.1199,-71.5139,Rhode Island,,Rhode Island,gem_label_outside_gadm,
+G100000909286,Broadview Energy wind farm,wind,83.0,34.832,-102.936,New Mexico,Texas,Texas,gadm,GEM label: New Mexico
+G100000908588,Coastal Virginia Offshore Wind (CVOW) Pilot Project,wind,12.0,36.8868,-75.4916,Virginia,,Virginia,gem_label_outside_gadm,
+G100000909618,South Fork (Ørsted) wind farm,wind,130.0,41.0584,-71.2074,New York,,New York,gem_label_outside_gadm,
+G100000908706,Steel Winds wind farm,wind,20.0,42.8171,-78.8675,New York,Ohio,Ohio,gadm,GEM label: New York
+G100000908621,Steel Winds wind farm,wind,15.0,42.8033,-78.8601,New York,Ohio,Ohio,gadm,GEM label: New York
+G100000909416,White Rock Wind Project,wind,100.0,34.9668,-92.3678,Oklahoma,Arkansas,Arkansas,gadm,GEM label: Oklahoma
+G100001019882,"Green Providence Wind I, LLC wind farm",wind,1.5,41.7895,-71.3848,Rhode Island,,Rhode Island,gem_label_outside_gadm,
+G100001019883,"Green Providence Wind II, LLC wind farm",wind,3.0,41.786,-71.3855,Rhode Island,,Rhode Island,gem_label_outside_gadm,
+G100000100057,AES Puerto Rico power station,coal,255.0,17.945558,-66.14944,Puerto Rico,,Puerto Rico,gem_label_outside_gadm,
+G100000100058,AES Puerto Rico power station,coal,255.0,17.945558,-66.14944,Puerto Rico,,Puerto Rico,gem_label_outside_gadm,
+G100000106997,Monroe Power Plant,coal,817.2,41.890389,-83.344978,Michigan,Ohio,Ohio,gadm,GEM label: Michigan
+G100000106998,Monroe Power Plant,coal,822.6,41.890389,-83.344978,Michigan,Ohio,Ohio,gadm,GEM label: Michigan
+G100000106999,Monroe Power Plant,coal,822.6,41.890389,-83.344978,Michigan,Ohio,Ohio,gadm,GEM label: Michigan
+G100000107000,Monroe Power Plant,coal,817.2,41.890389,-83.344978,Michigan,Ohio,Ohio,gadm,GEM label: Michigan
+G100001050768,North Brawley geothermal power plant,geothermal,17.0,33.0144429946752,-115.541,Nevada,California,California,gadm,GEM label: Nevada
+G100000603753,Apalachia hydroelectric plant,hydropower,94.0,35.1677,-84.2956,Tennessee,North Carolina,North Carolina,gadm,GEM label: Tennessee
+G100000603759,Bartletts Ferry hydroelectric plant,hydropower,173.0,32.663,-85.0908,Alabama,Georgia,Georgia,gadm,GEM label: Alabama
+G100000603871,John Day hydroelectric plant,hydropower,2160.0,45.7164,-120.694,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100001027529,Lake Lynn hydroelectric plant,hydropower,51.0,39.7203,-79.8561,Pennsylvania,West Virginia,West Virginia,gadm,GEM label: Pennsylvania
+G100000603901,McNary hydroelectric plant,hydropower,991.0,45.9402,-119.299,Oregon,Washington,Washington,gadm,GEM label: Oregon
+G100000603924,Oxbow hydroelectric plant,hydropower,190.0,44.9716,-116.835,Oregon,Idaho,Idaho,gadm,GEM label: Oregon
+G100000603944,Richard B. Russell hydroelectric plant,hydropower,300.0,34.0256,-82.5953,Georgia,South Carolina,South Carolina,gadm,GEM label: Georgia
+G100000603945,Richard B. Russell Pumped Storage hydroelectric plant,hydropower,328.0,34.0256,-82.5953,Georgia,South Carolina,South Carolina,gadm,GEM label: Georgia
+G100000603980,The Dalles hydroelectric plant,hydropower,1820.0,45.614,-121.135,Oregon,Washington,Washington,gadm,GEM label: Oregon

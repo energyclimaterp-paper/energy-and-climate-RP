@@ -1,0 +1,7 @@
+model,fold_origin,rmse
+seasonal_naive,2022-12-01,20.09
+seasonal_naive,2023-12-01,16.95
+seasonal_naive,2024-12-01,31.03
+SARIMA,2022-12-01,41.53
+SARIMA,2023-12-01,12.88
+SARIMA,2024-12-01,33.44

@@ -1,0 +1,5 @@
+lever,type,water_phys_saved_m3_yr,water_onsite_saved_m3_yr,water_scarcity_saved_m3eq_yr,carbon_saved_tco2_yr,note,pct_of_scarcity_baseline,pct_of_carbon_baseline
+efficiency_standard,reduction,51083471.08049062,34478926.58304,788288468.9508343,2062176.356961382,"PUE<=1.3, WUE<=0.7 (water+carbon; liquid-cooling tradeoff bounded by caps)",31.4,12.9
+zero_liquid_discharge,reduction,51569965.4764416,51569965.4764416,736925013.1042205,0.0,"recycle 92% of ON-SITE (scope-1) water, all facilities",29.3,0.0
+coastal_seawater_siting,reduction,0.0,0.0,0.0,0.0,WUE->0.1 at coastal hubs (scope-1); 0 facilities eligible,0.0,0.0
+mandatory_disclosure,transparency,0.0,0.0,0.0,0.0,"reveals ~137,319,983 m3/yr currently unreported (baseline disclosure ~30%)",0.0,0.0

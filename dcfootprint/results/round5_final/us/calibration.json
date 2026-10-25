@@ -1,0 +1,23 @@
+{
+  "account_year": 2024,
+  "grid_zone": "state",
+  "ci_mean_gco2_per_kwh": 309.2,
+  "region": "US",
+  "n_facilities": 235,
+  "n_operational_total": 747,
+  "us_capacity_basis": {
+    "unspecified": 192,
+    "it": 26,
+    "facility": 17
+  },
+  "us_unspecified_basis_treated_as": "it",
+  "n_operational_uncosted": 512,
+  "n_costed_no_basin": 0,
+  "dropped_facility_months_no_cf": 0,
+  "carbon_basis": "generation (consumption basis is India-only)",
+  "ci_state_fill_months": 0,
+  "cea_national_ef_crosscheck": 0.6751,
+  "bottom_up_twh": 51.88,
+  "lbnl_2023_twh": 176.0,
+  "energy_coverage_vs_lbnl": 0.295
+}

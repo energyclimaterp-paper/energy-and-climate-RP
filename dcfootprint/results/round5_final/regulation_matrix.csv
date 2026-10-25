@@ -1,0 +1,5 @@
+axis,US,EU,India,closest_instrument
+carbon_intensity,No,No,No,"EU CSRD / ESRS E1 (entity GHG + intensity per revenue) - per-revenue, entity-level - not a per-DC measured intensity; MN HF16 / German EnEfG mandate renewable SUPPLY (an input, not an intensity)"
+marginal_carbon,No,No,No,"Voluntary 24/7 CFE tariffs (NV/Google-Fervo; Xcel/Google); CNDCP hourly-CFE - consumption-based and voluntary, not a marginal-carbon mandate"
+scarcity_weighted_water,No,No,No,"EU ESRS E3-4 (water use in high water-stress areas) - entity-level location-flagged VOLUME; CA AB2619 (proposed) indirect water; India CGWA aquifer tiers = permit gate, not weighted accounting"
+inference_attribution,No,No,No,"EU AI Act Annex XI 1(2)(e) (GPAI model energy documentation) - model-level, training-oriented, no water/carbon; decoupled from DC reporting"

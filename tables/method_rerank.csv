@@ -1,0 +1,6 @@
+region,level,n,spearman_physical_vs_scarcity,top5_overlap,top_by_physical,top_by_scarcity
+India,facility,71,0.867,2/5,in-ntt-bengaluru-4-campus,in-ntt-bengaluru-4-campus
+India,state,9,0.933,5/5,Maharashtra,Tamil Nadu
+US,facility,235,0.72,0/5,us-meta-prineville-or,us-edgecore-mesa-az
+US,state,36,0.846,2/5,Oregon,Arizona
+EU,country,21,0.905,3/5,Germany,Spain

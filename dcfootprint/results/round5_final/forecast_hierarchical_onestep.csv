@@ -1,0 +1,9 @@
+method,rmse_2022,rmse_2023,rmse_backtest_mean,rmse_2024_out_of_sample,chosen,region,source
+seasonal_naive,41.8849071751875,47.50305597381974,44.69398157450362,44.94459769579695,True,India,dcfootprint/results/forecast_ci_method_backtest.csv
+bottom_up,58.59838756731429,82.64963987023101,70.62401371877266,45.7232820667526,False,India,dcfootprint/results/forecast_ci_method_backtest.csv
+mint_wls_var,57.023708053107015,74.18000880837106,65.60185843073904,43.40338410986734,False,India,dcfootprint/results/forecast_ci_method_backtest.csv
+mint_wls_struct,62.487484707183285,86.21222318672486,74.34985394695407,49.65463403740131,False,India,dcfootprint/results/forecast_ci_method_backtest.csv
+seasonal_naive,39.72678658022495,42.998314386104674,41.36255048316481,38.43929062977581,False,US,data/ember/ci_method_backtest_us_2024_state_v3-validfit.csv
+bottom_up,38.03653898785106,41.433240536202966,39.73488976202701,40.988147969351424,True,US,data/ember/ci_method_backtest_us_2024_state_v3-validfit.csv
+mint_wls_var,37.90333067301912,41.6400000756564,39.77166537433776,41.09716911087731,False,US,data/ember/ci_method_backtest_us_2024_state_v3-validfit.csv
+mint_wls_struct,37.939280041128654,43.29788882406674,40.6185844325977,43.85017067873825,False,US,data/ember/ci_method_backtest_us_2024_state_v3-validfit.csv

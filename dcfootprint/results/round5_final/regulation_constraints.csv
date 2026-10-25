@@ -1,0 +1,8 @@
+jurisdiction,region,rule,type,effect,param,source
+EU,EU-wide,EED/2024-1364 PUE+WUE reporting >=500kW,soft,disclosure,,Reg (EU) 2024/1364
+EU,Ireland,>=80% additional RE; locational test,hard,re_share_min,0.8,POLICY_DEEP_DIVE; CRU/2025236
+EU,Germany,PUE<=1.2 new (2026),hard,pue_cap_new,1.2,POLICY_DEEP_DIVE; EnEfG
+EU,Netherlands,hyperscale ban (>10ha & >=70MW),hard,ban_new_above_mw,70.0,POLICY_DEEP_DIVE; Noord-Holland strategy
+India,Rajasthan,ZLD + recharge mandatory,hard,zld_mandate,0.92,POLICY_DEEP_DIVE; Rajasthan Data Centre Policy 2025
+India,Gujarat,>=51% renewable energy,hard,re_share_min,0.51,POLICY_DEEP_DIVE
+US,Minnesota,RE/carbon-free supply; >100Mgal water permit,hard,water_permit_mgal,100.0,POLICY_DEEP_DIVE

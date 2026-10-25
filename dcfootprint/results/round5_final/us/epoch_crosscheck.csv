@@ -1,0 +1,78 @@
+epoch_name,owner,state,city,epoch_power_mw,status,account_facilities,account_operators,account_it_mw,account_facility_mw_est
+Colossus 2,SpaceXAI,Tennessee,memphis,946.0,matched,us-xai-colossus-memphis-tn,xAI,150.0,240.0
+Anthropic-Amazon New Carlisle,Amazon,Indiana,new carlisle,910.0,matched,us-amazon-project-rainier-new-carlisle-in,Amazon Web Services,590.0,708.0
+Microsoft Fairwater Atlanta,Microsoft,Georgia,fayetteville,636.0,not in account,,,0.0,0.0
+Meta Prometheus,Meta,Ohio,new albany,496.0,"possible match (same city, operator not confirmed)",us-edged-columbus-new-albany-oh; us-stack-nal01-new-albany-oh,Edged (an Endeavour company); STACK Infrastructure,84.0,134.4
+OpenAI Stargate Abilene,Oracle,Texas,abilene,421.0,"possible match (same city, operator not confirmed)",us-lancium-crusoe-abilene-tx,Crusoe,200.0,320.0
+Microsoft Fairwater Wisconsin,Microsoft,Wisconsin,mount pleasant,369.0,not in account,,,0.0,0.0
+Google Pryor (North),Google,Oklahoma,pryor,368.0,not in account,,,0.0,0.0
+Colossus 1,SpaceXAI,Tennessee,memphis,340.0,matched,us-xai-colossus-memphis-tn,xAI,150.0,240.0
+Google New Albany,Google,Ohio,new albany,333.0,"possible match (same city, operator not confirmed)",us-edged-columbus-new-albany-oh; us-stack-nal01-new-albany-oh,Edged (an Endeavour company); STACK Infrastructure,84.0,134.4
+Google Columbus,Google,Ohio,columbus,303.0,"possible match (same city, operator not confirmed)",us-cologix-col3-columbus-oh,Cologix,18.0,28.8
+Amazon Madison Mega Site,Amazon,Mississippi,madison mega site nissan parkway and highway 22 canton,284.0,not in account,,,0.0,0.0
+CoreWeave Denton TX,CoreWeave,Texas,denton,262.0,not in account,,,0.0,0.0
+QTS Richmond 1,,Virginia,sandston,238.0,not in account,,,0.0,0.0
+Google Bristow,Google,Virginia,bristow,238.0,not in account,,,0.0,0.0
+Google Council Bluffs (East),Google,Iowa,council bluffs,237.0,not in account,,,0.0,0.0
+Google Papillion,Google,Nebraska,,237.0,not in account,,,0.0,0.0
+Google Omaha,Google,Nebraska,omaha,237.0,"possible match (same city, operator not confirmed)",us-1623-farnam-omaha-ne,1623 Farnam,5.0,8.0
+Amazon Ridgeland,Amazon,Mississippi,1626 county line road ridgeland,228.0,not in account,,,0.0,0.0
+AWS New Albany,Amazon,,,213.0,no address in Epoch,,,0.0,0.0
+Microsoft Goodyear,Microsoft,Arizona,goodyear,202.0,"possible match (same city, operator not confirmed)",us-compass-goodyear-campus-az,Compass Datacenters,72.0,115.2
+Microsoft Project Osmium,Microsoft,Iowa,cumming,190.0,not in account,,,0.0,0.0
+Google Mesa,Google,,,183.0,no address in Epoch,,,0.0,0.0
+Meta-QTS Hillsboro 2,Meta,Oregon,hillsboro,180.0,matched,us-qts-hillsboro-1-or,QTS Data Centers,20.0,32.0
+QTS Richmond 2,,Virginia,sandston,180.0,not in account,,,0.0,0.0
+Meta Rosemount,Meta,Minnesota,rosemount,178.0,not in account,,,0.0,0.0
+Meta Jeffersonville,Meta,Indiana,jeffersonville,178.0,not in account,,,0.0,0.0
+Google Storey County,Google,,,161.0,no address in Epoch,,,0.0,0.0
+Google The Dalles,Google,Oregon,the dalles,154.0,matched,us-google-the-dalles-or,Google,300.0,360.0
+Meta Montgomery,Meta,Alabama,montgomery,153.0,"possible match (same city, operator not confirmed)",us-rsa-dexter-avenue-montgomery-al,The Retirement Systems of Alabama,2.0,3.2
+Meta Temple,Meta,Texas,temple,152.0,matched,us-meta-temple-tx,Meta,152.0,182.4
+Meta Cheyenne,Meta,Wyoming,cheyenne,152.0,"possible match (same city, operator not confirmed)",us-cogent-cheyenne-114-w-10th-wy; us-lunavi-cheyenne-wy,Cogent Communications; Lunavi,7.5,12.0
+Meta Kuna,Meta,,,152.0,no address in Epoch,,,0.0,0.0
+Meta Huntsville,Meta,Alabama,toney,146.0,not in account,,,0.0,0.0
+QTS Richmond 3,,Virginia,sandston,144.0,not in account,,,0.0,0.0
+Google Lincoln,Google,Nebraska,lincoln,141.0,not in account,,,0.0,0.0
+Google Lancaster,Google,Ohio,lancaster,137.0,not in account,,,0.0,0.0
+Meta Eagle Mountain,Meta,Utah,eagle mountain,133.0,not in account,,,0.0,0.0
+Coreweave Helios,CoreWeave,Texas,afton,132.0,"possible match (same city, operator not confirmed)",us-galaxy-helios-dickens-tx,Galaxy Digital,200.0,320.0
+AWS Berwick,Amazon,Pennsylvania,berwick,108.0,not in account,,,0.0,0.0
+Google Kansas City East,Google,,,105.0,no address in Epoch,,,0.0,0.0
+Google Midlothian,Google,Texas,midlothian,103.0,not in account,,,0.0,0.0
+Meta Los Lunas,Meta,New Mexico,los lunas,87.0,not in account,,,0.0,0.0
+Meta Gallatin,Meta,Tennessee,gallatin,87.0,matched,us-meta-gallatin-tn,Meta,300.0,360.0
+STACK Infrastructure NVA02,,Virginia,manassas,85.0,"possible match (same city, operator not confirmed)",us-iron-mountain-va-4-va; us-iron-mountain-va-6-va,Iron Mountain,64.0,102.4
+CoreWeave Chester VA,CoreWeave,Virginia,chester,82.0,not in account,,,0.0,0.0
+Meta Sarpy,Meta,Nebraska,springfield,80.0,not in account,,,0.0,0.0
+Google Arcola,Google,Virginia,sterling,77.0,"possible match (same city, operator not confirmed)",us-cyrusone-nva1-nva2-nva3-sterling-va; us-cyrusone-nva8-sterling-va; us-qts-ashburn-1-va; us-stack-nva01a-va,CyrusOne; QTS Data Centers; STACK Infrastructure,145.0,232.0
+Google Red Oak,Google,Texas,red oak,77.0,not in account,,,0.0,0.0
+Microsoft SAT40,Microsoft,Texas,san antonio,75.0,not in account,,,0.0,0.0
+Meta Aiken,Meta,South Carolina,trenton,69.0,not in account,,,0.0,0.0
+CoreWeave Ellendale ND,CoreWeave,North Dakota,ellendale,68.0,not in account,,,0.0,0.0
+CoreWeave Marble NC,CoreWeave,North Carolina,marble,65.0,not in account,,,0.0,0.0
+Stream Phoenix,,,,64.0,no address in Epoch,,,0.0,0.0
+Core42 Lake Mariner,Core42,New York,barker,58.0,not in account,,,0.0,0.0
+Microsoft-Nebius New Jersey,Nebius,New Jersey,vineland,50.0,matched,us-nebius-vineland-nj,Nebius Group,100.0,160.0
+Microsoft SAT14,Microsoft,Texas,san antonio,47.0,not in account,,,0.0,0.0
+Anthropic Lake Mariner,AI XPV Platform,New York,barker,42.0,not in account,,,0.0,0.0
+Vantage TX1,,Texas,san antonio,32.0,not in account,,,0.0,0.0
+CoreWeave Dalton 1 & 2,CoreWeave,Georgia,dalton,28.0,not in account,,,0.0,0.0
+xAI QTS Atlanta,SpaceXAI,Georgia,atlanta,17.32971,"possible match (same city, operator not confirmed)",us-edged-atlanta-tilford-yard-ga,Edged Energy (Endeavour),27.0,43.2
+Anthropic Barber Lake,Cipher Mining,,,0.0,no address in Epoch,,,0.0,0.0
+CoreWeave Lancaster Greenfield site,CoreWeave,Pennsylvania,lancaster,0.0,not in account,,,0.0,0.0
+CoreWeave Muskogee OK,CoreWeave,Oklahoma,muskogee,0.0,not in account,,,0.0,0.0
+Crusoe Abilene Expansion,Microsoft,Texas,abilene,0.0,matched,us-lancium-crusoe-abilene-tx,Crusoe,200.0,320.0
+Goodnight,Google,Texas,claude,0.0,not in account,,,0.0,0.0
+Google Cedar Rapids,Google,,,0.0,no address in Epoch,,,0.0,0.0
+Google Fort Wayne,Google,Indiana,fort wayne,0.0,not in account,,,0.0,0.0
+Meta Bowling Green,Meta,Ohio,bowling green,0.0,not in account,,,0.0,0.0
+Meta Hyperion,Meta,Louisiana,holly ridge,0.0,not in account,,,0.0,0.0
+OpenAI Stargate Lordstown,Softbank,Ohio,warren,0.0,not in account,,,0.0,0.0
+OpenAI Stargate Michigan,Oracle,,,0.0,no address in Epoch,,,0.0,0.0
+OpenAI Stargate Milam,Softbank,,,0.0,no address in Epoch,,,0.0,0.0
+OpenAI Stargate New Mexico,Oracle,,,0.0,no address in Epoch,,,0.0,0.0
+OpenAI Stargate Shackelford,Oracle,Texas,abilene,0.0,"possible match (same city, operator not confirmed)",us-lancium-crusoe-abilene-tx,Crusoe,200.0,320.0
+OpenAI Stargate Wisconsin,Oracle,,,0.0,no address in Epoch,,,0.0,0.0
+QTS Cedar Rapids,,Iowa,fairfax,0.0,not in account,,,0.0,0.0
+QTS Eagle Mountain,,Utah,eagle mountain,0.0,not in account,,,0.0,0.0

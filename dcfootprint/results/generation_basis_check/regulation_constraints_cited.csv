@@ -1,0 +1,13 @@
+jurisdiction,region,title,doc_type,topic,status,url
+EU,EU-wide,Commission Delegated Regulation (EU) 2024/1364 on data centre sustainability rating,regulation,electricity_consumption,IN FORCE,https://eur-lex.europa.eu/eli/reg_del/2024/1364/oj/eng
+EU,Ireland,CRU Large Energy Users Connection Policy Decision CRU/2025236,regulatory decision,electricity_consumption,IN FORCE,https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/
+EU,Netherlands,Datacenterstrategie Noord-Holland 2025-2027,provincial strategy,siting_general,IN FORCE,https://www.noord-holland.nl/Onderwerpen/Economie_Werk/Projecten/Datacenters
+US,USA,Executive Order 14318 - Accelerating Federal Permitting of Data Center Infrastructure,executive order,siting_general,IN FORCE,https://www.govinfo.gov/app/details/DCPD-202500788
+US,USA-Virginia,Virginia HB 153 Chapter 567 - siting of data centers; site assessment; high energy use facility,statute,siting_general,IN FORCE,https://lis.virginia.gov/bill-details/20261/HB153/text/CHAP0567
+US,USA-Texas,Texas SB 6 (89R) - large load interconnection and grid access for data centers,statute,electricity_consumption,IN FORCE,https://capitol.texas.gov/BillLookup/history.aspx?LegSess=89R&Bill=SB6
+India,Rajasthan,Rajasthan Data Centre Policy 2025 (PARTIALLY SCANNED - most pages are images; only a few pages have extractable text - see README),state policy,siting_general,IN FORCE,https://rising.rajasthan.gov.in/storage/app/public/files/pdf/rajasthan-data-centre-policy-2025.pdf
+Global,Global,Marginal Emissions Modeling: WattTime's Approach to Modeling and Validation,methodology,carbon_intensity,IN FORCE,https://www.watttime.org/wp-content/uploads/2023/11/WattTime-MOER-modeling-20221004.pdf
+Global,Global,Aqueduct Water Risk Framework (World Resources Institute) - note: this is the original framework paper; WRI has since released updated indicator versions (Aqueduct 4.0),methodology,water_stress,IN FORCE,https://www.wri.org/data/aqueduct-water-risk-atlas
+EU,EU,2024 Best Practice Guidelines for the EU Code of Conduct on Data Centre Energy Efficiency (JRC136986),guidance,temperature,IN FORCE,https://e3p.jrc.ec.europa.eu/publications/2024-best-practice-guidelines-eu-code-conduct-data-centre-energy-efficiency
+US,USA,Data Centers and Water Fact Sheet (Environmental Law Institute),fact sheet,water_storage,IN FORCE,https://www.eli.org/sites/default/files/files-pdf/Data%20Centers%20and%20Water%20Fact%20Sheet%20ELI%20January%202026%20(1).pdf
+US,USA,IM3 Data Center Atlas - PNNL public tool for data center location and infrastructure mapping,research article,datacenter_mapping,IN FORCE,https://im3.pnnl.gov/datacenter-atlas

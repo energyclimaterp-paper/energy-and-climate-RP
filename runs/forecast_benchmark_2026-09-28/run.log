@@ -1,0 +1,43 @@
+series: {'electricity': 95, 'carbon': 95} -> D:\3Gtech_paper - GNN\counterfactual-policy\runs\forecast_benchmark_2026-09-28
+  seasonal_naive  electricity: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  seasonal_naive  carbon     : {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  sarima_dcf      electricity: {('holdout', 'last12'): 68, ('rolling', '2022-12-01'): 69, ('rolling', '2023-12-01'): 71, ('rolling', '2024-12-01'): 57}  failures=101
+  sarima_dcf      carbon     : {('holdout', 'last12'): 94, ('rolling', '2022-12-01'): 94, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 81}  failures=3
+  sarima_core     electricity: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  sarima_core     carbon     : {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  timesfm_2p5     electricity: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  timesfm_2p5     carbon     : {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 170/170 [00:00<00:00, 5843.42it/s]
+  chronos_2       electricity: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  chronos_2       carbon     : {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+  xlstm           electricity seed 42: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 595s)
+  xlstm           carbon      seed 42: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 377s)
+  xlstm           electricity seed 43: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 228s)
+  xlstm           carbon      seed 43: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 198s)
+  xlstm           electricity seed 44: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 200s)
+  xlstm           carbon      seed 44: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 198s)
+  xlstm           electricity seed 45: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 198s)
+  xlstm           carbon      seed 45: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 200s)
+  xlstm           electricity seed 46: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 197s)
+  xlstm           carbon      seed 46: {('holdout', 'last12'): 95, ('rolling', '2022-12-01'): 95, ('rolling', '2023-12-01'): 94, ('rolling', '2024-12-01'): 82}  failures=0
+    (366 fits in 198s)
+
+CACHE CHECK (fresh holdout vs earlier cached benchmark):
+cache_model fresh_model  n_points  median_rel_diff  p95_rel_diff  share_within_1pct  mean_zone_rmse_cache  mean_zone_rmse_fresh
+     SARIMA sarima_core      2280           0.0000        0.0000             1.0000              322.0268              322.0268
+    TimesFM timesfm_2p5      2280           0.0000        0.0000             1.0000              307.5701              307.5701
+      Nexus   chronos_2      2280           0.0000        0.0000             1.0000              296.3688              296.3688
+      xLSTM       xlstm      2280           0.0112        0.0995             0.4627              393.8164              381.5198
+DONE

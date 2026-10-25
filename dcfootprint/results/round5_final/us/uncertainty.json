@@ -1,0 +1,57 @@
+{
+  "n_samples": 4000,
+  "distribution": "triangular",
+  "measured_energy_and_water": false,
+  "point_scarcity_m3eq_yr": 2513318685.0,
+  "facility_types": {
+    "colocation": 227,
+    "hyperscale": 8
+  },
+  "carbon_tco2_yr": {
+    "mean": 16814469.0,
+    "p05": 13636308.0,
+    "p95": 20314881.0
+  },
+  "carbon_inference_tco2_yr": {
+    "mean": 14285680.0,
+    "p05": 11561747.0,
+    "p95": 17245104.0
+  },
+  "water_phys_m3_yr": {
+    "mean": 168457157.0,
+    "p05": 117950412.0,
+    "p95": 220973979.0
+  },
+  "scarcity_m3eq_yr": {
+    "mean": 2296410104.0,
+    "p05": 1638635849.0,
+    "p95": 3047998278.0
+  },
+  "scarcity_inference_m3eq_yr": {
+    "mean": 1950997874.0,
+    "p05": 1392161848.0,
+    "p95": 2594818133.0
+  },
+  "scarcity_mean_over_point": 0.914,
+  "scarcity_at_hydro_0_m3eq_yr": 1802111930.0,
+  "scarcity_sobol_first_order": {
+    "util_colocation": 0.577,
+    "hydro": 0.183,
+    "wue": 0.147,
+    "pue_colocation": 0.057,
+    "ewif": 0.043,
+    "inference": 0.021,
+    "util_hyperscale": 0.016,
+    "pue_hyperscale": 0.012
+  },
+  "scarcity_oat_swing_Mm3eq": {
+    "util_colocation": 1529.3,
+    "wue": 645.0,
+    "hydro": 604.5,
+    "pue_colocation": 408.3,
+    "ewif": 340.4,
+    "inference": 251.3,
+    "util_hyperscale": 72.9,
+    "pue_hyperscale": 37.2
+  }
+}

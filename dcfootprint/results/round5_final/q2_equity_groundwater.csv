@@ -1,0 +1,72 @@
+facility_id,operator,city,state,scarcity_m3eq_yr,gw_stage_pct,gw_stage_source,gw_category
+in-ntt-bengaluru-4-campus,NTT GDC India,Bengaluru,Karnataka,76492612.97557221,186.7020029,city,over-exploited
+in-techno-digital-chennai-dc,Techno Digital,Chennai,Tamil Nadu,52739909.46014807,124.89,city,over-exploited
+in-adaniconnex-chennai-1-maa,AdaniConneX,Chennai,Tamil Nadu,48344917.00513574,124.89,city,over-exploited
+in-nxtra-siruseri-dc3,Nxtra by Airtel,Chennai,Tamil Nadu,39554932.095111065,124.89,city,over-exploited
+in-stt-chennai-2-ambattur,STT GDC India,Chennai,Tamil Nadu,38089934.61010695,124.89,city,over-exploited
+in-yotta-d1-shakti-greater-noida,Yotta,Greater Noida,Uttar Pradesh,36648598.64136503,70.45,state,semi-critical
+in-sify-noida-02-campus,Sify,Noida,Uttar Pradesh,31664389.22613938,70.45,state,semi-critical
+in-digital-connexion-maa10-chennai,Digital Connexion,Chennai,Tamil Nadu,29299949.70008226,124.89,city,over-exploited
+in-ntt-chennai-2-ambattur,NTT GDC India,Chennai,Tamil Nadu,25490956.23907157,124.89,city,over-exploited
+in-nxtra-siruseri-2-che3,Nxtra by Airtel,Chennai,Tamil Nadu,23439959.76006581,124.89,city,over-exploited
+in-nxtra-bangalore-dc2,Nxtra by Airtel,Bengaluru,Karnataka,22765658.62368221,186.7020029,city,over-exploited
+in-nxtra-ncr-hyperscale-ncr4,Nxtra by Airtel,Noida,Uttar Pradesh,21989159.184819013,70.45,state,semi-critical
+in-stt-chennai-3-ambattur,STT GDC India,Chennai,Tamil Nadu,21974962.2750617,124.89,city,over-exploited
+in-stt-noida-1,STT GDC India,Noida,Uttar Pradesh,20767539.230106845,70.45,state,semi-critical
+in-stt-bengaluru-3-whitefield,STT GDC India,Bengaluru,Karnataka,20489092.761313982,186.7020029,city,over-exploited
+in-pdg-mu1,Princeton Digital Group,Mumbai,Maharashtra,18574755.68520727,52.99,state,safe
+in-nxtra-hoskote-1-blr2,Nxtra by Airtel,Bengaluru,Karnataka,15935961.036577541,186.7020029,city,over-exploited
+in-ctrls-mumbai-dc1-dc2-nine-zone,CtrlS,Mumbai,Maharashtra,15478963.071006056,52.99,state,safe
+in-iron-mountain-ncr-1-noida,Iron Mountain,Noida,Uttar Pradesh,14659439.456546009,70.45,state,semi-critical
+in-ctrls-mumbai-dc4,CtrlS,Mumbai,Maharashtra,14240646.02532557,52.99,state,safe
+in-ctrls-hyderabad-dc3,CtrlS,Hyderabad,Telangana,13789200.663422745,102.79,city,over-exploited
+in-ntt-bengaluru-3-bidrahalli,NTT GDC India,Bengaluru,Karnataka,13659395.174209327,186.7020029,city,over-exploited
+in-ctrls-mumbai-dc5,CtrlS,Mumbai,Maharashtra,12383170.456804845,52.99,state,safe
+in-l-t-cloudfiniti-mumbai-chennai,L&T Cloudfiniti,Mumbai,Maharashtra,11609222.303254543,52.99,state,safe
+in-nxtra-kokapet-hyd1,Nxtra by Airtel,Hyderabad,Telangana,10607077.43340211,102.79,city,over-exploited
+in-stt-chennai-7-siruseri,STT GDC India,Chennai,Tamil Nadu,10547981.892029615,124.89,city,over-exploited
+in-nxtra-hinjewadi-3-pun4,Nxtra by Airtel,Pune,Maharashtra,10443222.000363637,64.51,city,safe
+in-ntt-mumbai-7-andheri,NTT GDC India,Mumbai,Maharashtra,9906536.365443874,52.99,state,safe
+in-ctrls-hyderabad-dc2,CtrlS,Hyderabad,Telangana,7849237.300717561,102.79,city,over-exploited
+in-ctrls-ahmedabad-edge-dc,CtrlS,Ahmedabad,Gujarat,7524091.981556176,73.63,city,semi-critical
+in-ntt-mumbai-6-andheri,NTT GDC India,Mumbai,Maharashtra,7429902.274082908,52.99,state,safe
+in-nxtra-hinjewadi-1-pun2,Nxtra by Airtel,Pune,Maharashtra,7397282.250257575,64.51,city,safe
+in-nxtra-hoskote-2-blr3,Nxtra by Airtel,Bengaluru,Karnataka,6829697.587104663,186.7020029,city,over-exploited
+in-ntt-kolkata-1,NTT GDC India,Kolkata,West Bengal,6736600.161915435,45.63,state,safe
+in-stt-pune-2,STT GDC India,Pune,Maharashtra,6527013.750227271,64.51,city,safe
+in-stt-pune-3,STT GDC India,Pune,Maharashtra,6527013.750227271,64.51,city,safe
+in-ctrls-hyderabad-dc1,CtrlS,Hyderabad,Telangana,6364246.460041266,102.79,city,over-exploited
+in-nxtra-whitefield-blr1,Nxtra by Airtel,Bengaluru,Karnataka,6146727.828394198,186.7020029,city,over-exploited
+in-iron-mountain-hyd-1,Iron Mountain,Hyderabad,Telangana,5939963.36270518,102.79,city,over-exploited
+in-nxtra-siruseri-1-che2,Nxtra by Airtel,Chennai,Tamil Nadu,5859989.940016452,124.89,city,over-exploited
+in-stt-delhi-3-gk,STT GDC India,Delhi,Delhi,5753673.818287963,100.7695183,city,over-exploited
+in-nxtra-noida-sec-62-ncr1,Nxtra by Airtel,Noida,Uttar Pradesh,5497289.796204753,70.45,state,semi-critical
+in-ntt-bengaluru-2-electronic-city,NTT GDC India,Bengaluru,Karnataka,5122273.190328496,186.7020029,city,over-exploited
+in-ntt-mumbai-5-chandivali,NTT GDC India,Mumbai,Maharashtra,4837175.959689394,52.99,state,safe
+in-stt-bengaluru-2-kiadb,STT GDC India,Bengaluru,Karnataka,4553131.724736442,186.7020029,city,over-exploited
+in-iron-mountain-blr-1,Iron Mountain,Bengaluru,Karnataka,4553131.724736442,186.7020029,city,over-exploited
+in-stt-chennai-1-vsb,STT GDC India,Chennai,Tamil Nadu,4394992.45501234,124.89,city,over-exploited
+in-nxtra-noida-sec-81-ncr2,Nxtra by Airtel,Noida,Uttar Pradesh,4275669.841492586,70.45,state,semi-critical
+in-stt-hyderabad-1-hitec,STT GDC India,Hyderabad,Telangana,4242830.973360844,102.79,city,over-exploited
+in-stt-pune-1-dighi,STT GDC India,Pune,Maharashtra,3916208.2501363624,64.51,city,safe
+in-ctrls-mumbai-dc3,CtrlS,Mumbai,Maharashtra,3869740.767751514,52.99,state,safe
+in-cyfuture-noida-dc,Cyfuture,Noida,Uttar Pradesh,3664859.864136502,70.45,state,semi-critical
+in-stt-mumbai-3-bkc,STT GDC India,Mumbai,Maharashtra,3482766.690976362,52.99,state,safe
+in-iron-mountain-ncr-2-noida,Iron Mountain,Noida,Uttar Pradesh,3420535.873194068,70.45,state,semi-critical
+in-nxtra-santhome-che1,Nxtra by Airtel,Chennai,Tamil Nadu,2929994.970008226,124.89,city,over-exploited
+in-nxtra-kolkata-kol1,Nxtra by Airtel,Kolkata,West Bengal,2694640.064766174,45.63,state,safe
+in-nxtra-kharadi-pun1,Nxtra by Airtel,Pune,Maharashtra,1958104.1250681812,64.51,city,safe
+in-ntt-noida-1,NTT GDC India,Noida,Uttar Pradesh,1832429.932068251,70.45,state,semi-critical
+in-nxtra-hinjewadi-2-pun3,Nxtra by Airtel,Pune,Maharashtra,1740537.000060606,64.51,city,safe
+in-stt-kolkata-2-new-town,STT GDC India,Kolkata,West Bengal,1616784.0388597045,45.63,state,safe
+in-nxtra-chandivali-mum1,Nxtra by Airtel,Mumbai,Maharashtra,1547896.3071006057,52.99,state,safe
+in-stt-mumbai-1-prabhadevi,STT GDC India,Mumbai,Maharashtra,1547896.3071006057,52.99,state,safe
+in-ntt-mumbai-vikhroli-iv,NTT GDC India,Mumbai,Maharashtra,1160922.2303254544,52.99,state,safe
+in-ntt-mumbai-vikhroli,NTT GDC India,Mumbai,Maharashtra,928737.7842603636,52.99,state,safe
+in-iron-mountain-pun-1-hinjewadi,Iron Mountain,Pune,Maharashtra,870268.500030303,64.51,city,safe
+in-stt-kolkata-1-ultadanga,STT GDC India,Kolkata,West Bengal,808392.0194298523,45.63,state,safe
+in-stt-bengaluru-1-sanjay-nagar,STT GDC India,Bengaluru,Karnataka,682969.7587104662,186.7020029,city,over-exploited
+in-stt-delhi-2-gk1,STT GDC India,Delhi,Delhi,569670.6750780161,100.7695183,city,over-exploited
+in-stt-delhi-1,STT GDC India,Delhi,Delhi,512703.60757021443,100.7695183,city,over-exploited
+in-nxtra-bhubaneshwar-bbr1,Nxtra by Airtel,Bhubaneswar,Odisha,508581.4130320108,48.23,state,safe
+in-stt-mumbai-2-andheri,STT GDC India,Mumbai,Maharashtra,386974.0767751514,52.99,state,safe

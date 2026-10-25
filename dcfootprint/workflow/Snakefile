@@ -1,0 +1,25 @@
+# dcfootprint reproducible pipeline (Snakemake).
+#
+# The TESTED, one-command end-to-end entrypoint is the Python orchestrator:
+#     PYTHONPATH=dcfootprint/src python -m dcfootprint.pipeline
+# which runs L0->L9 (facilities -> geo -> account -> calibrate -> forecast ->
+# recharge -> counterfactual -> policy-gap -> routing -> Q2 -> Q1 -> uncertainty),
+# validates every boundary with pandera, and writes dcfootprint/results/.
+#
+# This DAG delegates to that orchestrator so `snakemake` and the module runner
+# stay in lock-step (no drift). Run from the dcfootprint/ directory.
+
+rule all:
+    """Run the full L0-L9 pipeline and materialise dcfootprint/results/."""
+    shell:
+        "PYTHONPATH=src python -m dcfootprint.pipeline"
+
+rule account:
+    """Just the deterministic account spine (L0-L2), contract-validated."""
+    shell:
+        "PYTHONPATH=src python -m dcfootprint.account.build"
+
+rule routing:
+    """Just the Q3 Lyapunov routing comparison (Ceiling)."""
+    shell:
+        "PYTHONPATH=src python -m dcfootprint.routing.lyapunov"

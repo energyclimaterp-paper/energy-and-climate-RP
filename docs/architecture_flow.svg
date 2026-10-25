@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 760" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#475569"/></marker>
+    <style>
+      .t{font-size:13px;fill:#0f172a} .s{font-size:11px;fill:#475569} .h{font-size:14px;font-weight:700;fill:#0f172a}
+      .lay{font-size:12px;font-weight:700} .box{rx:9} .lbl{font-size:11px;fill:#64748b}
+      .star{font-size:11px;font-weight:700;fill:#b45309}
+    </style>
+  </defs>
+  <rect width="1180" height="760" fill="#f8fafc"/>
+  <text x="30" y="34" class="h" font-size="19">dcfootprint — architecture &amp; data flow</text>
+  <text x="30" y="54" class="s">account → project (time-series) → counterfactual → policy-gap · deterministic · schema-validated · Snakemake-reproducible</text>
+
+  <!-- Floor / Ceiling legend -->
+  <rect x="900" y="24" width="16" height="12" fill="#dcfce7" stroke="#16a34a"/><text x="922" y="34" class="lbl">Floor (submittable)</text>
+  <rect x="900" y="42" width="16" height="12" fill="#fef9c3" stroke="#ca8a04"/><text x="922" y="52" class="lbl">Ceiling (stretch)</text>
+  <text x="900" y="68" class="star">★ = paper product</text>
+
+  <!-- CONFIG -->
+  <rect x="30" y="80" width="1120" height="46" rx="9" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="45" y="100" class="lay" fill="#4338ca">CONFIG</text>
+  <text x="45" y="117" class="s">parameters.yaml (PUE·WUE·EWIF·inference·bands) · datasets.yaml (path·granularity·join_key) · levers · validated by pydantic</text>
+
+  <!-- L0 ingest -->
+  <rect x="30" y="140" width="1120" height="66" rx="9" fill="#ecfeff" stroke="#0891b2"/>
+  <text x="45" y="160" class="lay" fill="#0e7490">L0 · INGEST (io/)  — parallel</text>
+  <text x="45" y="180" class="s">facilities (ours ⋈ ATLAS coords ⋈ CEA plant) · ember (zone-month CI + fuel-mix) · aware (basin CF + polygons) · macknick (EWIF)</text>
+  <text x="45" y="196" class="s">gadm (state polys) · egrid (US x-check) · cgwb / g3p / gem (context) · policy texts</text>
+
+  <!-- SPINE column -->
+  <!-- L1 -->
+  <rect x="30" y="222" width="540" height="60" rx="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="45" y="242" class="lay" fill="#15803d">L1 · GEO LINKAGE (geo/)</text>
+  <text x="45" y="260" class="s">geocode facilities → lat/lon  ·  point-in-polygon →</text>
+  <text x="45" y="275" class="s">zone_id (GADM)  +  basin_id (AWARE)   [salvaged geocoder]</text>
+
+  <!-- L2 -->
+  <rect x="30" y="298" width="540" height="86" rx="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="45" y="318" class="lay" fill="#15803d">L2 · ACCOUNT — present (account/)</text>
+  <text x="45" y="336" class="s">E_IT=cap·util·hrs → E_grid=·PUE → Carbon=·CI</text>
+  <text x="45" y="351" class="s">W_onsite=WUE·E_IT + W_grid=EWIF·E_grid = W_phys</text>
+  <text x="45" y="366" class="s">W_scarce = W_phys · AWARE_CF(basin,month)  · ×inference</text>
+  <text x="378" y="336" class="star">★ dataset</text>
+  <text x="360" y="351" class="lbl">account_facility_month</text>
+
+  <!-- L3 project (ceiling) to the right of L2 -->
+  <rect x="600" y="298" width="550" height="86" rx="9" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="615" y="318" class="lay" fill="#a16207">L3 · PROJECT — forward / TIME-SERIES (project/)</text>
+  <text x="615" y="336" class="s">forecast_grid_ci: SARIMA/Chronos, backtested → 2030  [REAL forecast]</text>
+  <text x="615" y="351" class="s">growth: announced pipeline 1.8→6.5 GW  [scenario]</text>
+  <text x="615" y="366" class="s">scarcity_future  →  account_projected (lifetime/2030)</text>
+
+  <!-- L4 -->
+  <rect x="30" y="400" width="540" height="74" rx="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="45" y="420" class="lay" fill="#15803d">L4 · COUNTERFACTUAL (counterfactual/)</text>
+  <text x="45" y="438" class="s">levers (disclosure · coastal seawater · ZLD · efficiency)</text>
+  <text x="45" y="453" class="s">→ Δ present + cumulative-to-2030 → rank "which lever pays"</text>
+  <text x="405" y="470" class="star">★ finding</text>
+
+  <!-- L5 policy (parallel) -->
+  <rect x="600" y="400" width="550" height="74" rx="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="615" y="420" class="lay" fill="#15803d">L5 · POLICY-GAP (policy/)  — parallel</text>
+  <text x="615" y="438" class="s">4-axis regulation matrix (IN/US/EU) ⋈ measured burden</text>
+  <text x="615" y="453" class="s">→ high-burden facility-months in blind spots</text>
+  <text x="1000" y="470" class="star">★ frame</text>
+
+  <!-- L6 uncertainty full width -->
+  <rect x="30" y="490" width="1120" height="52" rx="9" fill="#f1f5f9" stroke="#64748b" stroke-dasharray="5 4"/>
+  <text x="45" y="510" class="lay" fill="#334155">L6 · UNCERTAINTY + VALIDATION (cross-cutting)</text>
+  <text x="45" y="528" class="s">pandera contracts at every boundary (facility-month guarantee = GAT mistake becomes a test failure) · Monte-Carlo bands · Sobol sensitivity (SALib)</text>
+
+  <!-- L7 outputs -->
+  <rect x="30" y="558" width="1120" height="52" rx="9" fill="#ecfeff" stroke="#0891b2"/>
+  <text x="45" y="578" class="lay" fill="#0e7490">L7 · OUTPUTS &amp; INSTRUMENT (viz/ report/)</text>
+  <text x="45" y="596" class="s">sub-national burden maps · gap overlay · ranked-lever tables · seasonal trajectories · projection fan-charts · open data+code (snakemake all)</text>
+
+  <!-- arrows spine -->
+  <line x1="300" y1="206" x2="300" y2="222" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="300" y1="282" x2="300" y2="298" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="300" y1="384" x2="300" y2="400" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="570" y1="341" x2="600" y2="341" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="620" y1="384" x2="360" y2="400" stroke="#ca8a04" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#a)"/>
+  <line x1="300" y1="474" x2="300" y2="490" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="875" y1="474" x2="875" y2="490" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="590" y1="537" x2="590" y2="558" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <text x="312" y="393" class="lbl">present account</text>
+  <text x="366" y="398" class="lbl" fill="#a16207">projected → cumulative Δ</text>
+
+  <!-- footer -->
+  <text x="30" y="640" class="s">FLOOR = L0–L2 India + L5 gap + L4 present (1–2 levers) + L6 + L7  (no forecasting needed).</text>
+  <text x="30" y="658" class="s">CEILING = + L3 projection (time-series) + full L4 cumulative-to-2030 + US/EU tiers + US/UK marginal carbon.</text>
+  <text x="30" y="682" class="s">Build spine first: io/facilities.py (the bottleneck) → geo → account → counterfactual → policy ∥ → project → uncertainty → outputs.</text>
+  <text x="30" y="706" class="lbl">No agents: a pipeline of pure functions — agents would force behavioural assumptions (rejected) and break reproducibility.</text>
+</svg>

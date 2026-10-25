@@ -1,0 +1,236 @@
+facility_id,state,gadm_state,match
+us-123net-dc1-southfield-mi,Michigan,Michigan,True
+us-1623-farnam-omaha-ne,Nebraska,Nebraska,True
+us-165-halsey-street-newark-nj,New Jersey,New Jersey,True
+us-365-data-centers-bridgewater-nj,New Jersey,New Jersey,True
+us-365-data-centers-carlstadt-nj,New Jersey,New Jersey,True
+us-365-data-centers-commack-ny,New York,New York,True
+us-365datacenters-marlborough-ma,Massachusetts,Massachusetts,True
+us-60-hudson-street-ny,New York,New York,True
+us-ainet-cybernap-glen-burnie-md,Maryland,Maryland,True
+us-ainet-one-market-center-baltimore-md,Maryland,Maryland,True
+us-aligned-dfw-01-tx,Texas,Texas,True
+us-aligned-iad-01-va,Virginia,Virginia,True
+us-aligned-ord-01-il,Illinois,Illinois,True
+us-aligned-west-jordan-ut,Utah,Utah,True
+us-amazon-project-rainier-new-carlisle-in,Indiana,Indiana,True
+us-ardent-pittsburgh-mckees-rocks-pa,Pennsylvania,Pennsylvania,True
+us-ark-data-centers-akron-i-summit-county-oh,Ohio,Ohio,True
+us-ark-data-centers-akron-ii-summit-county-oh,Ohio,Ohio,True
+us-ark-data-centers-marion-ia,Iowa,Iowa,True
+us-att-redwood-city-ca,California,California,True
+us-bloomberg-orangeburg-ny,New York,New York,True
+us-centersquare-lax3-irvine-ca,California,California,True
+us-centersquare-lax5-irvine-ca,California,California,True
+us-centersquare-ord2-elk-grove-village-il,Illinois,Illinois,True
+us-centersquare-phx3-az,Arizona,Arizona,True
+us-centersquare-shakopee-mn,Minnesota,Minnesota,True
+us-cerebras-oklahoma-city-ok,Oklahoma,Oklahoma,True
+us-chirisa-volo-data-center-il,Illinois,Illinois,True
+us-cirrus-data-services-midvale-ut,Utah,Utah,True
+us-cobalt-cheyenne-las-vegas-nv,Nevada,Nevada,True
+us-cogent-650-poydras-new-orleans-la,Louisiana,Louisiana,True
+us-cogent-akron-summit-county-oh,Ohio,Ohio,True
+us-cogent-cheyenne-114-w-10th-wy,Wyoming,Wyoming,True
+us-colocrossing-buf1-buffalo-ny,New York,New York,True
+us-colocsx-jacksonville-fl,Florida,Florida,True
+us-cologix-cedar-falls-ia,Iowa,Iowa,True
+us-cologix-col3-columbus-oh,Ohio,Ohio,True
+us-cologix-des-moines-ia,Iowa,Iowa,True
+us-cologix-sv1-ca,California,California,True
+us-compass-goodyear-campus-az,Arizona,Arizona,True
+us-connect-data-centers-albuquerque-nm,New Mexico,New Mexico,True
+us-core-scientific-austin-tx,Texas,Texas,True
+us-coresite-ch2-chicago-il,Illinois,Illinois,True
+us-cspire-starkville-ms,Mississippi,Mississippi,True
+us-csquare-sfo1-ca,California,California,True
+us-csquare-sfo2-ca,California,California,True
+us-csquare-sfo3-ca,California,California,True
+us-csquare-sfo4-ca,California,California,True
+us-cyrusone-chi1-chi3-aurora-il,Illinois,Illinois,True
+us-cyrusone-cin2-cincinnati-oh,Ohio,Ohio,True
+us-cyrusone-cin6-florence-boone-ky,Kentucky,Kentucky,True
+us-cyrusone-nva1-nva2-nva3-sterling-va,Virginia,Virginia,True
+us-cyrusone-nva8-sterling-va,Virginia,Virginia,True
+us-cyrusone-nym1-somerset-nj,New Jersey,New Jersey,True
+us-cyrusone-nym2-totowa-nj,New Jersey,New Jersey,True
+us-cyrusone-pnw1-quincy-wa,Washington,Washington,True
+us-dartpoints-btr1-baton-rouge-la,Louisiana,Louisiana,True
+us-dartpoints-btr2-baton-rouge-la,Louisiana,Louisiana,True
+us-dartpoints-greenville-sc,South Carolina,South Carolina,True
+us-data-holdings-eau-claire-wi,Wisconsin,Wisconsin,True
+us-data-holdings-milwaukee-wi,Wisconsin,Wisconsin,True
+us-data-suites-murfreesboro-tn,Tennessee,Tennessee,True
+us-databank-bos1-boston-ma,Massachusetts,Massachusetts,True
+us-databank-brooklyn-park-mn,Minnesota,Minnesota,True
+us-databank-bwi1-baltimore-md,Maryland,Maryland,True
+us-databank-cleveland-cle1-oh,Ohio,Ohio,True
+us-databank-den2-centennial-co,Colorado,Colorado,True
+us-databank-den5-centennial-co,Colorado,Colorado,True
+us-databank-downtown-minneapolis-msp4-mn,Minnesota,Minnesota,True
+us-databank-east-twin-cities-eagan-mn,Minnesota,Minnesota,True
+us-databank-ewr2-piscataway-nj,New Jersey,New Jersey,True
+us-databank-las1-las-vegas-nv,Nevada,Nevada,True
+us-databank-lenexa-ks,Kansas,Kansas,True
+us-databank-lga3-orangeburg-ny,New York,New York,True
+us-databank-mem1-memphis-tn,Tennessee,Tennessee,True
+us-databank-mia1-miami-fl,Florida,Florida,True
+us-databank-ord3-mount-prospect-il,Illinois,Illinois,True
+us-databank-ord4-oak-brook-il,Illinois,Illinois,True
+us-databank-overland-park-ks,Kansas,Kansas,True
+us-databank-pit1-pittsburgh-pa,Pennsylvania,Pennsylvania,True
+us-databank-pit2-summit-park-pittsburgh-pa,Pennsylvania,Pennsylvania,True
+us-databank-san1-san-diego-ca,California,California,True
+us-databank-slc1-salt-lake-city-ut,Utah,Utah,True
+us-databank-sna1-irvine-ca,California,California,True
+us-databank-sna2-irvine-ca,California,California,True
+us-databank-west-twin-cities-edina-mn,Minnesota,Minnesota,True
+us-dc-blox-birmingham-al,Alabama,Alabama,True
+us-digital-fortress-pnj-piscataway-nj,New Jersey,New Jersey,True
+us-digital-fortress-ptl-portland-or,Oregon,Oregon,True
+us-digital-realty-acc3-va,Virginia,Virginia,True
+us-digital-realty-phx-tempe-az,Arizona,Arizona,True
+us-ebay-topaz-south-jordan-ut,Utah,Utah,True
+us-edgeconnex-chi02-il,Illinois,Illinois,True
+us-edgeconnex-den01-denver-co,Colorado,Colorado,True
+us-edgeconnex-edclas01-las-vegas-nv,Nevada,Nevada,True
+us-edgeconnex-west-valley-city-ut,Utah,Utah,True
+us-edgecore-mesa-az,Arizona,Arizona,True
+us-edged-atlanta-tilford-yard-ga,Georgia,Georgia,True
+us-edged-columbus-new-albany-oh,Ohio,Ohio,True
+us-edged-dallas-irving-tx,Texas,Texas,True
+us-edged-mesa-az,Arizona,Arizona,True
+us-element-critical-austin-one-tx,Texas,Texas,True
+us-element-critical-chicago-one-il,Illinois,Illinois,True
+us-element-critical-chicago-two-il,Illinois,Illinois,True
+us-equinix-ashburn-va,Virginia,Virginia,True
+us-evocative-bos1-somerville-ma,Massachusetts,Massachusetts,True
+us-evocative-ewr1-secaucus-nj,New Jersey,New Jersey,True
+us-expedient-baltimore-tide-point-md,Maryland,Maryland,True
+us-expedient-bwi1-owings-mills-md,Maryland,Maryland,True
+us-expedient-cmh1-upper-arlington-oh,Ohio,Ohio,True
+us-expedient-cmh2-dublin-oh,Ohio,Ohio,True
+us-expedient-cmh3-lewis-center-oh,Ohio,Ohio,True
+us-expedient-memphis-tn,Tennessee,Tennessee,True
+us-expedient-mke1-milwaukee-franklin-wi,Wisconsin,Wisconsin,True
+us-expedient-pit1-green-tree-pittsburgh-south-pa,Pennsylvania,Pennsylvania,True
+us-fiberstate-draper-ut,Utah,Utah,True
+us-flexential-atlanta-douglasville-1-ga,Georgia,Georgia,True
+us-flexential-charlotte-south-clt01-02-03-nc,North Carolina,North Carolina,True
+us-flexential-cottonwood-heights-ut,Utah,Utah,True
+us-flexential-dallas-plano-tx,Texas,Texas,True
+us-flexential-denver-englewood-co,Colorado,Colorado,True
+us-flexential-las-vegas-north-las04-nv,Nevada,Nevada,True
+us-flexential-minneapolis-chaska-msp01-mn,Minnesota,Minnesota,True
+us-flexential-nashville-cool-springs-tn,Tennessee,Tennessee,True
+us-flexential-nashville-franklin-tn,Tennessee,Tennessee,True
+us-flexential-phoenix-deer-valley-az,Arizona,Arizona,True
+us-flexential-portland-hillsboro-1-pdx01-or,Oregon,Oregon,True
+us-flexential-portland-hillsboro-2-or,Oregon,Oregon,True
+us-flexential-portland-hillsboro-3-or,Oregon,Oregon,True
+us-flexential-portland-hillsboro-4-pdx04-or,Oregon,Oregon,True
+us-flexential-portland-hillsboro-5-or,Oregon,Oregon,True
+us-flexential-salt-lake-city-downtown-ut,Utah,Utah,True
+us-galaxy-helios-dickens-tx,Texas,Texas,True
+us-google-the-dalles-or,Oregon,Oregon,True
+us-h5-buffalo-i-lockport-ny,New York,New York,True
+us-h5-buffalo-ii-lockport-ny,New York,New York,True
+us-h5-data-centers-chandler-az,Arizona,Arizona,True
+us-h5-denver-greenwood-village-co,Colorado,Colorado,True
+us-h5-la-vista-ne,Nebraska,Nebraska,True
+us-hines-hayward-exchange-92-ca,California,California,True
+us-honda-longmont-co,Colorado,Colorado,True
+us-ip-pathways-urbandale-ia,Iowa,Iowa,True
+us-iron-mountain-azs-1-az,Arizona,Arizona,True
+us-iron-mountain-den1-denver-co,Colorado,Colorado,True
+us-iron-mountain-miamisburg-oh,Ohio,Ohio,True
+us-iron-mountain-nje1-edison-nj,New Jersey,New Jersey,True
+us-iron-mountain-va-4-va,Virginia,Virginia,True
+us-iron-mountain-va-6-va,Virginia,Virginia,True
+us-ironmountain-bos1-northborough-ma,Massachusetts,Massachusetts,True
+us-jackson-technical-enguard-tulsa-ok,Oklahoma,Oklahoma,True
+us-lancium-crusoe-abilene-tx,Texas,Texas,True
+us-lightedge-chaska-mn,Minnesota,Minnesota,True
+us-lumen-ogden-ut,Utah,Utah,True
+us-lumen-salt-lake-city-ut,Utah,Utah,True
+us-lumen-sunnyvale-1-ca,California,California,True
+us-lunavi-cheyenne-wy,Wyoming,Wyoming,True
+us-markley-boston-summer-street-ma,Massachusetts,Massachusetts,True
+us-meta-altoona-ia,Iowa,Iowa,True
+us-meta-gallatin-tn,Tennessee,Tennessee,True
+us-meta-mesa-az,Arizona,Arizona,True
+us-meta-prineville-or,Oregon,Oregon,True
+us-meta-temple-tx,Texas,Texas,True
+us-mghpcc-holyoke-ma,Massachusetts,Massachusetts,True
+us-nautilus-stockton-1-ca,California,California,True
+us-nebius-vineland-nj,New Jersey,New Jersey,True
+us-newfold-digital-provo-ut,Utah,Utah,True
+us-njfx-wall-township-nj,New Jersey,New Jersey,True
+us-nova-innova-data-center-albuquerque-nm,New Mexico,New Mexico,True
+us-novva-colorado-springs-co,Colorado,Colorado,True
+us-novva-las-vegas-nicco-way-nv,Nevada,Nevada,True
+us-novva-west-jordan-ut,Utah,Utah,True
+us-ntt-ashburn-va1-data-center-va,Virginia,Virginia,True
+us-ntt-ashburn-va2-data-center-va,Virginia,Virginia,True
+us-ntt-ashburn-va5-data-center-va,Virginia,Virginia,True
+us-ntt-chicago-ch1-data-center-il,Illinois,Illinois,True
+us-ntt-chicago-ch2-data-center-il,Illinois,Illinois,True
+us-ntt-hillsboro-hi1-data-center-or,Oregon,Oregon,True
+us-ntt-phoenix-ph1-data-center-az,Arizona,Arizona,True
+us-ntt-sacramento-ca1-data-center-ca,California,California,True
+us-ntt-silicon-valley-sv1-data-center-ca,California,California,True
+us-oppidan-des-moines-ia,Iowa,Iowa,True
+us-oracle-hillsboro-or,Oregon,Oregon,True
+us-otava-metro-detroit-westland-mi,Michigan,Michigan,True
+us-pittock-block-portland-or,Oregon,Oregon,True
+us-prime-dfw01-01-tx,Texas,Texas,True
+us-prime-lax01-vernon-ca,California,California,True
+us-qts-ashburn-1-va,Virginia,Virginia,True
+us-qts-colorado-springs-co,Colorado,Colorado,True
+us-qts-east-windsor-nj,New Jersey,New Jersey,True
+us-qts-hillsboro-1-or,Oregon,Oregon,True
+us-qts-mia1-sweetwater-fl,Florida,Florida,True
+us-qts-piscataway-1-nj,New Jersey,New Jersey,True
+us-qts-sacramento-ca,California,California,True
+us-qts-santa-clara-1-ca,California,California,True
+us-radiusdc-miami-i-sweetwater-fl,Florida,Florida,True
+us-raeden-detroit-carrier-hotel-mi,Michigan,Michigan,True
+us-regence-salt-lake-city-ut,Utah,Utah,True
+us-ritter-communications-data-technology-center-jonesboro-ar,Arkansas,Arkansas,True
+us-rsa-dexter-avenue-montgomery-al,Alabama,Alabama,True
+us-sabey-intergate-manhattan-ny,New York,New York,True
+us-sabey-intergate-quincy-campus-wa,Washington,Washington,True
+us-scalematrix-san-diego-ca,California,California,True
+us-serverfarm-ch1-chicago-il,Illinois,Illinois,True
+us-serverfarm-lax1-el-segundo-ca,California,California,True
+us-serverfarm-titan-moses-lake-wa,Washington,Washington,True
+us-skybox-chicago-i-il,Illinois,Illinois,True
+us-skybox-houston-one-tx,Texas,Texas,True
+us-stack-chi01-il,Illinois,Illinois,True
+us-stack-dfw01-plano-tx,Texas,Texas,True
+us-stack-nal01-new-albany-oh,Ohio,Ohio,True
+us-stack-nva01a-va,Virginia,Virginia,True
+us-stack-por01-or,Oregon,Oregon,True
+us-stack-por02-or,Oregon,Oregon,True
+us-stack-por03-or,Oregon,Oregon,True
+us-stack-svy02-ca,California,California,True
+us-stream-chicago-i-orda-elk-grove-village-il,Illinois,Illinois,True
+us-stream-data-centers-dfwa-dfw-vii-tx,Texas,Texas,True
+us-switch-citadel-storey-county-nv,Nevada,Nevada,True
+us-switch-tahoe-reno-1-the-citadel-campus-nv,Nevada,Nevada,True
+us-t5-atlanta-i-ga,Georgia,Georgia,True
+us-t5-minneapolis-1001-third-avenue-mn,Minnesota,Minnesota,True
+us-t5-silicon-valley-newark-ca,California,California,True
+us-tierpoint-omaha-bellevue-ne,Nebraska,Nebraska,True
+us-unisys-salt-lake-city-ut,Utah,Utah,True
+us-us-signal-wi01-madison-wi,Wisconsin,Wisconsin,True
+us-us-signal-wi02-fitchburg-wi,Wisconsin,Wisconsin,True
+us-valorc3-oklahoma-city-ok,Oklahoma,Oklahoma,True
+us-valorc3-st-george-ut,Utah,Utah,True
+us-vantage-santa-clara-i-ca1-ca,California,California,True
+us-vantage-santa-clara-ii-ca2-ca,California,California,True
+us-vantage-santa-clara-iii-ca3-ca,California,California,True
+us-vantage-wa13-quincy-wa,Washington,Washington,True
+us-voonami-orem-ut,Utah,Utah,True
+us-whitefiber-nc1-madison-nc,North Carolina,North Carolina,True
+us-xai-colossus-memphis-tn,Tennessee,Tennessee,True

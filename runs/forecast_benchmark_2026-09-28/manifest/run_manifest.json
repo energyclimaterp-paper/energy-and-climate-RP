@@ -1,0 +1,47 @@
+{
+  "run": "forecast_benchmark_2026-09-28",
+  "created": "2026-09-28 03:27:31",
+  "wall_clock_min": 68.0,
+  "script": "dcfootprint\\experiments\\forecast_benchmark.py",
+  "dcfootprint_commit": "f5166835e04ee970e14f99e59c19fd3ec986fd76",
+  "core_repo_commit": "698a118b3cc20e39f6b7c3b1b941f0e1bbaa6806",
+  "core_repo_dirty": true,
+  "series_file": "D:\\3Gtech_paper - GNN\\diff\\gat-sarima-nexus\\work\\region_series_dump.json",
+  "series_sha256": "c717b7cd976d8b4c51e64e0404e662a2ddb1b5839c6b6c85bdbe8dc3c99e6718",
+  "notebook_file": "D:\\3Gtech_paper - GNN\\diff\\gat-sarima-nexus\\notebooks\\v2\\partB_gat_weighted_forecasting.ipynb",
+  "notebook_sha256": "4d0c20a2e2a36e18b7545b3170e60a16f092b95aca95913d087677bc0b34cd49",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "resources": [
+    "electricity",
+    "carbon"
+  ],
+  "horizon": 12,
+  "rolling_origins": [
+    "2022-12-01",
+    "2023-12-01",
+    "2024-12-01"
+  ],
+  "xlstm_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "xlstm_hparams": {
+    "lookback": 12,
+    "hidden": 64,
+    "layers": 2,
+    "dropout": 0.2,
+    "epochs": 100,
+    "lr": 0.001,
+    "batch": 16
+  },
+  "interval": "80% central; quantile models q0.1..q0.9; sigma=(q90-q10)/2.563 for CRPS",
+  "notes": [
+    "holdout = last 12 observations (positional), as in the earlier cached benchmark and the Kaggle Nexus run",
+    "USA|washington dc carbon has missing months: positional holdout spans more calendar months",
+    "xLSTM has no predictive distribution: PICP/CRPS are NaN for it by design",
+    "water not forecast: future water = Aqueduct scenarios (see docs/methodology.md)"
+  ]
+}

@@ -1,0 +1,195 @@
+facility_name|operator|operator_family|city|state|cea_grid_region|capacity_mw|capacity_basis|status|area_sqft|confidence|source_url|notes
+CtrlS Mumbai DC1/DC2 (Nine Zone)|CtrlS|CtrlS|Mumbai|Maharashtra|Western|40|combined|Operational||Med|https://www.ctrls.com/datacenters-in-india/|Combined DC1+DC2 disclosed
+CtrlS Mumbai DC3|CtrlS|CtrlS|Mumbai|Maharashtra|Western|10|operational_total|Operational||Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Mumbai DC4|CtrlS|CtrlS|Mumbai|Maharashtra|Western|36.8|operational_total|Operational|265000|High|https://baxtel.com/data-centers/ctrls-datacenters-ltd|2936 racks corroborated
+CtrlS Mumbai DC5|CtrlS|CtrlS|Mumbai|Maharashtra|Western|32|operational_total|Operational|228482|High|https://baxtel.com/data-centers/ctrls-datacenters-ltd|2750 racks corroborated
+CtrlS Navi Mumbai DC6/DC7|CtrlS|CtrlS|Navi Mumbai|Maharashtra|Western|95|planned|Under-construction||Med|https://www.ctrls.com/datacenters-in-india/|Combined planned
+CtrlS Hyderabad DC1|CtrlS|CtrlS|Hyderabad|Telangana|Southern|6|operational_total|Operational|191749|Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Hyderabad DC2|CtrlS|CtrlS|Hyderabad|Telangana|Southern|7.4|operational_total|Operational|82262|Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Hyderabad DC3|CtrlS|CtrlS|Hyderabad|Telangana|Southern|13|operational_total|Operational|130000|Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Chandan Valley Campus|CtrlS|CtrlS|Hyderabad|Telangana|Southern||planned|Announced|1612700|Low|https://www.datacenterdynamics.com/en/news/ctrls-to-build-40-acre-data-center-campus-near-hyderabad-india/|6 buildings planned
+CtrlS Chennai DC2|CtrlS|CtrlS|Chennai|Tamil Nadu|Southern||unknown|Operational|290000|Med|https://baxtel.com/data-centers/ctrls-datacenters-ltd|
+CtrlS Chennai DC Park|CtrlS|CtrlS|Chennai|Tamil Nadu|Southern||park|Operational|1000000|Med|https://baxtel.com/data-centers/ctrls-datacenters-ltd|Campus total sqft
+CtrlS Chennai DC3|CtrlS|CtrlS|Chennai|Tamil Nadu|Southern||unknown|Announced||Low|https://baxtel.com/data-centers/ctrls-datacenters-ltd|Single directory source
+CtrlS Noida DC1|CtrlS|CtrlS|Noida|Uttar Pradesh|Northern||unknown|Operational||Med|https://www.ctrls.com/datacenter-noida/|
+CtrlS Bangalore DC1|CtrlS|CtrlS|Bengaluru|Karnataka|Southern||unknown|Operational||Med|https://www.ctrls.com/datacenter-bangalore/|
+CtrlS Kolkata DC1|CtrlS|CtrlS|Kolkata|West Bengal|Eastern||unknown|Operational||Med|https://www.businessworld.in/article/ctrls-opens-kolkata-data-centre-567186|
+CtrlS Kolkata Campus|CtrlS|CtrlS|Kolkata|West Bengal|Eastern|60|planned|Announced||Med|https://www.datacenterdynamics.com/en/news/indias-ctrls-datacenters-to-build-data-center-campus-in-kolkata/|Rs2200cr
+CtrlS Patna Edge DC1|CtrlS|CtrlS|Patna|Bihar|Eastern|0.5|operational_total|Operational||Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Patna Edge DC2|CtrlS|CtrlS|Patna|Bihar|Eastern|11.6|operational_total|Operational||Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Lucknow Edge DC|CtrlS|CtrlS|Lucknow|Uttar Pradesh|Northern|0.2|operational_total|Operational||Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS Ahmedabad Edge DC|CtrlS|CtrlS|Ahmedabad|Gujarat|Western|9.2|operational_total|Operational||Med|https://www.ctrls.com/datacenters-in-india/|
+CtrlS GIFT City DC|CtrlS|CtrlS|Gandhinagar|Gujarat|Western||planned|Under-construction||Med|https://www.datacenterdynamics.com/en/news/ctrls-breaks-ground-on-data-center-in-gujarat-india-to-invest-30m-in-project/|$30M
+CtrlS Bhopal DC|CtrlS|CtrlS|Bhopal|Madhya Pradesh|Western||planned|Announced||Med|https://telecomtalk.info/ctrls-invest-rs500-crore-greenfield-datacentre-bhopal/993442/|Rs500cr
+CtrlS Guwahati DC|CtrlS|CtrlS|Guwahati|Assam|North-Eastern||planned|Under-construction||Med|https://www.datacenterdynamics.com/en/news/ctrls-breaks-ground-on-new-data-center-in-guwahati-assam/|
+CtrlS Bhubaneswar Edge|CtrlS|CtrlS|Bhubaneswar|Odisha|Eastern||unknown|Announced||Low|https://baxtel.com/data-centers/ctrls-datacenters-ltd|Single source
+CtrlS Kochi Edge|CtrlS|CtrlS|Kochi|Kerala|Southern||unknown|Announced||Low|https://baxtel.com/data-centers/ctrls-datacenters-ltd|Single source
+Yotta NM1|Yotta|Yotta|Navi Mumbai|Maharashtra|Western|52|operational_IT|Operational||High|https://yotta.com/|~7000 racks
+Yotta NM2|Yotta|Yotta|Navi Mumbai|Maharashtra|Western||planned|Under-construction||Med|https://colocation.yotta.com/data-center/|Core and shell ready
+Yotta D1 Shakti (Greater Noida)|Yotta|Yotta|Greater Noida|Uttar Pradesh|Northern|30|operational_total|Operational|300000|High|https://www.datacenterdynamics.com/en/news/yotta-launches-data-center-in-noida-india/|5000 racks
+Yotta G1 (GIFT City)|Yotta|Yotta|Gandhinagar|Gujarat|Western|2|operational_total|Operational|21000|High|https://colocation.yotta.com/data-center/|350 racks
+Yotta Chennai DC Park|Yotta|Yotta|Chennai|Tamil Nadu|Southern|140|planned|Under-construction||Med|https://colocation.yotta.com/data-center/|25000 racks planned
+Sify Mumbai 01 (Vashi)|Sify|Sify|Navi Mumbai|Maharashtra|Western||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|
+Sify Mumbai 02 (Airoli)|Sify|Sify|Navi Mumbai|Maharashtra|Western||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|1345 racks
+Sify Rabale DC Park (Mumbai 03)|Sify|Sify|Navi Mumbai|Maharashtra|Western|85|operational_IT|Operational||High|https://www.sifytechnologies.com/data-center/rabale-data-center/|5 towers live; low end of 85-97 range; scaling to 185+
+Sify Noida 01|Sify|Sify|Noida|Uttar Pradesh|Northern||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|2100 racks
+Sify Noida 02 Campus|Sify|Sify|Noida|Uttar Pradesh|Northern|25.92|operational_IT|Operational||High|https://www.sifytechnologies.com/data-center/noida02-data-center/|Campus target 78MW
+Sify Bangalore 01|Sify|Sify|Bengaluru|Karnataka|Southern||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|600+ racks
+Sify Bangalore 02|Sify|Sify|Bengaluru|Karnataka|Southern||planned|Announced||Low|https://baxtel.com/data-centers/sify-technologies|
+Sify Hyderabad 1|Sify|Sify|Hyderabad|Telangana|Southern||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|2400 racks
+Sify Hyderabad 2 Campus|Sify|Sify|Hyderabad|Telangana|Southern|250|planned|Announced||Low|https://baxtel.com/data-centers/sify-technologies|
+Sify Chennai 01|Sify|Sify|Chennai|Tamil Nadu|Southern||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|800+ racks
+Sify Chennai Campus (Siruseri)|Sify|Sify|Chennai|Tamil Nadu|Southern||unknown|Operational||Med|https://www.deccanherald.com/india/tamil-nadu/m-k-stalin-inaugurates-rs-1882-cr-sify-data-center-campus-3497854|Rs1882cr; may overlap directory Chennai 02
+Sify Kolkata|Sify|Sify|Kolkata|West Bengal|Eastern||unknown|Operational||Med|https://baxtel.com/data-centers/sify-technologies|400+ racks
+Sify Visakhapatnam Campus|Sify|Sify|Visakhapatnam|Andhra Pradesh|Southern||unknown|Under-construction||Low|https://baxtel.com/data-centers/sify-technologies|
+Sify Chandigarh|Sify|Sify|Chandigarh|Chandigarh|Northern||unknown|Announced||Low|https://baxtel.com/data-centers/sify-technologies|
+Sify Lucknow|Sify|Sify|Lucknow|Uttar Pradesh|Northern||unknown|Announced||Low|https://baxtel.com/data-centers/sify-technologies|
+Sify Nagpur|Sify|Sify|Nagpur|Maharashtra|Western||unknown|Announced||Low|https://baxtel.com/data-centers/sify-technologies|
+Iron Mountain MUM-1 (Rabale)|Iron Mountain|Web Werks / Iron Mountain JV|Navi Mumbai|Maharashtra|Western|2.3|operational_total|Operational|50000|High|https://www.ironmountain.com/data-centers/locations/mumbai-data-center|ex-Web Werks
+Iron Mountain MUM-2 (Rabale)|Iron Mountain|Web Werks / Iron Mountain JV|Navi Mumbai|Maharashtra|Western|6.3|operational_IT|Operational|110631|High|https://www.ironmountain.com/data-centers/locations/mumbai-data-center|ex-Web Werks
+Iron Mountain MUM-3|Iron Mountain|Web Werks / Iron Mountain JV|Navi Mumbai|Maharashtra|Western|85|planned|Under-construction||High|https://www.ironmountain.com/data-centers/locations/mumbai-data-center|Target 2027-28
+Iron Mountain BLR-1|Iron Mountain|Web Werks / Iron Mountain JV|Bengaluru|Karnataka|Southern|4|operational_total|Operational||Med|https://baxtel.com/data-centers/web-werks|ex-Web Werks
+Iron Mountain HYD-1|Iron Mountain|Web Werks / Iron Mountain JV|Hyderabad|Telangana|Southern|5.6|operational_total|Operational||Med|https://baxtel.com/data-centers/web-werks|ex-Web Werks
+Iron Mountain NCR-1 (Noida)|Iron Mountain|Web Werks / Iron Mountain JV|Noida|Uttar Pradesh|Northern|12|operational_total|Operational|69735|High|https://www.ironmountain.com/data-centers/locations/delhi-ncr-data-center|
+Iron Mountain NCR-2 (Noida)|Iron Mountain|Web Werks / Iron Mountain JV|Noida|Uttar Pradesh|Northern|2.8|operational_total|Operational|103333|High|https://www.ironmountain.com/data-centers/locations/delhi-ncr-data-center|
+Iron Mountain PUN-1 (Hinjewadi)|Iron Mountain|Web Werks / Iron Mountain JV|Pune|Maharashtra|Western|2|operational_total|Operational|38000|High|https://www.ironmountain.com/data-centers/locations/apac/pune-data-center|
+Iron Mountain CHN-1|Iron Mountain|Web Werks / Iron Mountain JV|Chennai|Tamil Nadu|Southern|23.2|planned|Under-construction||High|https://www.ironmountain.com/data-centers/locations/apac|Target 2026
+Iron Mountain CHN-2|Iron Mountain|Web Werks / Iron Mountain JV|Chennai|Tamil Nadu|Southern|19|planned|Announced||High|https://www.ironmountain.com/data-centers/locations/apac|Target 2028
+ESDS Nashik DC|ESDS|ESDS|Nashik|Maharashtra|Western||unknown|Operational||Med|https://www.esds.co.in/our-datacenter|
+ESDS Airoli DC|ESDS|ESDS|Navi Mumbai|Maharashtra|Western||unknown|Operational||Med|https://www.esds.co.in/our-datacenter|
+ESDS STPI Bengaluru|ESDS|ESDS|Bengaluru|Karnataka|Southern||unknown|Operational||Med|https://www.esds.co.in/our-datacenter|At govt STPI premises
+ESDS STPI Mohali|ESDS|ESDS|Mohali|Punjab|Northern||unknown|Operational||Med|https://www.esds.co.in/our-datacenter|At govt STPI premises
+ESDS STPI Noida|ESDS|ESDS|Noida|Uttar Pradesh|Northern||unknown|Operational||Med|https://www.esds.co.in/our-datacenter|At govt STPI premises
+ESDS STPI Kolkata|ESDS|ESDS|Kolkata|West Bengal|Eastern||unknown|Announced||Med|https://www.esds.co.in/our-datacenter|
+ESDS CEL Ghaziabad|ESDS|ESDS|Ghaziabad|Uttar Pradesh|Northern||unknown|Announced||Med|https://www.esds.co.in/our-datacenter|
+Pi Vijayawada/Amaravati Campus|Pi Datacenters|Pi Datacenters|Mangalagiri|Andhra Pradesh|Southern|60|operational_IT|Operational|500000|Med|https://pidatacenters.com/about-pi|Scalable to 120MW; low end of 60-70
+Pi Mumbai|Pi Datacenters|Pi Datacenters|Mumbai|Maharashtra|Western|23|planned|Under-construction||Med|https://baxtel.com/news/pi-data-centers-plans-23mw-mumbai-facility|Phase1 3MW
+Pi Kochi|Pi Datacenters|Pi Datacenters|Kochi|Kerala|Southern||unknown|Operational||Med|https://www.datacenters.com/pi-kochi|
+Pi Hyderabad (Gachibowli)|Pi Datacenters|Pi Datacenters|Hyderabad|Telangana|Southern||unknown|Uncertain||Low|https://datacenterhawk.com/marketplace/providers/pi-data-centers|Possibly office not DC
+NxtGen HDDC (Bidadi)|NxtGen|NxtGen|Bengaluru Rural|Karnataka|Southern|20|operational_total|Operational||Med|https://www.datacentermap.com/india/bangalore/nxtgen-hddc/|
+NxtGen Infinite Bengaluru|NxtGen|NxtGen|Bengaluru|Karnataka|Southern||unknown|Operational||Med|https://baxtel.com/data-center/nxtgen-infinite-bengaluru|May share campus with HDDC
+NxtGen Infinite Whitefield|NxtGen|NxtGen|Bengaluru|Karnataka|Southern||unknown|Operational||Med|https://baxtel.com/data-center/nxtgen-infinite-bengaluru-whitefield|
+NxtGen Ahmedabad|NxtGen|NxtGen|Ahmedabad|Gujarat|Western||unknown|Uncertain||Low|https://www.datacenterdynamics.com/en/news/nxtgen-raising-100-million/|Dated 2022 source
+NxtGen Faridabad|NxtGen|NxtGen|Faridabad|Haryana|Northern||unknown|Uncertain||Low|https://www.datacenterdynamics.com/en/news/nxtgen-raising-100-million/|Dated 2022 source
+NxtGen Mumbai|NxtGen|NxtGen|Mumbai|Maharashtra|Western||unknown|Uncertain||Low|https://www.datacenterdynamics.com/en/news/nxtgen-raising-100-million/|Dated 2022 source
+Nxtra Chandivali (MUM1)|Nxtra by Airtel|Nxtra by Airtel|Mumbai|Maharashtra|Western|4|operational_IT|Operational||High|https://www.nxtra.in/data-center-mumbai|
+Nxtra Airoli (MUM2)|Nxtra by Airtel|Nxtra by Airtel|Navi Mumbai|Maharashtra|Western|7|operational_IT|Operational||High|https://www.nxtra.in/data-center-mumbai|
+Nxtra Mahape 1 (MUM3)|Nxtra by Airtel|Nxtra by Airtel|Navi Mumbai|Maharashtra|Western|18|operational_IT|Operational||High|https://www.nxtra.in/data-center-mumbai|
+Nxtra Mahape 2 (MUM4)|Nxtra by Airtel|Nxtra by Airtel|Navi Mumbai|Maharashtra|Western|42|operational_IT|Operational||High|https://www.nxtra.in/data-center-mumbai|
+Nxtra Kharadi (PUN1)|Nxtra by Airtel|Nxtra by Airtel|Pune|Maharashtra|Western|4.5|operational_IT|Operational||High|https://www.nxtra.in/data-center-pune|
+Nxtra Hinjewadi 1 (PUN2)|Nxtra by Airtel|Nxtra by Airtel|Pune|Maharashtra|Western|17|operational_IT|Operational||High|https://www.nxtra.in/data-center-pune|
+Nxtra Hinjewadi 2 (PUN3)|Nxtra by Airtel|Nxtra by Airtel|Pune|Maharashtra|Western|4|operational_IT|Operational||High|https://www.nxtra.in/data-center-pune|
+Nxtra Hinjewadi 3 (PUN4)|Nxtra by Airtel|Nxtra by Airtel|Pune|Maharashtra|Western|24|operational_IT|Operational||High|https://www.nxtra.in/data-center-pune|
+Nxtra Whitefield (BLR1)|Nxtra by Airtel|Nxtra by Airtel|Bengaluru|Karnataka|Southern|5.4|operational_IT|Operational||High|https://www.nxtra.in/data-center-bangalore|
+Nxtra Hoskote 1 (BLR2)|Nxtra by Airtel|Nxtra by Airtel|Bengaluru|Karnataka|Southern|14|operational_IT|Operational||High|https://www.nxtra.in/data-center-bangalore|
+Nxtra Hoskote 2 (BLR3)|Nxtra by Airtel|Nxtra by Airtel|Bengaluru|Karnataka|Southern|6|operational_IT|Operational||High|https://www.nxtra.in/data-center-bangalore|
+Nxtra Bangalore DC2|Nxtra by Airtel|Nxtra by Airtel|Bengaluru|Karnataka|Southern|20|operational_IT|Operational||High|https://www.nxtra.in/data-center-bangalore|
+Nxtra Santhome (CHE1)|Nxtra by Airtel|Nxtra by Airtel|Chennai|Tamil Nadu|Southern|2|operational_IT|Operational||High|https://www.nxtra.in/data-center-chennai|
+Nxtra Siruseri 1 (CHE2)|Nxtra by Airtel|Nxtra by Airtel|Chennai|Tamil Nadu|Southern|4|operational_IT|Operational||High|https://www.nxtra.in/data-center-chennai|
+Nxtra Siruseri 2 (CHE3)|Nxtra by Airtel|Nxtra by Airtel|Chennai|Tamil Nadu|Southern|16|operational_IT|Operational||High|https://www.nxtra.in/data-center-chennai|
+Nxtra Siruseri DC3|Nxtra by Airtel|Nxtra by Airtel|Chennai|Tamil Nadu|Southern|27|operational_IT|Operational||High|https://www.nxtra.in/data-center-chennai|
+Nxtra Noida Sec-62 (NCR1)|Nxtra by Airtel|Nxtra by Airtel|Noida|Uttar Pradesh|Northern|4.5|operational_IT|Operational||High|https://www.nxtra.in/data-center-noida|
+Nxtra Noida Sec-81 (NCR2)|Nxtra by Airtel|Nxtra by Airtel|Noida|Uttar Pradesh|Northern|3.5|operational_IT|Operational||High|https://www.nxtra.in/data-center-noida|
+Nxtra NCR Hyperscale (NCR4)|Nxtra by Airtel|Nxtra by Airtel|Noida|Uttar Pradesh|Northern|18|operational_IT|Operational||High|https://www.nxtra.in/data-center-noida|
+Nxtra Manesar (NCR3)|Nxtra by Airtel|Nxtra by Airtel|Manesar|Haryana|Northern|12.5|estimate|Operational||Low|https://www.datacentermap.com/india/gurgaon/nxtra-manesar-i/|Third-party estimate
+Nxtra Kolkata (KOL1)|Nxtra by Airtel|Nxtra by Airtel|Kolkata|West Bengal|Eastern|10|operational_IT|Operational||High|https://www.nxtra.in/data-center-kolkata-bhubaneshwar|
+Nxtra Bhubaneshwar (BBR1)|Nxtra by Airtel|Nxtra by Airtel|Bhubaneswar|Odisha|Eastern|1.8|operational_IT|Operational||High|https://www.nxtra.in/data-center-kolkata-bhubaneshwar|
+Nxtra Kokapet (HYD1)|Nxtra by Airtel|Nxtra by Airtel|Hyderabad|Telangana|Southern|10|operational_IT|Operational||High|https://www.nxtra.in/data-center-hyderabad|
+Nxtra Hyderabad new campus|Nxtra by Airtel|Nxtra by Airtel|Hyderabad|Telangana|Southern|200|planned|Under-construction||Med|https://www.datacenterdynamics.com/en/news/airtels-nxtra-plans-200mw-hyderabad-data-centers/|40-acre
+Nxtra Edge network (66 cities)|Nxtra by Airtel|Nxtra by Airtel|Multiple|Multiple|Multiple||edge|Operational||Med|https://www.nxtra.in/|120+ locations; not MW-rated
+AdaniConneX Chennai 1 (MAA)|AdaniConneX|AdaniConneX|Chennai|Tamil Nadu|Southern|33|operational_IT|Operational||High|https://www.adaniconnex.com/data-centers|Phase1 live Oct2022
+AdaniConneX Hyderabad Campus|AdaniConneX|AdaniConneX|Hyderabad|Telangana|Southern|600|planned|Under-construction||Med|https://www.adaniconnex.com/data-centers|Ph1 live Oct2024
+AdaniConneX Noida Campus|AdaniConneX|AdaniConneX|Noida|Uttar Pradesh|Northern|150|planned|Under-construction||Med|https://www.adaniconnex.com/data-centers|Ph1 live Jan2025
+AdaniConneX Navi Mumbai Campus|AdaniConneX|AdaniConneX|Navi Mumbai|Maharashtra|Western|1000|planned|Announced||Med|https://www.adaniconnex.com/data-centers|
+AdaniConneX Pune Campus|AdaniConneX|AdaniConneX|Pune|Maharashtra|Western|250|planned|Announced||Med|https://www.adaniconnex.com/data-centers|
+AdaniConneX/Google Vizag AI Campus|AdaniConneX + Google|AdaniConneX|Visakhapatnam|Andhra Pradesh|Southern|1000|planned|Under-construction||Med|https://www.adani.com/newsroom/media-releases/adani-and-google-partner|Google $15B; also under Google brand
+Reliance Jamnagar AI DC|Reliance / Jio|Reliance / Jio|Jamnagar|Gujarat|Western|120|planned|Under-construction||Med|https://about.fb.com/news/2026/06/meta-partners-with-reliance-on-ai-enabled-data-center-in-india/|+168MW Meta lease; up to 3GW plan
+Digital Connexion MAA10 (Chennai)|Digital Connexion|Digital Realty / Brookfield / Jio JV|Chennai|Tamil Nadu|Southern|20|operational_IT|Operational|196000|High|https://www.digitalconnexion.com/datacenter/|100MW campus; JV also under Digital Realty
+Digital Connexion BOM10 (Mumbai)|Digital Connexion|Digital Realty / Brookfield / Jio JV|Mumbai|Maharashtra|Western|40|planned|Under-construction||High|https://digitalconnexion.com/india/mumbai|
+Digital Connexion Vizag|Digital Connexion|Digital Realty / Brookfield / Jio JV|Visakhapatnam|Andhra Pradesh|Southern|1000|planned|Announced||Med|https://www.thenewsminute.com/news/reliance-brookfield-joint-venture-vizag|Separate from Adani-Google Vizag
+TCS HyperVault AI DC|TCS HyperVault|Tata (TCS)|Undisclosed|Undisclosed|Undisclosed|1000|planned|Announced||Med|https://www.datacenterdynamics.com/en/news/indias-tata-launches-business-entity-for-1gw-data-center-build-out/|OpenAI partner; site TBD
+STT Mumbai 1 (Prabhadevi)|STT GDC India|STT GDC India|Mumbai|Maharashtra|Western|4|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Mumbai 2 (Andheri)|STT GDC India|STT GDC India|Mumbai|Maharashtra|Western|1|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Mumbai 3 (BKC)|STT GDC India|STT GDC India|Mumbai|Maharashtra|Western|9|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Navi Mumbai 1 (Mahape)|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|28|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Navi Mumbai 2|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|49|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Navi Mumbai 3|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|42|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Navi Mumbai 4|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|36|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Palava 1|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|50|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|370-acre park
+STT Palava 4|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|60.5|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Palava 5|STT GDC India|STT GDC India|Navi Mumbai|Maharashtra|Western|60.5|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/mumbai|
+STT Chennai 1 (VSB)|STT GDC India|STT GDC India|Chennai|Tamil Nadu|Southern|3|operational_IT|Operational|80000|High|https://www.sttgdc.com/in-en/locations/chennai|
+STT Chennai 2 (Ambattur)|STT GDC India|STT GDC India|Chennai|Tamil Nadu|Southern|26|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/chennai|
+STT Chennai 3 (Ambattur)|STT GDC India|STT GDC India|Chennai|Tamil Nadu|Southern|15|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/chennai|
+STT Chennai 4 (Ambattur)|STT GDC India|STT GDC India|Chennai|Tamil Nadu|Southern|17|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/chennai|
+STT Chennai 7 (Siruseri)|STT GDC India|STT GDC India|Chennai|Tamil Nadu|Southern|7.2|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/chennai|
+STT Bengaluru 1 (Sanjay Nagar)|STT GDC India|STT GDC India|Bengaluru|Karnataka|Southern|0.6|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/bengaluru|
+STT Bengaluru 2 (KIADB)|STT GDC India|STT GDC India|Bengaluru|Karnataka|Southern|4|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/bengaluru|
+STT Bengaluru 3 (Whitefield)|STT GDC India|STT GDC India|Bengaluru|Karnataka|Southern|18|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/bengaluru|
+STT Noida 1|STT GDC India|STT GDC India|Noida|Uttar Pradesh|Northern|17|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/noida|
+STT Noida 2|STT GDC India|STT GDC India|Noida|Uttar Pradesh|Northern|22|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/noida|
+STT Noida 3|STT GDC India|STT GDC India|Noida|Uttar Pradesh|Northern|28|planned|Under-construction||High|https://www.sttgdc.com/in-en/locations/noida|
+STT Delhi 1|STT GDC India|STT GDC India|Delhi|Delhi|Northern|0.9|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/delhi|
+STT Delhi 2 (GK1)|STT GDC India|STT GDC India|Delhi|Delhi|Northern|1|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/delhi|
+STT Delhi 3 (GK)|STT GDC India|STT GDC India|Delhi|Delhi|Northern|10.1|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/delhi|
+STT Pune 1 (Dighi)|STT GDC India|STT GDC India|Pune|Maharashtra|Western|9|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/pune|
+STT Pune 2|STT GDC India|STT GDC India|Pune|Maharashtra|Western|15|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/pune|
+STT Pune 3|STT GDC India|STT GDC India|Pune|Maharashtra|Western|15|operational_IT|Operational||High|https://www.sttgdc.com/in-en/locations/pune|
+STT Pune 4|STT GDC India|STT GDC India|Pune|Maharashtra|Western|18|planned|Under-construction||Med|https://www.sttgdc.com/in-en/locations/pune|
+STT Pune 5|STT GDC India|STT GDC India|Pune|Maharashtra|Western|24|planned|Under-construction||Med|https://www.sttgdc.com/in-en/locations/pune|
+STT Hyderabad 1 (HITEC)|STT GDC India|STT GDC India|Hyderabad|Telangana|Southern|4|operational_IT|Operational|270000|High|https://www.sttgdc.com/in-en/locations/hyderabad|
+STT Kolkata 1 (Ultadanga)|STT GDC India|STT GDC India|Kolkata|West Bengal|Eastern|3|operational_IT|Operational|20000|High|https://www.sttgdc.com/in-en/locations/kolkata|
+STT Kolkata 2 (New Town)|STT GDC India|STT GDC India|Kolkata|West Bengal|Eastern|6|operational_IT|Operational|243000|High|https://www.sttgdc.com/in-en/locations/kolkata|
+STT Ahmedabad 1 (GIFT City)|STT GDC India|STT GDC India|Gandhinagar|Gujarat|Western|3|operational_IT|Operational|70000|High|https://www.sttgdc.com/in-en/locations/ahmedabad|
+STT Jaipur Edge|STT GDC India|STT GDC India|Jaipur|Rajasthan|Northern|6|planned|Under-construction|165000|High|https://www.datacenterdynamics.com/en/news/stt-gdc-india-breaks-ground-on-edge-facility-in-jaipur-india/|First STT edge
+NTT Mumbai 5 (Chandivali)|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western|12.5|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Mumbai 6 (Andheri)|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western|19.2|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Mumbai 7 (Andheri)|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western|25.6|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Mumbai Vikhroli|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western|2.4|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Mumbai Vikhroli IV|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western|3|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Mumbai BSE|NTT GDC India|NTT Global Data Centers|Mumbai|Maharashtra|Western||unknown|Operational||Med|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Navi Mumbai NAV1 (Mahape)|NTT GDC India|NTT Global Data Centers|Navi Mumbai|Maharashtra|Western|30|operational_IT|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india/navi-mumbai-data-center|
+NTT NAV2 (new campus)|NTT GDC India|NTT Global Data Centers|Navi Mumbai|Maharashtra|Western|336|planned|Announced||Med|https://www.datacenterdynamics.com/en/news/ntt-announces-500mw-nav2-data-center-in-navi-mumbai-india/|500MW power/336 IT
+NTT Bengaluru 2 (Electronic City)|NTT GDC India|NTT Global Data Centers|Bengaluru|Karnataka|Southern|4.5|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Bengaluru 3 (Bidrahalli)|NTT GDC India|NTT Global Data Centers|Bengaluru|Karnataka|Southern|12|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Bengaluru 4 Campus|NTT GDC India|NTT Global Data Centers|Bengaluru|Karnataka|Southern|67.2|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|Campus total
+NTT Chennai 1 (Velappanchavadi)|NTT GDC India|NTT Global Data Centers|Chennai|Tamil Nadu|Southern||unknown|Operational||Med|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Chennai 2 (Ambattur)|NTT GDC India|NTT Global Data Centers|Chennai|Tamil Nadu|Southern|17.4|operational_IT|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|Per building
+NTT Noida 1|NTT GDC India|NTT Global Data Centers|Noida|Uttar Pradesh|Northern|1.5|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Noida 2 (Tech Zone IV)|NTT GDC India|NTT Global Data Centers|Noida|Uttar Pradesh|Northern|52.8|planned|Under-construction||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|
+NTT Kolkata 1|NTT GDC India|NTT Global Data Centers|Kolkata|West Bengal|Eastern|25|operational_critical|Operational||High|https://services.global.ntt/en-us/services-and-products/global-data-centers/global-locations/india|25+ MW
+Equinix MB1|Equinix|Equinix|Mumbai|Maharashtra|Western||unknown|Operational|18352|High|https://www.equinix.com/data-centers/asia-pacific-colocation/india-colocation/mumbai-data-centers/mb1|Cabinets only disclosed
+Equinix MB2|Equinix|Equinix|Mumbai|Maharashtra|Western||unknown|Operational|32529|High|https://www.equinix.com/data-centers/asia-pacific-colocation/india-colocation/mumbai-data-centers/mb2|
+Equinix MB3 (Chandivali)|Equinix|Equinix|Mumbai|Maharashtra|Western||unknown|Operational||High|https://www.equinix.com/data-centers/asia-pacific-colocation/india-colocation/mumbai-data-centers/mb3|5475+ cabinets
+Equinix MB4|Equinix|Equinix|Mumbai|Maharashtra|Western||unknown|Operational||High|https://newsroom.equinix.com/2026-04-08-Equinix-Launches-Purpose-Built-IBX-Data-Center-in-Mumbai|Launched Apr2026
+Colt Mumbai 1 (Dighe)|Colt DCS|Colt DCS|Navi Mumbai|Maharashtra|Western|22|combined|Operational||High|https://www.coltdatacentres.net/en-GB/our-locations/data-centre-locations-asia/mumbai|22MW combined M1+M2; campus planned 120-134MW
+Colt Mumbai 2 (Dighe)|Colt DCS|Colt DCS|Navi Mumbai|Maharashtra|Western||operational_IT|Operational||High|https://www.coltdatacentres.net/en-GB/our-locations/data-centre-locations-asia/mumbai|Counted in Mumbai1 combined
+Colt Chennai (Ambattur)|Colt DCS|Colt DCS|Chennai|Tamil Nadu|Southern|96|planned|Under-construction||High|https://www.coltdatacentres.net/en-GB/our-locations/data-centre-locations-asia/chennai|Land acquired Mar2024
+PDG MU1|Princeton Digital Group|Princeton Digital Group|Mumbai|Maharashtra|Western|48|operational_IT|Operational||High|https://princetondg.com/newsroom/|Expanding to 150MW
+PDG MU2|Princeton Digital Group|Princeton Digital Group|Navi Mumbai|Maharashtra|Western|120|planned|Under-construction||High|https://w.media/pdg-breaks-ground-on-mu2-dc-campus-in-mumbai/|Groundbreaking Apr2026
+PDG CH1|Princeton Digital Group|Princeton Digital Group|Chennai|Tamil Nadu|Southern|72|planned|Announced||High|https://www.datacenterdynamics.com/en/news/pdg-announces-1bn-india-expansion-in-mumbai-and-chennai/|
+AWS Mumbai (ap-south-1)|AWS|AWS (hyperscale cloud region)|Mumbai|Maharashtra|Western||region|Operational||High|https://www.aboutamazon.in/news/aws/aws-invests-8-billion-in-maharashtra|3 AZs; region-level not single facility
+AWS Hyderabad (ap-south-2)|AWS|AWS (hyperscale cloud region)|Hyderabad|Telangana|Southern||region|Operational||High|https://www.aboutamazon.in/news/aws/aws-data-centre-hyderabad|3 AZs; $21B 2026-30
+Azure Central India|Microsoft Azure|Azure (hyperscale cloud region)|Pune|Maharashtra|Western||region|Operational||High|https://news.microsoft.com/source/asia/features/microsofts-newest-india-datacenter-region-goes-live/|
+Azure South India|Microsoft Azure|Azure (hyperscale cloud region)|Chennai|Tamil Nadu|Southern||region|Operational||High|https://news.microsoft.com/source/asia/features/microsofts-newest-india-datacenter-region-goes-live/|
+Azure West India|Microsoft Azure|Azure (hyperscale cloud region)|Mumbai|Maharashtra|Western||region|Operational||High|https://news.microsoft.com/source/asia/features/microsofts-newest-india-datacenter-region-goes-live/|
+Azure India South Central|Microsoft Azure|Azure (hyperscale cloud region)|Hyderabad|Telangana|Southern||region|Operational||High|https://news.microsoft.com/source/asia/features/microsofts-newest-india-datacenter-region-goes-live/|Opened Aug2026; 110 acres
+Google Cloud asia-south1|Google Cloud|Google Cloud (hyperscale region)|Mumbai|Maharashtra|Western||region|Operational||High|https://cloud.google.com/blog/products/gcp/gcp-arrives-in-india-with-launch-of-mumbai-region|
+Google Cloud asia-south2|Google Cloud|Google Cloud (hyperscale region)|Delhi NCR|Delhi|Northern||region|Operational||High|https://cloud.google.com/blog/products/infrastructure/google-cloud-region-in-delhi-ncr-is-now-open|3 zones
+Oracle OCI India West|Oracle Cloud|Oracle (hyperscale cloud region)|Mumbai|Maharashtra|Western||region|Operational||Med|https://www.oracle.com/in/cloud/public-cloud-regions/|
+Oracle OCI India South|Oracle Cloud|Oracle (hyperscale cloud region)|Hyderabad|Telangana|Southern||region|Operational||High|https://www.oracle.com/in/corporate/pressrelease/oracle-opens-second-cloud-region-2020-06-29.html|
+CapitaLand Chennai DC (Ambattur)|CapitaLand/Ascendas|CapitaLand/Ascendas|Chennai|Tamil Nadu|Southern|55|planned|Under-construction|420000|High|https://www.datacenterdynamics.com/en/news/capitaland-planning-55mw-data-center-in-chennai-india/|
+CapitaLand Mumbai (3-DC stake)|CapitaLand/Ascendas|CapitaLand/Ascendas|Mumbai|Maharashtra|Western||unknown|Operational||Med|https://www.capitaland.com/|20.2% stake in 3 DCs
+Bridge Data Centres BBY01|Bridge Data Centres|Bridge Data Centres|Navi Mumbai|Maharashtra|Western|20|planned|Under-construction||Med|https://www.datacentermap.com/india/navi-mumbai/bdc-bby01/|Bain Capital
+Lumina CloudInfra Airoli|Lumina CloudInfra|Lumina CloudInfra (AirTrunk)|Navi Mumbai|Maharashtra|Western|60|planned|Under-construction||High|https://www.datacenterdynamics.com/en/news/blackstone-backed-lumina-cloudinfra-breaks-ground-on-60mw-data-center-campus-in-navi-mumbai-india/|
+RackBank Indore DC|RackBank|RackBank|Indore|Madhya Pradesh|Western|80|planned|Under-construction||High|https://www.datacenterdynamics.com/en/news/rackbank-announces-80mw-madya-pradesh-data-center-in-india/|4x20MW phases
+L&T Cloudfiniti (Mumbai/Chennai)|L&T Cloudfiniti|Larsen & Toubro|Mumbai|Maharashtra|Western|30|operational_total|Operational||High|https://india.entrepreneur.com/technology/lt-cloudfiniti-aims-to-scale-up-data-center-capacity-to-90/490311|30MW now to 90MW by end-2026
+Anant Raj Cloud (Panchkula)|Anant Raj|Anant Raj|Panchkula|Haryana|Northern|50|operational_total|Operational||High|https://apacnewsnetwork.com/2025/07/anant-raj-adds-7-mw-data-center-in-panchkula/|Target 310MW by 2032
+Blackstone-Panchshil Campus|Blackstone/Panchshil|Blackstone/Panchshil|Navi Mumbai|Maharashtra|Western|500|planned|Announced||High|https://www.datacenterdynamics.com/en/news/blackstone-and-panchshil-realty-to-build-indias-largest-ai-data-center-campus/|
+Cyfuture Noida DC|Cyfuture|Cyfuture|Noida|Uttar Pradesh|Northern|3|operational_total|Operational||Med|https://www.datacentermap.com/india/noida/cyfuture/|Also Jaipur, Raipur
+Mapletree Mumbai (rumored)|Mapletree|Mapletree|Mumbai|Maharashtra|Western|400|planned|Announced||Low|https://thetechcapital.com/mapletree-weighs-india-data-centre-entry-with-400mw-in-mumbai/|Unconfirmed by Mapletree
+EverYondr (Yondr+Everstone)|EverYondr|Yondr/Everstone JV|Mumbai|Maharashtra|Western|60|planned|Under-construction||Med|https://www.datacenterdynamics.com/en/news/yondr-forms-1-billion-joint-venture-with-everstone/|2021 baseline
+Lodha Green DC Park (Palava)|Lodha (landlord)|Lodha Developers|Palava|Maharashtra|Western|2500|park|Announced||High|https://www.lodhagroup.com/news/lodha-developers-to-invest-rs-1-3-lakh-crore-for-data-centre-park-mumbai|Landlord not operator; avoid double-count tenants
+Digital Edge Navi Mumbai BOM1|Digital Edge|Digital Edge DC|Navi Mumbai|Maharashtra|Western|300|planned|Under-construction||High|https://www.datacenterdynamics.com/en/news/digital-edge-breaks-ground-on-navi-mumbai-campus-in-india/|47 acres
+SLG Capital Noida DC|SLG Capital|SLG Capital|Noida|Uttar Pradesh|Northern||unknown|Announced||Med|https://w.media/uttar-pradesh-singapores-slg-capital-sign-1b-agreement/|$1B pact
+Techno Digital Chennai DC|Techno Digital|Techno Electric|Chennai|Tamil Nadu|Southern|36|operational_total|Operational||High|https://datacentremagazine.com/news/techno-digital-launches-ai-ready-36-mw-chennai-data-centre|Part of 250MW plan

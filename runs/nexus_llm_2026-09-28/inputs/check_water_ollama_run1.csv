@@ -1,0 +1,37 @@
+region_id,rep,resource,arm,tag,timestamp,value,actual,seconds
+Albany River,1,water,ollama,ollama,2022-10-16,-52.5,-71.00202374921473,51.2
+Albany River,1,water,ollama,ollama,2022-11-16,-22.5,-26.31869788481884,51.2
+Albany River,1,water,ollama,ollama,2022-12-16,17.5,-21.57794803522041,51.2
+Albany River,1,water,ollama,ollama,2023-01-16,57.5,21.78525074019611,51.2
+Albany River,1,water,ollama,ollama,2023-02-16,67.5,48.4944307659738,51.2
+Albany River,1,water,ollama,ollama,2023-03-16,35.0,53.43643652843778,51.2
+Albany River,1,water,ollama,ollama,2023-04-16,-10.0,78.69482060362418,51.2
+Albany River,1,water,ollama,ollama,2023-05-16,-52.5,64.36304891356102,51.2
+Albany River,1,water,ollama,ollama,2023-06-16,-55.0,-34.14319458073446,51.2
+Albany River,1,water,ollama,ollama,2023-07-16,-30.0,-99.75627812275845,51.2
+Albany River,1,water,ollama,ollama,2023-08-16,0.0,-134.79410517288272,51.2
+Albany River,1,water,ollama,ollama,2023-09-16,30.0,-136.56144986929087,51.2
+Bravo,1,water,ollama,ollama,2022-10-16,-85.0,-98.96266931601228,33.2
+Bravo,1,water,ollama,ollama,2022-11-16,-85.0,-92.68437956905096,33.2
+Bravo,1,water,ollama,ollama,2022-12-16,-95.0,-76.8354448680551,33.2
+Bravo,1,water,ollama,ollama,2023-01-16,-105.0,-76.66440000882886,33.2
+Bravo,1,water,ollama,ollama,2023-02-16,-115.0,-85.31554032557482,33.2
+Bravo,1,water,ollama,ollama,2023-03-16,-115.0,-85.17537935335392,33.2
+Bravo,1,water,ollama,ollama,2023-04-16,-105.0,-97.5355735621904,33.2
+Bravo,1,water,ollama,ollama,2023-05-16,-105.0,-74.13222411550969,33.2
+Bravo,1,water,ollama,ollama,2023-06-16,-95.0,-107.75194504511764,33.2
+Bravo,1,water,ollama,ollama,2023-07-16,-90.0,-127.6785505631619,33.2
+Bravo,1,water,ollama,ollama,2023-08-16,-95.0,-144.42577425255,33.2
+Bravo,1,water,ollama,ollama,2023-09-16,-100.0,-164.607598548378,33.2
+Brazos River,1,water,ollama,ollama,2022-10-16,-145.0,-186.99315080733945,32.9
+Brazos River,1,water,ollama,ollama,2022-11-16,-135.0,-122.36155010889414,32.9
+Brazos River,1,water,ollama,ollama,2022-12-16,-140.0,-87.67430595265681,32.9
+Brazos River,1,water,ollama,ollama,2023-01-16,-135.0,-89.16199178817165,32.9
+Brazos River,1,water,ollama,ollama,2023-02-16,-150.0,-57.45066723863034,32.9
+Brazos River,1,water,ollama,ollama,2023-03-16,-160.0,-54.91183301921063,32.9
+Brazos River,1,water,ollama,ollama,2023-04-16,-170.0,-113.71541149660123,32.9
+Brazos River,1,water,ollama,ollama,2023-05-16,-175.0,-88.48379260529741,32.9
+Brazos River,1,water,ollama,ollama,2023-06-16,-165.0,-88.91862060946335,32.9
+Brazos River,1,water,ollama,ollama,2023-07-16,-155.0,-98.6428604908068,32.9
+Brazos River,1,water,ollama,ollama,2023-08-16,-140.0,-190.9801168500201,32.9
+Brazos River,1,water,ollama,ollama,2023-09-16,-130.0,-205.0867602064876,32.9

@@ -1,0 +1,13 @@
+resource,model,RMSE
+carbon,Chronos-2 (Nexus slot),33.85
+carbon,SARIMA,38.01
+carbon,TimesFM,35.5
+carbon,xLSTM,42.32
+electricity,Chronos-2 (Nexus slot),558.88
+electricity,SARIMA,606.05
+electricity,TimesFM,579.64
+electricity,xLSTM,745.31
+water,Chronos-2 (Nexus slot),40.42
+water,SARIMA,37.49
+water,TimesFM,47.0
+water,xLSTM,55.17

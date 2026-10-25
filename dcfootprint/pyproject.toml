@@ -1,0 +1,51 @@
+[project]
+name = "dcfootprint"
+version = "0.1.0"
+description = "Sub-national, inference-attributed joint carbon + scarcity-weighted-water account of AI datacenters (India/US/EU), with a counterfactual policy engine. Reproducible instrument for the Energy & Climate Change paper."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+
+# Libraries chosen per layer (see README §Architecture). No ad-hoc scripts:
+# every step is a module function, orchestrated by Snakemake, validated by pandera.
+dependencies = [
+    # tabular + io
+    "pandas>=2.2",
+    "pyarrow>=16",          # parquet
+    "openpyxl>=3.1",        # CEA/eGRID/GEM xlsx
+    # geospatial joins (facility -> AWARE basin, -> GADM state)
+    "geopandas>=1.0",
+    "shapely>=2.0",
+    "pyogrio>=0.9",         # fast gpkg/vector IO
+    # data contracts + units (the anti-granularity-mistake core)
+    "pandera>=0.20",        # dataframe schemas: enforce facility-month grain, units, keys
+    "pint>=0.24",           # unit safety
+    "pint-pandas>=0.6",
+    # config (params never hardcoded)
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    # uncertainty
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "SALib>=1.5",           # Sobol / Morris sensitivity
+    # forecasting (Ceiling, L4 — salvaged benchmark)
+    "statsmodels>=0.14",    # SARIMA baseline
+    "sktime>=0.30",         # unified forecasting API
+    # viz / maps
+    "matplotlib>=3.9",
+    "folium>=0.17",
+]
+
+[project.optional-dependencies]
+forecast-tsfm = ["chronos-forecasting"]   # Chronos-2 TSFM (heavy; Ceiling only)
+dev = ["pytest>=8", "ruff>=0.5", "snakemake>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dcfootprint"]
+
+[tool.ruff]
+line-length = 100

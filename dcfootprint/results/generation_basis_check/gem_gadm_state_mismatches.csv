@@ -1,0 +1,48 @@
+plant_id,location_id,plant,type,capacity_mw,lat,lon,location_accuracy,gem_state,gadm_state,match,issue,km_to_gem_state
+G100001021430,L100001019040,GM Sugars power station,bioenergy,18.0,12.97596752,77.5790672751339,approximate,,Karnataka,False,no_gem_state,
+G100001053353,L100001047008,Aranthangi Empee power station,bioenergy,10.0,10.2047510768091,79.0096541842903,approximate,,Tamil Nadu,False,no_gem_state,
+G100001053883,L100001047357,Purkhali Biomass power station,bioenergy,12.0,30.9308947338446,76.6348796281577,approximate,,Punjab,False,no_gem_state,
+G100001053902,L100001047371,Sattur Biomass power station,bioenergy,10.0,9.23959495400216,77.882970190065,approximate,,Tamil Nadu,False,no_gem_state,
+G100001062357,L100001054476,Khavda-I wind farm,wind,52.8,24.1347,69.4847,approximate,,Gujarat,False,no_gem_state,
+G100000800551,L100000800458,Vijaypura (Adani) II solar farm,utility-scale solar,20.0,26.8364,77.0968,approximate,Karnataka,Rajasthan,False,state_mismatch,911.4
+G100000108490,L100000102178,Rawan Cement power station,coal,30.0,24.764914,74.609613,exact,Chhattisgarh,Rajasthan,False,state_mismatch,693.1
+G100000833894,L100000830052,Gujarat (Adani) IV Hybrid solar farm,utility-scale solar,570.0,24.1141,69.3438,approximate,Rajasthan,Gujarat,False,state_mismatch,182.3
+G100000601967,L100000601947,Lower Sileru hydroelectric plant,hydropower,460.0,17.8703,81.6592,exact,Andhra Pradesh,Telangana,False,state_mismatch,8.8
+G100000900723,L100000900628,Ramakkalmedu wind farm,wind,25.0,9.811,77.2441,approximate,Kerala,Tamil Nadu,False,state_mismatch_near_border,1.9
+G100000408637,L100000407144,Kashipur (Gama) power station,oil/gas,225.0,29.141711,78.963497,exact,Uttarakhand,Uttar Pradesh,False,state_mismatch_near_border,1.8
+G100001047250,L100001041952,Gummidipoondi solar project II,utility-scale solar,1.5,13.5438,79.9998,exact,Tamil Nadu,Andhra Pradesh,False,state_mismatch_near_border,1.4
+G100001053820,L100001047325,Tehkhand WtE power station,bioenergy,25.0,28.5094341,77.2807237,exact,Haryana,NCT of Delhi,False,state_mismatch_near_border,1.3
+G100001062632,L100001054740,Moyar hydroelectric plant,hydropower,36.0,11.6139,76.6923,exact,Tamil Nadu,Karnataka,False,state_mismatch_near_border,1.1
+G100001077682,L100001067896,Delhi Bahadurgarh solar project,utility-scale solar,2.9,28.5675,76.8461,exact,Haryana,NCT of Delhi,False,state_mismatch_near_border,1.0
+G100001077618,L100001067832,Satyavedu solar project V,utility-scale solar,1.0,13.5133,80.0161,exact,Andhra Pradesh,Tamil Nadu,False,state_mismatch_near_border,1.0
+G100001077582,L100001067796,Kurnool solar project II,utility-scale solar,17.5,15.8551,78.0658,exact,Andhra Pradesh,Telangana,False,state_mismatch_near_border,0.9
+G100001077836,L100001068050,Iritty solar project,utility-scale solar,1.4,12.0833,75.7855,exact,Kerala,Karnataka,False,state_mismatch_near_border,0.8
+G100001077354,L100001067568,Kurnool solar project I,utility-scale solar,11.3,15.8485,78.073,exact,Andhra Pradesh,Telangana,False,state_mismatch_near_border,0.8
+G100001027289,L100001023084,Rajghat hydroelectric plant,hydropower,45.0,24.7635,78.2322,exact,Madhya Pradesh,Uttar Pradesh,False,state_mismatch_near_border,0.8
+G100001072705,L100001063295,Matatila hydroelectric plant,hydropower,31.0,25.1002,78.3719,exact,Madhya Pradesh,Uttar Pradesh,False,state_mismatch_near_border,0.7
+G100001062631,L100001054739,Matatilla hydroelectric plant,hydropower,31.0,25.1001,78.3717,exact,Madhya Pradesh,Uttar Pradesh,False,state_mismatch_near_border,0.7
+G100000833507,L100000829716,Hosakote PVLP solar project,utility-scale solar,10.0,14.027,76.937,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.6
+G100001047957,L100001042659,Challakere Taluku solar project IX,utility-scale solar,17.2,14.5975,76.7676,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.5
+G100001077789,L100001068003,Dhanera Taluka solar project I,utility-scale solar,9.4,24.6377,72.1536,exact,Gujarat,Rajasthan,False,state_mismatch_near_border,0.5
+G100000601861,L100000601841,Chibro hydroelectric plant,hydropower,240.0,30.5559,77.7915,exact,Uttarakhand,Himachal Pradesh,False,state_mismatch_near_border,0.5
+G100001027299,L100001023094,Western Yamuna Canal hydroelectric plant,hydropower,63.0,30.3033,77.5684,exact,Haryana,Uttar Pradesh,False,state_mismatch_near_border,0.5
+G100001053800,L100001047307,Naini Tissues power station,bioenergy,16.0,29.2003383394464,78.893406140434,exact,Uttarakhand,Uttar Pradesh,False,state_mismatch_near_border,0.4
+G100000408625,L100000407123,Kashipur Sravanthi power station,oil/gas,225.0,29.154721,78.974029,exact,Uttarakhand,Uttar Pradesh,False,state_mismatch_near_border,0.4
+G100000408624,L100000407123,Kashipur Sravanthi power station,oil/gas,225.0,29.154721,78.974029,exact,Uttarakhand,Uttar Pradesh,False,state_mismatch_near_border,0.4
+G100000833506,L100000829715,Hosakote GTP solar project,utility-scale solar,10.0,14.024,76.942,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.4
+G100001047171,L100001041873,Paonta Sahib solar project I,utility-scale solar,5.1,30.5076,77.7993,exact,Himachal Pradesh,Uttarakhand,False,state_mismatch_near_border,0.4
+G100000601973,L100000601953,Machkund hydroelectric plant,hydropower,115.0,18.5323,82.4645,exact,Andhra Pradesh,Odisha,False,state_mismatch_near_border,0.4
+G100000601992,L100000601972,Nagarjuna Sagar hydroelectric plant,hydropower,110.0,16.5767,79.312,exact,Andhra Pradesh,Telangana,False,state_mismatch_near_border,0.4
+G100000833629,L100000829797,Kashapura solar farm,utility-scale solar,20.0,13.844,77.264,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.3
+G100000601929,L100000601909,Khodri hydroelectric plant,hydropower,120.0,30.5085,77.8001,exact,Himachal Pradesh,Uttarakhand,False,state_mismatch_near_border,0.3
+G100000601938,L100000601918,Kopoli hydroelectric plant,hydropower,200.0,25.5286,92.6328,exact,Assam,Meghalaya,False,state_mismatch_near_border,0.3
+G100001030364,L100001025617,Nagarjuna Sagar Pumped Storage hydroelectric plant,hydropower,706.0,16.5763,79.312,exact,Andhra Pradesh,Telangana,False,state_mismatch_near_border,0.3
+G100000834033,L100000830184,Teona Photon solar farm,utility-scale solar,25.0,29.912,75.082,exact,Punjab,Haryana,False,state_mismatch_near_border,0.2
+G100000834040,L100000830191,Thingalur solar farm,utility-scale solar,30.0,13.688,77.449,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.2
+G100000109465,L100000102606,Sitapuram Cement power station,coal,43.0,16.83007007,80.04077398,exact,Telangana,Andhra Pradesh,False,state_mismatch_near_border,0.2
+G100001047177,L100001041879,Nagapattinam solar project,utility-scale solar,5.3,10.8245,79.8144,exact,Tamil Nadu,Puducherry,False,state_mismatch_near_border,0.1
+G100000834001,L100000830152,Srinivasapura solar farm,utility-scale solar,20.0,13.369,78.365,exact,Karnataka,Andhra Pradesh,False,state_mismatch_near_border,0.1
+G100000900427,L100000900360,Mamatkheda wind farm,wind,101.0,23.9844,75.4692,approximate,Madhya Pradesh,Rajasthan,False,state_mismatch_near_border,0.1
+G100000602020,L100000602000,Pulinchinthala hydroelectric plant,hydropower,120.0,16.7739,80.0525,exact,Andhra Pradesh,Telangana,False,state_mismatch_near_border,0.1
+G100001053360,L100001047016,Athani Sugar power station,bioenergy,24.0,16.7699774,74.9211368,exact,Karnataka,Maharashtra,False,state_mismatch_near_border,0.0
+G100001053361,L100001047016,Athani Sugar power station,bioenergy,28.0,16.7699774,74.9211368,exact,Karnataka,Maharashtra,False,state_mismatch_near_border,0.0

@@ -1,0 +1,26 @@
+D:\3Gtech_paper - GNN\counterfactual-policy\.venv\Lib\site-packages\geopandas\tools\overlay.py:375: UserWarning: `keep_geom_type=True` in overlay resulted in 3 dropped geometries of different geometry types than df1 has. Set `keep_geom_type=False` to retain all geometries
+  result = _collection_extract(result, geom_type, keep_geom_type_warning)
+
+===== US STATUS =====
+  [OK] US L2 account                    OK
+  [OK] US L2.5 calibrate/coverage       OK
+  [OK] US L1 GADM checks                OK
+  [OK] US L7 levers                     OK
+  [OK] US L7 Q2 scorecard               OK
+  [OK] US L7 Q1 siting                  OK
+  [OK] US L6 routing (Q3)               OK
+  [OK] US L8 uncertainty                OK
+  [OK] US L9 report                     OK
+  [OK] US L9 figures                    OK
+D:\3Gtech_paper - GNN\counterfactual-policy\.venv\Lib\site-packages\pyogrio\raw.py:200: RuntimeWarning: organizePolygons() received a polygon with more than 100 parts. The processing may be really slow.  You can skip the processing by setting METHOD=SKIP, or only make it analyze counter-clock wise parts by setting METHOD=ONLY_CCW if you can assume that the outline of holes is counter-clock wise defined
+  return ogr_read(
+
+===== EU STATUS =====
+  [OK] EU L2 account                    OK
+  [OK] EU L2.5 calibrate/coverage       OK
+  [OK] EU L7 levers                     OK
+  [OK] EU L7 Q2 scorecard               OK
+  [OK] EU L7 Q1 siting                  OK
+  [OK] EU L8 uncertainty                OK
+  [OK] EU L9 report                     OK
+  [OK] EU L9 figures                    OK

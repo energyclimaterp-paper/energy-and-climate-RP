@@ -1,0 +1,17 @@
+
+===== PIPELINE STATUS =====
+  [OK] L0/L1 facilities+geo         OK
+  [OK] L2 account                   OK
+  [OK] L4 incidence                 OK
+  [OK] L2.5 calibrate               OK
+  [OK] L3 forecast                  OK
+  [OK] L3 recharge                  OK
+  [OK] L5 policy-gap                OK
+  [OK] L6 routing (Q3)              OK
+  [OK] L7 levers (counterfactual)   OK
+  [OK] L7 Q2 scorecard              OK
+  [OK] L7 Q1 siting                 OK
+  [OK] L8 uncertainty               OK
+  [OK] L9 report                    OK
+  [OK] L9 figures                   OK
+  14/14 stages OK

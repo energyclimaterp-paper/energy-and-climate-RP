@@ -1,0 +1,1141 @@
+model,resource,zone_id,region,account_zone,aggregate_zone,window,origin,h,timestamp,actual,mean,sigma,lo,hi,interval_level,mase_scale,seed,tag,n_rep
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,1,2025-05-01,5650.0,5975.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,2,2025-06-01,5930.0,6000.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,3,2025-07-01,6110.0,6050.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,4,2025-08-01,5990.0,6225.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,5,2025-09-01,5030.0,5800.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,6,2025-10-01,5480.0,5850.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,7,2025-11-01,4870.0,6000.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,8,2025-12-01,4720.0,5650.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,9,2026-01-01,5300.0,5850.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,10,2026-02-01,5080.0,5900.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,11,2026-03-01,5450.0,6200.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,AUT,Europe,True,False,holdout,last12,12,2026-04-01,5680.0,6500.0,,,,0.8,584.7321428571429,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,1,2025-05-01,5440.0,5600.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,2,2025-06-01,5460.0,5950.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,3,2025-07-01,5070.0,6240.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,4,2025-08-01,5050.0,6275.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,5,2025-09-01,5190.0,5300.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,6,2025-10-01,5370.0,5175.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,7,2025-11-01,5650.0,5750.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,8,2025-12-01,6070.0,6300.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,9,2026-01-01,6700.0,6550.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,10,2026-02-01,5420.0,6450.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,11,2026-03-01,5540.0,6350.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BEL,Europe,True,False,holdout,last12,12,2026-04-01,4170.0,5550.0,,,,0.8,849.6428571428571,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,1,2025-05-01,2370.0,3130.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,2,2025-06-01,2820.0,3715.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,3,2025-07-01,3000.0,3885.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,4,2025-08-01,2910.0,4050.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,5,2025-09-01,2730.0,3960.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,6,2025-10-01,2890.0,4250.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,7,2025-11-01,2500.0,4525.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,8,2025-12-01,3330.0,4535.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,9,2026-01-01,3760.0,4320.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,10,2026-02-01,3250.0,4405.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,11,2026-03-01,3460.0,4000.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BGR,Europe,True,False,holdout,last12,12,2026-04-01,3220.0,3995.0,,,,0.8,434.73214285714283,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,1,2025-05-01,700.0,1050.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,2,2025-06-01,770.0,1150.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,3,2025-07-01,790.0,1250.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,4,2025-08-01,870.0,1350.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,5,2025-09-01,790.0,1250.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,6,2025-10-01,890.0,1300.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,7,2025-11-01,1080.0,1100.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,8,2025-12-01,1180.0,1050.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,9,2026-01-01,1230.0,1160.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,10,2026-02-01,1130.0,1240.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,11,2026-03-01,1140.0,1400.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,BIH,Europe,False,False,holdout,last12,12,2026-04-01,800.0,1300.0,,,,0.8,155.46875,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,1,2025-05-01,6010.0,5800.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,2,2025-06-01,7030.0,6250.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,3,2025-07-01,6380.0,6900.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,4,2025-08-01,6030.0,7000.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,5,2025-09-01,5720.0,6150.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,6,2025-10-01,5160.0,5650.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,7,2025-11-01,4960.0,5550.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,8,2025-12-01,4690.0,5650.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,9,2026-01-01,4910.0,5700.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,10,2026-02-01,4370.0,5200.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,11,2026-03-01,4860.0,5250.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CHE,Europe,False,False,holdout,last12,12,2026-04-01,5610.0,5300.0,,,,0.8,620.6818181818181,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,1,2025-03-01,470.0,450.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,2,2025-04-01,460.0,475.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,3,2025-05-01,500.0,470.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,4,2025-06-01,610.0,535.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,5,2025-07-01,750.0,600.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,6,2025-08-01,740.0,705.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,7,2025-09-01,640.0,690.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,8,2025-10-01,520.0,600.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,9,2025-11-01,490.0,530.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,10,2025-12-01,540.0,500.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,11,2026-01-01,610.0,530.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CYP,Europe,False,False,holdout,last12,12,2026-02-01,500.0,560.0,,,,0.8,30.813953488372093,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,1,2025-05-01,5350.0,5420.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,2,2025-06-01,4420.0,5325.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,3,2025-07-01,5190.0,5650.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,4,2025-08-01,5580.0,5775.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,5,2025-09-01,5060.0,6250.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,6,2025-10-01,5830.0,7000.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,7,2025-11-01,6460.0,7125.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,8,2025-12-01,6330.0,7125.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,9,2026-01-01,7350.0,7150.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,10,2026-02-01,6140.0,6800.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,11,2026-03-01,6390.0,6950.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,CZE,Europe,False,False,holdout,last12,12,2026-04-01,5730.0,6550.0,,,,0.8,448.0357142857143,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,1,2025-05-01,37650.0,34500.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,2,2025-06-01,37760.0,34000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,3,2025-07-01,37100.0,36000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,4,2025-08-01,35030.0,38500.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,5,2025-09-01,37210.0,41000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,6,2025-10-01,41780.0,43000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,7,2025-11-01,40790.0,45000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,8,2025-12-01,40670.0,46500.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,9,2026-01-01,48150.0,45000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,10,2026-02-01,43510.0,43000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,11,2026-03-01,41730.0,42000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DEU,Europe,True,False,holdout,last12,12,2026-04-01,38500.0,41000.0,,,,0.8,2486.4285714285716,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,1,2025-05-01,2480.0,2160.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,2,2025-06-01,2460.0,2270.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,3,2025-07-01,2100.0,2775.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,4,2025-08-01,2210.0,3110.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,5,2025-09-01,2570.0,2730.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,6,2025-10-01,3000.0,2445.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,7,2025-11-01,3110.0,3260.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,8,2025-12-01,3270.0,3555.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,9,2026-01-01,3870.0,3160.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,10,2026-02-01,3430.0,2890.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,11,2026-03-01,3220.0,2640.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,DNK,Europe,True,False,holdout,last12,12,2026-04-01,2940.0,2150.0,,,,0.8,280.625,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,1,2025-05-01,19940.0,20500.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,2,2025-06-01,22450.0,20850.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,3,2025-07-01,23990.0,22350.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,4,2025-08-01,22240.0,22750.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,5,2025-09-01,20300.0,21400.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,6,2025-10-01,20240.0,21000.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,7,2025-11-01,20870.0,21850.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,8,2025-12-01,21080.0,20750.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,9,2026-01-01,23290.0,20000.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,10,2026-02-01,19890.0,20150.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,11,2026-03-01,21120.0,21100.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,ESP,Europe,True,False,holdout,last12,12,2026-04-01,18830.0,21250.0,,,,0.8,1191.875,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,1,2025-05-01,440.0,480.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,2,2025-06-01,380.0,482.5,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,3,2025-07-01,300.0,515.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,4,2025-08-01,250.0,520.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,5,2025-09-01,310.0,545.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,6,2025-10-01,340.0,547.5,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,7,2025-11-01,370.0,537.5,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,8,2025-12-01,380.0,540.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,9,2026-01-01,490.0,570.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,10,2026-02-01,490.0,592.5,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,11,2026-03-01,410.0,620.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,EST,Europe,False,False,holdout,last12,12,2026-04-01,380.0,645.0,,,,0.8,164.91071428571428,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,1,2025-05-01,6210.0,5870.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,2,2025-06-01,5520.0,5950.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,3,2025-07-01,5680.0,6450.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,4,2025-08-01,5590.0,7050.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,5,2025-09-01,5680.0,7000.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,6,2025-10-01,7300.0,7575.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,7,2025-11-01,7560.0,7800.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,8,2025-12-01,8080.0,7925.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,9,2026-01-01,8890.0,7650.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,10,2026-02-01,7950.0,7350.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,11,2026-03-01,8240.0,7100.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FIN,Europe,True,False,holdout,last12,12,2026-04-01,6460.0,7000.0,,,,0.8,402.84090909090907,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,1,2025-05-01,37490.0,37500.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,2,2025-06-01,37870.0,38500.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,3,2025-07-01,40890.0,39500.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,4,2025-08-01,38880.0,44000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,5,2025-09-01,39440.0,48000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,6,2025-10-01,42830.0,46000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,7,2025-11-01,48160.0,50000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,8,2025-12-01,54840.0,54000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,9,2026-01-01,55500.0,58000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,10,2026-02-01,47450.0,44250.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,11,2026-03-01,48220.0,45000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,FRA,Europe,True,False,holdout,last12,12,2026-04-01,41480.0,43000.0,,,,0.8,2979.0178571428573,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,1,2025-05-01,18030.0,17500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,2,2025-06-01,18370.0,18500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,3,2025-07-01,17560.0,19500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,4,2025-08-01,17300.0,20500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,5,2025-09-01,18500.0,21500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,6,2025-10-01,20770.0,22500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,7,2025-11-01,22970.0,23500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,8,2025-12-01,22740.0,24000.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,9,2026-01-01,25590.0,23250.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,10,2026-02-01,22390.0,21000.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,11,2026-03-01,21700.0,21500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GBR,Europe,False,False,holdout,last12,12,2026-04-01,19470.0,23500.0,,,,0.8,1230.4464285714287,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,1,2025-05-01,3470.0,3010.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,2,2025-06-01,4330.0,3500.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,3,2025-07-01,5350.0,4550.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,4,2025-08-01,5020.0,4800.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,5,2025-09-01,4230.0,5100.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,6,2025-10-01,3710.0,4545.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,7,2025-11-01,3910.0,4100.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,8,2025-12-01,4590.0,4225.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,9,2026-01-01,5510.0,3940.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,10,2026-02-01,4490.0,3400.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,11,2026-03-01,4900.0,4195.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,GRC,Europe,True,False,holdout,last12,12,2026-04-01,3560.0,3500.0,,,,0.8,463.39285714285717,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,1,2025-05-01,860.0,1320.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,2,2025-06-01,830.0,1170.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,3,2025-07-01,1050.0,1050.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,4,2025-08-01,1050.0,950.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,5,2025-09-01,830.0,900.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,6,2025-10-01,1080.0,1050.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,7,2025-11-01,1130.0,1200.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,8,2025-12-01,1250.0,1150.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,9,2026-01-01,1550.0,1300.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,10,2026-02-01,1490.0,1350.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,11,2026-03-01,1070.0,1400.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HRV,Europe,True,False,holdout,last12,12,2026-04-01,820.0,1250.0,,,,0.8,173.69230769230768,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,1,2025-05-01,3240.0,3370.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,2,2025-06-01,3300.0,3450.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,3,2025-07-01,3430.0,3480.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,4,2025-08-01,3220.0,3470.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,5,2025-09-01,3050.0,3300.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,6,2025-10-01,3400.0,3300.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,7,2025-11-01,2930.0,3400.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,8,2025-12-01,2850.0,3500.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,9,2026-01-01,3200.0,3350.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,10,2026-02-01,2850.0,3370.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,11,2026-03-01,3020.0,3425.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,HUN,Europe,True,False,holdout,last12,12,2026-04-01,3050.0,3550.0,,,,0.8,201.16071428571428,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,1,2024-12-01,89.41,270.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,2,2025-01-01,154.31,330.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,3,2025-02-01,294.42,550.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,4,2025-03-01,250.68,735.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,5,2025-04-01,424.61,750.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,6,2025-05-01,416.19,650.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,7,2025-06-01,504.4,460.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,8,2025-07-01,435.31,465.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,9,2025-08-01,308.94,575.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,10,2025-09-01,220.06,500.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,11,2025-10-01,105.78,450.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|delhi,India,True,False,holdout,last12,12,2025-11-01,152.52,375.0,,,,0.8,131.8484745762712,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,1,2024-12-01,12587.71,11500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,2,2025-01-01,12483.88,12150.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,3,2025-02-01,11945.49,13500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,4,2025-03-01,13932.58,15250.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,5,2025-04-01,14756.3,16500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,6,2025-05-01,15395.69,14750.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,7,2025-06-01,14750.75,14000.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,8,2025-07-01,13036.02,13500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,9,2025-08-01,12709.35,13500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,10,2025-09-01,11478.69,13000.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,11,2025-10-01,9418.44,13500.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|gujarat,India,True,False,holdout,last12,12,2025-11-01,8822.5,14200.0,,,,0.8,2118.901525423729,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,1,2024-12-01,8145.37,7830.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,2,2025-01-01,9225.42,8000.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,3,2025-02-01,8745.45,8400.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,4,2025-03-01,9617.26,8200.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,5,2025-04-01,8712.33,7900.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,6,2025-05-01,8192.56,8100.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,7,2025-06-01,7637.08,9500.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,8,2025-07-01,10897.87,8750.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,9,2025-08-01,8199.13,8200.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,10,2025-09-01,8928.18,7650.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,11,2025-10-01,8001.72,7525.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|karnataka,India,True,False,holdout,last12,12,2025-11-01,8240.21,7750.0,,,,0.8,738.1993220338982,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,1,2024-12-01,565.37,600.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,2,2025-01-01,617.85,640.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,3,2025-02-01,639.53,780.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,4,2025-03-01,702.28,850.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,5,2025-04-01,714.39,840.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,6,2025-05-01,1021.22,950.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,7,2025-06-01,1450.32,1110.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,8,2025-07-01,1539.31,1200.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,9,2025-08-01,1430.45,1050.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,10,2025-09-01,1220.3,850.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,11,2025-10-01,1178.3,700.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|kerala,India,False,False,holdout,last12,12,2025-11-01,850.0,610.0,,,,0.8,217.61152542372878,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,1,2024-12-01,13876.65,13275.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,2,2025-01-01,14233.32,13525.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,3,2025-02-01,13573.43,15450.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,4,2025-03-01,15928.98,15675.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,5,2025-04-01,15581.37,16100.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,6,2025-05-01,14882.24,14350.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,7,2025-06-01,13979.36,13800.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,8,2025-07-01,13977.26,13450.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,9,2025-08-01,13748.55,13150.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,10,2025-09-01,13191.61,13450.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,11,2025-10-01,13462.57,13200.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|maharashtra,India,True,False,holdout,last12,12,2025-11-01,13245.31,13750.0,,,,0.8,1541.1954237288135,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,1,2024-12-01,6635.86,6425.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,2,2025-01-01,6284.04,6250.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,3,2025-02-01,5776.28,6450.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,4,2025-03-01,6961.29,6275.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,5,2025-04-01,6907.28,6450.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,6,2025-05-01,6709.94,6125.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,7,2025-06-01,6099.69,6325.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,8,2025-07-01,6031.1,6500.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,9,2025-08-01,6307.43,6725.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,10,2025-09-01,5672.77,7425.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,11,2025-10-01,6679.8,7025.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|odisha,India,True,False,holdout,last12,12,2025-11-01,6655.16,6675.0,,,,0.8,564.7605084745763,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,1,2024-12-01,10757.79,10425.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,2,2025-01-01,11043.02,10700.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,3,2025-02-01,10526.0,11225.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,4,2025-03-01,12412.28,11250.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,5,2025-04-01,12533.83,11575.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,6,2025-05-01,12132.14,11800.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,7,2025-06-01,11319.68,11400.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,8,2025-07-01,10650.32,10900.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,9,2025-08-01,11210.52,11200.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,10,2025-09-01,11179.15,11700.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,11,2025-10-01,10251.8,11575.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|rajasthan,India,False,False,holdout,last12,12,2025-11-01,10472.81,11900.0,,,,0.8,1087.1737288135591,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,1,2024-12-01,9211.41,10200.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,2,2025-01-01,9973.75,10500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,3,2025-02-01,10178.31,11150.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,4,2025-03-01,10491.04,11800.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,5,2025-04-01,9753.51,12250.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,6,2025-05-01,10921.98,12850.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,7,2025-06-01,13519.46,12500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,8,2025-07-01,14223.45,12500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,9,2025-08-01,12188.58,13400.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,10,2025-09-01,12145.92,11500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,11,2025-10-01,9833.56,10500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|tamil nadu,India,True,False,holdout,last12,12,2025-11-01,8707.34,10500.0,,,,0.8,944.462033898305,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,1,2024-12-01,5112.6,5050.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,2,2025-01-01,6178.86,4850.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,3,2025-02-01,5657.22,5575.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,4,2025-03-01,6656.99,5600.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,5,2025-04-01,6211.13,5250.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,6,2025-05-01,5714.55,4850.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,7,2025-06-01,5427.52,4950.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,8,2025-07-01,5673.5,5750.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,9,2025-08-01,6582.44,5900.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,10,2025-09-01,6456.92,6350.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,11,2025-10-01,5679.38,5600.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|telangana,India,True,False,holdout,last12,12,2025-11-01,4864.57,5625.0,,,,0.8,568.0579661016949,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,1,2024-12-01,13467.27,13500.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,2,2025-01-01,14315.4,14800.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,3,2025-02-01,13471.49,14650.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,4,2025-03-01,15709.37,15700.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,5,2025-04-01,15502.94,16500.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,6,2025-05-01,15593.63,15850.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,7,2025-06-01,15190.04,16150.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,8,2025-07-01,15381.4,15650.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,9,2025-08-01,14525.06,15500.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,10,2025-09-01,14221.7,14350.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,11,2025-10-01,13189.6,13500.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|uttar pradesh,India,True,False,holdout,last12,12,2025-11-01,12691.32,13750.0,,,,0.8,1150.260338983051,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,1,2024-12-01,7954.59,7625.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,2,2025-01-01,8050.61,7800.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,3,2025-02-01,7662.91,8600.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,4,2025-03-01,8692.39,8200.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,5,2025-04-01,8096.83,8175.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,6,2025-05-01,8080.16,8225.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,7,2025-06-01,7957.76,8025.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,8,2025-07-01,8110.86,7800.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,9,2025-08-01,7911.93,8000.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,10,2025-09-01,7560.3,8500.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,11,2025-10-01,7727.87,8300.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IND|west bengal,India,True,False,holdout,last12,12,2025-11-01,6616.51,8250.0,,,,0.8,656.100847457627,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,1,2025-04-01,2290.0,2300.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,2,2025-05-01,2070.0,2150.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,3,2025-06-01,2009.9999999999998,2075.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,4,2025-07-01,2290.0,2125.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,5,2025-08-01,2150.0,2250.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,6,2025-09-01,2160.0,2450.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,7,2025-10-01,2460.0,2650.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,8,2025-11-01,2570.0,2800.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,9,2025-12-01,2720.0,2850.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,10,2026-01-01,2880.0,2800.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,11,2026-02-01,2570.0,2775.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,IRL,Europe,True,False,holdout,last12,12,2026-03-01,2650.0,2625.0,,,,0.8,125.67251461988305,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,1,2025-05-01,19810.0,20970.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,2,2025-06-01,22180.0,21500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,3,2025-07-01,24130.0,22500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,4,2025-08-01,20740.0,24500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,5,2025-09-01,20870.0,22200.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,6,2025-10-01,20390.0,21500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,7,2025-11-01,20600.0,23500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,8,2025-12-01,21550.0,21500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,9,2026-01-01,23770.0,20500.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,10,2026-02-01,20550.0,20355.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,11,2026-03-01,21030.0,21000.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,ITA,Europe,True,False,holdout,last12,12,2026-04-01,18970.0,19760.0,,,,0.8,1155.4,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,1,2025-05-01,810.0,885.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,2,2025-06-01,770.0,770.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,3,2025-07-01,610.0,890.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,4,2025-08-01,600.0,900.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,5,2025-09-01,620.0,890.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,6,2025-10-01,740.0,915.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,7,2025-11-01,550.0,945.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,8,2025-12-01,730.0,950.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,9,2026-01-01,920.0,970.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,10,2026-02-01,780.0,965.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,11,2026-03-01,750.0,1015.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LTU,Europe,True,False,holdout,last12,12,2026-04-01,880.0,1040.0,,,,0.8,83.66071428571429,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,1,2025-05-01,130.0,120.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,2,2025-06-01,120.0,100.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,3,2025-07-01,110.0,110.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,4,2025-08-01,110.0,120.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,5,2025-09-01,100.0,120.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,6,2025-10-01,100.0,115.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,7,2025-11-01,100.0,105.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,8,2025-12-01,120.0,100.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,9,2026-01-01,90.0,110.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,10,2026-02-01,120.0,130.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,11,2026-03-01,110.0,135.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LUX,Europe,True,False,holdout,last12,12,2026-04-01,120.0,120.0,,,,0.8,13.421052631578947,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,1,2025-05-01,400.0,360.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,2,2025-06-01,480.0,265.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,3,2025-07-01,480.0,260.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,4,2025-08-01,440.0,385.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,5,2025-09-01,330.0,550.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,6,2025-10-01,330.0,715.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,7,2025-11-01,470.0,650.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,8,2025-12-01,510.0,550.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,9,2026-01-01,750.0,510.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,10,2026-02-01,720.0,490.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,11,2026-03-01,680.0,525.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,LVA,Europe,True,False,holdout,last12,12,2026-04-01,580.0,380.0,,,,0.8,119.28571428571429,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,1,2023-09-01,430.0,460.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,2,2023-10-01,480.0,430.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,3,2023-11-01,470.0,440.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,4,2023-12-01,470.0,420.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,5,2024-01-01,460.0,420.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,6,2024-02-01,450.0,435.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,7,2024-03-01,490.0,480.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,8,2024-04-01,440.0,475.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,9,2024-05-01,430.0,450.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,10,2024-06-01,430.0,475.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,11,2024-07-01,490.0,520.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MDA,Europe,False,False,holdout,last12,12,2024-08-01,470.0,555.0,,,,0.8,65.9375,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,1,2024-03-01,540.0,680.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,2,2024-04-01,470.0,675.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,3,2024-05-01,460.0,635.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,4,2024-06-01,500.0,580.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,5,2024-07-01,570.0,530.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,6,2024-08-01,560.0,580.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,7,2024-09-01,490.0,625.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,8,2024-10-01,420.0,635.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,9,2024-11-01,610.0,580.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,10,2024-12-01,630.0,630.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,11,2025-01-01,660.0,670.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MKD,Europe,False,False,holdout,last12,12,2025-02-01,690.0,720.0,,,,0.8,66.75675675675676,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,1,2025-04-01,250.0,260.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,2,2025-05-01,270.0,270.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,3,2025-06-01,300.0,275.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,4,2025-07-01,340.0,300.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,5,2025-08-01,320.0,310.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,6,2025-09-01,300.0,320.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,7,2025-10-01,270.0,310.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,8,2025-11-01,260.0,280.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,9,2025-12-01,260.0,260.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,10,2026-01-01,270.0,250.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,11,2026-02-01,280.0,250.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,MLT,Europe,True,False,holdout,last12,12,2026-03-01,260.0,255.0,,,,0.8,26.50793650793651,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,1,2025-05-01,11390.0,10535.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,2,2025-06-01,10840.0,11200.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,3,2025-07-01,11530.0,11650.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,4,2025-08-01,11700.0,11900.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,5,2025-09-01,10840.0,11950.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,6,2025-10-01,10960.0,11800.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,7,2025-11-01,11860.0,11600.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,8,2025-12-01,11890.0,11400.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,9,2026-01-01,13530.0,12000.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,10,2026-02-01,11690.0,12100.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,11,2026-03-01,10870.0,11900.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NLD,Europe,True,False,holdout,last12,12,2026-04-01,10550.0,12000.0,,,,0.8,627.5892857142857,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,1,2025-05-01,11180.0,11430.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,2,2025-06-01,10410.0,10900.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,3,2025-07-01,11060.0,10750.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,4,2025-08-01,10830.0,10750.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,5,2025-09-01,11290.0,11650.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,6,2025-10-01,12790.0,12750.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,7,2025-11-01,14420.0,14250.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,8,2025-12-01,15390.0,15500.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,9,2026-01-01,17180.0,15750.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,10,2026-02-01,13070.0,15750.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,11,2026-03-01,12090.0,15800.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,NOR,Europe,False,False,holdout,last12,12,2026-04-01,10320.0,14000.0,,,,0.8,944.9107142857143,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,1,2025-05-01,12260.0,12500.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,2,2025-06-01,11980.0,12700.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,3,2025-07-01,12420.0,13100.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,4,2025-08-01,11690.0,13100.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,5,2025-09-01,12320.0,13500.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,6,2025-10-01,14120.0,13800.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,7,2025-11-01,13640.0,14200.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,8,2025-12-01,14280.0,14800.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,9,2026-01-01,16079.999999999998,14700.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,10,2026-02-01,13900.0,14500.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,11,2026-03-01,14560.0,14700.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,POL,Europe,True,False,holdout,last12,12,2026-04-01,13750.0,13500.0,,,,0.8,701.6071428571429,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,1,2025-05-01,4010.0,3440.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,2,2025-06-01,3230.0,3165.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,3,2025-07-01,3510.0,3410.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,4,2025-08-01,3330.0,3435.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,5,2025-09-01,3400.0,3845.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,6,2025-10-01,3190.0,3645.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,7,2025-11-01,3730.0,3350.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,8,2025-12-01,4140.0,3300.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,9,2026-01-01,4720.0,3700.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,10,2026-02-01,4410.0,4100.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,11,2026-03-01,4230.0,4200.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,PRT,Europe,True,False,holdout,last12,12,2026-04-01,3060.0,3900.0,,,,0.8,454.73214285714283,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,1,2025-05-01,3920.0,4100.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,2,2025-06-01,3940.0,4225.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,3,2025-07-01,4230.0,4375.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,4,2025-08-01,4110.0,4350.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,5,2025-09-01,3850.0,4250.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,6,2025-10-01,4430.0,4175.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,7,2025-11-01,4480.0,4200.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,8,2025-12-01,4720.0,4225.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,9,2026-01-01,4680.0,4325.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,10,2026-02-01,4420.0,4475.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,11,2026-03-01,4540.0,4565.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,ROU,Europe,False,False,holdout,last12,12,2026-04-01,3750.0,4405.0,,,,0.8,357.4107142857143,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,1,2025-05-01,2290.0,2450.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,2,2025-06-01,2310.0,2380.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,3,2025-07-01,2690.0,2625.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,4,2025-08-01,2570.0,2550.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,5,2025-09-01,2410.0,2725.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,6,2025-10-01,2510.0,2900.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,7,2025-11-01,2940.0,3100.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,8,2025-12-01,3230.0,3250.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,9,2026-01-01,3300.0,3350.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,10,2026-02-01,3190.0,3000.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,11,2026-03-01,3050.0,2850.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SRB,Europe,False,False,holdout,last12,12,2026-04-01,2430.0,3000.0,,,,0.8,246.47727272727272,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,1,2025-05-01,2150.0,2350.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,2,2025-06-01,2230.0,2450.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,3,2025-07-01,2100.0,2450.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,4,2025-08-01,2090.0,2500.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,5,2025-09-01,2220.0,2600.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,6,2025-10-01,2570.0,2675.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,7,2025-11-01,2680.0,2775.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,8,2025-12-01,2740.0,2725.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,9,2026-01-01,2770.0,2750.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,10,2026-02-01,2600.0,2875.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,11,2026-03-01,2590.0,3000.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVK,Europe,False,False,holdout,last12,12,2026-04-01,2190.0,2950.0,,,,0.8,182.76785714285714,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,1,2025-05-01,1240.0,1250.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,2,2025-06-01,1140.0,1410.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,3,2025-07-01,1090.0,1450.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,4,2025-08-01,950.0,1150.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,5,2025-09-01,980.0,1350.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,6,2025-10-01,790.0,1400.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,7,2025-11-01,1310.0,1550.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,8,2025-12-01,1250.0,1500.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,9,2026-01-01,1200.0,1300.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,10,2026-02-01,1160.0,1425.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,11,2026-03-01,1260.0,1450.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SVN,Europe,False,False,holdout,last12,12,2026-04-01,1040.0,1300.0,,,,0.8,180.6,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,1,2025-05-01,11970.0,12360.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,2,2025-06-01,10940.0,10680.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,3,2025-07-01,11690.0,11060.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,4,2025-08-01,11440.0,11100.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,5,2025-09-01,11180.0,11550.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,6,2025-10-01,12640.0,13680.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,7,2025-11-01,14690.0,14960.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,8,2025-12-01,16820.0,16590.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,9,2026-01-01,17680.0,16560.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,10,2026-02-01,15600.0,14990.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,11,2026-03-01,14780.0,15660.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,SWE,Europe,True,False,holdout,last12,12,2026-04-01,12920.0,13610.0,,,,0.8,790.4464285714286,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,1,2025-04-01,26680.0,28000.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,2,2025-05-01,27770.0,27500.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,3,2025-06-01,27740.0,29500.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,4,2025-07-01,35210.0,30000.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,5,2025-08-01,35020.0,31750.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,6,2025-09-01,29500.0,33500.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,7,2025-10-01,27310.0,33750.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,8,2025-11-01,27310.0,30000.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,9,2025-12-01,30900.0,29000.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,10,2026-01-01,31810.0,28500.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,11,2026-02-01,27530.0,29000.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,TUR,Europe,False,False,holdout,last12,12,2026-03-01,29190.0,30250.0,,,,0.8,1443.4666666666667,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,1,2025-01-01,13861.86,12570.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,2,2025-02-01,10453.48,11270.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,3,2025-03-01,10399.45,10340.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,4,2025-04-01,10242.19,10500.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,5,2025-05-01,11299.5,11270.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,6,2025-06-01,12377.33,12260.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,7,2025-07-01,13945.0,14200.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,8,2025-08-01,12394.4,14080.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,9,2025-09-01,12051.63,12090.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,10,2025-10-01,11040.76,11730.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,11,2025-11-01,11510.35,12410.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|alabama,US,True,False,holdout,last12,12,2025-12-01,12765.81,12410.0,,,,0.8,648.7864855072464,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,1,2025-01-01,9857.97,8750.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,2,2025-02-01,8344.59,7475.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,3,2025-03-01,8234.84,8250.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,4,2025-04-01,7976.68,8600.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,5,2025-05-01,9772.43,9500.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,6,2025-06-01,11484.6,11395.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,7,2025-07-01,13119.49,12885.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,8,2025-08-01,13771.1,12500.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,9,2025-09-01,12089.36,11000.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,10,2025-10-01,9876.54,9404.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,11,2025-11-01,8643.59,8226.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arizona,US,True,False,holdout,last12,12,2025-12-01,9369.16,8923.0,,,,0.8,542.966811594203,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,1,2025-01-01,6010.79,5800.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,2,2025-02-01,4790.01,4200.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,3,2025-03-01,4558.38,4600.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,4,2025-04-01,4000.74,3800.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,5,2025-05-01,5070.82,4600.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,6,2025-06-01,6200.04,6000.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,7,2025-07-01,7671.86,6800.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,8,2025-08-01,7065.7,6700.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,9,2025-09-01,5895.66,5500.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,10,2025-10-01,5114.02,4500.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,11,2025-11-01,5252.74,4123.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|arkansas,US,True,False,holdout,last12,12,2025-12-01,5554.66,4600.0,,,,0.8,471.990579710145,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,1,2025-01-01,18152.51,19500.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,2,2025-02-01,17104.45,17650.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,3,2025-03-01,18260.71,19500.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,4,2025-04-01,18940.17,21000.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,5,2025-05-01,20793.93,22250.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,6,2025-06-01,22186.69,23750.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,7,2025-07-01,24519.92,28500.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,8,2025-08-01,25604.32,26500.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,9,2025-09-01,22596.48,22750.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,10,2025-10-01,19054.19,21000.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,11,2025-11-01,17614.23,18500.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|california,US,True,False,holdout,last12,12,2025-12-01,16498.03,19250.0,,,,0.8,951.2784782608695,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,1,2025-01-01,5418.74,5050.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,2,2025-02-01,4627.92,4600.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,3,2025-03-01,4527.69,4850.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,4,2025-04-01,4682.37,4300.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,5,2025-05-01,4727.7,4500.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,6,2025-06-01,5179.42,5300.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,7,2025-07-01,5783.35,5850.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,8,2025-08-01,5640.97,5700.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,9,2025-09-01,4632.58,4900.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,10,2025-10-01,4460.1,4600.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,11,2025-11-01,4424.68,4800.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|colorado,US,True,False,holdout,last12,12,2025-12-01,4793.87,5300.0,,,,0.8,198.18322463768112,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,1,2025-01-01,4000.76,3858.5,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,2,2025-02-01,3677.62,3569.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,3,2025-03-01,3986.73,3770.5,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,4,2025-04-01,2993.68,3314.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,5,2025-05-01,2739.76,3491.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,6,2025-06-01,3960.58,3864.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,7,2025-07-01,4677.73,4301.5,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,8,2025-08-01,4309.02,4453.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,9,2025-09-01,3941.81,3849.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,10,2025-10-01,3314.96,3266.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,11,2025-11-01,3804.45,3851.0,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|connecticut,US,False,False,holdout,last12,12,2025-12-01,4143.32,3983.5,,,,0.8,278.6471014492754,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,1,2025-01-01,598.85,380.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,2,2025-02-01,388.15,323.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,3,2025-03-01,202.27,290.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,4,2025-04-01,471.15,353.4,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,5,2025-05-01,210.98,355.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,6,2025-06-01,444.68,600.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,7,2025-07-01,888.68,752.1,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,8,2025-08-01,505.05,525.3,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,9,2025-09-01,437.0,430.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,10,2025-10-01,535.19,430.0,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,11,2025-11-01,435.67,307.5,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|delaware,US,False,False,holdout,last12,12,2025-12-01,463.86,367.5,,,,0.8,147.7436956521739,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,1,2025-01-01,20780.7,17500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,2,2025-02-01,17861.41,17000.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,3,2025-03-01,19077.93,19500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,4,2025-04-01,20911.74,20500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,5,2025-05-01,25342.66,26500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,6,2025-06-01,25762.9,27500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,7,2025-07-01,28205.58,29500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,8,2025-08-01,27623.64,29000.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,9,2025-09-01,24796.75,25500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,10,2025-10-01,22972.93,22000.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,11,2025-11-01,19037.18,20000.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|florida,US,True,False,holdout,last12,12,2025-12-01,19761.66,18500.0,,,,0.8,854.2251449275362,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,1,2025-01-01,13390.05,12500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,2,2025-02-01,10482.79,10500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,3,2025-03-01,10031.68,10200.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,4,2025-04-01,11437.67,11500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,5,2025-05-01,12052.93,13500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,6,2025-06-01,13411.4,14500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,7,2025-07-01,15327.85,15500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,8,2025-08-01,13974.75,15700.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,9,2025-09-01,11673.9,12500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,10,2025-10-01,11927.92,12000.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,11,2025-11-01,11220.68,11000.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|georgia,US,True,False,holdout,last12,12,2025-12-01,12534.58,12500.0,,,,0.8,747.4295289855072,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,1,2025-01-01,1793.04,1715.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,2,2025-02-01,1441.5,1635.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,3,2025-03-01,1513.46,1725.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,4,2025-04-01,1519.66,1575.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,5,2025-05-01,1660.89,1500.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,6,2025-06-01,1882.53,1775.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,7,2025-07-01,1854.16,1850.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,8,2025-08-01,1850.64,1750.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,9,2025-09-01,1526.96,1450.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,10,2025-10-01,1475.77,1350.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,11,2025-11-01,1675.51,1550.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|idaho,US,False,False,holdout,last12,12,2025-12-01,2130.78,1680.0,,,,0.8,150.9736956521739,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,1,2025-01-01,18190.93,17450.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,2,2025-02-01,15824.61,15350.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,3,2025-03-01,15777.42,15450.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,4,2025-04-01,15046.57,14350.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,5,2025-05-01,15082.73,14800.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,6,2025-06-01,16867.0,16700.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,7,2025-07-01,18840.63,17650.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,8,2025-08-01,17134.05,17600.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,9,2025-09-01,14858.28,15250.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,10,2025-10-01,16074.6,15150.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,11,2025-11-01,15168.03,15200.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|illinois,US,True,False,holdout,last12,12,2025-12-01,17647.88,16700.0,,,,0.8,722.6458333333334,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,1,2025-01-01,11308.63,9562.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,2,2025-02-01,9085.6,7858.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,3,2025-03-01,8891.16,7174.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,4,2025-04-01,7854.58,6606.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,5,2025-05-01,7435.69,6781.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,6,2025-06-01,8935.97,8595.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,7,2025-07-01,11067.11,9646.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,8,2025-08-01,9555.52,9174.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,9,2025-09-01,8774.35,6874.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,10,2025-10-01,9172.56,6971.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,11,2025-11-01,7765.74,7583.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|indiana,US,True,False,holdout,last12,12,2025-12-01,9813.61,9344.0,,,,0.8,721.3359782608696,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,1,2025-01-01,7167.77,6500.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,2,2025-02-01,6536.37,6100.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,3,2025-03-01,6303.64,6400.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,4,2025-04-01,6080.04,6000.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,5,2025-05-01,5208.24,5700.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,6,2025-06-01,5862.98,5800.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,7,2025-07-01,6413.91,6000.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,8,2025-08-01,5600.82,6200.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,9,2025-09-01,5280.29,6100.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,10,2025-10-01,6601.9,6300.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,11,2025-11-01,6324.62,6500.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|iowa,US,True,False,holdout,last12,12,2025-12-01,7342.54,6700.0,,,,0.8,350.7590942028986,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,1,2025-01-01,5641.24,5300.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,2,2025-02-01,5168.69,4950.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,3,2025-03-01,5192.48,5200.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,4,2025-04-01,4979.67,4200.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,5,2025-05-01,5036.34,4450.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,6,2025-06-01,5744.28,5200.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,7,2025-07-01,6307.32,5700.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,8,2025-08-01,5923.87,5800.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,9,2025-09-01,5265.74,5300.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,10,2025-10-01,4149.56,4750.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,11,2025-11-01,4139.51,4600.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kansas,US,True,False,holdout,last12,12,2025-12-01,5599.6,4950.0,,,,0.8,342.8010507246377,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,1,2025-01-01,7788.51,6800.0,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,2,2025-02-01,6149.72,5129.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,3,2025-03-01,5195.49,4566.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,4,2025-04-01,4802.07,4580.0,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,5,2025-05-01,5333.2,5558.0,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,6,2025-06-01,6741.62,6293.0,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,7,2025-07-01,8008.28,7091.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,8,2025-08-01,6924.67,6990.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,9,2025-09-01,5823.67,5404.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,10,2025-10-01,5104.76,4449.0,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,11,2025-11-01,5381.57,4506.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|kentucky,US,True,False,holdout,last12,12,2025-12-01,6725.98,5939.5,,,,0.8,568.944347826087,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,1,2025-01-01,8884.11,7467.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,2,2025-02-01,7188.9,7109.5,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,3,2025-03-01,6743.71,7100.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,4,2025-04-01,7457.76,7500.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,5,2025-05-01,8101.79,8500.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,6,2025-06-01,9162.89,9000.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,7,2025-07-01,9964.24,10000.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,8,2025-08-01,10020.87,10200.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,9,2025-09-01,9317.96,8800.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,10,2025-10-01,8565.92,8000.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,11,2025-11-01,8291.85,7800.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|louisiana,US,True,False,holdout,last12,12,2025-12-01,8617.11,7700.0,,,,0.8,517.4338405797101,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,1,2025-01-01,1291.82,1110.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,2,2025-02-01,1210.45,1077.5,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,3,2025-03-01,1428.26,1150.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,4,2025-04-01,1183.24,1092.5,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,5,2025-05-01,1359.31,1045.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,6,2025-06-01,1365.56,1162.5,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,7,2025-07-01,1487.58,1225.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,8,2025-08-01,1337.32,1195.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,9,2025-09-01,1260.78,1100.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,10,2025-10-01,1211.06,1080.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,11,2025-11-01,1370.89,1117.5,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maine,US,False,False,holdout,last12,12,2025-12-01,1561.39,1075.0,,,,0.8,154.14967391304347,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,1,2025-01-01,3554.85,3251.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,2,2025-02-01,2683.67,2331.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,3,2025-03-01,2573.29,2889.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,4,2025-04-01,3173.48,3544.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,5,2025-05-01,3388.41,3302.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,6,2025-06-01,3683.34,3269.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,7,2025-07-01,4396.58,3924.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,8,2025-08-01,3216.14,3600.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,9,2025-09-01,3088.05,2913.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,10,2025-10-01,3680.5,3305.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,11,2025-11-01,2669.02,2476.0,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|maryland,US,True,False,holdout,last12,12,2025-12-01,3327.67,2928.5,,,,0.8,404.219384057971,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,1,2025-01-01,2047.35,2092.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,2,2025-02-01,1872.69,2067.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,3,2025-03-01,1992.72,1795.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,4,2025-04-01,1904.13,1755.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,5,2025-05-01,2013.87,2223.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,6,2025-06-01,2556.87,2430.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,7,2025-07-01,3214.23,2708.5,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,8,2025-08-01,2706.05,2186.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,9,2025-09-01,2135.02,1744.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,10,2025-10-01,2278.43,1540.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,11,2025-11-01,2201.16,1588.5,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|massachusetts,US,True,False,holdout,last12,12,2025-12-01,2292.68,2088.0,,,,0.8,370.6084420289855,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,1,2025-01-01,11693.55,11200.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,2,2025-02-01,10152.38,10500.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,3,2025-03-01,9820.38,9200.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,4,2025-04-01,9409.46,8600.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,5,2025-05-01,9018.45,9500.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,6,2025-06-01,10655.78,10800.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,7,2025-07-01,12206.19,12200.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,8,2025-08-01,11443.71,12500.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,9,2025-09-01,10358.02,10800.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,10,2025-10-01,9934.39,10000.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,11,2025-11-01,10666.11,9600.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|michigan,US,True,False,holdout,last12,12,2025-12-01,11631.5,10500.0,,,,0.8,705.7997826086956,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,1,2025-01-01,5675.45,5327.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,2,2025-02-01,5096.53,4650.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,3,2025-03-01,5063.61,5046.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,4,2025-04-01,4554.74,4869.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,5,2025-05-01,4199.38,4765.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,6,2025-06-01,4928.01,5055.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,7,2025-07-01,6128.45,5800.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,8,2025-08-01,5656.14,5550.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,9,2025-09-01,4766.9,4651.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,10,2025-10-01,4725.95,4050.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,11,2025-11-01,4757.04,4407.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|minnesota,US,True,False,holdout,last12,12,2025-12-01,5641.7,5055.0,,,,0.8,291.43597826086955,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,1,2025-01-01,6584.96,6352.3,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,2,2025-02-01,5416.5,5566.8,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,3,2025-03-01,6376.84,4623.8,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,4,2025-04-01,5730.56,5107.3,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,5,2025-05-01,5400.59,6215.5,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,6,2025-06-01,6909.71,7130.0,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,7,2025-07-01,8285.4,7705.0,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,8,2025-08-01,8055.46,7659.8,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,9,2025-09-01,6628.23,6477.3,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,10,2025-10-01,6088.42,5691.5,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,11,2025-11-01,5277.09,5179.5,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|mississippi,US,True,False,holdout,last12,12,2025-12-01,6092.9,5507.5,,,,0.8,559.9975,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,1,2025-01-01,6658.1,6504.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,2,2025-02-01,6609.74,4794.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,3,2025-03-01,5844.29,4676.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,4,2025-04-01,5193.59,4897.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,5,2025-05-01,5204.01,5824.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,6,2025-06-01,5915.34,7139.5,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,7,2025-07-01,7168.47,7671.5,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,8,2025-08-01,7098.49,7314.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,9,2025-09-01,5916.52,5721.5,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,10,2025-10-01,5578.63,5079.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,11,2025-11-01,5425.6,4287.5,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|missouri,US,False,False,holdout,last12,12,2025-12-01,6636.02,5336.0,,,,0.8,517.0428260869566,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,1,2025-01-01,2804.17,2485.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,2,2025-02-01,2293.24,2250.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,3,2025-03-01,2278.21,2125.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,4,2025-04-01,2001.33,1965.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,5,2025-05-01,1932.12,1800.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,6,2025-06-01,2003.92,1975.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,7,2025-07-01,2450.98,2250.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,8,2025-08-01,2484.3,2325.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,9,2025-09-01,1932.99,2175.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,10,2025-10-01,2434.81,2125.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,11,2025-11-01,2588.37,2400.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|montana,US,False,False,holdout,last12,12,2025-12-01,2611.07,2775.0,,,,0.8,243.6841304347826,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,1,2025-01-01,3869.61,3550.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,2,2025-02-01,3335.8,3275.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,3,2025-03-01,2981.07,3125.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,4,2025-04-01,2518.96,3000.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,5,2025-05-01,2885.69,3200.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,6,2025-06-01,3139.86,3550.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,7,2025-07-01,3698.95,3875.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,8,2025-08-01,3823.45,3850.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,9,2025-09-01,3504.77,3350.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,10,2025-10-01,3417.77,3000.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,11,2025-11-01,3382.93,2975.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nebraska,US,True,False,holdout,last12,12,2025-12-01,3596.21,3375.0,,,,0.8,220.76934782608694,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,1,2025-01-01,3472.19,3400.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,2,2025-02-01,3147.71,3175.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,3,2025-03-01,3578.69,3428.5,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,4,2025-04-01,3646.11,3675.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,5,2025-05-01,4229.66,4075.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,6,2025-06-01,4677.88,4750.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,7,2025-07-01,4935.44,5450.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,8,2025-08-01,4932.66,5100.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,9,2025-09-01,4257.33,4400.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,10,2025-10-01,3766.53,3950.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,11,2025-11-01,3225.92,3300.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|nevada,US,True,False,holdout,last12,12,2025-12-01,3365.61,3475.0,,,,0.8,274.2497101449275,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,1,2025-01-01,1715.9,1506.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,2,2025-02-01,1459.49,1450.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,3,2025-03-01,1408.73,1355.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,4,2025-04-01,1553.74,1374.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,5,2025-05-01,1586.96,1477.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,6,2025-06-01,1731.73,1598.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,7,2025-07-01,1982.98,1723.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,8,2025-08-01,1748.07,1747.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,9,2025-09-01,1587.06,1656.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,10,2025-10-01,1691.09,1100.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,11,2025-11-01,1488.28,900.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new hampshire,US,False,False,holdout,last12,12,2025-12-01,1899.98,1417.0,,,,0.8,257.4848188405797,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,1,2025-01-01,4807.8,5605.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,2,2025-02-01,4672.49,5074.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,3,2025-03-01,4895.39,4893.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,4,2025-04-01,5514.29,5115.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,5,2025-05-01,4246.87,5133.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,6,2025-06-01,5902.59,6195.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,7,2025-07-01,7621.86,7225.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,8,2025-08-01,6372.28,6487.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,9,2025-09-01,5344.55,5475.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,10,2025-10-01,5227.22,5126.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,11,2025-11-01,5199.24,4685.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new jersey,US,True,False,holdout,last12,12,2025-12-01,5406.4,4941.0,,,,0.8,447.53778985507256,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,1,2025-01-01,3086.8,3550.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,2,2025-02-01,2632.42,3750.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,3,2025-03-01,3435.71,3375.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,4,2025-04-01,3507.36,3275.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,5,2025-05-01,3289.11,3575.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,6,2025-06-01,3486.24,3900.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,7,2025-07-01,3304.31,3850.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,8,2025-08-01,3593.88,3350.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,9,2025-09-01,3379.33,3175.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,10,2025-10-01,3424.92,3000.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,11,2025-11-01,3363.92,3000.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new mexico,US,True,False,holdout,last12,12,2025-12-01,3855.01,3450.0,,,,0.8,300.25811594202895,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,1,2025-01-01,12101.4,11470.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,2,2025-02-01,10583.77,10740.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,3,2025-03-01,10723.43,10440.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,4,2025-04-01,10330.61,10300.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,5,2025-05-01,10569.38,11010.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,6,2025-06-01,12278.9,12080.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,7,2025-07-01,14676.42,13910.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,8,2025-08-01,12601.19,12770.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,9,2025-09-01,10624.29,10670.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,10,2025-10-01,10489.93,10450.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,11,2025-11-01,10713.13,10790.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|new york,US,True,False,holdout,last12,12,2025-12-01,12068.33,11610.0,,,,0.8,592.2707608695652,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,1,2025-01-01,13974.47,12800.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,2,2025-02-01,10490.7,10500.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,3,2025-03-01,9176.69,9500.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,4,2025-04-01,9144.82,9200.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,5,2025-05-01,10742.12,10800.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,6,2025-06-01,12996.19,12500.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,7,2025-07-01,14749.2,14000.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,8,2025-08-01,12363.15,13800.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,9,2025-09-01,11296.2,11000.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,10,2025-10-01,9170.38,10000.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,11,2025-11-01,10002.46,10500.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north carolina,US,True,False,holdout,last12,12,2025-12-01,12228.73,12000.0,,,,0.8,759.7571376811595,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,1,2025-01-01,4480.72,4250.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,2,2025-02-01,3823.39,3700.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,3,2025-03-01,3687.94,3850.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,4,2025-04-01,3135.29,3400.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,5,2025-05-01,3062.74,3100.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,6,2025-06-01,3095.37,3500.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,7,2025-07-01,3579.34,3700.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,8,2025-08-01,3302.88,3800.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,9,2025-09-01,3089.49,3300.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,10,2025-10-01,3552.32,3500.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,11,2025-11-01,3712.81,3850.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|north dakota,US,False,False,holdout,last12,12,2025-12-01,4218.86,4200.0,,,,0.8,199.00463768115938,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,1,2025-01-01,14564.37,13800.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,2,2025-02-01,12128.6,11500.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,3,2025-03-01,11184.99,10350.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,4,2025-04-01,8299.15,9500.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,5,2025-05-01,11238.9,10620.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,6,2025-06-01,13043.38,12650.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,7,2025-07-01,15251.93,14200.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,8,2025-08-01,13721.02,13800.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,9,2025-09-01,12813.83,11900.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,10,2025-10-01,9913.77,10350.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,11,2025-11-01,11630.07,11300.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|ohio,US,True,False,holdout,last12,12,2025-12-01,13325.61,13500.0,,,,0.8,912.0921014492752,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,1,2025-01-01,8291.08,8200.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,2,2025-02-01,6840.8,7200.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,3,2025-03-01,7000.79,7800.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,4,2025-04-01,6367.57,8500.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,5,2025-05-01,6689.29,9000.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,6,2025-06-01,8373.76,10200.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,7,2025-07-01,9842.85,10800.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,8,2025-08-01,9038.69,11000.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,9,2025-09-01,7394.28,8800.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,10,2025-10-01,7219.92,7800.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,11,2025-11-01,6581.66,7500.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oklahoma,US,True,False,holdout,last12,12,2025-12-01,7662.01,8000.0,,,,0.8,535.8723550724637,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,1,2025-01-01,6008.77,5950.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,2,2025-02-01,5194.21,5700.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,3,2025-03-01,5601.12,5450.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,4,2025-04-01,4962.7,4850.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,5,2025-05-01,4782.65,4500.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,6,2025-06-01,5061.19,5250.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,7,2025-07-01,5450.7,5700.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,8,2025-08-01,5595.75,5650.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,9,2025-09-01,4894.0,4950.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,10,2025-10-01,4821.6,4650.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,11,2025-11-01,5468.79,5350.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|oregon,US,True,False,holdout,last12,12,2025-12-01,6815.04,6100.0,,,,0.8,308.29626811594204,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,1,2025-01-01,24413.5,22440.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,2,2025-02-01,21163.66,20255.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,3,2025-03-01,19816.41,19915.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,4,2025-04-01,17453.77,16430.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,5,2025-05-01,19351.63,18820.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,6,2025-06-01,22062.19,21965.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,7,2025-07-01,25058.69,24145.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,8,2025-08-01,22874.48,23500.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,9,2025-09-01,19867.09,20005.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,10,2025-10-01,16775.65,17490.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,11,2025-11-01,17370.27,18370.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|pennsylvania,US,True,False,holdout,last12,12,2025-12-01,22612.12,21500.0,,,,0.8,871.1751811594203,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,1,2025-01-01,699.87,543.0,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,2,2025-02-01,618.3,541.1,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,3,2025-03-01,648.75,729.1,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,4,2025-04-01,719.64,842.6,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,5,2025-05-01,824.85,1026.0,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,6,2025-06-01,917.62,1091.5,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,7,2025-07-01,1145.84,1070.5,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,8,2025-08-01,1076.75,1048.7,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,9,2025-09-01,891.49,866.0,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,10,2025-10-01,909.15,772.5,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,11,2025-11-01,850.63,650.0,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|rhode island,US,False,False,holdout,last12,12,2025-12-01,791.98,633.8,,,,0.8,116.0623188405797,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,1,2025-01-01,9582.06,9000.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,2,2025-02-01,8165.53,8000.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,3,2025-03-01,8665.02,8100.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,4,2025-04-01,8502.12,7500.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,5,2025-05-01,8446.48,8450.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,6,2025-06-01,9464.23,8900.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,7,2025-07-01,10295.9,9800.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,8,2025-08-01,9280.89,9400.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,9,2025-09-01,7915.84,8350.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,10,2025-10-01,8113.79,7350.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,11,2025-11-01,7605.26,7300.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south carolina,US,True,False,holdout,last12,12,2025-12-01,9009.43,8200.0,,,,0.8,471.6781884057971,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,1,2025-01-01,2167.09,1920.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,2,2025-02-01,1738.11,1880.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,3,2025-03-01,1943.44,1992.5,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,4,2025-04-01,1908.17,1905.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,5,2025-05-01,1665.96,1780.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,6,2025-06-01,1727.86,1920.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,7,2025-07-01,1798.34,1930.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,8,2025-08-01,1695.56,1890.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,9,2025-09-01,1533.46,1760.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,10,2025-10-01,1890.78,1880.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,11,2025-11-01,1783.65,2020.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|south dakota,US,False,False,holdout,last12,12,2025-12-01,2120.1,2180.0,,,,0.8,151.75184782608696,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,1,2025-01-01,7018.39,7800.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,2,2025-02-01,5105.17,6800.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,3,2025-03-01,5249.45,6200.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,4,2025-04-01,4574.9,5000.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,5,2025-05-01,5866.96,6200.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,6,2025-06-01,6767.27,7200.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,7,2025-07-01,8395.33,7800.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,8,2025-08-01,7477.8,7500.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,9,2025-09-01,6838.69,6500.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,10,2025-10-01,5207.32,5500.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,11,2025-11-01,5038.31,4800.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|tennessee,US,True,False,holdout,last12,12,2025-12-01,7334.73,6000.0,,,,0.8,580.4349275362318,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,1,2025-01-01,50664.45,45500.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,2,2025-02-01,43505.62,41000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,3,2025-03-01,43638.58,43000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,4,2025-04-01,44170.61,46000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,5,2025-05-01,49854.94,51000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,6,2025-06-01,54264.88,56000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,7,2025-07-01,58395.03,59000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,8,2025-08-01,58608.03,61000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,9,2025-09-01,52444.81,53000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,10,2025-10-01,49386.31,48000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,11,2025-11-01,43851.65,44000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|texas,US,True,False,holdout,last12,12,2025-12-01,46513.29,46000.0,,,,0.8,1617.7998188405797,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,1,2025-01-01,3715.99,3450.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,2,2025-02-01,3400.02,3200.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,3,2025-03-01,3082.64,2800.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,4,2025-04-01,2293.93,2600.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,5,2025-05-01,2613.36,2900.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,6,2025-06-01,3349.4,3800.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,7,2025-07-01,3619.2,4300.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,8,2025-08-01,3546.26,4200.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,9,2025-09-01,3521.16,3600.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,10,2025-10-01,3130.11,3100.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,11,2025-11-01,3248.99,3000.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|utah,US,True,False,holdout,last12,12,2025-12-01,2812.76,3300.0,,,,0.8,286.88612318840575,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,1,2025-01-01,246.75,215.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,2,2025-02-01,208.26,205.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,3,2025-03-01,252.35,245.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,4,2025-04-01,211.33,233.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,5,2025-05-01,258.52,210.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,6,2025-06-01,232.59,215.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,7,2025-07-01,220.2,223.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,8,2025-08-01,211.6,245.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,9,2025-09-01,188.93,235.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,10,2025-10-01,168.72,215.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,11,2025-11-01,174.42,225.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|vermont,US,False,False,holdout,last12,12,2025-12-01,198.73,240.0,,,,0.8,78.75684782608695,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,1,2025-01-01,9929.47,9504.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,2,2025-02-01,8896.14,9650.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,3,2025-03-01,8569.92,9350.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,4,2025-04-01,7100.73,7984.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,5,2025-05-01,7547.2,7450.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,6,2025-06-01,10445.23,8250.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,7,2025-07-01,11489.17,10150.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,8,2025-08-01,10656.82,9950.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,9,2025-09-01,8660.54,9000.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,10,2025-10-01,6597.59,7650.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,11,2025-11-01,7158.03,7500.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|virginia,US,True,False,holdout,last12,12,2025-12-01,9489.73,9000.0,,,,0.8,583.1111956521739,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,1,2025-01-01,9805.14,10150.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,2,2025-02-01,7949.51,8950.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,3,2025-03-01,8717.34,8500.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,4,2025-04-01,8342.76,7650.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,5,2025-05-01,8050.98,8532.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,6,2025-06-01,8695.6,9835.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,7,2025-07-01,9024.78,10100.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,8,2025-08-01,8891.26,9550.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,9,2025-09-01,7196.44,7583.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,10,2025-10-01,8024.05,7650.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,11,2025-11-01,7990.22,8950.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington,US,True,False,holdout,last12,12,2025-12-01,10654.71,10400.0,,,,0.8,821.3428985507245,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,1,2025-01-01,38.73,38.5,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,2,2025-02-01,38.46,41.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,3,2025-03-01,46.15,46.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,4,2025-04-01,41.7,40.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,5,2025-05-01,46.19,42.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,6,2025-06-01,52.44,54.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,7,2025-07-01,55.27,55.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,8,2025-08-01,53.25,52.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,9,2025-09-01,53.09,45.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,10,2025-10-01,41.84,38.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,11,2025-11-01,44.29,36.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|washington dc,US,False,False,holdout,last12,12,2025-12-01,36.49,37.0,,,,0.8,7.923115942028985,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,1,2025-01-01,5982.09,5300.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,2,2025-02-01,4649.35,4250.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,3,2025-03-01,2983.63,3936.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,4,2025-04-01,3975.78,4100.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,5,2025-05-01,3137.53,4777.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,6,2025-06-01,4935.56,5650.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,7,2025-07-01,5920.24,5400.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,8,2025-08-01,4958.67,5600.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,9,2025-09-01,3064.23,3800.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,10,2025-10-01,4203.9,3000.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,11,2025-11-01,4217.15,3400.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|west virginia,US,False,False,holdout,last12,12,2025-12-01,5768.66,4600.0,,,,0.8,717.3102536231884,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,1,2025-01-01,6349.03,5879.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,2,2025-02-01,5335.84,5342.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,3,2025-03-01,4608.61,5372.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,4,2025-04-01,4208.11,4638.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,5,2025-05-01,4928.03,5102.5,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,6,2025-06-01,6315.57,5895.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,7,2025-07-01,7167.39,6697.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,8,2025-08-01,6742.28,6645.5,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,9,2025-09-01,5711.74,5345.5,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,10,2025-10-01,4722.51,4500.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,11,2025-11-01,5211.78,4429.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wisconsin,US,True,False,holdout,last12,12,2025-12-01,5821.32,5079.0,,,,0.8,372.4132971014493,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,1,2025-01-01,4541.51,4100.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,2,2025-02-01,3944.25,3600.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,3,2025-03-01,3743.11,3225.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,4,2025-04-01,3240.12,2875.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,5,2025-05-01,3039.28,2775.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,6,2025-06-01,3367.56,3200.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,7,2025-07-01,4212.4,3850.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,8,2025-08-01,3972.35,4000.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,9,2025-09-01,3645.64,3475.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,10,2025-10-01,3776.28,3300.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,11,2025-11-01,4240.71,3600.0,,,,0.8,244.27764492753624,,ollama,3
+nexus_llm,electricity,USA|wyoming,US,True,False,holdout,last12,12,2025-12-01,4438.93,4400.0,,,,0.8,244.27764492753624,,ollama,3
