@@ -196,7 +196,13 @@ def assign_subregion(df: pd.DataFrame, lat: str = "latitude", lon: str = "longit
 # --------------------------------------------------------------------------- plant-month table
 def plant_month(year: int) -> pd.DataFrame:
     """Plant x month: [plant_id, month, subregion, latitude, longitude, gen_mwh, co2_t, water_l,
-    water_hydro_l, water_source]. Generation clipped at 0 (pumped storage, station service)."""
+    water_hydro_l, water_source]. Generation clipped at 0 (pumped storage, station service).
+    Built once per year per process (routing set-ups call it repeatedly); callers get a copy."""
+    return _plant_month(year).copy()
+
+
+@lru_cache(maxsize=4)
+def _plant_month(year: int) -> pd.DataFrame:
     coeff = _cfg_params()["water_grid"]["ewif_coeff_L_per_MWh"]
     g = eia923_generation(year).copy()
     g["gen"] = g["netgen_mwh"].clip(lower=0)
@@ -208,15 +214,17 @@ def plant_month(year: int) -> pd.DataFrame:
     loc = pd.concat([loc, new[["plant_id", "subregion", "latitude", "longitude"]]], ignore_index=True)
 
     cw = cooling_water(year)
-    in_cooling = set(cw["plant_id"])
+    # covered = the cooling file reports this plant in THIS month (some plants report only part of the year)
+    in_cooling = pd.MultiIndex.from_frame(cw[["plant_id", "month"]])
     pm = g["prime_mover"].astype(str)
     thermal = pm.isin(THERMAL_PM) & ~g["fuel"].isin(["Solar", "Wind", "Hydro"])
-    covered = thermal & g["plant_id"].isin(in_cooling)          # the cooling file reports this water
+    covered = thermal & pd.MultiIndex.from_frame(g[["plant_id", "month"]]).isin(in_cooling)
     hydro = pm.eq("HY")
     k = g["fuel"].map(coeff).fillna(0.0)
     g["water_macknick_l"] = np.where(thermal & ~covered, g["gen"] * k, 0.0)
     g.loc[pm.eq("PV") | (g["fuel"].eq("Solar") & ~hydro), "water_macknick_l"] = g["gen"] * coeff["Solar"]
-    g.loc[g["fuel"].eq("Other Renewables"), "water_macknick_l"] = g["gen"] * coeff["Other Renewables"]
+    geo = g["fuel"].eq("Other Renewables") & ~covered          # geothermal: never on top of reported water
+    g.loc[geo, "water_macknick_l"] = g["gen"] * coeff["Other Renewables"]
     g["water_hydro_l"] = np.where(hydro, g["gen"] * coeff["Hydro"], 0.0)
 
     # CO2: eGRID plant rate; plants without one take the subregion x fuel mean rate of eGRID plants
@@ -301,5 +309,10 @@ def egrid_reproduction() -> pd.DataFrame:
 def seasonal_naive_ci(year: int) -> pd.DataFrame:
     """[zone_id, month, ci_hat] - the controller's one-year-ahead forecast for the US eGRID basis:
     the same subregion-month CI computed for year - 1 (EIA-923 of that year)."""
+    return _seasonal_naive_ci(year).copy()
+
+
+@lru_cache(maxsize=4)
+def _seasonal_naive_ci(year: int) -> pd.DataFrame:
     prev = subregion_month(year - 1)
     return prev[["zone_id", "month", "ci_gco2_per_kwh"]].rename(columns={"ci_gco2_per_kwh": "ci_hat"})

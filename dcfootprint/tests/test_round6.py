@@ -215,3 +215,12 @@ def test_egrid_subregion_rates_reproduced():
     d = egrid_reproduction()
     assert len(d) >= 25
     assert d["rel_diff"].abs().median() < 0.01 and d["rel_diff"].abs().max() < 0.08
+
+
+def test_retired_ember_notice_is_detected(tmp_path):
+    from dcfootprint.io.ember import _retired
+    notice = tmp_path / "us.csv"
+    notice.write_text("notice,new_url\n\"This file is no longer updated.\",https://x\n")
+    data = tmp_path / "us2.csv"
+    data.write_text("Country,Country code,State,Date\n")
+    assert _retired(notice) and _retired(tmp_path / "absent.csv") and not _retired(data)

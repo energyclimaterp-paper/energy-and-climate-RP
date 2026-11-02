@@ -37,7 +37,7 @@ def test_eu_extraction_reproduces_report_totals():
 
 
 _EMBER = ROOT / "data" / "ember"
-_US_OLD = (_EMBER / "us_monthly_full_release_long_format.csv").exists()
+_US_OLD = not ember._retired(_EMBER / "us_monthly_full_release_long_format.csv")
 _needs_ember = pytest.mark.skipif(not all((_EMBER / f"{r}_monthly_full_release_long_format.csv").exists()
                                           for r in ("india", "europe"))
                                   or not (_US_OLD or (_EMBER / ember.EMBER_US_SUBNATIONAL).exists()),

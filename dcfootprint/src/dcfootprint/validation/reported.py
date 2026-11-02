@@ -104,7 +104,8 @@ def compare(account: pd.DataFrame, reported: pd.DataFrame | None = None) -> pd.D
                          "ratio_total": mv / v if v else np.nan, "ratio_per_mw": per_mw,
                          "model_mw": m["capacity_mw"], "reported_mw": rep_mw, "source": src[metric]})
         e = vals.get("electricity_mwh")
-        w = vals.get("water_withdrawal_m3", vals.get("water_consumption_m3"))
+        # model on-site water is evaporative (WUE x IT energy): compare with consumption where reported
+        w = vals.get("water_consumption_m3", vals.get("water_withdrawal_m3"))
         if e and w:                                                  # capacity-free: water per facility kWh
             rw, mw_ = w * 1000 / (e * 1000), m["water_withdrawal_m3"] * 1000 / (m["electricity_mwh"] * 1000)
             rows.append({**base, "metric": "onsite_water_l_per_facility_kwh", "reported": rw, "model": mw_,

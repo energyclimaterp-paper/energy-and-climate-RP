@@ -77,7 +77,7 @@ def india(steps: list[dict]) -> None:
     fac = pd.read_parquet(R5 / "outputs" / "interim" / "facilities_geocoded.parquet")
     fac = fac[fac["facility_id"].isin(r5["facility_id"])]
     p = params()
-    acct = recompute_onsite(r5, facility_month_wue(fac, p, 2024))
+    acct = recompute_onsite(r5, facility_month_wue(fac, p, int(p["region_config"]["India"]["account_year"])))
     _json(out / "account_totals.json", {"round5_constant_wue": _totals(r5), "round6_climate_wue": _totals(acct),
                                         "climate_wue_by_month": acct.groupby("month")["wue_l_per_kwh"].mean().round(3).to_dict()})
     acct.to_parquet(out / "account_india.parquet")
@@ -127,7 +127,8 @@ def us(steps: list[dict]) -> None:
     fac = us_facilities.build()
     pc = copy.deepcopy(params())
     pc["water_onsite"]["wue_model"] = "constant"
-    const = recompute_onsite(acct, facility_month_wue(fac[fac["facility_id"].isin(acct["facility_id"])], pc, 2024))
+    yr = int(pc["region_config"]["US"]["account_year"])
+    const = recompute_onsite(acct, facility_month_wue(fac[fac["facility_id"].isin(acct["facility_id"])], pc, yr))
     r5 = pd.read_parquet(R5 / "outputs" / "account_us.parquet")
     _json(out / "account_totals.json", {"round5_ember_macknick": _totals(r5), "round6_eia_egrid_constant_wue": _totals(const),
                                         "round6_eia_egrid_climate_wue": _totals(acct),

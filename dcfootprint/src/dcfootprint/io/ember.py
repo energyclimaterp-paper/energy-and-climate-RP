@@ -36,8 +36,11 @@ def load_raw(region: str = "India", path: str | Path | None = None) -> pd.DataFr
              becomes 'EU Total'. Ember Europe reports TWh / MtCO2e / gCO2e per kWh: converted
              (x1000) and relabelled — note the EU emissions are CO2-EQUIVALENT (flagged)."""
     path = Path(path) if path else _repo_root() / "data" / "ember" / EMBER_FILES[region]
-    if region == "US" and not path.exists() and (path.parent / EMBER_US_SUBNATIONAL).exists():
-        return _drop_impossible_zero_ci(_us_subnational_to_long(pd.read_csv(path.parent / EMBER_US_SUBNATIONAL)))
+    if region == "US" and _retired(path):
+        sub = path.parent / EMBER_US_SUBNATIONAL
+        if not sub.exists():
+            raise FileNotFoundError(f"{path.name} is retired by Ember; download {EMBER_US_SUBNATIONAL} into {sub.parent}")
+        return _drop_impossible_zero_ci(_us_subnational_to_long(pd.read_csv(sub)))
     df = pd.read_csv(path)
     df["date"] = pd.to_datetime(df["Date"])
     if region == "EU":
@@ -74,6 +77,14 @@ EMBER_US_SUBNATIONAL = "release_us_subnational_generation_monthly.csv"
 _US_FUELS = {"Bioenergy": "Bioenergy", "Coal": "Coal", "Gas": "Gas", "Hydro": "Hydro", "Nuclear": "Nuclear",
              "Other fossil": "Other Fossil", "Other renewables": "Other Renewables", "Solar": "Solar",
              "Wind": "Wind", "Fossil": "Fossil", "Total generation": "Total Generation"}
+
+
+def _retired(path: Path) -> bool:
+    """True if the old US file is absent or is Ember's retirement notice (header 'notice,new_url')."""
+    if not path.exists():
+        return True
+    with open(path, encoding="utf-8", errors="ignore") as f:
+        return f.readline().strip().lower().startswith("notice")
 
 
 def _us_subnational_to_long(raw: pd.DataFrame) -> pd.DataFrame:

@@ -62,6 +62,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     root = _repo_root()
     zone = params["grid"]["zone"]
     year = int(params["region_config"][region]["account_year"])
+    basins = None
     if region == "India":
         fac = pd.read_parquet(root / "dcfootprint" / "outputs" / "interim" / "facilities_geocoded.parquet")
         acct_fac = fac[(fac["status"] == "Operational") & fac["capacity_mw"].notna() & fac["basin_id"].notna()].copy()
@@ -81,7 +82,8 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
         from dcfootprint.io import us_facilities
         from dcfootprint.geo import join as gj
         spine = us_facilities.build()
-        fac = gj.assign_basin(spine, gj.load_aware_basins())
+        basins = gj.load_aware_basins()                # reused below for the eGRID/EIA grid tables
+        fac = gj.assign_basin(spine, basins)
         acct_fac = fac[fac["basin_id"].notna()].copy()
         n_op_total = int(spine.attrs["meta"]["n_operational_datacenters"])
         extra_meta = {"us_capacity_basis": spine.attrs["meta"]["basis_counts"],
@@ -95,7 +97,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     if grid_source == "eia_egrid":                     # US: eGRID subregions, EIA plant data (io/us_grid.py)
         from dcfootprint.io import us_grid
         from dcfootprint.geo import join as gj
-        basins = gj.load_aware_basins()
+        basins = basins if basins is not None else gj.load_aware_basins()
         cf = gj.basin_monthly_cf(basins)
         sm = us_grid.subregion_month(year, cf, basins)
         acct_fac["zone_id"] = us_grid.assign_subregion(acct_fac).astype("string")

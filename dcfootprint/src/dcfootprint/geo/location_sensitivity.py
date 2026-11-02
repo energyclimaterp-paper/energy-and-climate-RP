@@ -34,7 +34,12 @@ def centroid_bounds(account: pd.DataFrame, facilities: pd.DataFrame, basins, cf:
     cand = basins_within(cen, basins, radius_km)
     onsite = account.groupby(["facility_id", "month"])["water_onsite_l"].sum().rename("w").reset_index()
     c = cand.merge(onsite, on="facility_id").merge(cf, on=["basin_id", "month"], how="left")
-    c["s"] = c["w"] * c["cf"].fillna(0.0)
+    # a basin without an AWARE CF in some month (ocean, undefined) is not a scorable location: the
+    # account drops such facility-months, so it is excluded here rather than scored as CF = 0
+    no_cf = c.loc[c["cf"].isna(), ["facility_id", "basin_id"]].drop_duplicates()
+    c = c.merge(no_cf.assign(_drop=True), on=["facility_id", "basin_id"], how="left")
+    c = c[c["_drop"].isna()].drop(columns="_drop")
+    c["s"] = c["w"] * c["cf"]
     per_basin = c.groupby(["facility_id", "basin_id"], as_index=False).agg(s_l_eq=("s", "sum"),
                                                                           cf_mean=("cf", "mean"))
     assigned = account.groupby("facility_id").agg(basin_id=("basin_id", "first"),

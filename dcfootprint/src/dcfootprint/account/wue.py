@@ -37,18 +37,22 @@ def gupta_cold_water_wue(tw_c) -> np.ndarray:
 
 
 def _fetch_point(lat: float, lon: float, year: int) -> dict[int, float]:
+    """Monthly T2MWET at one point. Fails fast (3 tries, 30 s each) with a clear message rather than
+    silently falling back to the default WUE, which would change the results without notice."""
     url = _POWER.format(lat=lat, lon=lon, year=year)
-    for i in range(4):
+    for i in range(3):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "dcfootprint"}), timeout=90) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "dcfootprint"}), timeout=30) as r:
                 v = json.load(r)["properties"]["parameter"]["T2MWET"]
             out = {int(k[-2:]): float(x) for k, x in v.items() if 1 <= int(k[-2:]) <= 12}
             if len(out) != 12 or any(x <= -900 for x in out.values()):    # -999 = POWER fill value
                 raise ValueError(f"incomplete T2MWET at {lat},{lon} {year}")
             return out
-        except (OSError, ValueError):
-            if i == 3:
-                raise
+        except (OSError, ValueError) as e:
+            if i == 2:
+                raise RuntimeError(
+                    f"NASA POWER wet-bulb unavailable for {lat},{lon} {year} ({e}). Run once online to fill "
+                    f"data/climate/, or set water_onsite.wue_model: constant in parameters.yaml.") from e
             time.sleep(3 * (i + 1))
     raise RuntimeError("unreachable")
 
