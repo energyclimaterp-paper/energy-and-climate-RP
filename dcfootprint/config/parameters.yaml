@@ -38,6 +38,10 @@ water_onsite:             # scope-1 WUE (L per kWh IT), fleet-average -> wide ba
     # evaporative sites 1.41. ISO/IEC 30134-9:2022 DEFINES WUE but sets no limits or targets.
     # Replaces 9 L/kWh (Li et al. 2304.03271: on-site WUE 0.01-9 across sites/seasons, not an
     # annual-average range).
+  # constant = wue_default everywhere (round 5); climate = cooling-tower WUE at the facility's monthly
+  # wet-bulb temperature (Gupta et al. 2024, ACM e-Energy, eq. "fixed cold water"; NASA POWER T2MWET),
+  # see account/wue.py. Disclosed operator WUEs below override either.
+  wue_model: climate
   wue_by_operator:
     microsoft: 0.27
     meta: 0.19
@@ -153,7 +157,7 @@ regions:
     India: ember_state_monthly        # set by grid.zone; generation-based -> R2 caveat stated in results
     India_pooled_alternative: ember_national_monthly   # grid.zone: national
     India_crosscheck: cea_national_annual              # only if data/cea/ is present
-    US: egrid_subregion_annual        # eGRID subregion = the consumption grid; Ember-state = x-check
+    US: egrid_eia_subregion_monthly   # region_config.US.grid_source: eia_egrid (io/us_grid.py); ember_macknick = round-5 sensitivity
     EU: ember_country_monthly         # no sub-national -> light tier
   # => India sub-national NOVELTY rides on WATER (local), not carbon (regional). Stated.
   comparison_unit: per_MW_and_basin_level   # ⚠️ R11: common normalised unit for the cross-region gradient
@@ -222,6 +226,13 @@ uncertainty:
   # WUE band is [0.7, 2.5] with mode 1.9 (see water_onsite.wue_default for sources).
   distribution: triangular
   n_samples: 4000
+  # Routing Monte Carlo (uncertainty/routing_mc.py): the Q3 comparison re-run per draw, so the
+  # carbon/water trade-off gets an interval instead of a point. Each draw also takes its own
+  # demand-noise seed. ci_zone_band is a per-zone multiplier on grid CI, drawn independently per
+  # zone (ASSUMPTION, not sourced: +-10% relative uncertainty between grid zones, which is what
+  # moves routing carbon); set [1.0, 1.0] to switch it off.
+  routing_n_samples: 1000
+  ci_zone_band: [0.9, 1.1]
 
 # ---------------------------------------------------------------------------
 # REGIONS (L0/L1 inputs per region; the India block mirrors grid.* above)
@@ -237,6 +248,18 @@ region_config:
     gem_countries: [United States]
     gadm_path: "data/gadm/gadm41_USA.gpkg"
     compute_atlas_path: "data/compute_atlas/facilities_v1.34.0.json"   # pinned release v1.34.0 (CC BY 4.0)
+    # US grid carbon + power-plant water source (io/us_grid.py):
+    #   eia_egrid       zone = eGRID subregion; carbon = EIA-923 monthly plant generation x eGRID plant
+    #                   CO2 rates; water = EIA reported cooling-water consumption per plant (Macknick
+    #                   only for plants that do not report); scarcity at each plant's own basin.
+    #   ember_macknick  zone = state; Ember state generation mix x Macknick fuel coefficients (round 5).
+    grid_source: eia_egrid
+    egrid_year: 2023                    # latest eGRID (rev2, June 2025); plant rates applied to 2024 generation
+    egrid_path: "data/egrid/egrid2023_data_rev2.xlsx"
+    egrid_subregions_path: "data/egrid/subregions/eGRID2023_Subregions.shp"
+    eia923_path: "data/eia/f923_{year}/EIA923_Schedules_2_3_4_5_M_12_{year}_Final*.xlsx"
+    eia_cooling_path: "data/eia/Cooling_Boiler_Generator_Data_Summary_{year}.xlsx"
+    eia860_plant_path: "data/eia/eia860_2024/2___Plant_Y2024.xlsx"     # locations of plants not in eGRID
   EU:
     tier: country            # facility data confidential under Reg (EU) 2024/1364
     account_year: 2023       # first EED reporting period covers calendar 2023

@@ -1,0 +1,296 @@
+{
+  "10km": {
+    "radius_km": 10,
+    "n_centroid_facilities": 71,
+    "n_facilities_with_alternative_basin": 27,
+    "scope1_scarcity_m3eq": 259945735,
+    "scope1_scarcity_range_m3eq": [
+      204374581,
+      259945735
+    ],
+    "total_scarcity_m3eq": 766626179,
+    "total_scarcity_range_m3eq": [
+      711055025,
+      766626179
+    ],
+    "total_scarcity_range_pct": [
+      -7.2,
+      0.0
+    ],
+    "by_city": [
+      {
+        "city": "Ahmedabad",
+        "n_facilities": 1,
+        "n_basins": 1,
+        "cf_min": 71.97,
+        "cf_max": 71.97
+      },
+      {
+        "city": "Bengaluru",
+        "n_facilities": 11,
+        "n_basins": 1,
+        "cf_min": 75.45,
+        "cf_max": 75.45
+      },
+      {
+        "city": "Bhubaneswar",
+        "n_facilities": 1,
+        "n_basins": 1,
+        "cf_min": 4.81,
+        "cf_max": 4.81
+      },
+      {
+        "city": "Chennai",
+        "n_facilities": 12,
+        "n_basins": 2,
+        "cf_min": 49.07,
+        "cf_max": 53.18
+      },
+      {
+        "city": "Delhi",
+        "n_facilities": 3,
+        "n_basins": 1,
+        "cf_min": 51.28,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Greater Noida",
+        "n_facilities": 1,
+        "n_basins": 1,
+        "cf_min": 51.28,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Hyderabad",
+        "n_facilities": 6,
+        "n_basins": 1,
+        "cf_min": 40.75,
+        "cf_max": 40.75
+      },
+      {
+        "city": "Kolkata",
+        "n_facilities": 4,
+        "n_basins": 1,
+        "cf_min": 1.39,
+        "cf_max": 1.39
+      },
+      {
+        "city": "Mumbai",
+        "n_facilities": 15,
+        "n_basins": 2,
+        "cf_min": 3.94,
+        "cf_max": 34.83
+      },
+      {
+        "city": "Noida",
+        "n_facilities": 9,
+        "n_basins": 1,
+        "cf_min": 51.28,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Pune",
+        "n_facilities": 8,
+        "n_basins": 1,
+        "cf_min": 40.75,
+        "cf_max": 40.75
+      }
+    ]
+  },
+  "25km": {
+    "radius_km": 25,
+    "n_centroid_facilities": 71,
+    "n_facilities_with_alternative_basin": 62,
+    "scope1_scarcity_m3eq": 259945735,
+    "scope1_scarcity_range_m3eq": [
+      194123253,
+      261000960
+    ],
+    "total_scarcity_m3eq": 766626179,
+    "total_scarcity_range_m3eq": [
+      700803697,
+      767681404
+    ],
+    "total_scarcity_range_pct": [
+      -8.6,
+      0.1
+    ],
+    "by_city": [
+      {
+        "city": "Ahmedabad",
+        "n_facilities": 1,
+        "n_basins": 1,
+        "cf_min": 71.97,
+        "cf_max": 71.97
+      },
+      {
+        "city": "Bengaluru",
+        "n_facilities": 11,
+        "n_basins": 2,
+        "cf_min": 75.45,
+        "cf_max": 76.43
+      },
+      {
+        "city": "Bhubaneswar",
+        "n_facilities": 1,
+        "n_basins": 2,
+        "cf_min": 4.81,
+        "cf_max": 23.46
+      },
+      {
+        "city": "Chennai",
+        "n_facilities": 12,
+        "n_basins": 2,
+        "cf_min": 49.07,
+        "cf_max": 53.18
+      },
+      {
+        "city": "Delhi",
+        "n_facilities": 3,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Greater Noida",
+        "n_facilities": 1,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Hyderabad",
+        "n_facilities": 6,
+        "n_basins": 2,
+        "cf_min": 4.48,
+        "cf_max": 40.75
+      },
+      {
+        "city": "Kolkata",
+        "n_facilities": 4,
+        "n_basins": 2,
+        "cf_min": 1.39,
+        "cf_max": 1.39
+      },
+      {
+        "city": "Mumbai",
+        "n_facilities": 15,
+        "n_basins": 2,
+        "cf_min": 3.94,
+        "cf_max": 34.83
+      },
+      {
+        "city": "Noida",
+        "n_facilities": 9,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Pune",
+        "n_facilities": 8,
+        "n_basins": 1,
+        "cf_min": 40.75,
+        "cf_max": 40.75
+      }
+    ]
+  },
+  "50km": {
+    "radius_km": 50,
+    "n_centroid_facilities": 71,
+    "n_facilities_with_alternative_basin": 71,
+    "scope1_scarcity_m3eq": 259945735,
+    "scope1_scarcity_range_m3eq": [
+      91287397,
+      261860659
+    ],
+    "total_scarcity_m3eq": 766626179,
+    "total_scarcity_range_m3eq": [
+      597967841,
+      768541103
+    ],
+    "total_scarcity_range_pct": [
+      -22.0,
+      0.2
+    ],
+    "by_city": [
+      {
+        "city": "Ahmedabad",
+        "n_facilities": 1,
+        "n_basins": 2,
+        "cf_min": 32.58,
+        "cf_max": 71.97
+      },
+      {
+        "city": "Bengaluru",
+        "n_facilities": 11,
+        "n_basins": 3,
+        "cf_min": 49.07,
+        "cf_max": 76.43
+      },
+      {
+        "city": "Bhubaneswar",
+        "n_facilities": 1,
+        "n_basins": 5,
+        "cf_min": 4.81,
+        "cf_max": 100.0
+      },
+      {
+        "city": "Chennai",
+        "n_facilities": 12,
+        "n_basins": 3,
+        "cf_min": 4.77,
+        "cf_max": 53.18
+      },
+      {
+        "city": "Delhi",
+        "n_facilities": 3,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Greater Noida",
+        "n_facilities": 1,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Hyderabad",
+        "n_facilities": 6,
+        "n_basins": 2,
+        "cf_min": 4.48,
+        "cf_max": 40.75
+      },
+      {
+        "city": "Kolkata",
+        "n_facilities": 4,
+        "n_basins": 2,
+        "cf_min": 1.39,
+        "cf_max": 1.39
+      },
+      {
+        "city": "Mumbai",
+        "n_facilities": 15,
+        "n_basins": 3,
+        "cf_min": 3.94,
+        "cf_max": 34.83
+      },
+      {
+        "city": "Noida",
+        "n_facilities": 9,
+        "n_basins": 2,
+        "cf_min": 42.53,
+        "cf_max": 51.28
+      },
+      {
+        "city": "Pune",
+        "n_facilities": 8,
+        "n_basins": 3,
+        "cf_min": 2.64,
+        "cf_max": 40.75
+      }
+    ]
+  }
+}

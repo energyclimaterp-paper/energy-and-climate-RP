@@ -43,16 +43,51 @@ def _params() -> dict:
     return _cfg_params()["routing"]
 
 
-def _ci_forecast(account: pd.DataFrame) -> pd.Series:
-    """One-step CI forecast per row from the L3 pre-registered method (project/hierarchy.py:
-    chosen on 2022-2023 one-step backtests over the datacenter states; cached)."""
+EMBER_CI_SOURCES = ("ember_state", "ember_national_fill", "ember_national")
+
+
+def _ci_forecast(account: pd.DataFrame) -> np.ndarray:
+    """One-step CI forecast per row, on the SAME basis as the realised CI the account charges.
+
+    The forecast comes from the L3 pre-registered method (project/hierarchy.py: chosen on
+    2022-2023 one-step backtests over the datacenter states; cached), which forecasts Ember
+    state GENERATION intensity. Where the account charges another basis (India consumption CI
+    from Electricity Maps, ci_source 'em_consumption'), handing the controller the generation
+    forecast makes it plan on a different signal from the one it is scored on (e.g. Karnataka
+    ~400 g/kWh generation vs 543 consumption in 2024). There the forecast's RELATIVE error is
+    carried onto the charged basis:
+        ci_hat = ci_charged * ci_hat_generation / ci_generation_realised
+    so the controller sees the charged CI with the pre-registered method's forecast skill.
+    US eGRID subregions (ci_source 'egrid_eia', io/us_grid.py) have no Ember series: their
+    forecast is the same subregion-month CI one year earlier (seasonal naive on that basis).
+    Zones no forecast covers fall back to the charged CI (perfect foresight).
+    """
+    from dcfootprint.io import ember
     from dcfootprint.project.hierarchy import chosen_onestep_ci
+    if "ci_hat" in account.columns:                        # supplied by the caller (e.g. forecast_value)
+        return account["ci_hat"].to_numpy(float)
     P = _cfg_params()
     region = str(account["region"].iloc[0])
+    year = int(P["region_config"][region]["account_year"])
+    if (account["ci_source"].astype(str) == "egrid_eia").all():
+        from dcfootprint.io import us_grid
+        sn = us_grid.seasonal_naive_ci(year)
+        hat = account[["zone_id", "month"]].reset_index(drop=True).merge(sn, on=["zone_id", "month"], how="left")["ci_hat"]
+        return hat.fillna(account["ci_gco2_per_kwh"].reset_index(drop=True)).to_numpy(float)
+    zone = P["grid"]["zone"]
     zones = tuple(sorted(account["zone_id"].astype(str).unique()))
-    ci, _, _ = chosen_onestep_ci(zones, int(P["region_config"][region]["account_year"]), P["grid"]["zone"], region)
-    m = account[["zone_id", "month"]].merge(ci[["zone_id", "month", "ci_hat"]], on=["zone_id", "month"], how="left")
-    return m["ci_hat"].fillna(account["ci_gco2_per_kwh"].reset_index(drop=True)).values
+    ci, _, _ = chosen_onestep_ci(zones, year, zone, region)
+    keys = account[["zone_id", "month"]].reset_index(drop=True)
+    charged = account["ci_gco2_per_kwh"].to_numpy(float)
+    hat = keys.merge(ci[["zone_id", "month", "ci_hat"]], on=["zone_id", "month"], how="left")["ci_hat"].to_numpy(float)
+    other_basis = ~account["ci_source"].astype(str).isin(EMBER_CI_SOURCES).to_numpy()
+    if other_basis.any():
+        gen = ember.zone_month_ci(ember.load_raw(region), year, zone)
+        gen_true = keys.merge(gen[["zone_id", "month", "ci_gco2_per_kwh"]], on=["zone_id", "month"],
+                              how="left")["ci_gco2_per_kwh"].to_numpy(float)
+        ok = other_basis & np.isfinite(hat) & np.isfinite(gen_true) & (gen_true > 0)
+        hat = np.where(ok, charged * hat / np.where(gen_true > 0, gen_true, 1.0), np.where(other_basis, np.nan, hat))
+    return np.where(np.isfinite(hat), hat, charged)
 
 
 def prepare(account: pd.DataFrame, legal: bool = True, budget_alpha: float | None = None,

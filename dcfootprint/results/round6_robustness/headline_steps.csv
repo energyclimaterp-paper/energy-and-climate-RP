@@ -1,0 +1,19 @@
+region,step,policy,carbon_change_pct,scarcity_change_pct
+India,0 round 5 as published,greedy,1.39,-21.85
+India,0 round 5 as published,lyapunov,1.87,-21.7
+India,0 round 5 as published,oracle,0.35,-22.73
+India,1 basis-consistent CI forecast,greedy,0.41,-22.8
+India,1 basis-consistent CI forecast,lyapunov,1.08,-22.59
+India,1 basis-consistent CI forecast,oracle,0.35,-22.73
+India,2 + climate WUE (round 6 account),greedy,0.44,-22.85
+India,2 + climate WUE (round 6 account),lyapunov,1.06,-22.52
+India,2 + climate WUE (round 6 account),oracle,0.45,-22.79
+US,0 round 5 as published,greedy,-10.21,-29.33
+US,0 round 5 as published,lyapunov,-10.21,-29.33
+US,0 round 5 as published,oracle,-10.63,-29.41
+US,1 eGRID + EIA plant data,greedy,-2.92,-30.07
+US,1 eGRID + EIA plant data,lyapunov,-2.92,-30.07
+US,1 eGRID + EIA plant data,oracle,-3.7,-29.5
+US,2 + climate WUE (round 6 account),greedy,-2.73,-30.04
+US,2 + climate WUE (round 6 account),lyapunov,-2.73,-30.04
+US,2 + climate WUE (round 6 account),oracle,-3.36,-29.62

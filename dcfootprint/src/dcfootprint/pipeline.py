@@ -221,7 +221,6 @@ def _write_report(account, cal, fc, rech, levers_df, gap_overlay, routing, scard
                  f"Siting and capacity limits are needed, not only load shifting (routing_budget_sweep.csv). "
                  f"*Synthetic demand; conditional on R-hat.*")
     if levers_df is not None:
-        top = levers_df.iloc[0]
         L.append("## L7 Levers — which lever pays\n" + "\n".join(
             f"- {r['lever']}: {r['water_scarcity_saved_m3eq_yr']:,.0f} m3-eq/yr ({r['pct_of_scarcity_baseline']}% of scarcity), "
             f"{r['carbon_saved_tco2_yr']:,.0f} tCO2/yr ({r['pct_of_carbon_baseline']}%)" for _, r in levers_df.iterrows()))

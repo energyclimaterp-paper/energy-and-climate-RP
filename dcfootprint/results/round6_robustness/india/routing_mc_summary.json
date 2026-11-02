@@ -1,0 +1,81 @@
+{
+  "n_draws": 1000,
+  "distribution": "triangular",
+  "legal": true,
+  "sign_convention": "change vs static in %; positive carbon = more carbon, negative scarcity = water saved",
+  "greedy": {
+    "carbon_change_pct": {
+      "mean": 0.358,
+      "p05": -0.77,
+      "p50": 0.428,
+      "p95": 1.21
+    },
+    "scarcity_change_pct": {
+      "mean": -22.383,
+      "p05": -24.389,
+      "p50": -22.317,
+      "p95": -20.625
+    },
+    "share_draws_carbon_up": 0.76,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov": {
+    "carbon_change_pct": {
+      "mean": 0.983,
+      "p05": 0.068,
+      "p50": 1.047,
+      "p95": 1.599
+    },
+    "scarcity_change_pct": {
+      "mean": -21.976,
+      "p05": -24.655,
+      "p50": -21.867,
+      "p95": -19.58
+    },
+    "share_draws_carbon_up": 0.962,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov_pf": {
+    "carbon_change_pct": {
+      "mean": 0.717,
+      "p05": -0.12,
+      "p50": 0.747,
+      "p95": 1.392
+    },
+    "scarcity_change_pct": {
+      "mean": -21.841,
+      "p05": -24.509,
+      "p50": -21.714,
+      "p95": -19.447
+    },
+    "share_draws_carbon_up": 0.93,
+    "share_draws_scarcity_down": 1.0
+  },
+  "oracle": {
+    "carbon_change_pct": {
+      "mean": 0.447,
+      "p05": -0.566,
+      "p50": 0.493,
+      "p95": 1.275
+    },
+    "scarcity_change_pct": {
+      "mean": -22.423,
+      "p05": -24.471,
+      "p50": -22.295,
+      "p95": -20.698
+    },
+    "share_draws_carbon_up": 0.836,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov_carbon_first_order": {
+    "util_colocation": 0.702,
+    "ci_Karnataka+Tamil Nadu+Telangana": 0.127,
+    "ci_Delhi+Uttar Pradesh": 0.078,
+    "hydro": 0.046,
+    "ci_Odisha+West Bengal": 0.046,
+    "ci_Gujarat+Maharashtra": 0.04,
+    "ewif": 0.038,
+    "pue_colocation": 0.037,
+    "wue": 0.035
+  }
+}

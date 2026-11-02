@@ -16,12 +16,16 @@ over the part of the basin that has a score; `scored_share` records that part.
 from __future__ import annotations
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import numpy as np
 import pandas as pd
 
 from dcfootprint.io.facilities import _repo_root
 from dcfootprint.settings import params as _cfg_params
+
+if TYPE_CHECKING:                       # annotation only; geopandas is imported where it is used
+    import geopandas as gpd
 
 SCENARIOS = ("baseline", "bau30", "opt30", "pes30", "bau50", "opt50", "pes50")
 EQUAL_AREA = "EPSG:6933"
@@ -31,7 +35,7 @@ def _gdb() -> Path:
     return _repo_root() / _cfg_params()["siting"]["aqueduct_gdb_path"]
 
 
-def pfaf_scores() -> "gpd.GeoDataFrame":
+def pfaf_scores() -> gpd.GeoDataFrame:
     """[pfaf_id, ws_<scenario> for SCENARIOS, geometry]; no-data (-9999 / NaN) -> NaN."""
     import pyogrio
     p = _gdb()

@@ -37,8 +37,10 @@ def test_clear_market_matches_lp(seed):
 
 @pytest.fixture(scope="module")
 def prepared():
-    if not (ROOT / "data" / "gem").is_dir():
-        pytest.skip("needs the raw inputs in data/ (the routing setup validates their paths)")
+    needed = [ROOT / "data" / "ember" / "india_monthly_full_release_long_format.csv",
+              ROOT / "data" / "aware" / "AWARE20_Intermediate_Variables.xlsx"]
+    if not all(p.exists() for p in needed):
+        pytest.skip("needs Ember India and the AWARE intermediate variables in data/ (CI forecast and budgets)")
     acct = pd.read_parquet(ACCOUNT)
     return {legal: lyapunov.prepare(acct, legal=legal) for legal in (True, False)}
 
