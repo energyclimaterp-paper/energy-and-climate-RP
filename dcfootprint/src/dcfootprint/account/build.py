@@ -56,17 +56,6 @@ def grid_tables(zone: str, year: int, region: str = "India") -> dict:
     return {"ci": ci, "shares": shares, "grid_water": gw, "plants": plants, "fuel_cf": fuel_cf, "basin_cf": cf}
 
 
-def _wue_by_facility_id(fac: pd.DataFrame, params: dict) -> dict:
-    wcfg = params["water_onsite"]
-    default = float(wcfg["wue_default"]["default"])
-    byop = {k.lower(): v for k, v in wcfg.get("wue_by_operator", {}).items()}
-    wue = pd.Series(default, index=fac.index, dtype=float)
-    opl = fac["operator"].fillna("").str.lower()
-    for op, val in byop.items():
-        wue.loc[opl.str.contains(op, regex=False)] = float(val)
-    return dict(zip(fac["facility_id"], wue))
-
-
 def facility_month_account(config: dict | None = None, region: str = "India") -> pd.DataFrame:
     """Facility-month account for a facility-tier region (India, US)."""
     params = load_params()
@@ -102,10 +91,27 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     else:
         raise ValueError(f"facility_month_account: region {region!r} is not facility-tier")
 
-    g = grid_tables(zone, year, region)
-    cf = g["basin_cf"].copy()
+    grid_source = params["region_config"][region].get("grid_source", "ember_macknick")
+    if grid_source == "eia_egrid":                     # US: eGRID subregions, EIA plant data (io/us_grid.py)
+        from dcfootprint.io import us_grid
+        from dcfootprint.geo import join as gj
+        basins = gj.load_aware_basins()
+        cf = gj.basin_monthly_cf(basins)
+        sm = us_grid.subregion_month(year, cf, basins)
+        acct_fac["zone_id"] = us_grid.assign_subregion(acct_fac).astype("string")
+        n_no_zone = int(acct_fac["zone_id"].isna().sum())
+        acct_fac = acct_fac[acct_fac["zone_id"].notna()].copy()
+        extra_meta["n_costed_no_egrid_subregion"] = n_no_zone
+        ci = sm[["zone_id", "month", "ci_gco2_per_kwh", "ci_source"]]
+        grid_water = sm[["zone_id", "month", "ewif_l_per_mwh", "ewif_hydro_l_per_mwh",
+                         "sewif_l_eq_per_mwh", "sewif_hydro_l_eq_per_mwh"]]
+        zone = "egrid_subregion"
+    else:
+        g = grid_tables(zone, year, region)
+        cf = g["basin_cf"].copy()
+        ci, grid_water = g["ci"], g["grid_water"]
+    extra_meta["grid_source"] = grid_source
 
-    ci = g["ci"]
     carbon_basis = params["grid"].get("carbon_basis", "generation")
     if carbon_basis == "consumption" and region == "India":
         try:                                           # R2: consumption-based India carbon (Electricity Maps)
@@ -113,15 +119,19 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
             ci = em.apply_consumption_ci(ci, year)
         except Exception as exc:                       # no EM key/cache -> fall back to generation, flagged
             carbon_basis = f"generation (consumption unavailable: {type(exc).__name__})"
+    elif grid_source == "eia_egrid":
+        carbon_basis = "generation (eGRID subregion, location-based; EIA-923 x eGRID plant rates)"
     elif carbon_basis == "consumption":                # consumption CI exists for India's grids only
         carbon_basis = "generation (consumption basis is India-only)"
 
     e = energy_mod.energy_account(acct_fac, params, year)
-    e["zone_id"] = e["state"].astype(str)
+    e["zone_id"] = (e["zone_id"] if grid_source == "eia_egrid" else e["state"]).astype(str)
     e = carbon_mod.carbon_account(e, ci)
 
     # --- scope-1 (on-site) water, scarcity at the facility's own basin ---
-    e["wue_l_per_kwh"] = e["facility_id"].map(_wue_by_facility_id(acct_fac, params))
+    from dcfootprint.account.wue import facility_month_wue      # constant or climate (water_onsite.wue_model)
+    e = e.merge(facility_month_wue(acct_fac, params, year), on=["facility_id", "month"], how="left",
+                validate="many_to_one")
     e["water_onsite_l"] = e["wue_l_per_kwh"] * e["e_it_mwh"] * 1000.0          # MWh -> kWh
     e["basin_id"] = e["basin_id"].astype("int64")
     cf["basin_id"] = cf["basin_id"].astype("int64")
@@ -131,7 +141,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     e["water_scarcity_onsite_l_eq"] = e["water_onsite_l"] * e["cf"]
 
     # --- scope-2 (grid) water, scarcity at the generation basins of the zone ---
-    e = e.merge(g["grid_water"], on=["zone_id", "month"], how="left")
+    e = e.merge(grid_water, on=["zone_id", "month"], how="left")
     e["water_grid_l"] = e["ewif_l_per_mwh"] * e["e_grid_mwh"]
     e["water_grid_hydro_l"] = e["ewif_hydro_l_per_mwh"] * e["e_grid_mwh"]
     e["water_scarcity_grid_l_eq"] = e["sewif_l_eq_per_mwh"] * e["e_grid_mwh"]
@@ -146,7 +156,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     e["region"] = region
 
     keep = _CONTRACT_COLS + ["state", "zone_id", "basin_id", "facility_type", "capacity_mw", "operator", "city",
-                             "cf", "cf_grid_eff", "ci_gco2_per_kwh", "ci_source", "pue", "wue_l_per_kwh",
+                             "cf", "cf_grid_eff", "ci_gco2_per_kwh", "ci_source", "pue", "wue_l_per_kwh", "wue_source",
                              "water_grid_hydro_l", "water_scarcity_grid_hydro_l_eq", "month"]
     account = e[keep].reset_index(drop=True)
 
@@ -162,6 +172,9 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
         "dropped_facility_months_no_cf": missing_cf,
         "carbon_basis": carbon_basis,
         "ci_state_fill_months": int((~account["ci_source"].isin(["ember_state", "em_consumption"])).sum()) if zone == "state" else 0,
+        "water_grid_source": ("EIA reported cooling water (gaps filled by technology x cooling intensity); Macknick for "
+                              "non-reporting plants; AWARE CF at each plant's basin") if grid_source == "eia_egrid"
+                             else "Ember fuel mix x Macknick 2012; AWARE CF at GEM plant basins",
     }
     try:                                           # optional cross-check, CEA not required
         from dcfootprint.io import cea

@@ -114,7 +114,6 @@ def score_cells(account: pd.DataFrame, legal: bool = True) -> pd.DataFrame:
             cells.iloc[i, cells.columns.get_loc("legal_flags")] = ",".join(flags)
     cells["new_scarcity_m3eq"] = (cells["s1_l"] * (1 - zld) + cells["s2_per_pue"] * pue) / 1000.0
     cells["new_carbon_tco2"] = cells["c_per_pue"] * pue * (1 - re)
-    new_onsite_l = float(e_it["e_it_mwh"].sum() * 1000 * wue) * (1 - zld)
 
     # marginal basin pressure: Delta D_b = rise in the peak queue D(t+1) = (D + W - R)^+ over a
     # steady year (one spin-up year), with vs without the new facility's scope-1 draw

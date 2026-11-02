@@ -35,6 +35,12 @@ Each provider's licence applies to its data and to values derived from it.
 | G3P terrestrial water storage | groundwater context | GFZ G3P v1.12 |
 | Epoch AI frontier datacenters | US coverage cross-check only | https://epoch.ai/data |
 | Policy documents (15) and legal rules (7) | regulatory gap and legal limits | `dcfootprint/config/policy_sources.csv`, `dcfootprint/config/legal_constraints.csv` (each with its link) |
+| EPA eGRID2023 (rev2, June 2025): plant table, subregion table, subregion map | US grid zone (eGRID subregion), plant CO₂ output rates | https://www.epa.gov/egrid/download-data, https://www.epa.gov/egrid/egrid-mapping-files |
+| EIA-923 monthly generation and fuel data, 2023 and 2024 | US plant-month net generation (carbon weights, EWIF denominator) | https://www.eia.gov/electricity/data/eia923/ |
+| EIA thermoelectric cooling water data, 2023 and 2024 | US plant-month reported cooling-water consumption | https://www.eia.gov/electricity/data/water/ |
+| EIA-860 schedule 2 (2024) | locations of US plants not in eGRID2023 | https://www.eia.gov/electricity/data/eia860/ |
+| NASA POWER monthly T2MWET (MERRA-2) | facility-month wet-bulb temperature for the climate WUE | https://power.larc.nasa.gov (fetched by `account/wue.py`, cached in `data/climate/`) |
+| Operator sustainability and ESG reports (Nxtra, CtrlS, STT GDC India, Meta, Google) | validation of energy and water against reported figures | `dcfootprint/config/reported_footprints.csv` (each figure with its link and PDF page) |
 
 ## Notes
 
@@ -44,3 +50,8 @@ Each provider's licence applies to its data and to values derived from it.
   siting scenarios.
 - Third-party terms apply to derived values too. Check the Electricity Maps terms before redistributing the India
   carbon values in `round5_final/outputs/`, and credit Ember and GEM (CC BY 4.0).
+- **Ember US.** Ember retired `us_monthly_full_release_long_format.csv` (the file now holds only a notice) in
+  favour of `release_us_subnational_generation_monthly.csv`, which reports lifecycle CO₂e rather than direct CO₂.
+  `io/ember.py` reads the new file when the old one is absent (Puerto Rico dropped: it is not in Ember's US
+  total). Since round 6 the US account takes its carbon and power-plant water from eGRID and EIA
+  (`io/us_grid.py`), so Ember US is used only for state names and the Ember-based sensitivity.

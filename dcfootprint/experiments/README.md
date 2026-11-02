@@ -12,6 +12,7 @@ None is needed to produce the account. Run them from the repository root, for ex
 | `spotcheck_trace.py` | recomputes three Indian facilities from the raw files without the pipeline's functions (writes `SPOTCHECK.md`) |
 | `compare_results.py <dir_a> <dir_b>` | compares two results folders file by file, CSVs numerically |
 | `gadm_gem_state_check.py` | checks GEM power-plant state labels against GADM boundaries |
+| `robustness_round6.py` | validation against operator reports, US on eGRID + EIA, routing Monte Carlo, forecast value for routing, climate WUE, location sensitivity → `results/round6_robustness/` |
 | `epoch_crosscheck.py` | US coverage of the Epoch AI frontier datacenter list (`us/epoch_crosscheck.md`) |
 
 ## Paper tables and inputs

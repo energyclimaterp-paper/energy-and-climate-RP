@@ -154,6 +154,53 @@ def attach_atlas_city_centroids(fac: pd.DataFrame, centroids: pd.DataFrame) -> p
 
 
 # --------------------------------------------------------------------------- #
+# Site coordinates (optional, researched per facility) override the centroid
+# --------------------------------------------------------------------------- #
+SITE_GEOCODES = Path("datasets") / "india_dc_facilities" / "geocodes.csv"
+_PRECISIONS = ("address", "campus", "locality")
+_INDIA_BBOX = (6.0, 37.5, 68.0, 97.5)          # lat_min, lat_max, lon_min, lon_max
+
+
+def load_site_geocodes(path: str | Path | None = None) -> pd.DataFrame:
+    """[facility_name, latitude, longitude, precision, source_url]: one researched coordinate per
+    facility (keyed by the master's facility_name). Every row needs a source and a precision; a
+    point outside India or a duplicate name fails loudly. Missing file -> empty frame."""
+    p = Path(path) if path else _repo_root() / SITE_GEOCODES
+    cols = ["facility_name", "latitude", "longitude", "precision", "source_url"]
+    if not p.exists():
+        return pd.DataFrame(columns=cols)
+    g = pd.read_csv(p)
+    if set(cols) - set(g.columns):
+        raise ValueError(f"{p.name}: needs columns {cols}")
+    g = g.dropna(how="all")
+    lat0, lat1, lon0, lon1 = _INDIA_BBOX
+    bad = ~(g["latitude"].between(lat0, lat1) & g["longitude"].between(lon0, lon1))
+    if bad.any() or g["facility_name"].duplicated().any():
+        raise ValueError(f"{p.name}: points outside India or duplicate names: {g.loc[bad, 'facility_name'].tolist()}")
+    if (~g["precision"].isin(_PRECISIONS)).any() or g["source_url"].fillna("").str.strip().eq("").any():
+        raise ValueError(f"{p.name}: precision must be one of {_PRECISIONS} and every row needs a source_url")
+    return g[cols]
+
+
+def attach_site_geocodes(fac: pd.DataFrame, raw: pd.DataFrame, geocodes: pd.DataFrame) -> pd.DataFrame:
+    """Replace the city centroid with a researched site coordinate where one exists
+    (geocode_method = 'site_<precision>'). Names not in the master fail loudly."""
+    if geocodes.empty:
+        return fac
+    unknown = set(geocodes["facility_name"]) - set(raw["facility_name"])
+    if unknown:
+        raise ValueError(f"geocodes.csv names not in the facility master: {sorted(unknown)}")
+    df = fac.copy()
+    g = geocodes.set_index("facility_name")
+    names = raw["facility_name"].reindex(df.index)
+    hit = names.isin(g.index).to_numpy()
+    df.loc[hit, "latitude"] = names[hit].map(g["latitude"]).to_numpy(float)
+    df.loc[hit, "longitude"] = names[hit].map(g["longitude"]).to_numpy(float)
+    df.loc[hit, "geocode_method"] = "site_" + names[hit].map(g["precision"]).astype(str).to_numpy()
+    return df
+
+
+# --------------------------------------------------------------------------- #
 # Orchestration + validation
 # --------------------------------------------------------------------------- #
 def validate(df: pd.DataFrame) -> pd.DataFrame:
@@ -176,6 +223,7 @@ def build(config: dict | None = None) -> pd.DataFrame:
         fac = attach_atlas_city_centroids(fac, atlas_city_centroids())
     except Exception as e:  # ATLAS coords are a gap-filler, not a hard dependency
         print(f"[facilities] WARNING: ATLAS geocode skipped ({e!r}); coordinates left null.")
+    fac = attach_site_geocodes(fac, raw, load_site_geocodes())
     return validate(fac)
 
 

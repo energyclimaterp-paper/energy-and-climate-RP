@@ -67,6 +67,7 @@ class Energy(_M):
 
 class WaterOnsite(_M):
     wue_default: Band
+    wue_model: Literal["constant", "climate"] = "constant"
     wue_by_operator: dict[str, float] = {}
 
     @model_validator(mode="after")
@@ -151,6 +152,15 @@ class Siting(_M):
 class Uncertainty(_M):
     distribution: Literal["triangular", "uniform"]
     n_samples: int = Field(ge=100)
+    routing_n_samples: int = Field(default=1000, ge=10)
+    ci_zone_band: tuple[float, float] = (1.0, 1.0)
+
+    @model_validator(mode="after")
+    def _ci_band(self):
+        lo, hi = self.ci_zone_band
+        if not (0 < lo <= 1 <= hi):
+            raise ValueError(f"ci_zone_band {self.ci_zone_band} must bracket 1 and be > 0")
+        return self
 
 
 class Parameters(_M):
@@ -166,10 +176,9 @@ class Parameters(_M):
 
     @model_validator(mode="after")
     def _cross(self):
-        root = _repo_root()
-        for p in [self.grid.gem_path, self.grid.gadm_path, self.routing.aware_intermediate_path]:
-            if not (root / p).exists():
-                raise ValueError(f"configured path does not exist: {p}")
+        # Raw-data paths are checked where they are read (data_path), not here: a stage that does
+        # not use GEM (e.g. routing on a frozen account, or the US on EIA plant data) must not
+        # need the GEM workbook on disk.
         if self.siting.new_facility_type not in self.energy.utilisation.by_facility_type:
             raise ValueError("siting.new_facility_type must be an energy facility type")
         bad = set(self.grid.gem_type_to_fuel.values()) - set(self.water_grid.ewif_coeff_L_per_MWh)
@@ -195,3 +204,12 @@ def params() -> dict:
     """The validated parameters.yaml as a dict (re-read and re-validated if the file changes)."""
     p = config_path()
     return _load(str(p), p.stat().st_mtime)
+
+
+def data_path(rel: str) -> Path:
+    """Repo-relative raw-data path, checked at the point of use: a missing file fails the stage
+    that needs it with a pointer to data/README.md."""
+    path = _repo_root() / rel
+    if not path.exists():
+        raise FileNotFoundError(f"raw input not on disk: {rel} (download as in data/README.md)")
+    return path

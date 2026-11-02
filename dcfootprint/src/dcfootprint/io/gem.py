@@ -30,10 +30,9 @@ def load_plants(country="India", status: str = "operating", path: str | Path | N
                 tag: str | None = None, assign: bool = True) -> pd.DataFrame:
     """[plant_id, type, plant, capacity_mw, status, latitude, longitude, gem_state, country, fossil]
     for one country or a list (cached per `tag`); India state of record assigned if assign."""
-    root = _repo_root()
     if path is None:
-        params = _cfg_params()
-        path = root / params["grid"]["gem_path"]
+        from dcfootprint.settings import data_path
+        path = data_path(_cfg_params()["grid"]["gem_path"])
     path = Path(path)
     countries = [country] if isinstance(country, str) else list(country)
     tag = tag or countries[0]

@@ -36,6 +36,8 @@ def load_raw(region: str = "India", path: str | Path | None = None) -> pd.DataFr
              becomes 'EU Total'. Ember Europe reports TWh / MtCO2e / gCO2e per kWh: converted
              (x1000) and relabelled — note the EU emissions are CO2-EQUIVALENT (flagged)."""
     path = Path(path) if path else _repo_root() / "data" / "ember" / EMBER_FILES[region]
+    if region == "US" and not path.exists() and (path.parent / EMBER_US_SUBNATIONAL).exists():
+        return _drop_impossible_zero_ci(_us_subnational_to_long(pd.read_csv(path.parent / EMBER_US_SUBNATIONAL)))
     df = pd.read_csv(path)
     df["date"] = pd.to_datetime(df["Date"])
     if region == "EU":
@@ -62,6 +64,40 @@ def load_raw(region: str = "India", path: str | Path | None = None) -> pd.DataFr
                   .assign(Category="Power sector emissions", Subcategory="Total", Variable="Total emissions", Unit="ktCO2"))
         df = pd.concat([df[~fuel & ~df["Unit"].eq("%")], f, tot_em], ignore_index=True)
     return _drop_impossible_zero_ci(df)
+
+
+# Ember retired us_monthly_full_release_long_format.csv (the file now holds only a notice) in
+# favour of this subnational release, which reports LIFECYCLE CO2e (e.g. solar 48, nuclear ~5
+# gCO2e/kWh), not the direct CO2 of the old file. It is read only when the old file is absent,
+# and the US account itself takes its carbon from eGRID/EIA (io/us_grid.py), not from Ember.
+EMBER_US_SUBNATIONAL = "release_us_subnational_generation_monthly.csv"
+_US_FUELS = {"Bioenergy": "Bioenergy", "Coal": "Coal", "Gas": "Gas", "Hydro": "Hydro", "Nuclear": "Nuclear",
+             "Other fossil": "Other Fossil", "Other renewables": "Other Renewables", "Solar": "Solar",
+             "Wind": "Wind", "Fossil": "Fossil", "Total generation": "Total Generation"}
+
+
+def _us_subnational_to_long(raw: pd.DataFrame) -> pd.DataFrame:
+    """Ember US subnational release -> the long format of load_raw (State, State code, date,
+    Category, Variable, Unit, Value), generation in GWh, emissions in kt, intensity in g/kWh;
+    Ember's 'US (total)' row becomes 'US Total'. Values are lifecycle CO2e (see above)."""
+    # Puerto Rico is its own grid and is not in Ember's 'US (total)': dropped, so states sum to the total
+    d = raw[raw["Electricity source"].isin(_US_FUELS) & (raw["State"] != "Puerto Rico")].copy()
+    d["date"] = pd.to_datetime(d["Date"])
+    d["Variable"] = d["Electricity source"].map(_US_FUELS)
+    base = ["State", "State code", "date", "Date"]
+    gen = d[base + ["Variable"]].assign(Category="Electricity generation", Unit="GWh",
+                                       Value=d["Generation (TWh)"] * 1000.0)
+    tot = d[d["Variable"] == "Total Generation"]
+    em = tot[base].assign(Category="Power sector emissions", Variable="Total emissions", Unit="ktCO2",
+                          Value=tot["Emissions (MtCO2e)"] * 1000.0)
+    long = pd.concat([gen, em], ignore_index=True)
+    long["State"] = long["State"].replace({"US (total)": "US Total"})      # Ember's own national row
+    g = long[long["Variable"] == "Total Generation"].set_index(["State", "date"])["Value"]
+    e = long[long["Variable"] == "Total emissions"].set_index(["State", "date"])["Value"]
+    ci = (e / g * 1000.0).rename("Value").dropna().reset_index()          # kt/GWh -> g/kWh
+    ci = ci.merge(long[["State", "State code", "date", "Date"]].drop_duplicates(["State", "date"]), on=["State", "date"])
+    ci = ci.assign(Category="Power sector emissions", Variable="CO2 intensity", Unit="gCO2/kWh")
+    return pd.concat([long, ci], ignore_index=True)
 
 
 def _drop_impossible_zero_ci(df: pd.DataFrame) -> pd.DataFrame:

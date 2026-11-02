@@ -21,7 +21,6 @@ import os
 import time
 import urllib.error
 import urllib.request
-from pathlib import Path
 
 import pandas as pd
 

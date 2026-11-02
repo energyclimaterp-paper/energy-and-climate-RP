@@ -37,15 +37,19 @@ def test_eu_extraction_reproduces_report_totals():
 
 
 _EMBER = ROOT / "data" / "ember"
+_US_OLD = (_EMBER / "us_monthly_full_release_long_format.csv").exists()
 _needs_ember = pytest.mark.skipif(not all((_EMBER / f"{r}_monthly_full_release_long_format.csv").exists()
-                                          for r in ("india", "us", "europe")),
+                                          for r in ("india", "europe"))
+                                  or not (_US_OLD or (_EMBER / ember.EMBER_US_SUBNATIONAL).exists()),
                                   reason="raw Ember files not in data/ember/ (see data/README.md)")
 _needs_gem = pytest.mark.skipif(not (ROOT / "data" / "gem").is_dir(), reason="raw GEM file not in data/gem/")
 
 
 @_needs_ember
 @pytest.mark.parametrize("region,year,n_zones,national", [("India", 2024, 36, "India Total"),
-                                                          ("US", 2024, 52, "US Total"),
+                                                          # retired US file: 52 zones; subnational
+                                                          # release: 50 states + DC (Puerto Rico dropped)
+                                                          ("US", 2024, 52 if _US_OLD else 51, "US Total"),
                                                           ("EU", 2023, 27, "EU Total")])
 def test_ember_regions_coherent(region, year, n_zones, national):
     raw = ember.load_raw(region)
