@@ -42,8 +42,8 @@ def aware_country_cf(iso3: list[str]) -> pd.DataFrame:
 
 
 def country_month_account() -> pd.DataFrame:
-    from dcfootprint.account.build import grid_tables, _CONTRACT_COLS
     from dcfootprint.account import carbon as carbon_mod
+    from dcfootprint.account.build import _CONTRACT_COLS, grid_tables
     from dcfootprint.io import ember
     P = _cfg_params()
     rc = P["region_config"]["EU"]
@@ -94,7 +94,7 @@ def country_month_account() -> pd.DataFrame:
     schemas.FacilityMonthAccount.validate(account[_CONTRACT_COLS])
     account.attrs["meta"] = {
         "region": "EU", "account_year": year, "tier": "country",
-        "n_countries_reporting": int(rep["country"].nunique()), "n_countries_total": int(len(eu)),
+        "n_countries_reporting": int(rep["country"].nunique()), "n_countries_total": len(eu),
         "n_reporting_dc": int(eu["reporting_n_dc"].sum()), "n_estimated_dc": int(eu["est_n_dc"].sum()),
         "reported_energy_gwh": float(rep["reported_energy_gwh"].sum()), "pue_eu_assumed": PUE_EU,
         "ci_mean_gco2_per_kwh": round(float(account["carbon_tco2"].sum() * 1000 / account["e_grid_mwh"].sum()), 1),

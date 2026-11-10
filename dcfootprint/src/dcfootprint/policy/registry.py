@@ -45,52 +45,56 @@ _CONSTRAINT_TO_CORPUS = {
 
 # the "closest instrument" per axis (POLICY_DEEP_DIVE §1) — none MANDATE the axis; not in corpus
 _CLOSEST = [
-    dict(id="eu_csrd_esrs_e1", instrument="EU CSRD / ESRS E1 (entity GHG + intensity per revenue)",
-         jurisdiction="EU", region="EU-wide", status="IN FORCE (narrowed by Omnibus 2026/470)",
-         doc_type="directive+standard", closest_for="carbon_intensity",
-         closest_note="per-revenue, entity-level - not a per-DC measured intensity; German EnEfG mandates renewable SUPPLY (an input, not an intensity); MN HF16 only requires a utility plan protecting the RE/carbon-free standards",
-         url="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2464", source="POLICY_DEEP_DIVE 1"),
-    dict(id="cfe_247", instrument="Voluntary 24/7 CFE tariffs (NV/Google-Fervo; Xcel/Google); CNDCP hourly-CFE",
-         jurisdiction="US", region="multi", status="voluntary", doc_type="utility tariff/program",
-         closest_for="marginal_carbon", closest_note="consumption-based and voluntary, not a marginal-carbon mandate",
-         url="https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472",
-         source="POLICY_DEEP_DIVE 1; PUCN Docket 24-05023 (NV Clean Transition Tariff)"),
-    dict(id="eu_esrs_e3", instrument="EU ESRS E3-4 (water use in high water-stress areas)",
-         jurisdiction="EU", region="EU-wide", status="IN FORCE (materiality-gated)", doc_type="standard",
-         closest_for="scarcity_weighted_water",
-         closest_note="entity-level location-flagged VOLUME; CA AB2619 (proposed) indirect water; India CGWA aquifer tiers = permit gate, not weighted accounting",
-         url="https://eur-lex.europa.eu/eli/reg_del/2023/2772/oj/eng", source="POLICY_DEEP_DIVE 1; Reg (EU) 2023/2772"),
-    dict(id="eu_ai_act_annex_xi", instrument="EU AI Act Annex XI 1(2)(e) (GPAI model energy documentation)",
-         jurisdiction="EU", region="EU-wide", status="IN FORCE (GPAI duties from Aug 2025)", doc_type="regulation",
-         closest_for="inference_attribution",
-         closest_note="model-level, training-oriented, no water/carbon; decoupled from DC reporting",
-         url="https://artificialintelligenceact.eu/annex/11/", source="POLICY_DEEP_DIVE 1"),
+    {"id": "eu_csrd_esrs_e1", "instrument": "EU CSRD / ESRS E1 (entity GHG + intensity per revenue)",
+         "jurisdiction": "EU", "region": "EU-wide", "status": "IN FORCE (narrowed by Omnibus 2026/470)",
+         "doc_type": "directive+standard", "closest_for": "carbon_intensity",
+         "closest_note": "per-revenue, entity-level - not a per-DC measured intensity; German EnEfG mandates renewable SUPPLY (an input, not an intensity); MN HF16 only requires a utility plan protecting the RE/carbon-free standards",
+         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2464", "source": "POLICY_DEEP_DIVE 1"},
+    {"id": "cfe_247", "instrument": "Voluntary 24/7 CFE tariffs (NV/Google-Fervo; Xcel/Google); CNDCP hourly-CFE",
+         "jurisdiction": "US", "region": "multi", "status": "voluntary", "doc_type": "utility tariff/program",
+         "closest_for": "marginal_carbon", "closest_note": "consumption-based and voluntary, not a marginal-carbon mandate",
+         "url": "https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472",
+         "source": "POLICY_DEEP_DIVE 1; PUCN Docket 24-05023 (NV Clean Transition Tariff)"},
+    {"id": "eu_esrs_e3", "instrument": "EU ESRS E3-4 (water use in high water-stress areas)",
+         "jurisdiction": "EU", "region": "EU-wide", "status": "IN FORCE (materiality-gated)", "doc_type": "standard",
+         "closest_for": "scarcity_weighted_water",
+         "closest_note": "entity-level location-flagged VOLUME; CA AB2619 (proposed) indirect water; India CGWA aquifer tiers = permit gate, not weighted accounting",
+         "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2772/oj/eng", "source": "POLICY_DEEP_DIVE 1; Reg (EU) 2023/2772"},
+    {"id": "eu_ai_act_annex_xi", "instrument": "EU AI Act Annex XI 1(2)(e) (GPAI model energy documentation)",
+         "jurisdiction": "EU", "region": "EU-wide", "status": "IN FORCE (GPAI duties from Aug 2025)", "doc_type": "regulation",
+         "closest_for": "inference_attribution",
+         "closest_note": "model-level, training-oriented, no water/carbon; decoupled from DC reporting",
+         "url": "https://artificialintelligenceact.eu/annex/11/", "source": "POLICY_DEEP_DIVE 1"},
 ]
 
 # key standing/perimeter instruments from POLICY_DEEP_DIVE not already in the corpus
 _PERIMETER = [
-    dict(id="us_eo_14141_revoked", instrument="EO 14141 (federal carbon-matching) - REVOKED", jurisdiction="US",
-         region="federal", status="REVOKED (2025)", doc_type="executive order", nearest_axis="carbon_intensity",
-         url="https://www.govinfo.gov/content/pkg/FR-2025-01-17/html/2025-01395.htm",
-         source="POLICY_DEEP_DIVE 2.1; revoked by EO 14318 sec. 4"),
-    dict(id="us_hr9825", instrument="Data Center Water & Energy Transparency Act (H.R.9825/S.4213)", jurisdiction="US",
-         region="federal", status="PROPOSED", doc_type="bill", nearest_axis="perimeter_disclosure",
-         url="https://www.congress.gov/bill/119th-congress/house-bill/9825", source="POLICY_DEEP_DIVE 2.1"),
-    dict(id="us_ca_ab2619", instrument="California AB 2619 (indirect/embedded water use)", jurisdiction="US",
-         region="California", status="PROPOSED", doc_type="bill", nearest_axis="scarcity_weighted_water",
-         url="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2619",
-         source="POLICY_DEEP_DIVE 2.2"),
-    dict(id="in_cgwa_noc", instrument="India CGWA groundwater NOC (aquifer stress tiers)", jurisdiction="India",
-         region="national", status="IN FORCE", doc_type="guideline", nearest_axis="scarcity_weighted_water",
-         url="https://cgwa-noc.gov.in/landingpage/Guidlines/ConsolidateGuidline.pdf",
-         source="POLICY_DEEP_DIVE 4.1; S.O. 3289(E) 24.09.2020, amended S.O. 1509(E) 29.03.2023"),
-    dict(id="in_bis_30134", instrument="India BIS IS/ISO/IEC 30134 (PUE/WUE/CUE) - voluntary", jurisdiction="India",
-         region="national", status="IN FORCE (voluntary)", doc_type="standard", nearest_axis="perimeter_efficiency",
-         url="https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/knowyourstandards/Indian_standards/isdetails/MjQ3OTM=",
-         source="POLICY_DEEP_DIVE 4.1; IS/ISO/IEC 30134-2:2016 (PUE)"),
+    {"id": "us_eo_14141_revoked", "instrument": "EO 14141 (federal carbon-matching) - REVOKED", "jurisdiction": "US",
+         "region": "federal", "status": "REVOKED (2025)", "doc_type": "executive order", "nearest_axis": "carbon_intensity",
+         "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-17/html/2025-01395.htm",
+         "source": "POLICY_DEEP_DIVE 2.1; revoked by EO 14318 sec. 4"},
+    {"id": "us_hr9825", "instrument": "Data Center Water & Energy Transparency Act (H.R.9825/S.4213)", "jurisdiction": "US",
+         "region": "federal", "status": "PROPOSED", "doc_type": "bill", "nearest_axis": "perimeter_disclosure",
+         "url": "https://www.congress.gov/bill/119th-congress/house-bill/9825", "source": "POLICY_DEEP_DIVE 2.1"},
+    {"id": "us_ca_ab2619", "instrument": "California AB 2619 (indirect/embedded water use)", "jurisdiction": "US",
+         "region": "California", "status": "PROPOSED", "doc_type": "bill", "nearest_axis": "scarcity_weighted_water",
+         "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2619",
+         "source": "POLICY_DEEP_DIVE 2.2"},
+    {"id": "in_cgwa_noc", "instrument": "India CGWA groundwater NOC (aquifer stress tiers)", "jurisdiction": "India",
+         "region": "national", "status": "IN FORCE", "doc_type": "guideline", "nearest_axis": "scarcity_weighted_water",
+         "url": "https://cgwa-noc.gov.in/landingpage/Guidlines/ConsolidateGuidline.pdf",
+         "source": "POLICY_DEEP_DIVE 4.1; S.O. 3289(E) 24.09.2020, amended S.O. 1509(E) 29.03.2023"},
+    {"id": "in_bis_30134", "instrument": "India BIS IS/ISO/IEC 30134 (PUE/WUE/CUE) - voluntary", "jurisdiction": "India",
+         "region": "national", "status": "IN FORCE (voluntary)", "doc_type": "standard", "nearest_axis": "perimeter_efficiency",
+         "url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/knowyourstandards/Indian_standards/isdetails/MjQ3OTM=",
+         "source": "POLICY_DEEP_DIVE 4.1; IS/ISO/IEC 30134-2:2016 (PUE)"},
 ]
 
-COLS = ["id", "instrument", "jurisdiction", "region", "status", "in_force", "doc_type", "topic",
+# corpus document types that are evidence ABOUT the problem, not rules: kept in the registry (they back
+# the retrieval check) but not counted as instruments and never read as in force
+REFERENCE_DOC_TYPES = {"methodology", "fact sheet", "research article"}
+
+COLS = ["id", "instrument", "kind", "jurisdiction", "region", "status", "in_force", "doc_type", "topic",
         "nearest_axis", "mandates_axis", "closest_for", "closest_note",
         "type", "rule", "effect", "param", "in_corpus", "url", "source"]
 
@@ -134,13 +138,13 @@ def build_registry() -> pd.DataFrame:
             corp.loc[cid, ["type", "rule", "effect", "param", "region", "source"]] = [
                 r["type"], r["rule"], r.get("effect", ""), r.get("param", ""), r["region"], r["source"]]
         else:
-            standalone.append(dict(id=f"constraint_{r['region']}".lower().replace(' ', '_'),
-                                   instrument=r["rule"], jurisdiction=r["jurisdiction"], region=r["region"],
-                                   status="IN FORCE", in_force=True, doc_type="policy", topic="",
-                                   nearest_axis="", mandates_axis="", closest_for="", closest_note="",
-                                   type=r["type"], rule=r["rule"], effect=r.get("effect", ""),
-                                   param=r.get("param", ""), in_corpus=False,
-                                   url=r["url"] if pd.notna(r.get("url")) else "", source=r["source"]))
+            standalone.append({"id": f"constraint_{r['region']}".lower().replace(' ', '_'),
+                                   "instrument": r["rule"], "jurisdiction": r["jurisdiction"], "region": r["region"],
+                                   "status": "IN FORCE", "in_force": True, "doc_type": "policy", "topic": "",
+                                   "nearest_axis": "", "mandates_axis": "", "closest_for": "", "closest_note": "",
+                                   "type": r["type"], "rule": r["rule"], "effect": r.get("effect", ""),
+                                   "param": r.get("param", ""), "in_corpus": False,
+                                   "url": r["url"] if pd.notna(r.get("url")) else "", "source": r["source"]})
     corp = corp.reset_index()
 
     # --- closest-per-axis + perimeter supplements ---
@@ -156,6 +160,7 @@ def build_registry() -> pd.DataFrame:
     for c in COLS:
         if c not in reg.columns:
             reg[c] = ""
+    reg["kind"] = ["reference" if str(d).lower() in REFERENCE_DOC_TYPES else "instrument" for d in reg["doc_type"]]
     reg = reg[COLS].copy()
     # normalise dtypes: string-ish columns -> filled str; the two flags -> bool
     for c in COLS:
@@ -163,7 +168,14 @@ def build_registry() -> pd.DataFrame:
             reg[c] = reg[c].fillna(False).astype(bool)
         else:
             reg[c] = reg[c].where(reg[c].notna(), "")
+    reg.loc[reg["kind"] == "reference", "in_force"] = False     # a methodology paper is not "in force"
     return reg
+
+
+def instruments(reg: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Registry rows that are laws, regulations, standards, guidance or proposals (kind == instrument)."""
+    reg = build_registry() if reg is None else reg
+    return reg[reg["kind"] == "instrument"]
 
 
 def load_registry() -> pd.DataFrame:
@@ -174,7 +186,8 @@ def load_registry() -> pd.DataFrame:
 
 if __name__ == "__main__":
     reg = build_registry()
-    print(f"registry: {len(reg)} instruments | in_corpus={int(reg['in_corpus'].sum())} | "
+    print(f"registry: {len(reg)} rows = {int((reg['kind'] == 'instrument').sum())} instruments + "
+          f"{int((reg['kind'] == 'reference').sum())} reference documents | in_corpus={int(reg['in_corpus'].sum())} | "
           f"binding={int((reg['type'] != '').sum())} | closest={int((reg['closest_for'] != '').sum())}")
     print("by jurisdiction:", reg["jurisdiction"].value_counts().to_dict())
     print("\nbinding rows:")

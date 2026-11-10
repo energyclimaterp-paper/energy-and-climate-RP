@@ -15,9 +15,10 @@ Usage:
     account    = schemas.FacilityMonthAccount.validate(df)
 """
 from __future__ import annotations
+
+import pandas as pd
 import pandera.pandas as pa
 from pandera.typing import Series
-import pandas as pd
 
 VALID_REGIONS = ("India", "US", "EU")
 
@@ -32,7 +33,7 @@ class Facilities(pa.DataFrameModel):
     longitude: Series[float] = pa.Field(ge=-180, le=180, nullable=True)
     capacity_mw: Series[float] = pa.Field(gt=0, le=5000, nullable=True)  # disclosed MW; large values = verified announced campus/park totals (e.g. Lodha Palava 2500), not single operational buildings
     zone_id: Series[str] = pa.Field(nullable=True)   # carbon join key (ISO|state or ISO3)
-    basin_id: Series["Int64"] = pa.Field(nullable=True)  # AWARE Basin_ID (post point-in-polygon)
+    basin_id: Series[pd.Int64Dtype] = pa.Field(nullable=True)  # AWARE Basin_ID (post point-in-polygon)
 
     class Config:
         strict = False
@@ -79,7 +80,7 @@ class GemPlants(pa.DataFrameModel):
     capacity_mw: Series[float] = pa.Field(gt=0)
     latitude: Series[float] = pa.Field(ge=-90, le=90)
     longitude: Series[float] = pa.Field(ge=-180, le=180)
-    basin_id: Series["Int64"]
+    basin_id: Series[pd.Int64Dtype]
     state: Series[str] = pa.Field(nullable=True)          # NaN only for 'ambiguous'
     state_source: Series[str] = pa.Field(isin=["gadm_agrees", "gadm", "override", "ambiguous",
                                                "gem_label_outside_gadm", "country"])
@@ -117,7 +118,7 @@ class GridWater(pa.DataFrameModel):
 
 class AwareRemaining(pa.DataFrameModel):
     """L0 — AWARE 2.0 water remaining per basin-month (negative = over-committed)."""
-    basin_id: Series["Int64"]
+    basin_id: Series[pd.Int64Dtype]
     month: Series[int] = pa.Field(ge=1, le=12)
     amd_m3_per_m2: Series[float] = pa.Field(nullable=True)
     area_m2: Series[float] = pa.Field(gt=0, nullable=True)
@@ -133,7 +134,7 @@ class AwareRemaining(pa.DataFrameModel):
 
 class BasinBudget(pa.DataFrameModel):
     """L3/L6 — datacenter water budget per basin-month (project/recharge.basin_budgets)."""
-    basin_id: Series["Int64"]
+    basin_id: Series[pd.Int64Dtype]
     month: Series[int] = pa.Field(ge=1, le=12)
     budget_l: Series[float] = pa.Field(ge=0)
 
@@ -149,7 +150,7 @@ class BasinBudget(pa.DataFrameModel):
 class BasinMonthlyCF(pa.DataFrameModel):
     """AWARE native CFs — basin x 12 climatological months (NOT year-specific).
     Join to facilities is SPATIAL (point-in-polygon on the gpkg), by Basin_ID."""
-    basin_id: Series["Int64"]
+    basin_id: Series[pd.Int64Dtype]
     month: Series[int] = pa.Field(ge=1, le=12)
     cf: Series[float] = pa.Field(ge=0, le=100)   # AWARE capped at 100
 

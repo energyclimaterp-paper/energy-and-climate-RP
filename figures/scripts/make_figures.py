@@ -18,10 +18,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "dcfootprint" / "src"))
 
-import matplotlib  # noqa: E402
+import matplotlib
 
 matplotlib.use("Agg")
-from matplotlib.figure import Figure  # noqa: E402
+from matplotlib.figure import Figure
 
 _orig_save = Figure.savefig
 
@@ -40,10 +40,9 @@ def _clean_save(self, fname, *a, **k):
 
 Figure.savefig = _clean_save
 
-import matplotlib.pyplot as plt  # noqa: E402
-import pandas as pd  # noqa: E402
-
-from dcfootprint.viz import figures as F  # noqa: E402
+import matplotlib.pyplot as plt
+import pandas as pd
+from dcfootprint.viz import figures as F
 
 R5 = ROOT / "dcfootprint" / "results" / "round5_final"
 OUT = ROOT / "figures"

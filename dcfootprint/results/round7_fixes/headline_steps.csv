@@ -1,0 +1,25 @@
+region,step,policy,carbon_change_pct,scarcity_change_pct,carbon_change_vs_status_quo_pct,scarcity_change_vs_status_quo_pct
+India,0 round 5 as published,greedy,1.39,-21.85,,
+India,0 round 5 as published,lyapunov,1.87,-21.7,,
+India,0 round 5 as published,oracle,0.35,-22.73,,
+India,1 round 6 (PR #1),greedy,0.44,-22.85,,
+India,1 round 6 (PR #1),lyapunov,1.06,-22.52,,
+India,1 round 6 (PR #1),oracle,0.45,-22.79,,
+India,2 + capacity basis,greedy,0.74,-22.95,0.74,-22.95
+India,2 + capacity basis,lyapunov,1.3,-22.64,1.3,-22.64
+India,2 + capacity basis,oracle,0.67,-22.86,0.67,-22.86
+India,3 + WUE clamp + ZLD physics (round 7),greedy,0.74,-22.95,0.74,-22.95
+India,3 + WUE clamp + ZLD physics (round 7),lyapunov,1.3,-22.64,1.3,-22.64
+India,3 + WUE clamp + ZLD physics (round 7),oracle,0.67,-22.86,0.67,-22.86
+India,consistency: generation basis for carbon AND water (round 5 code),greedy,0.42,-21.85,,
+India,consistency: generation basis for carbon AND water (round 5 code),lyapunov,1.44,-21.7,,
+India,consistency: generation basis for carbon AND water (round 5 code),oracle,1.28,-22.27,,
+US,0 round 5 as published,greedy,-10.21,-29.33,,
+US,0 round 5 as published,lyapunov,-10.21,-29.33,,
+US,0 round 5 as published,oracle,-10.63,-29.41,,
+US,1 round 6 (PR #1),greedy,-2.73,-30.04,,
+US,1 round 6 (PR #1),lyapunov,-2.73,-30.04,,
+US,1 round 6 (PR #1),oracle,-3.36,-29.62,,
+US,3 + WUE clamp + ZLD physics (round 7),greedy,-2.73,-30.03,-1.89,-26.87
+US,3 + WUE clamp + ZLD physics (round 7),lyapunov,-2.73,-30.03,-1.89,-26.87
+US,3 + WUE clamp + ZLD physics (round 7),oracle,-3.36,-29.6,-2.53,-26.43

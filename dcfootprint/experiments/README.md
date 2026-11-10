@@ -13,6 +13,7 @@ None is needed to produce the account. Run them from the repository root, for ex
 | `compare_results.py <dir_a> <dir_b>` | compares two results folders file by file, CSVs numerically |
 | `gadm_gem_state_check.py` | checks GEM power-plant state labels against GADM boundaries |
 | `robustness_round6.py` | validation against operator reports, US on eGRID + EIA, routing Monte Carlo, forecast value for routing, climate WUE, location sensitivity → `results/round6_robustness/` |
+| `robustness_round7.py` | round-7 fixes (capacity basis, ZLD physics, cold-weather WUE, siting carbon basis, Sobol, groundwater scope, status-quo baseline) and consistency checks → `results/round7_fixes/` |
 | `epoch_crosscheck.py` | US coverage of the Epoch AI frontier datacenter list (`us/epoch_crosscheck.md`) |
 
 ## Paper tables and inputs
@@ -30,6 +31,7 @@ None is needed to produce the account. Run them from the repository root, for ex
 | `forecast_benchmark.py` | runs every model on one grid and one set of windows → `runs/forecast_benchmark_2026-09-28/` |
 | `score_nexus_llm.py` | scores the LLM forecaster's runs → `runs/nexus_llm_2026-09-28/` |
 | `forecast_exhibit.py` | builds `results/forecast_simple_vs_complex.{md,csv}` from the benchmark run |
+| `forecast_significance.py` | scale-free skill (geometric mean of relative RMSE) and Holm-corrected Wilcoxon tests across series, with the SARIMA naive fallback → `results/round7_fixes/forecast_significance.{md,csv}` |
 
 The benchmark needs a Python environment with torch, chronos-forecasting and timesfm, and reads its input series
 from the preliminary experiment's series file (`DCF_GAT_DIR`), which is not part of this release. The scored

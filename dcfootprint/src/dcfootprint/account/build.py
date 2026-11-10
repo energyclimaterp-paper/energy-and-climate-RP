@@ -20,9 +20,10 @@ from pathlib import Path
 
 import pandas as pd
 
-from dcfootprint.io.facilities import _repo_root
+from dcfootprint.account import carbon as carbon_mod
+from dcfootprint.account import energy as energy_mod
 from dcfootprint.io import ember, gem
-from dcfootprint.account import energy as energy_mod, carbon as carbon_mod
+from dcfootprint.io.facilities import _repo_root
 from dcfootprint.settings import params as _cfg_params
 
 _CONTRACT_COLS = ["facility_id", "date", "region", "e_it_mwh", "e_grid_mwh", "carbon_tco2",
@@ -40,7 +41,8 @@ def grid_tables(zone: str, year: int, region: str = "India") -> dict:
     """Zone-month grid inputs shared by the account, routing and siting:
     ci [zone_id, month, ci_gco2_per_kwh, ci_source], grid_water [zone_id, month, ewif...,
     sewif...], plants (GEM operating, with basin_id), fuel_cf."""
-    from dcfootprint.geo import join as gj, generation_basins as gb
+    from dcfootprint.geo import generation_basins as gb
+    from dcfootprint.geo import join as gj
     params = load_params()
     raw = ember.load_raw(region)
     ci = ember.zone_month_ci(raw, year, zone)
@@ -54,6 +56,26 @@ def grid_tables(zone: str, year: int, region: str = "India") -> dict:
     schemas.GridWater.validate(gw)
     schemas.GemPlants.validate(plants)
     return {"ci": ci, "shares": shares, "grid_water": gw, "plants": plants, "fuel_cf": fuel_cf, "basin_cf": cf}
+
+
+def charged_ci(ci: pd.DataFrame, region: str, year: int, params: dict | None = None) -> tuple[pd.DataFrame, str]:
+    """The zone-month CI a load is charged in the account, from the Ember generation table `ci`,
+    and a label for its basis. India on grid.carbon_basis: consumption takes the Electricity Maps
+    flow-traced regional CI (R2). Shared by the account and the siting analysis, so a new facility
+    is scored on the same carbon basis as the existing ones."""
+    params = load_params() if params is None else params
+    carbon_basis = params["grid"].get("carbon_basis", "generation")
+    if carbon_basis == "consumption" and region == "India":
+        try:                                           # R2: consumption-based India carbon (Electricity Maps)
+            from dcfootprint.io import electricitymaps as em
+            return em.apply_consumption_ci(ci, year), carbon_basis
+        except (OSError, ValueError) as exc:           # no EM key (HTTP 401), no network or no cache
+            # falls back to generation, flagged in the basis label: a code error must not do this silently
+            print(f"[account] WARNING: India consumption CI unavailable ({exc!r}); using Ember generation CI")
+            return ci, f"generation (consumption unavailable: {type(exc).__name__})"
+    if carbon_basis == "consumption":                  # consumption CI exists for India's grids only
+        return ci, "generation (consumption basis is India-only)"
+    return ci, carbon_basis
 
 
 def facility_month_account(config: dict | None = None, region: str = "India") -> pd.DataFrame:
@@ -79,8 +101,8 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
             "n_operational_no_basin": int((op["capacity_mw"].notna() & op["basin_id"].isna()).sum()),
         }
     elif region == "US":
-        from dcfootprint.io import us_facilities
         from dcfootprint.geo import join as gj
+        from dcfootprint.io import us_facilities
         spine = us_facilities.build()
         basins = gj.load_aware_basins()                # reused below for the eGRID/EIA grid tables
         fac = gj.assign_basin(spine, basins)
@@ -95,8 +117,8 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
 
     grid_source = params["region_config"][region].get("grid_source", "ember_macknick")
     if grid_source == "eia_egrid":                     # US: eGRID subregions, EIA plant data (io/us_grid.py)
-        from dcfootprint.io import us_grid
         from dcfootprint.geo import join as gj
+        from dcfootprint.io import us_grid
         basins = basins if basins is not None else gj.load_aware_basins()
         cf = gj.basin_monthly_cf(basins)
         sm = us_grid.subregion_month(year, cf, basins)
@@ -114,24 +136,18 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
         ci, grid_water = g["ci"], g["grid_water"]
     extra_meta["grid_source"] = grid_source
 
-    carbon_basis = params["grid"].get("carbon_basis", "generation")
-    if carbon_basis == "consumption" and region == "India":
-        try:                                           # R2: consumption-based India carbon (Electricity Maps)
-            from dcfootprint.io import electricitymaps as em
-            ci = em.apply_consumption_ci(ci, year)
-        except Exception as exc:                       # no EM key/cache -> fall back to generation, flagged
-            carbon_basis = f"generation (consumption unavailable: {type(exc).__name__})"
-    elif grid_source == "eia_egrid":
+    if grid_source == "eia_egrid":
         carbon_basis = "generation (eGRID subregion, location-based; EIA-923 x eGRID plant rates)"
-    elif carbon_basis == "consumption":                # consumption CI exists for India's grids only
-        carbon_basis = "generation (consumption basis is India-only)"
+    else:
+        ci, carbon_basis = charged_ci(ci, region, year, params)
 
     e = energy_mod.energy_account(acct_fac, params, year)
     e["zone_id"] = (e["zone_id"] if grid_source == "eia_egrid" else e["state"]).astype(str)
     e = carbon_mod.carbon_account(e, ci)
 
     # --- scope-1 (on-site) water, scarcity at the facility's own basin ---
-    from dcfootprint.account.wue import facility_month_wue      # constant or climate (water_onsite.wue_model)
+    # WUE is constant or climate-dependent (water_onsite.wue_model)
+    from dcfootprint.account.wue import facility_month_wue
     e = e.merge(facility_month_wue(acct_fac, params, year), on=["facility_id", "month"], how="left",
                 validate="many_to_one")
     e["water_onsite_l"] = e["wue_l_per_kwh"] * e["e_it_mwh"] * 1000.0          # MWh -> kWh
@@ -160,6 +176,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     keep = _CONTRACT_COLS + ["state", "zone_id", "basin_id", "facility_type", "capacity_mw", "operator", "city",
                              "cf", "cf_grid_eff", "ci_gco2_per_kwh", "ci_source", "pue", "wue_l_per_kwh", "wue_source",
                              "water_grid_hydro_l", "water_scarcity_grid_hydro_l_eq", "month"]
+    keep += [c for c in ("capacity_recorded_mw", "capacity_basis") if c in e.columns]
     account = e[keep].reset_index(drop=True)
 
     from dcfootprint.validation import schemas
@@ -181,7 +198,7 @@ def facility_month_account(config: dict | None = None, region: str = "India") ->
     try:                                           # optional cross-check, CEA not required
         from dcfootprint.io import cea
         account.attrs["meta"]["cea_national_ef_crosscheck"] = round(cea.india_grid_ef()["ef_tco2_per_mwh"], 4)
-    except Exception:
+    except (OSError, KeyError, ValueError):        # CEA workbook absent or reshaped: cross-check only
         account.attrs["meta"]["cea_national_ef_crosscheck"] = None
     return account
 
@@ -222,15 +239,15 @@ def _write_results(account: pd.DataFrame) -> Path:
     )
     md = [
         "# India AI-datacenter account — v2 results (present, operational)\n",
-        f"*Generated by `dcfootprint.account.build` on real data. Account year {meta['account_year']}; "
+        (f"*Generated by `dcfootprint.account.build` on real data. Account year {meta['account_year']}; "
         f"grid zone = **{meta['grid_zone']}**; carbon basis = **{meta.get('carbon_basis', 'generation')}** "
-        f"(energy-weighted mean {meta['ci_mean_gco2_per_kwh']} gCO2/kWh).*\n",
-        f"- **Facilities in account:** {meta['n_facilities']} (operational, costed, basin-resolved) "
-        f"of {meta['n_operational_total']} operational total — coverage gap = un-costed / un-geocoded.",
+        f"(energy-weighted mean {meta['ci_mean_gco2_per_kwh']} gCO2/kWh).*\n"),
+        (f"- **Facilities in account:** {meta['n_facilities']} (operational, costed, basin-resolved) "
+        f"of {meta['n_operational_total']} operational total — coverage gap = un-costed / un-geocoded."),
         f"- **Total carbon:** {tot_c:,.0f} tCO2/yr  (inference-attributed ~{tot_c*inf:,.0f} tCO2/yr at {inf:.0%})",
         f"- **Total physical water:** {tot_wp:,.0f} m3/yr  (scope-1 on-site {tot_w1:,.0f} = {tot_w1/tot_wp:.0%})",
-        f"- **Total scarcity-weighted water:** {tot_ws:,.0f} m3-eq/yr  *(primary metric)* — "
-        f"scope-1 {tot_ws1:,.0f} ({tot_ws1/tot_ws:.0%}), scope-2 at generation basins {tot_ws-tot_ws1:,.0f}\n",
+        (f"- **Total scarcity-weighted water:** {tot_ws:,.0f} m3-eq/yr  *(primary metric)* — "
+        f"scope-1 {tot_ws1:,.0f} ({tot_ws1/tot_ws:.0%}), scope-2 at generation basins {tot_ws-tot_ws1:,.0f}\n"),
         "## Scarcity-weighted water by state (top 6)\n",
         by_state.head(6).apply(lambda v: f"{v:,.0f} m3-eq/yr").to_string(),
         "\n\n## Top 8 facilities by scarcity-weighted water\n",

@@ -18,8 +18,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from dcfootprint.io.facilities import _repo_root
 from dcfootprint.io import ember
+from dcfootprint.io.facilities import _repo_root
 
 NEXUS_SLOT_LABEL = "Chronos-2 (Nexus slot)"
 
@@ -65,7 +65,7 @@ def backtest_ci(h: int = 12, n_folds: int = 3) -> dict:
         try:
             pred, _ = _sarima_forecast(train, len(test))
             errs["SARIMA"].append(pred - test.values)
-        except Exception:
+        except Exception:  # noqa: BLE001 - any failed fit falls back to seasonal naive (the stated rule)
             errs["SARIMA"].append(None)
         folds.append(str(test.index[0].date()))
     rmse, fold_rmse = {}, {}
@@ -95,7 +95,7 @@ def forecast_ci(year_end: int = 2030) -> dict:
         try:
             mean, ci = _sarima_forecast(s, h)
             fc = pd.DataFrame({"date": dates, "ci_gco2_per_kwh": mean, "lo": ci[:, 0], "hi": ci[:, 1]})
-        except Exception:
+        except Exception:  # noqa: BLE001 - any failed fit falls back to seasonal naive (the stated rule)
             bt["winner"] = "seasonal_naive"
     if bt["winner"] != "SARIMA":
         mean = _seasonal_naive(s, h)

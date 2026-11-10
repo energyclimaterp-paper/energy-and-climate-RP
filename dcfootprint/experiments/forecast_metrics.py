@@ -27,7 +27,7 @@ def mase_scale(train: np.ndarray, m: int = 12) -> float:
 
 
 def crps_gaussian(y, mu, sigma):
-    y, mu, sigma = map(lambda a: np.asarray(a, float), (y, mu, sigma))
+    y, mu, sigma = (np.asarray(a, float) for a in (y, mu, sigma))
     z = (y - mu) / sigma
     return sigma * (z * (2 * norm.cdf(z) - 1) + 2 * norm.pdf(z) - 1 / np.sqrt(np.pi))
 
@@ -42,7 +42,7 @@ def metrics(df: pd.DataFrame) -> dict:
     den = np.abs(f) + np.abs(y)
     # divide only where den > 0 (np.where would still evaluate 0/0 and warn); both zero -> 0 error
     smape = np.divide(2 * np.abs(e), den, out=np.zeros_like(den), where=den > 0)
-    out = {"n_points": int(len(d)),
+    out = {"n_points": len(d),
            "MAE": float(np.mean(np.abs(e))),
            "RMSE": float(np.sqrt(np.mean(e ** 2))),
            "WMAPE_pct": float(np.sum(np.abs(e)) / np.sum(np.abs(y)) * 100) if np.sum(np.abs(y)) > 0 else np.nan,

@@ -62,7 +62,9 @@ def _model_metrics(a: pd.DataFrame) -> dict:
             "water_withdrawal_m3": w, "water_consumption_m3": w,
             "pue": e_grid / e_it if e_it > 0 else np.nan,
             "wue_l_per_kwh": w * 1000.0 / (e_it * 1000.0) if e_it > 0 else np.nan,
-            "capacity_mw": a.drop_duplicates("facility_id")["capacity_mw"].sum(),
+            # the stated MW (operators state the same mixed basis), not the IT capacity the account derives
+            "capacity_mw": a.drop_duplicates("facility_id")[
+                "capacity_recorded_mw" if "capacity_recorded_mw" in a.columns else "capacity_mw"].sum(),
             "carbon_t": a["carbon_tco2"].sum(),
             "n_facilities": a["facility_id"].nunique()}
 

@@ -1,0 +1,87 @@
+{
+  "n_cells": 117,
+  "criteria": [
+    "new_scarcity_m3eq",
+    "new_carbon_tco2",
+    "basin_pressure_m3",
+    "grid_fossil_share"
+  ],
+  "top10_states_r5": {
+    "Karnataka": 10
+  },
+  "top10_states_r7": {
+    "Gujarat": 10
+  },
+  "top10_states_r7_without_legal_effects": {
+    "Rajasthan": 5,
+    "Karnataka": 5
+  },
+  "top10_overlap_with_r5": 0,
+  "spearman_rank_r5_vs_r7": 0.944,
+  "existing_dc_cells": [
+    {
+      "state": "Gujarat",
+      "basin_id": 44763,
+      "n_existing_dc": 1,
+      "rank": 16,
+      "rank_r5": 34
+    },
+    {
+      "state": "Karnataka",
+      "basin_id": 49464,
+      "n_existing_dc": 11,
+      "rank": 38,
+      "rank_r5": 11
+    },
+    {
+      "state": "Tamil Nadu",
+      "basin_id": 48918,
+      "n_existing_dc": 12,
+      "rank": 45,
+      "rank_r5": 45
+    },
+    {
+      "state": "Telangana",
+      "basin_id": 47940,
+      "n_existing_dc": 6,
+      "rank": 74,
+      "rank_r5": 86
+    },
+    {
+      "state": "Maharashtra",
+      "basin_id": 46321,
+      "n_existing_dc": 15,
+      "rank": 90,
+      "rank_r5": 82
+    },
+    {
+      "state": "Maharashtra",
+      "basin_id": 47940,
+      "n_existing_dc": 8,
+      "rank": 92,
+      "rank_r5": 84
+    },
+    {
+      "state": "Uttar Pradesh",
+      "basin_id": 43947,
+      "n_existing_dc": 10,
+      "rank": 94,
+      "rank_r5": 102
+    },
+    {
+      "state": "Odisha",
+      "basin_id": 45858,
+      "n_existing_dc": 1,
+      "rank": 105,
+      "rank_r5": 99
+    },
+    {
+      "state": "West Bengal",
+      "basin_id": 45082,
+      "n_existing_dc": 4,
+      "rank": 106,
+      "rank_r5": 103
+    }
+  ],
+  "top_regret_spread": 0.018
+}

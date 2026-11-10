@@ -53,7 +53,7 @@ import pandas as pd
 warnings.filterwarnings("ignore")
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from forecast_metrics import mase_scale, metrics  # noqa: E402
+from forecast_metrics import mase_scale, metrics
 
 REPO = HERE.parents[1]
 CORE = Path(os.environ.get("DCF_GAT_DIR", REPO.parent / "diff" / "gat-sarima-nexus"))
@@ -90,7 +90,7 @@ def region_of(zid: str) -> str:
     return "India" if zid.startswith("IND|") else "US" if zid.startswith("USA|") else "Europe"
 
 
-_META = {k: set(v) for k, v in json.load(open(DUMP)).items() if k in ("_account_zones", "_aggregate_zones")}
+_META = {k: set(v) for k, v in json.loads(Path(DUMP).read_text()).items() if k in ("_account_zones", "_aggregate_zones")}
 
 
 def is_account(zid: str) -> bool:
@@ -105,7 +105,7 @@ def is_aggregate(zid: str) -> bool:
 
 
 def load_series() -> dict[str, dict[str, pd.Series]]:
-    d = json.load(open(DUMP))
+    d = json.loads(Path(DUMP).read_text())
     lim = int(os.environ.get("LIMIT_ZONES", "0"))            # smoke tests only
     return {res: {z: pd.Series(p["values"], index=pd.to_datetime(p["index"]), dtype=float).sort_index()
                   for z, p in (sorted(d[res].items())[:lim] if lim else d[res].items())} for res in RESOURCES}
@@ -125,15 +125,16 @@ def windows(s: pd.Series):
 # ------------------------------------------------------------------ preliminary-experiment notebook forecasters
 def core_defs() -> dict:
     """exec fit_sarima / train_xlstm / predict_xlstm from notebook cell 19 (lines 1-106), verbatim."""
-    import torch, torch.nn as nn
-    from torch.utils.data import Dataset, DataLoader
+    import torch
     from statsmodels.tsa.statespace.sarimax import SARIMAX
-    nb = json.load(open(CORE_NB, encoding="utf-8"))
+    from torch import nn
+    from torch.utils.data import DataLoader, Dataset
+    nb = json.loads(Path(CORE_NB).read_text(encoding="utf-8"))
     src = "\n".join("".join(nb["cells"][19]["source"]).split("\n")[1:107])
-    ns = dict(np=np, pd=pd, torch=torch, nn=nn, Dataset=Dataset, DataLoader=DataLoader, SARIMAX=SARIMAX,
-              DEVICE=torch.device("cpu"), LOOKBACK=12, HIDDEN_SIZE=64, NUM_LAYERS=2, DROPOUT=0.2,
-              EPOCHS=100, LR=1e-3, BATCH_SIZE=16)       # the notebook's cell-2 hyper-parameters
-    exec(src, ns)
+    ns = {"np": np, "pd": pd, "torch": torch, "nn": nn, "Dataset": Dataset, "DataLoader": DataLoader, "SARIMAX": SARIMAX,
+              "DEVICE": torch.device("cpu"), "LOOKBACK": 12, "HIDDEN_SIZE": 64, "NUM_LAYERS": 2, "DROPOUT": 0.2,
+              "EPOCHS": 100, "LR": 1e-3, "BATCH_SIZE": 16}       # the notebook's cell-2 hyper-parameters
+    exec(src, ns)  # noqa: S102 - runs the preliminary notebook's model cell verbatim (repository file, not input)
     return ns
 
 
@@ -168,7 +169,7 @@ def _save(df: pd.DataFrame, fails: list, model: str, res: str, seed=None):
 
 def run_stat(S):
     """seasonal_naive, sarima_dcf, sarima_core."""
-    import forecast_run as FR                                 # dcfootprint SARIMA with validity checks
+    import forecast_run as FR  # dcfootprint SARIMA with validity checks
     ns = core_defs()
     for model in ("seasonal_naive", "sarima_dcf", "sarima_core"):
         for res in RESOURCES:
@@ -191,7 +192,7 @@ def run_stat(S):
                             if not np.all(np.isfinite(mu)):
                                 raise FloatingPointError("non-finite forecast")
                         out.append(rows(model, res, zid, win, org, tr, te, mu, sg))
-                    except Exception as e:
+                    except Exception as e:  # noqa: BLE001 - a failed model fit is logged to failures.csv
                         fails.append({"model": model, "resource": res, "zone_id": zid, "window": win,
                                       "origin": org, "reason": f"{type(e).__name__}: {e}"[:200]})
             _save(pd.concat(out, ignore_index=True), fails, model, res)
@@ -218,7 +219,7 @@ def run_foundation(S):
                         q = np.asarray(q)[0]                  # (H, 10): [mean, q0.1 .. q0.9]
                         mu, lo, hi = q[:, 5], q[:, 1], q[:, 9]
                         out.append(rows("timesfm_2p5", res, zid, win, org, tr, te, mu, (hi - lo) / (2 * Z80), lo, hi))
-                    except Exception as e:
+                    except Exception as e:  # noqa: BLE001 - a failed model fit is logged to failures.csv
                         fails.append({"model": "timesfm_2p5", "resource": res, "zone_id": zid, "window": win,
                                       "origin": org, "reason": f"{type(e).__name__}: {e}"[:200]})
             _save(pd.concat(out, ignore_index=True), fails, "timesfm_2p5", res)
@@ -236,7 +237,7 @@ def run_foundation(S):
                     q = np.asarray(q[0][0], float)          # (H, 3)
                     mu, lo, hi = q[:, 1], q[:, 0], q[:, 2]
                     out.append(rows("chronos_2", res, zid, win, org, tr, te, mu, (hi - lo) / (2 * Z80), lo, hi))
-                except Exception as e:
+                except Exception as e:  # noqa: BLE001 - a failed model fit is logged to failures.csv
                     fails.append({"model": "chronos_2", "resource": res, "zone_id": zid, "window": win,
                                   "origin": org, "reason": f"{type(e).__name__}: {e}"[:200]})
         _save(pd.concat(out, ignore_index=True), fails, "chronos_2", res)
@@ -265,7 +266,7 @@ def _xlstm_task(args):
         if not np.all(np.isfinite(mu)):
             raise FloatingPointError("non-finite forecast")
         return rows("xlstm", res, zid, win, org, tr, te, mu, seed=seed), None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - a failed model fit is logged to failures.csv
         return None, {"model": "xlstm", "resource": res, "zone_id": zid, "window": win, "origin": org,
                       "seed": seed, "reason": f"{type(e).__name__}: {e}"[:200]}
 
@@ -387,7 +388,7 @@ def cache_check():
         if not len(m):
             continue
         rel = (m["mean"] - m["value"]).abs() / m["value"].abs().clip(lower=1e-9)
-        rm = lambda v: m.assign(e=(v - m["actual"]) ** 2).groupby(["resource", "zone_id"])["e"].mean() ** 0.5
+        rm = lambda v, m=m: m.assign(e=(v - m["actual"]) ** 2).groupby(["resource", "zone_id"])["e"].mean() ** 0.5
         rows_.append({"cache_model": cm, "fresh_model": fm, "n_points": len(m),
                       "median_rel_diff": float(rel.median()), "p95_rel_diff": float(rel.quantile(0.95)),
                       "share_within_1pct": float((rel < 0.01).mean()),
@@ -400,8 +401,8 @@ def cache_check():
 def manifest(t_start: float):
     m = RUN / "manifest"
     m.mkdir(parents=True, exist_ok=True)
-    git = lambda *a: subprocess.run(["git", *a], capture_output=True, text=True).stdout.strip()
-    json.dump({
+    git = lambda *a: subprocess.run(["git", *a], capture_output=True, text=True, check=False).stdout.strip()
+    manifest = {
         "run": RUN.name, "created": time.strftime("%Y-%m-%d %H:%M:%S"), "wall_clock_min": round((time.time() - t_start) / 60, 1),
         "script": str(Path(__file__).relative_to(REPO)), "dcfootprint_commit": git("-C", str(REPO), "rev-parse", "HEAD"),
         "core_repo_commit": git("-C", str(CORE), "rev-parse", "HEAD"),
@@ -416,8 +417,9 @@ def manifest(t_start: float):
                   "USA|washington dc carbon has missing months: positional holdout spans more calendar months",
                   "xLSTM has no predictive distribution: PICP/CRPS are NaN for it by design",
                   "water not forecast: future water = Aqueduct scenarios (see docs/methodology.md)"],
-    }, open(m / "run_manifest.json", "w"), indent=2)
-    freeze = subprocess.run([sys.executable, "-m", "pip", "freeze"], capture_output=True, text=True).stdout
+    }
+    (m / "run_manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    freeze = subprocess.run([sys.executable, "-m", "pip", "freeze"], capture_output=True, text=True, check=True).stdout
     (m / "env_freeze_core_python311.txt").write_text(freeze, encoding="utf-8")
 
 
@@ -435,8 +437,8 @@ def summary():
     h = headline(M)
     cols = ["model", "resource", "window", "region", "n_series", "RMSE", "MASE", "WMAPE_pct", "PICP", "CRPS"]
     cols = [c for c in cols if c in h.columns]
-    L = [f"# {RUN.name}", "", "Account zones only (India 9, US 36, Europe 21); xLSTM = mean of 5 seeds. "
-         "Generated from metrics/per_model_per_region.csv.", ""]
+    L = [f"# {RUN.name}", "", ("Account zones only (India 9, US 36, Europe 21); xLSTM = mean of 5 seeds. "
+         "Generated from metrics/per_model_per_region.csv."), ""]
     for (res, win), g in h.groupby(["resource", "window"]):
         L += [f"## {res}, {win}", "", md_table(g[cols].sort_values(["region", "RMSE"])), ""]
     cc = RUN / "metrics" / "cache_check.csv"

@@ -10,6 +10,7 @@ R_hat_b = alpha * max(AWARE AMD, 0) * area: water left after human use and envir
 flows (project/recharge.basin_budgets), decoupled from datacenter use.
 
 Policies
+  status_quo   no movement: each facility serves its own share of the pool (the do-nothing baseline)
   static       proportional to headroom (the floor)
   greedy       per-month LP on forecast costs, no queue memory
   lyapunov     greedy + queue price D_b/R_bar_b on scope-1 water (drift-plus-penalty)
@@ -34,8 +35,8 @@ import pandas as pd
 from scipy import sparse
 from scipy.optimize import linprog
 
-from dcfootprint.io.facilities import _repo_root
 from dcfootprint.account.energy import month_hours
+from dcfootprint.io.facilities import _repo_root
 from dcfootprint.settings import params as _cfg_params
 
 
@@ -196,7 +197,7 @@ def simulate(P: dict, policy: str, seed: int = 0, V: float | None = None, solver
     rp, arr, A = _params(), P["arr"], P["A"].values
     V = float(rp["V"]) if V is None else V
     solver = rp.get("solver", "price_decomposition") if solver is None else solver
-    if solver == "price_decomposition" and policy != "static":
+    if solver == "price_decomposition" and policy not in ("static", "status_quo"):
         return _simulate_agents(P, policy, seed, V)
     flex = float(rp["flexible_share"])
     pools = _pools(P, seed, float(rp["demand_noise"]), flex)
@@ -209,6 +210,9 @@ def simulate(P: dict, policy: str, seed: int = 0, V: float | None = None, solver
         head[arr["banned"]] = 0.0
         if policy == "static":
             add = min(pools[t], head.sum()) * head / head.sum()
+        elif policy == "status_quo":                                         # load stays where it is
+            own = flex * arr["e_it_mwh"][:, t]
+            add = np.minimum(pools[t] * own / own.sum(), head)
         else:
             cost = V * (arr["cost_true"][:, t] if policy == "lyapunov_pf" else arr["cost_hat"][:, t])
             if policy in ("lyapunov", "lyapunov_pf"):
@@ -316,7 +320,7 @@ def compare(account: pd.DataFrame, seeds: int | None = None, legal: bool = True,
     P = prepare(account, legal=legal, budget_alpha=budget_alpha, A_basin=A_basin)
     runs = []
     for s in range(seeds):
-        for pol in ["static", "greedy", "lyapunov", "lyapunov_pf"]:
+        for pol in ["status_quo", "static", "greedy", "lyapunov", "lyapunov_pf"]:
             r = simulate(P, pol, seed=s)
             runs.append({**r, "seed": s})
             if pol == "lyapunov":
@@ -330,6 +334,9 @@ def compare(account: pd.DataFrame, seeds: int | None = None, legal: bool = True,
     base = out.set_index("policy").loc["static"]
     out["scarcity_saving_pct_vs_static"] = ((base["scarcity_m3eq"] - out["scarcity_m3eq"]) / base["scarcity_m3eq"] * 100).round(2)
     out["carbon_saving_pct_vs_static"] = ((base["carbon_tco2"] - out["carbon_tco2"]) / base["carbon_tco2"] * 100).round(2)
+    sq = out.set_index("policy").loc["status_quo"]
+    out["scarcity_saving_pct_vs_status_quo"] = ((sq["scarcity_m3eq"] - out["scarcity_m3eq"]) / sq["scarcity_m3eq"] * 100).round(2)
+    out["carbon_saving_pct_vs_status_quo"] = ((sq["carbon_tco2"] - out["carbon_tco2"]) / sq["carbon_tco2"] * 100).round(2)
     orc = out.set_index("policy").loc["oracle", "penalty"]
     out["penalty_gap_pct_vs_oracle"] = ((out["penalty"] - orc) / orc * 100).round(3)
     out["legal"] = legal

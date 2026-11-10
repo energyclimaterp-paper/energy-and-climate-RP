@@ -54,6 +54,15 @@ MWh generated with fuel $k$ (Macknick et al., 2012), $CF_{b,m}$ the AWARE 2.0 sc
 basin, and $\overline{CF}^{gen}_{z,m,k}$ the capacity-weighted factor of the basins that hold the zone's plants
 of fuel $k$. Physical water ($W^{on} + W^{off}$) and scarcity-weighted water (m³-eq) are reported separately.
 
+**Capacity basis.** $C_f$ is IT capacity.
+The India list states each MW figure on its own basis (`capacity_basis`): IT, critical IT or total facility power.
+Rows stated as total facility power (`operational_total`, 16 of the 71 account facilities, 240 MW) are converted with $C_f = C^{stated}_f / \mathrm{PUE}_f$, the same rule the US inventory applies (`account/energy.py`).
+Rounds 5 and 6 treated those rows as IT capacity, which overstated India's energy, carbon and on-site water by about 9%.
+
+**On-site WUE.** Facilities without a disclosed operator WUE take the cooling-tower WUE of their monthly wet-bulb temperature (Gupta et al. 2024; `account/wue.py`).
+The fitted quadratic has its minimum at 9.3 °C wet-bulb, and below that it rises again, which is an extrapolation artefact.
+Below 9.3 °C the WUE is held at the minimum (1.17 L/kWh), which removes the spurious winter rise without crediting free-cooling hours.
+
 **Carbon basis.** India uses the consumption-based, import-adjusted intensity of the five regional grids from
 Electricity Maps (life-cycle). The US and EU use Ember generation-based intensities (direct). The India
 generation-basis rerun is in [`results/generation_basis_check/`](../dcfootprint/results/generation_basis_check/).
@@ -79,21 +88,24 @@ replace equations (1), (2) and (4). IT energy uses the EU-average PUE of 1.36.
   estimated number of EU datacenters. Calibration checks totals, not their spatial distribution.
 - 4,000 Monte Carlo draws, each assumed parameter on a triangular distribution (mode = default, support = band).
   For the EU only the off-site water coefficients and the hydro multiplier vary.
-- First-order Sobol indices $S_i = \mathrm{Var}[\mathrm{E}(Y \mid X_i)] / \mathrm{Var}(Y)$, estimated from the
-  Monte Carlo sample with 40 quantile bins per parameter.
+- Sobol indices of total scarcity-weighted water: first order $S_i = \mathrm{Var}[\mathrm{E}(Y \mid X_i)] / \mathrm{Var}(Y)$ and total $S_{T,i}$, from a Saltelli design with $2^{15}$ base samples (Saltelli et al. 2010 for $S_i$, Jansen 1999 for $S_{T,i}$) and bootstrap 90% intervals (`uncertainty/monte_carlo.sobol_saltelli`).
+  The round-5 indices came from 40 quantile bins of the Monte Carlo sample; that estimator is biased upward by the noise of the bin means, so the India indices summed to 1.026.
+  The routing Monte Carlo, which has a single sample, keeps the binned estimator with the ANOVA bias correction.
 
 ## Regulatory gap (Section 4.7)
 
-`policy/registry.py` merges three sources into one 26-entry registry: the 15 collected policy documents
+`policy/registry.py` merges three sources into one 26-row registry: the 15 collected policy documents
 (`config/policy_sources.csv`), the 7 legal rules applied in the analyses (`config/legal_constraints.csv`), and
-the closest instrument for each axis. `policy/gap.py` derives the four-axis matrix (carbon intensity, marginal
+the closest instrument for each axis.
+Four of the 26 rows are reference documents rather than instruments (two methodology papers, a fact sheet and a research article: `kind = reference`); they back the retrieval check but are not counted as instruments and are never read as in force.
+The registry therefore holds 22 instruments. `policy/gap.py` derives the four-axis matrix (carbon intensity, marginal
 carbon, scarcity-weighted water, AI-inference attribution) from the registry rather than coding it by hand.
 
 Legal limits applied in siting and routing:
 
 | Region | Rule | Effect in the model |
 |---|---|---|
-| Rajasthan | zero liquid discharge | on-site water reduced by 92% |
+| Rajasthan | zero liquid discharge | on-site water reduced by 18.4% (recovered blowdown, see Levers) |
 | Gujarat | ≥51% renewable supply | carbon reduced accordingly |
 | Ireland | ≥80% additional renewable supply | carbon reduced accordingly |
 | Germany | PUE ≤ 1.2 for new facilities | efficiency cap |
@@ -103,15 +115,18 @@ Legal limits applied in siting and routing:
 
 ## Decision analyses (Section 4.8)
 
-- **Levers** (`counterfactual/levers.py`): zero liquid discharge (92% of on-site water recycled), an efficiency
-  standard (PUE ≤ 1.3, WUE ≤ 0.7 L/kWh) and coastal seawater cooling (WUE 0.1 L/kWh, coastal Indian cities).
+- **Levers** (`counterfactual/levers.py`): zero liquid discharge, an efficiency standard (PUE ≤ 1.3, WUE ≤ 0.7 L/kWh) and coastal seawater cooling (WUE 0.1 L/kWh, coastal Indian cities).
   Each lever changes parameters, recomputes the account and compares it with the baseline.
+  Zero liquid discharge reuses cooling-tower blowdown and leaves evaporation untouched.
+  With make-up $M = E + B$ and blowdown $B = E/(N-1)$ at $N$ cycles of concentration, $B/M = 1/N$, so ZLD saves $r/N$ of on-site water for a blowdown recovery $r$ (0.92 / 5 = 18.4%; `levers.zld_saving_fraction`).
+  Round 5 removed 92% of all on-site water, which treated evaporation as recoverable.
+  Under a strictly consumptive reading the discharged blowdown is returned water, so 18.4% is an upper bound.
 - **Harm scorecard** (`decisions/scorecard.py`, `decisions/equity.py`): a facility is flagged when its
   scarcity-weighted water is in the top quarter of its region and its basin factor is in the top 40%. Each flagged
   facility gets the lever that saves the most water within its state's rules. India adds the CGWB
   groundwater-extraction stage.
 - **Siting** (`decisions/siting.py`): a hypothetical 50 MW colocation facility is scored in every state × basin
-  cell on four criteria (scarcity-weighted water, carbon, rise in peak basin deficit, fossil share), rescaled to
+  cell on four criteria (scarcity-weighted water, carbon at the intensity the account charges, rise in peak basin deficit, fossil share), rescaled to
   [0, 1]. 500 Dirichlet weight vectors give scores $S_c(\mathbf{w})$, and cells are ranked by minimax regret
   $R_c = \max_{\mathbf{w}} [S_c(\mathbf{w}) - \min_{c'} S_{c'}(\mathbf{w})]$. The 2030/2050 version adds the
   Aqueduct 4.0 water-stress score (seven scenarios) and official grid-carbon paths.
@@ -119,7 +134,9 @@ Legal limits applied in siting and routing:
   sites are capped at 90% utilisation, and demand is perturbed by 5% Gaussian noise over 10 seeds. Basin budgets
   come from AWARE (water remaining after human and environmental use), and a queue tracks each basin's overdraft.
   A Lyapunov drift-plus-penalty controller is compared with a static allocation, a greedy rule, a version with
-  perfect carbon knowledge and an offline full-year oracle. Each month's linear programme is solved by price
+  perfect carbon knowledge and an offline full-year oracle.
+  Results are also reported against a status-quo baseline in which no load moves (each facility serves its own share of the pool).
+  In the US the basin queue never binds, so the Lyapunov controller coincides with the greedy rule (`results/round7_fixes/routing_queue_diagnostics.json`). Each month's linear programme is solved by price
   decomposition among grid, basin and facility agents, which matches the centralised HiGHS solution to within
   1.7 × 10⁻¹⁴ in 56 tests. **The routing analysis is a diagnostic bound on stylised demand, not a deployable
   router.** It is not run for the EU (no site locations).

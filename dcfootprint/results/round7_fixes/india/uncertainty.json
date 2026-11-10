@@ -1,0 +1,98 @@
+{
+  "n_samples": 4000,
+  "distribution": "triangular",
+  "measured_energy_and_water": false,
+  "point_scarcity_m3eq_yr": 698600143.0,
+  "facility_types": {
+    "colocation": 71
+  },
+  "carbon_tco2_yr": {
+    "mean": 3479352.0,
+    "p05": 2563852.0,
+    "p95": 4493724.0
+  },
+  "carbon_inference_tco2_yr": {
+    "mean": 2956367.0,
+    "p05": 2182986.0,
+    "p95": 3835024.0
+  },
+  "water_phys_m3_yr": {
+    "mean": 20055847.0,
+    "p05": 14342714.0,
+    "p95": 26701864.0
+  },
+  "scarcity_m3eq_yr": {
+    "mean": 668552456.0,
+    "p05": 477300497.0,
+    "p95": 886262679.0
+  },
+  "scarcity_inference_m3eq_yr": {
+    "mean": 568068566.0,
+    "p05": 406330195.0,
+    "p95": 753705939.0
+  },
+  "scarcity_mean_over_point": 0.957,
+  "scarcity_at_hydro_0_m3eq_yr": 583913609.0,
+  "scarcity_sobol_first_order": {
+    "util_colocation": 0.664,
+    "wue": 0.155,
+    "hydro": 0.058,
+    "ewif": 0.042,
+    "pue_colocation": 0.037
+  },
+  "scarcity_sobol": {
+    "estimator": "Saltelli 2010 (S1) / Jansen 1999 (ST), bootstrap 90% intervals",
+    "target": "scarcity_m3eq_yr",
+    "indices": {
+      "util_colocation": {
+        "S1": 0.664,
+        "S1_p05": 0.596,
+        "S1_p95": 0.716,
+        "ST": 0.695,
+        "ST_p05": 0.686,
+        "ST_p95": 0.704
+      },
+      "wue": {
+        "S1": 0.155,
+        "S1_p05": 0.13,
+        "S1_p95": 0.183,
+        "ST": 0.156,
+        "ST_p05": 0.154,
+        "ST_p95": 0.158
+      },
+      "ewif": {
+        "S1": 0.042,
+        "S1_p05": 0.027,
+        "S1_p95": 0.058,
+        "ST": 0.058,
+        "ST_p05": 0.058,
+        "ST_p95": 0.059
+      },
+      "hydro": {
+        "S1": 0.058,
+        "S1_p05": 0.043,
+        "S1_p95": 0.073,
+        "ST": 0.054,
+        "ST_p05": 0.054,
+        "ST_p95": 0.055
+      },
+      "pue_colocation": {
+        "S1": 0.037,
+        "S1_p05": 0.019,
+        "S1_p95": 0.053,
+        "ST": 0.053,
+        "ST_p05": 0.052,
+        "ST_p95": 0.053
+      }
+    },
+    "sum_S1": 0.956
+  },
+  "scarcity_oat_swing_Mm3eq": {
+    "util_colocation": 461.9,
+    "wue": 191.2,
+    "pue_colocation": 122.5,
+    "ewif": 117.8,
+    "hydro": 97.5,
+    "inference": 69.9
+  }
+}

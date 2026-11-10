@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from dcfootprint.policy.registry import load_registry, AXES, JURISDICTIONS
+from dcfootprint.policy.registry import AXES, JURISDICTIONS, load_registry
 
 _REGISTRY = load_registry()
 # binding-constraints view (what regulation DOES require) — preserves the old schema
@@ -29,7 +29,7 @@ def registry() -> pd.DataFrame:
 def four_axis_matrix() -> pd.DataFrame:
     """Derived: per (axis x jurisdiction), does any in-force instrument mandate it? + the
     nearest ('closest') instrument that touches the axis without mandating it."""
-    reg = _REGISTRY
+    reg = _REGISTRY[_REGISTRY["kind"] == "instrument"]          # reference documents mandate nothing
     rows = []
     for ax in AXES:
         cell = {"axis": ax}
@@ -60,7 +60,7 @@ def gap_overlay(account: pd.DataFrame) -> dict:
     blind = total_scarcity if not mandated_here else 0.0        # all axes unmandated -> all burden blind
     return {
         "region": region,
-        "n_facilities": int(len(ann)),
+        "n_facilities": len(ann),
         "total_scarcity_m3eq": round(total_scarcity, 0),
         "total_carbon_tco2": round(float(ann["carbon"].sum()), 0),
         "axes_mandated_in_region": mandated_here,
@@ -72,11 +72,17 @@ def gap_overlay(account: pd.DataFrame) -> dict:
 def region_effects(region: str, constraints: pd.DataFrame | None = None) -> dict:
     """{effect: param} for the HARD rules that apply in `region` (state / country name).
     Effects understood downstream (unchanged):
-      zld_mandate · re_share_min · ban_new_above_mw · pue_cap_new · water_permit_mgal."""
+      zld_mandate · re_share_min · ban_new_above_mw · pue_cap_new · water_permit_mgal.
+    zld_mandate is a flag in legal_constraints.csv (1 = mandated); the value returned is the share of
+    on-site water ZLD actually saves (counterfactual.levers.zld_saving_fraction: blowdown only)."""
+    from dcfootprint.counterfactual.levers import zld_saving_fraction
     c = HARD_CONSTRAINTS if constraints is None else constraints
     rows = c[(c["type"] == "hard") & (c["region"] == region)]
-    return {r["effect"]: float(r["param"]) for _, r in rows.iterrows()
-            if str(r["effect"]) != "" and pd.notna(r["param"]) and str(r["param"]) != ""}
+    eff = {r["effect"]: float(r["param"]) for _, r in rows.iterrows()
+           if str(r["effect"]) != "" and pd.notna(r["param"]) and str(r["param"]) != ""}
+    if eff.get("zld_mandate"):
+        eff["zld_mandate"] = zld_saving_fraction()
+    return eff
 
 
 if __name__ == "__main__":

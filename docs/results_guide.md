@@ -71,3 +71,25 @@ All figures are in [`figures/`](../figures/) and are redrawn by `figures/scripts
 `dcfootprint/config/legal_constraints.csv` and `policy/registry.py` now carry a source link for every registry
 entry, and the Minnesota entry describes the law as enacted. The frozen `R5/policy_registry.csv` predates these
 edits. They change no number, legal limit or matrix cell.
+
+## Revisions after the canonical snapshot
+
+The paper draft quotes `R5/`.
+Two later rounds revise it, and the paper should move to the round-7 numbers before submission.
+Below, `R7/` is [`dcfootprint/results/round7_fixes/`](../dcfootprint/results/round7_fixes/).
+
+| Paper item | Revised value | File |
+|---|---|---|
+| Table 3, routing | India Lyapunov +1.3% carbon, -22.6% water; oracle +0.7%; US -2.7% (static) or -1.9% (status quo) | `R7/headline_steps.csv`, `R7/*/routing_comparison.csv` |
+| Routing intervals | India Lyapunov carbon up in 98% of 1,000 draws, oracle in 90% | `R7/*/routing_mc_summary.json` |
+| Carbon-water basis check | India on the generation basis for both: Lyapunov +1.4%, oracle +1.3% | `R7/headline_steps.csv` |
+| Table 4, India account | 872 MW IT, 3.29 Mt CO2, 21.2 Mm3, 699 Mm3-eq, off-site 66% | `R7/india/account_totals.json` |
+| Table 7, levers | ZLD 6.3% / 4.3% / 3.3%; efficiency standard 30.0% / 21.8% / 6.9% | `R7/*/lever_savings.csv` |
+| Harm scorecard | efficiency standard recommended for 16/16 India, 50/53 US, 4/4 EU flagged facilities | `R7/*/q2_scorecard_summary.json` |
+| Siting | top cells flip with the carbon basis and with Gujarat's renewable rule; existing hubs mostly bottom half | `R7/india/q1_siting_rerank.csv` |
+| Groundwater | 59.0% over-exploited, 70.6% semi-critical or worse (on-site water) | `R7/india/groundwater_equity.json` |
+| Sobol indices | Saltelli/Jansen with intervals; India utilisation 0.66, WUE 0.16; US hydro 0.29 | `R7/*/uncertainty.json` |
+| Table 8, forecasting | scale-free skill with Holm-corrected tests | `R7/forecast_significance.md` |
+| Registry | 22 instruments + 4 reference documents | `policy/registry.py` |
+
+The full list of changes, and what is still open, is in [`R7/README.md`](../dcfootprint/results/round7_fixes/README.md).

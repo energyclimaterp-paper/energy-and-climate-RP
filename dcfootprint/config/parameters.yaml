@@ -16,6 +16,11 @@ energy:
       enterprise: {default: 0.40, band: [0.25, 0.60]}
       unknown:    {default: 0.55, band: [0.40, 0.75]}   # fallback = global mid
     source: "modeled (no per-facility utilisation dataset exists; DATA.md E4)"
+  # Stated capacities that are TOTAL FACILITY power, not IT capacity. The India list tags each MW
+  # figure (datasets/india_dc_facilities, Notes & Method: "mixes IT, critical-IT and total-facility
+  # bases"); operational_total rows are converted with the facility PUE, C_IT = C / PUE (account/energy.py),
+  # the same rule as US facility-basis records. operational_IT and operational_critical are IT load.
+  facility_power_capacity_bases: [operational_total]
   pue:
     by_facility_type:
       hyperscale: {default: 1.2, band: [1.1, 1.4]}
@@ -139,9 +144,21 @@ levers:
     new_wue: 0.1          # seawater/WSAC: near-zero freshwater (periodic salt flush)
     applies_to: "new/relocatable load in coastal zones"
   zero_liquid_discharge:
+    # ZLD treats and reuses cooling-tower BLOWDOWN; it does not touch evaporation. Tower mass balance:
+    # make-up M = E + B with blowdown B = E / (N - 1) at N cycles of concentration (drift neglected), so
+    # B / M = 1 / N, and ZLD saves recovery x (1/N) of make-up (on-site) water:
+    #   saving_fraction = blowdown_recovery / cycles_of_concentration  (= 0.92 / 5 = 18.4%)
+    # Round 5 applied 0.92 to ALL on-site water, which treated evaporation as recoverable (about 5x too high).
+    # On-site water (WUE) is read as site make-up water (ISO/IEC 30134-9 water INPUT). Under a strictly
+    # consumptive reading the discharged blowdown is returned water, so ZLD saves ~0 consumption: the
+    # saving below is an upper bound. Sources: US DOE FEMP, "Cooling Towers: Understanding Key Components of
+    # Cooling Towers and How to Improve Water Efficiency" (2011), cycles 3-7 typical, B = E/(N-1);
+    # recovery ~0.90-0.95 of blowdown for thermal/membrane ZLD trains.
     type: recycle
-    recycle_fraction: 0.92    # closed-loop returns ~90-95% (DATA.md E5)
-    band: [0.90, 0.95]
+    cycles_of_concentration: 5
+    cycles_band: [3, 7]
+    blowdown_recovery: 0.92
+    blowdown_recovery_band: [0.90, 0.95]
     applies_to: scope1        # on-site cooling water only; power-plant (scope-2) water is untouched
   efficiency_standard:
     type: pue_wue_cap
@@ -226,6 +243,9 @@ uncertainty:
   # WUE band is [0.7, 2.5] with mode 1.9 (see water_onsite.wue_default for sources).
   distribution: triangular
   n_samples: 4000
+  # Saltelli design for the account Sobol indices: sobol_n_samples x (k + 2) analytic evaluations
+  # (cheap); 2^15 keeps the bootstrap 90% interval on each first-order index within about +-0.05.
+  sobol_n_samples: 32768
   # Routing Monte Carlo (uncertainty/routing_mc.py): the Q3 comparison re-run per draw, so the
   # carbon/water trade-off gets an interval instead of a point. Each draw also takes its own
   # demand-noise seed. ci_zone_band is a per-zone multiplier on grid CI, drawn independently per

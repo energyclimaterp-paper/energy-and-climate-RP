@@ -17,7 +17,8 @@ def test_binding_rules_match_legal_constraints_including_citation():
     # every binding rule in the registry must equal its row in legal_constraints.csv -- including the
     # source, which the first registry version dropped for the 5 rules attached to corpus documents
     from dcfootprint.policy import gap
-    legal = pd.read_csv(ROOT / "dcfootprint" / "config" / "legal_constraints.csv").fillna("")
+    legal = pd.read_csv(ROOT / "dcfootprint" / "config" / "legal_constraints.csv")
+    legal = legal.astype(object).where(legal.notna(), "")      # mixed columns: blank, not NaN, before comparing
     hard = gap.HARD_CONSTRAINTS.fillna("")
     m = legal.merge(hard, on=["jurisdiction", "region", "rule"], how="outer", suffixes=("_cfg", "_reg"), indicator=True)
     assert (m["_merge"] == "both").all(), m[m["_merge"] != "both"][["region", "rule", "_merge"]]
@@ -27,12 +28,19 @@ def test_binding_rules_match_legal_constraints_including_citation():
 
 
 def test_region_effects_equal_a_direct_reading_of_the_config():
+    # every hard rule is read straight from the config, except that a ZLD mandate (a flag) becomes the
+    # share of on-site water ZLD actually saves (blowdown only), shared with the lever
+    from dcfootprint.counterfactual.levers import zld_saving_fraction
     from dcfootprint.policy import gap
     legal = pd.read_csv(ROOT / "dcfootprint" / "config" / "legal_constraints.csv")
     for region in legal["region"].unique():
         rows = legal[(legal["region"] == region) & (legal["type"] == "hard") & legal["param"].notna()]
-        assert gap.region_effects(region) == {r["effect"]: float(r["param"]) for _, r in rows.iterrows()}, region
+        expect = {r["effect"]: float(r["param"]) for _, r in rows.iterrows()}
+        if expect.get("zld_mandate"):
+            expect["zld_mandate"] = zld_saving_fraction()
+        assert gap.region_effects(region) == expect, region
     assert gap.region_effects("Nowhere") == {}
+    assert gap.region_effects("Rajasthan")["zld_mandate"] < 0.3          # not the round-5 0.92
 
 
 def test_four_axis_matrix_is_derived_from_in_force_mandates():

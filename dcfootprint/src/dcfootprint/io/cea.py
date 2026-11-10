@@ -37,7 +37,7 @@ def india_grid_ef(path: str | Path | None = None) -> dict:
     year_cols = [c for c in r.columns
                  if isinstance(years[c], str) and "-" in years[c] and years[c][:4].isdigit()]
     series = {years[c]: float(vals[c]) for c in year_cols if pd.notna(vals[c])}
-    latest_fy = sorted(series)[-1]
+    latest_fy = max(series)
     return {"ef_tco2_per_mwh": series[latest_fy], "fy": latest_fy, "all_years": series}
 
 

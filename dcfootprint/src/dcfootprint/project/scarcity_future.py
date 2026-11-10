@@ -54,6 +54,7 @@ def basin_scores(basin_ids) -> pd.DataFrame:
     """[basin_id, scenario, ws_score, scored_share] for the given AWARE basin ids (long format).
     Cached next to the GDB; basins missing from the cache are computed and appended."""
     import geopandas as gpd
+
     from dcfootprint.geo.join import load_aware_basins
     ids = sorted({int(b) for b in basin_ids})
     cache = _gdb().parent / "aware_basin_ws_scores.parquet"
@@ -74,7 +75,7 @@ def basin_scores(basin_ids) -> pd.DataFrame:
         for s in SCENARIOS:
             c = f"ws_{s}"
             v = ov.dropna(subset=[c])
-            agg = v.groupby("basin_id").apply(lambda d: np.average(d[c], weights=d["a"]), include_groups=False)
+            agg = v.groupby("basin_id").apply(lambda d, c=c: np.average(d[c], weights=d["a"]), include_groups=False)
             agg = agg.clip(0.0, 5.0)              # float round-off: a mean of 5s can come out as 5.000000000000001
             share = (v.groupby("basin_id")["a"].sum() / basin_area).fillna(0.0)   # no scored overlap -> 0
             for b in todo:

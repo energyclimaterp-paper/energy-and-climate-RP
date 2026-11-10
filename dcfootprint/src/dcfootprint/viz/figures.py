@@ -104,12 +104,12 @@ def fig_q1(res: Path, out: Path, states):
         ax.annotate(f"#{int(r['rank'])}  {r['state']} {int(r['basin_id'])}", (r["pt"].x, r["pt"].y),
                     xytext=(58.6, 16.5 - 1.7 * k), textcoords="data", fontsize=7.5, color=INK, weight="bold",
                     ha="left", va="center", zorder=6,
-                    arrowprops=dict(arrowstyle="-", color=INK2, linewidth=0.6, shrinkA=0, shrinkB=2))
+                    arrowprops={"arrowstyle": "-", "color": INK2, "linewidth": 0.6, "shrinkA": 0, "shrinkB": 2})
     sm = plt.cm.ScalarMappable(cmap=SEQ_CMAP, norm=plt.Normalize(0, 1))
     cb = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.01, ticks=[0, 1])
     cb.ax.set_yticklabels([f"rank {int(h['rank'].max())}", "rank 1"]); cb.outline.set_visible(False)
-    from matplotlib.patches import Patch
     from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
     ax.legend(handles=[Patch(facecolor=NEUTRAL, edgecolor=MUTED, hatch="////", label="small grid (<10 TWh/yr), ranked separately"),
                        Line2D([], [], marker="o", color="none", markeredgecolor=INK, markerfacecolor="none",
                               markersize=7, label="existing datacenter city (size = count)")],
@@ -136,7 +136,7 @@ def fig_mismatch(res: Path, out: Path, states):
         dx, dy, ha = side.get(r["city"], (14, 0, "left"))
         ax.annotate(f"{r['city']}  {r['scarcity_m3eq'] / 1e6:,.0f}M m³-eq", (r["lon"], r["lat"]),
                     xytext=(dx, dy), textcoords="offset points", fontsize=7.5, color=INK, va="center", ha=ha,
-                    zorder=6, bbox=dict(boxstyle="round,pad=0.15", fc=SURFACE, ec="none", alpha=0.85))
+                    zorder=6, bbox={"boxstyle": "round,pad=0.15", "fc": SURFACE, "ec": "none", "alpha": 0.85})
     sm = plt.cm.ScalarMappable(cmap=SEQ_CMAP, norm=plt.Normalize(0, 100))
     cb = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.01)
     cb.set_label("AWARE 2.0 scarcity factor, annual mean (1 = world avg, 100 = cap)", color=INK2)
@@ -217,12 +217,12 @@ def fig_routing(res: Path, out: Path):
 # view: map extent (lon/lat), x-stretch for the latitude (1/cos(mid-lat)), and where the top-5 label
 # column sits (in open sea, outside the land extent)
 REGION_VIEW = {
-    "US": dict(xlim=(-125.0, -66.5), ylim=(24.0, 50.0), lat0=38.0, label_x=-143.0, label_y0=45.0, label_dy=1.25,
-               xlim_q1=(-144.0, -66.5), mm_label_x=-127.0, mm_label_y0=46.0, mm_label_dy=1.6, mm_ha="right",
-               xlim_mm=(-128.0, -66.5), what="sites"),
-    "EU": dict(xlim=(-11.0, 35.0), ylim=(34.0, 71.0), lat0=52.0, label_x=-27.0, label_y0=62.0, label_dy=1.8,
-               xlim_q1=(-28.0, 35.0), mm_label_x=-30.0, mm_label_y0=58.0, mm_label_dy=2.0,
-               xlim_mm=(-31.0, 35.0), what="countries"),
+    "US": {"xlim": (-125.0, -66.5), "ylim": (24.0, 50.0), "lat0": 38.0, "label_x": -143.0, "label_y0": 45.0, "label_dy": 1.25,
+               "xlim_q1": (-144.0, -66.5), "mm_label_x": -127.0, "mm_label_y0": 46.0, "mm_label_dy": 1.6, "mm_ha": "right",
+               "xlim_mm": (-128.0, -66.5), "what": "sites"},
+    "EU": {"xlim": (-11.0, 35.0), "ylim": (34.0, 71.0), "lat0": 52.0, "label_x": -27.0, "label_y0": 62.0, "label_dy": 1.8,
+               "xlim_q1": (-28.0, 35.0), "mm_label_x": -30.0, "mm_label_y0": 58.0, "mm_label_dy": 2.0,
+               "xlim_mm": (-31.0, 35.0), "what": "countries"},
 }
 _AQ_ALIAS = {"Czech Republic": "Czechia"}          # Aqueduct name_0 -> Ember/EED country name
 
@@ -303,7 +303,7 @@ def fig_q1_region(region: str, res: Path, out: Path, states, sites):
         ax.annotate(f"#{int(r['rank'])}  {r['state']} {int(r['basin_id'])}", (r["pt"].x, r["pt"].y),
                     xytext=(v["label_x"], v["label_y0"] - v["label_dy"] * k), textcoords="data", fontsize=7.5,
                     color=INK, weight="bold", ha="left", va="center", zorder=6,
-                    arrowprops=dict(arrowstyle="-", color=INK2, linewidth=0.6, shrinkA=2, shrinkB=2, relpos=(1, 0.5)))
+                    arrowprops={"arrowstyle": "-", "color": INK2, "linewidth": 0.6, "shrinkA": 2, "shrinkB": 2, "relpos": (1, 0.5)})
     sm = plt.cm.ScalarMappable(cmap=SEQ_CMAP, norm=plt.Normalize(0, 1))
     cb = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.01, ticks=[0, 1])
     cb.ax.set_yticklabels([f"rank {int(h['rank'].max())}", "rank 1"]); cb.outline.set_visible(False)
@@ -339,7 +339,7 @@ def fig_mismatch_region(region: str, res: Path, out: Path, states, sites):
         ax.annotate(f"{r['label']}  {r['scarcity_m3eq'] / 1e6:,.0f}M m³-eq", (r["lon"], r["lat"]),
                     xytext=(v["mm_label_x"], v["mm_label_y0"] - v["mm_label_dy"] * k), textcoords="data",
                     fontsize=7.5, color=INK, va="center", ha=v.get("mm_ha", "left"), zorder=6,
-                    arrowprops=dict(arrowstyle="-", color=INK2, linewidth=0.6, shrinkA=2, shrinkB=3, relpos=(1, 0.5)))
+                    arrowprops={"arrowstyle": "-", "color": INK2, "linewidth": 0.6, "shrinkA": 2, "shrinkB": 3, "relpos": (1, 0.5)})
     ax.set_xlim(*v["xlim_mm"])
     sm = plt.cm.ScalarMappable(cmap=SEQ_CMAP, norm=plt.Normalize(0, 100))
     cb = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.01)

@@ -208,7 +208,7 @@ def validate(df: pd.DataFrame) -> pd.DataFrame:
     is absent, so a partial env still runs but the gap is visible."""
     try:
         from dcfootprint.validation import schemas
-    except Exception as e:  # pragma: no cover - env-dependent
+    except ImportError as e:  # pragma: no cover - env-dependent
         print(f"[facilities] WARNING: schema validation skipped ({e!r}); install pandera to enforce.")
         return df
     return schemas.Facilities.validate(df)
@@ -221,7 +221,7 @@ def build(config: dict | None = None) -> pd.DataFrame:
     fac = normalize_india(raw)
     try:
         fac = attach_atlas_city_centroids(fac, atlas_city_centroids())
-    except Exception as e:  # ATLAS coords are a gap-filler, not a hard dependency
+    except (OSError, KeyError, ValueError) as e:  # ATLAS coords are a gap-filler, not a hard dependency
         print(f"[facilities] WARNING: ATLAS geocode skipped ({e!r}); coordinates left null.")
     fac = attach_site_geocodes(fac, raw, load_site_geocodes())
     return validate(fac)

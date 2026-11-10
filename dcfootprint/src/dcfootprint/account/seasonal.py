@@ -49,8 +49,8 @@ def _load(region: str) -> pd.DataFrame | None:
 if __name__ == "__main__":
     res = _repo_root() / "dcfootprint" / "results"
     lines = ["# Seasonal profile (C3 - 'when') - joint carbon + scarcity-water by month\n",
-             "*When the burden peaks, and whether carbon and scarcity co-peak. From the monthly account; "
-             "the 'where' is RQ1's spatial result, this is the 'when'. Scarcity seasonality = AWARE monthly CF.*\n"]
+             ("*When the burden peaks, and whether carbon and scarcity co-peak. From the monthly account; "
+             "the 'where' is RQ1's spatial result, this is the 'when'. Scarcity seasonality = AWARE monthly CF.*\n")]
     for region in ["India", "US", "EU"]:
         acct = _load(region)
         if acct is None or "month" not in acct.columns:

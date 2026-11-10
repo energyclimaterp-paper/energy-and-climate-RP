@@ -1,0 +1,62 @@
+{
+  "round5_published": {
+    "n_facilities": 71,
+    "capacity_it_mw": 961.5,
+    "electricity_twh": 6.081,
+    "carbon_mt": 3.635,
+    "water_phys_mm3": 24.835,
+    "water_onsite_mm3": 7.221,
+    "water_grid_mm3": 17.614,
+    "scarcity_mm3eq": 846.6,
+    "scarcity_onsite_mm3eq": 339.92,
+    "offsite_share_of_scarcity_pct": 59.8
+  },
+  "round6_published": {
+    "n_facilities": 71,
+    "capacity_it_mw": 961.5,
+    "electricity_twh": 6.081,
+    "carbon_mt": 3.635,
+    "water_phys_mm3": 23.287,
+    "water_onsite_mm3": 5.673,
+    "water_grid_mm3": 17.614,
+    "scarcity_mm3eq": 766.63,
+    "scarcity_onsite_mm3eq": 259.95,
+    "offsite_share_of_scarcity_pct": 66.1
+  },
+  "round6_plus_capacity_basis": {
+    "n_facilities": 71,
+    "capacity_it_mw": 871.6,
+    "electricity_twh": 5.512,
+    "carbon_mt": 3.292,
+    "water_phys_mm3": 21.165,
+    "water_onsite_mm3": 5.14,
+    "water_grid_mm3": 16.025,
+    "scarcity_mm3eq": 698.63,
+    "scarcity_onsite_mm3eq": 237.5,
+    "offsite_share_of_scarcity_pct": 66.0
+  },
+  "round7": {
+    "n_facilities": 71,
+    "capacity_it_mw": 871.6,
+    "electricity_twh": 5.512,
+    "carbon_mt": 3.292,
+    "water_phys_mm3": 21.164,
+    "water_onsite_mm3": 5.14,
+    "water_grid_mm3": 16.025,
+    "scarcity_mm3eq": 698.6,
+    "scarcity_onsite_mm3eq": 237.47,
+    "offsite_share_of_scarcity_pct": 66.0
+  },
+  "capacity_basis_fix": {
+    "facility_power_rows": 16,
+    "facility_power_mw_stated": 239.8,
+    "by_operator": {
+      "CtrlS": 114.4,
+      "Cyfuture": 3.0,
+      "Iron Mountain": 26.4,
+      "L&T Cloudfiniti": 30.0,
+      "Techno Digital": 36.0,
+      "Yotta": 30.0
+    }
+  }
+}

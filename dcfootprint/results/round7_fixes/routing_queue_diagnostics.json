@@ -1,0 +1,10 @@
+{
+  "India": {
+    "lyapunov_equals_greedy": false,
+    "lyapunov_pf_equals_oracle": false
+  },
+  "US": {
+    "lyapunov_equals_greedy": true,
+    "lyapunov_pf_equals_oracle": true
+  }
+}

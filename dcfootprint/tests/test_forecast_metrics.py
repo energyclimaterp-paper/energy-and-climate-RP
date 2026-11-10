@@ -9,7 +9,7 @@ import pandas as pd
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments"))
-from forecast_metrics import crps_gaussian, mase_scale, metrics  # noqa: E402
+from forecast_metrics import crps_gaussian, mase_scale, metrics
 
 
 def test_point_metrics_by_hand():

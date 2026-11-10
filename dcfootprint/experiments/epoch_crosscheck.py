@@ -25,8 +25,8 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(REPO / "dcfootprint" / "src"))
-from dcfootprint.io import us_facilities  # noqa: E402
-from dcfootprint.settings import params  # noqa: E402
+from dcfootprint.io import us_facilities
+from dcfootprint.settings import params
 
 STATES = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado",
           "CT": "Connecticut", "DE": "Delaware", "DC": "Washington, D.C.", "FL": "Florida", "GA": "Georgia",
@@ -79,7 +79,7 @@ def main():
                                                    "Investors", "Project", "Name"))
         owner_words = {w for w in _norm(re.sub(r"#\w+", "", text)).split() if len(w) > 2 and w not in _GENERIC}
         owner_words |= {"xai"} if "spacexai" in owner_words else set()
-        op = cand[cand.apply(lambda r: bool(owner_words & set(_norm(f"{r['operator']} {r.get('operator_family', '')}").split())), axis=1)] \
+        op = cand[cand.apply(lambda r, ow=owner_words: bool(ow & set(_norm(f"{r['operator']} {r.get('operator_family', '')}").split())), axis=1)] \
             if len(cand) and owner_words else cand.iloc[0:0]
         hit = op if len(op) else cand
         no_state = not isinstance(e["state"], str) or not e["state"]
@@ -111,8 +111,8 @@ def main():
     for s_ in ("matched", "possible match (same city, operator not confirmed)", "not in account", "no address in Epoch"):
         if s_ in by.index:
             L.append(f"| {s_} | {int(by.loc[s_, 'size'])} | {by.loc[s_, 'sum']:,.0f} | {100 * by.loc[s_, 'sum'] / tot:.0f}% |")
-    L += ["", f"For matched campuses, account facility power / Epoch power: median {ratio['50%']:.2f} "
-          f"(range {ratio['min']:.2f}-{ratio['max']:.2f}, n = {int(ratio['count'])}).", "",
+    L += ["", (f"For matched campuses, account facility power / Epoch power: median {ratio['50%']:.2f} "
+          f"(range {ratio['min']:.2f}-{ratio['max']:.2f}, n = {int(ratio['count'])})."), "",
           "## Campuses of 200 MW or more", "", "| campus | owner | state | Epoch MW | status | account facility MW (est.) |",
           "|---|---|---|---|---|---|"]
     for r in big.itertuples():

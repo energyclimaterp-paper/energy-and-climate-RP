@@ -81,22 +81,39 @@ def attach_gw_stage(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def _category_shares(ann: pd.DataFrame, col: str, prefix: str) -> dict:
+    tot = ann[col].sum()
+    by_cat = ann.groupby("gw_category")[col].sum()
+    oe, cr = by_cat.get("over-exploited", 0), by_cat.get("critical", 0)
+    pct = lambda v: round(100 * v / tot, 1) if tot else 0
+    return {f"pct_{prefix}_over_exploited": pct(oe),
+            f"pct_{prefix}_critical_or_worse": pct(oe + cr),
+            f"pct_{prefix}_semicritical_or_worse": pct(sum(by_cat.get(c, 0) for c in ("over-exploited", "critical", "semi-critical"))),
+            f"{prefix}_by_category_m3eq_yr": {k: round(float(v), 0) for k, v in by_cat.sort_values(ascending=False).items()}}
+
+
 def equity_overlay(account: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
-    ann = account.groupby(["facility_id", "operator", "city", "state"], as_index=False).agg(
-        scarcity_m3eq_yr=("water_scarcity_l_eq", lambda s: s.sum() / 1000.0))
+    """Facility burden x local groundwater stage.
+
+    The aquifer claim uses ON-SITE (scope-1) scarcity-weighted water only: that is the only water a
+    facility draws locally. Power-plant (scope-2) water is drawn in the generation basins, so counting
+    it against the facility's own aquifer (the round-5 headline, 63% over-exploited) mixes places;
+    the total-burden shares are kept as `pct_burden_*` for comparison."""
+    agg = {"scarcity_m3eq_yr": ("water_scarcity_l_eq", lambda s: s.sum() / 1000.0)}
+    has_onsite = "water_scarcity_onsite_l_eq" in account.columns
+    if has_onsite:
+        agg["scarcity_onsite_m3eq_yr"] = ("water_scarcity_onsite_l_eq", lambda s: s.sum() / 1000.0)
+    ann = account.groupby(["facility_id", "operator", "city", "state"], as_index=False).agg(**agg)
     ann = attach_gw_stage(ann)
 
-    tot = ann["scarcity_m3eq_yr"].sum()
-    by_cat = ann.groupby("gw_category")["scarcity_m3eq_yr"].sum()
-    stressed = ["over-exploited", "critical", "semi-critical"]
-    summary = {
-        "total_scarcity_m3eq_yr": round(float(tot), 0),
-        "coverage": ann["gw_stage_source"].value_counts().to_dict(),
-        "pct_burden_over_exploited": round(100 * by_cat.get("over-exploited", 0) / tot, 1) if tot else 0,
-        "pct_burden_critical_or_worse": round(100 * (by_cat.get("over-exploited", 0) + by_cat.get("critical", 0)) / tot, 1) if tot else 0,
-        "pct_burden_semicritical_or_worse": round(100 * sum(by_cat.get(c, 0) for c in stressed) / tot, 1) if tot else 0,
-        "scarcity_by_category_m3eq_yr": {k: round(float(v), 0) for k, v in by_cat.sort_values(ascending=False).items()},
-    }
+    summary = {"total_scarcity_m3eq_yr": round(float(ann["scarcity_m3eq_yr"].sum()), 0),
+               "coverage": ann["gw_stage_source"].value_counts().to_dict()}
+    if has_onsite:
+        summary["total_scarcity_onsite_m3eq_yr"] = round(float(ann["scarcity_onsite_m3eq_yr"].sum()), 0)
+        summary |= _category_shares(ann, "scarcity_onsite_m3eq_yr", "onsite")
+    s = _category_shares(ann, "scarcity_m3eq_yr", "burden")
+    summary |= {k: v for k, v in s.items() if k.startswith("pct_")}
+    summary["scarcity_by_category_m3eq_yr"] = s["burden_by_category_m3eq_yr"]
     return ann.sort_values("scarcity_m3eq_yr", ascending=False).reset_index(drop=True), summary
 
 

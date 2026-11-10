@@ -1,0 +1,50 @@
+{
+  "electricity_mwh": {
+    "n": 3,
+    "geomean_ratio": 1.522,
+    "min": 1.215,
+    "max": 1.81
+  },
+  "grid_emission_factor_t_per_mwh": {
+    "n": 1,
+    "geomean_ratio": 0.806,
+    "min": 0.806,
+    "max": 0.806
+  },
+  "it_energy_mwh": {
+    "n": 1,
+    "geomean_ratio": 1.699,
+    "min": 1.699,
+    "max": 1.699
+  },
+  "onsite_water_l_per_facility_kwh": {
+    "n": 3,
+    "geomean_ratio": 2.053,
+    "min": 0.898,
+    "max": 3.524
+  },
+  "pue": {
+    "n": 1,
+    "geomean_ratio": 1.091,
+    "min": 1.091,
+    "max": 1.091
+  },
+  "water_consumption_m3": {
+    "n": 1,
+    "geomean_ratio": 1.625,
+    "min": 1.625,
+    "max": 1.625
+  },
+  "water_withdrawal_m3": {
+    "n": 2,
+    "geomean_ratio": 4.332,
+    "min": 3.321,
+    "max": 5.651
+  },
+  "wue_l_per_kwh": {
+    "n": 1,
+    "geomean_ratio": 2.563,
+    "min": 2.563,
+    "max": 2.563
+  }
+}

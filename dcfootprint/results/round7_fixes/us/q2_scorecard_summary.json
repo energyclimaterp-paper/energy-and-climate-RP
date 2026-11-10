@@ -1,0 +1,21 @@
+{
+  "n_flagged": 53,
+  "n_facilities": 235,
+  "flagged_by_state": {
+    "California": 14,
+    "Arizona": 9,
+    "Oregon": 7,
+    "Colorado": 6,
+    "Nevada": 5,
+    "Utah": 3,
+    "Washington": 3,
+    "Texas": 2,
+    "New Mexico": 2,
+    "Nebraska": 1,
+    "Wyoming": 1
+  },
+  "recommended_lever": {
+    "efficiency_standard": 50,
+    "zero_liquid_discharge": 3
+  }
+}

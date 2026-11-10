@@ -22,8 +22,8 @@ import pandas as pd
 import yaml
 
 from dcfootprint.io.facilities import _repo_root
+from dcfootprint.io.gem import GADM_ALIASES as ALIASES  # one alias table, shared with the pipeline
 
-from dcfootprint.io.gem import GADM_ALIASES as ALIASES   # one alias table, shared with the pipeline
 BORDER_KM = 5.0
 
 

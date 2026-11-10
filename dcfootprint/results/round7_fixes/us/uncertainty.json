@@ -1,0 +1,119 @@
+{
+  "n_samples": 4000,
+  "distribution": "triangular",
+  "measured_energy_and_water": false,
+  "point_scarcity_m3eq_yr": 2249437731.0,
+  "facility_types": {
+    "colocation": 227,
+    "hyperscale": 8
+  },
+  "carbon_tco2_yr": {
+    "mean": 16980439.0,
+    "p05": 13782592.0,
+    "p95": 20487961.0
+  },
+  "carbon_inference_tco2_yr": {
+    "mean": 14426696.0,
+    "p05": 11704448.0,
+    "p95": 17396230.0
+  },
+  "water_phys_m3_yr": {
+    "mean": 155668210.0,
+    "p05": 100252762.0,
+    "p95": 210915426.0
+  },
+  "scarcity_m3eq_yr": {
+    "mean": 2026878125.0,
+    "p05": 1470447753.0,
+    "p95": 2669942118.0
+  },
+  "scarcity_inference_m3eq_yr": {
+    "mean": 1722017283.0,
+    "p05": 1243025615.0,
+    "p95": 2271259713.0
+  },
+  "scarcity_mean_over_point": 0.901,
+  "scarcity_at_hydro_0_m3eq_yr": 1474438838.0,
+  "scarcity_sobol_first_order": {
+    "util_colocation": 0.534,
+    "hydro": 0.291,
+    "wue": 0.098,
+    "ewif": 0.053,
+    "pue_colocation": 0.031,
+    "util_hyperscale": 0.006,
+    "pue_hyperscale": 0.001
+  },
+  "scarcity_sobol": {
+    "estimator": "Saltelli 2010 (S1) / Jansen 1999 (ST), bootstrap 90% intervals",
+    "target": "scarcity_m3eq_yr",
+    "indices": {
+      "util_colocation": {
+        "S1": 0.534,
+        "S1_p05": 0.482,
+        "S1_p95": 0.583,
+        "ST": 0.534,
+        "ST_p05": 0.528,
+        "ST_p95": 0.54
+      },
+      "hydro": {
+        "S1": 0.291,
+        "S1_p05": 0.262,
+        "S1_p95": 0.329,
+        "ST": 0.279,
+        "ST_p05": 0.275,
+        "ST_p95": 0.282
+      },
+      "wue": {
+        "S1": 0.098,
+        "S1_p05": 0.078,
+        "S1_p95": 0.121,
+        "ST": 0.087,
+        "ST_p05": 0.086,
+        "ST_p95": 0.088
+      },
+      "ewif": {
+        "S1": 0.053,
+        "S1_p05": 0.038,
+        "S1_p95": 0.068,
+        "ST": 0.05,
+        "ST_p05": 0.05,
+        "ST_p95": 0.051
+      },
+      "pue_colocation": {
+        "S1": 0.031,
+        "S1_p05": 0.014,
+        "S1_p95": 0.049,
+        "ST": 0.049,
+        "ST_p05": 0.048,
+        "ST_p95": 0.05
+      },
+      "util_hyperscale": {
+        "S1": 0.006,
+        "S1_p05": 0.001,
+        "S1_p95": 0.012,
+        "ST": 0.005,
+        "ST_p05": 0.005,
+        "ST_p95": 0.005
+      },
+      "pue_hyperscale": {
+        "S1": 0.001,
+        "S1_p05": -0.001,
+        "S1_p95": 0.004,
+        "ST": 0.001,
+        "ST_p05": 0.001,
+        "ST_p95": 0.001
+      }
+    },
+    "sum_S1": 1.014
+  },
+  "scarcity_oat_swing_Mm3eq": {
+    "util_colocation": 1273.9,
+    "hydro": 658.7,
+    "wue": 422.9,
+    "pue_colocation": 377.5,
+    "ewif": 322.8,
+    "inference": 224.9,
+    "util_hyperscale": 117.5,
+    "pue_hyperscale": 64.4
+  }
+}

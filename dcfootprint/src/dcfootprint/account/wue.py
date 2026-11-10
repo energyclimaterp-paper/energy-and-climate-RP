@@ -30,10 +30,20 @@ _POWER = ("https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M
           "&longitude={lon:.4f}&latitude={lat:.4f}&start={year}&end={year}&format=JSON")
 
 
+_GUPTA = (0.0005112, -0.04982, 2.387)                 # a Tw^2 + b Tw + c, Tw in deg F
+GUPTA_TW_MIN_F = -_GUPTA[1] / (2 * _GUPTA[0])          # vertex: 48.7 F = 9.3 C
+
+
 def gupta_cold_water_wue(tw_c) -> np.ndarray:
-    """Cooling-tower on-site WUE (L/kWh IT) at wet-bulb temperature tw_c (deg C)."""
-    tw_f = np.asarray(tw_c, float) * 9.0 / 5.0 + 32.0
-    return np.maximum(0.0005112 * tw_f ** 2 - 0.04982 * tw_f + 2.387, 0.0)
+    """Cooling-tower on-site WUE (L/kWh IT) at wet-bulb temperature tw_c (deg C).
+
+    The quadratic has its minimum at 9.3 C wet-bulb; below it the raw curve RISES again (1.69 L/kWh
+    at -8 C), which is an extrapolation artefact: colder air needs less evaporation, and plants move
+    to free cooling. Below the vertex the WUE is held at the vertex value (1.17 L/kWh). This is
+    conservative: it removes the spurious winter rise but credits no economiser hours."""
+    tw_f = np.maximum(np.asarray(tw_c, float) * 9.0 / 5.0 + 32.0, GUPTA_TW_MIN_F)
+    a, b, c = _GUPTA
+    return np.maximum(a * tw_f ** 2 + b * tw_f + c, 0.0)
 
 
 def _fetch_point(lat: float, lon: float, year: int) -> dict[int, float]:

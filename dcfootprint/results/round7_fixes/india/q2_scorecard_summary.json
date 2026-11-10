@@ -1,0 +1,12 @@
+{
+  "n_flagged": 16,
+  "n_facilities": 71,
+  "flagged_by_state": {
+    "Tamil Nadu": 8,
+    "Karnataka": 4,
+    "Uttar Pradesh": 4
+  },
+  "recommended_lever": {
+    "efficiency_standard": 16
+  }
+}

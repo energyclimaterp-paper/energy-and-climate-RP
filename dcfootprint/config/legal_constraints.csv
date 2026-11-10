@@ -1,5 +1,5 @@
 jurisdiction,region,rule,type,effect,param,source,url
-India,Rajasthan,ZLD + recharge mandatory,hard,zld_mandate,0.92,POLICY_DEEP_DIVE; Rajasthan Data Centre Policy 2025,
+India,Rajasthan,ZLD + recharge mandatory,hard,zld_mandate,1,POLICY_DEEP_DIVE; Rajasthan Data Centre Policy 2025,
 India,Gujarat,>=51% renewable energy,hard,re_share_min,0.51,POLICY_DEEP_DIVE; Viksit Gujarat Data Center Policy 2026-29,https://dst.gujarat.gov.in/Home/Policies
 EU,Germany,PUE<=1.2 new (2026),hard,pue_cap_new,1.2,POLICY_DEEP_DIVE; EnEfG,
 EU,Ireland,>=80% additional RE; locational test,hard,re_share_min,0.80,POLICY_DEEP_DIVE; CRU/2025236,

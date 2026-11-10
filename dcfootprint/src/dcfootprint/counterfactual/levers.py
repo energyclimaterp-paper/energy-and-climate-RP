@@ -11,8 +11,9 @@ CF, a scope-2 saving by the generation-basin CF (cf_grid_eff).
 
 Levers (parameters from config/parameters.yaml):
   coastal_seawater_siting : WUE -> ~0.1 for coastal facilities (scope-1 only)
-  zero_liquid_discharge   : W_onsite -> W_onsite*(1-recycle), recycle~0.92 (scope-1 ONLY:
-                            on-site recycling cannot touch power-plant water)
+  zero_liquid_discharge   : W_onsite -> W_onsite*(1 - f_zld), f_zld = blowdown_recovery / cycles
+                            (zld_saving_fraction; ~18%). ZLD reuses blowdown, never evaporation,
+                            and cannot touch power-plant water (scope-1 only)
   efficiency_standard     : PUE<=1.3 (carbon + scope-2 water down) & WUE<=0.7 (scope-1 down)
   mandatory_disclosure    : transparency lever — reveals the currently-unreported footprint
 """
@@ -27,6 +28,22 @@ from dcfootprint.settings import params as _cfg_params
 # coastal DC hubs (seawater/WSAC eligible) — city-level proxy, flagged
 COASTAL = {"mumbai", "navi mumbai", "chennai", "visakhapatnam", "kolkata", "kochi", "mangalore", "surat"}
 _BASELINE_DISCLOSURE = 0.30   # <1/3 of operators measure water (Mytton / water-governance)
+
+
+def zld_saving_fraction(params: dict | None = None, cycles: float | None = None,
+                        recovery: float | None = None) -> float:
+    """Share of on-site make-up water that zero liquid discharge saves.
+
+    Cooling-tower mass balance (drift neglected): make-up M = E + B, blowdown B = E / (N - 1) at N
+    cycles of concentration, so B / M = 1 / N. ZLD reuses a fraction `recovery` of the blowdown and
+    leaves evaporation E untouched: saving = recovery / N. Shared by the lever and by the legal ZLD
+    mandates (policy/gap.region_effects), so the two cannot disagree."""
+    z = {} if cycles is not None and recovery is not None else (params or _cfg_params())["levers"]["zero_liquid_discharge"]
+    n = float(z["cycles_of_concentration"] if cycles is None else cycles)
+    r = float(z["blowdown_recovery"] if recovery is None else recovery)
+    if n <= 1:
+        raise ValueError("cycles of concentration must exceed 1")
+    return r / n
 
 
 def _load_account() -> pd.DataFrame:
@@ -58,7 +75,8 @@ def lever_deltas(a: pd.DataFrame, lv: dict) -> dict[str, pd.DataFrame]:
     d = np.where(coastal & (a["wue_l_per_kwh"] > new_wue), (a["wue_l_per_kwh"] - new_wue) * a["e_it_mwh"] * 1000.0, 0.0)
     out["coastal_seawater_siting"] = pd.DataFrame({"d_onsite_l": d, "d_grid_l": zero, "d_carbon_t": zero}, index=a.index)
 
-    rec = float(lv["zero_liquid_discharge"]["recycle_fraction"])
+    z = lv["zero_liquid_discharge"]
+    rec = zld_saving_fraction(cycles=z["cycles_of_concentration"], recovery=z["blowdown_recovery"])
     out["zero_liquid_discharge"] = pd.DataFrame(
         {"d_onsite_l": a["water_onsite_l"].values * rec, "d_grid_l": zero, "d_carbon_t": zero}, index=a.index)
 
@@ -83,7 +101,10 @@ def rank_lever_savings(account: pd.DataFrame | None = None) -> pd.DataFrame:
     notes = {
         "coastal_seawater_siting": f"WUE->{lv['coastal_seawater_siting']['new_wue']} at coastal hubs (scope-1); "
                                    f"{int(a['city'].fillna('').str.lower().isin(COASTAL).sum() / 12)} facilities eligible",
-        "zero_liquid_discharge": f"recycle {float(lv['zero_liquid_discharge']['recycle_fraction']):.0%} of ON-SITE (scope-1) water, all facilities",
+        "zero_liquid_discharge": (f"reuse {float(lv['zero_liquid_discharge']['blowdown_recovery']):.0%} of cooling-tower "
+                                  f"blowdown at {lv['zero_liquid_discharge']['cycles_of_concentration']} cycles = "
+                                  f"{zld_saving_fraction(params):.1%} of ON-SITE (scope-1) make-up water, all facilities; "
+                                  "upper bound (blowdown is returned water under a consumptive reading)"),
         "efficiency_standard": f"PUE<={lv['efficiency_standard']['pue_cap']}, WUE<={lv['efficiency_standard']['wue_cap']} "
                                "(water+carbon; liquid-cooling tradeoff bounded by caps)",
     }
