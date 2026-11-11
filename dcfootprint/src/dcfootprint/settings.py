@@ -67,6 +67,7 @@ class Energy(_M):
 
 class WaterOnsite(_M):
     wue_default: Band
+    wue_model: Literal["constant", "climate"] = "constant"
     wue_by_operator: dict[str, float] = {}
 
     @model_validator(mode="after")
@@ -116,9 +117,13 @@ class Levers(_M):
 
     @model_validator(mode="after")
     def _vals(self):
-        r = float(self.zero_liquid_discharge["recycle_fraction"])
-        if not 0 <= r <= 1 or self.zero_liquid_discharge.get("applies_to") != "scope1":
-            raise ValueError("ZLD recycle_fraction in [0,1] and applies_to: scope1")
+        z = self.zero_liquid_discharge
+        if "recycle_fraction" in z:
+            raise ValueError("ZLD recycle_fraction is retired: ZLD recovers blowdown only; set "
+                             "cycles_of_concentration and blowdown_recovery (parameters.yaml levers)")
+        n, rec = float(z["cycles_of_concentration"]), float(z["blowdown_recovery"])
+        if n <= 1 or not 0 <= rec <= 1 or z.get("applies_to") != "scope1":
+            raise ValueError("ZLD: cycles_of_concentration > 1, blowdown_recovery in [0,1], applies_to: scope1")
         if float(self.efficiency_standard["pue_cap"]) < 1 or float(self.efficiency_standard["wue_cap"]) < 0:
             raise ValueError("efficiency caps: pue_cap >= 1, wue_cap >= 0")
         if float(self.coastal_seawater_siting["new_wue"]) < 0:
@@ -151,6 +156,16 @@ class Siting(_M):
 class Uncertainty(_M):
     distribution: Literal["triangular", "uniform"]
     n_samples: int = Field(ge=100)
+    sobol_n_samples: int = Field(default=32768, ge=1000)
+    routing_n_samples: int = Field(default=1000, ge=10)
+    ci_zone_band: tuple[float, float] = (1.0, 1.0)
+
+    @model_validator(mode="after")
+    def _ci_band(self):
+        lo, hi = self.ci_zone_band
+        if not (0 < lo <= 1 <= hi):
+            raise ValueError(f"ci_zone_band {self.ci_zone_band} must bracket 1 and be > 0")
+        return self
 
 
 class Parameters(_M):
@@ -166,10 +181,9 @@ class Parameters(_M):
 
     @model_validator(mode="after")
     def _cross(self):
-        root = _repo_root()
-        for p in [self.grid.gem_path, self.grid.gadm_path, self.routing.aware_intermediate_path]:
-            if not (root / p).exists():
-                raise ValueError(f"configured path does not exist: {p}")
+        # Raw-data paths are checked where they are read (data_path), not here: a stage that does
+        # not use GEM (e.g. routing on a frozen account, or the US on EIA plant data) must not
+        # need the GEM workbook on disk.
         if self.siting.new_facility_type not in self.energy.utilisation.by_facility_type:
             raise ValueError("siting.new_facility_type must be an energy facility type")
         bad = set(self.grid.gem_type_to_fuel.values()) - set(self.water_grid.ewif_coeff_L_per_MWh)
@@ -195,3 +209,47 @@ def params() -> dict:
     """The validated parameters.yaml as a dict (re-read and re-validated if the file changes)."""
     p = config_path()
     return _load(str(p), p.stat().st_mtime)
+
+
+def data_path(rel: str) -> Path:
+    """Repo-relative raw-data path, checked at the point of use: a missing file fails the stage
+    that needs it with a pointer to data/README.md."""
+    path = _repo_root() / rel
+    if not path.exists():
+        raise FileNotFoundError(f"raw input not on disk: {rel} (download as in data/README.md)")
+    return path
+
+
+def write_run_manifest(outdir: Path | str, extra: dict | None = None) -> Path:
+    """Write run_manifest.json into a results folder: the exact parameters.yaml used (verbatim text
+    and its SHA-256), the git commit and whether the tree was dirty, and package versions. Without
+    it a results folder cannot be tied to the configuration that produced it once defaults change."""
+    import hashlib
+    import json
+    import platform
+    import subprocess
+    from importlib import metadata
+
+    root = _repo_root()
+
+    def git(*args: str) -> str:
+        try:
+            return subprocess.run(["git", *args], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
+        except (OSError, subprocess.CalledProcessError):
+            return ""
+
+    cfg = config_path().read_text(encoding="utf-8")
+    versions = {}
+    for pkg in ("pandas", "numpy", "scipy", "statsmodels", "geopandas", "pandera", "pydantic"):
+        try:
+            versions[pkg] = metadata.version(pkg)
+        except metadata.PackageNotFoundError:
+            versions[pkg] = None
+    manifest = {"git_commit": git("rev-parse", "HEAD"), "git_dirty": bool(git("status", "--porcelain")),
+                "python": platform.python_version(), "packages": versions,
+                "parameters_sha256": hashlib.sha256(cfg.encode("utf-8")).hexdigest(),
+                "parameters_yaml": cfg, **(extra or {})}
+    out = Path(outdir) / "run_manifest.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    return out

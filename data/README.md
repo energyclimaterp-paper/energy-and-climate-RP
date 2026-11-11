@@ -8,7 +8,8 @@ rebuilt automatically.
 ```
 data/
 ├── ember/          india_monthly_full_release_long_format.csv
-│                   us_monthly_full_release_long_format.csv
+│                   us_monthly_full_release_long_format.csv   (retired by Ember; or the file below)
+│                   release_us_subnational_generation_monthly.csv
 │                   europe_monthly_full_release_long_format.csv
 ├── gem/            Global-Integrated-Power-March-2026-II.xlsx
 ├── aware/          AWARE20_Native_CFs_geospatial.gpkg
@@ -27,6 +28,12 @@ data/
 ├── g3p/            G3P_v1.12_tws_rivbas.csv                  (groundwater context)
 ├── eu_eed/         EU datacenter assessment report (PDF)     (source of config/eu_member_state_2023.csv)
 ├── epoch/          data_centers.csv                          (optional US cross-check)
+├── egrid/          egrid2023_data_rev2.xlsx                  (US plant CO2 rates, subregion rates)
+│                   subregions/eGRID2023_Subregions.shp       (unzipped egrid2023_subregions.zip)
+├── eia/            f923_{2023,2024}/EIA923_Schedules_2_3_4_5_M_12_{year}_Final*.xlsx   (unzipped f923_{year}.zip)
+│                   Cooling_Boiler_Generator_Data_Summary_{2023,2024}.xlsx
+│                   eia860_2024/2___Plant_Y2024.xlsx           (unzipped eia8602024.zip)
+├── climate/        nasa_power_t2mwet_<year>.parquet          (written on first run: wet-bulb per facility)
 └── electricitymaps.key                                       (your API key; never commit it)
 ```
 

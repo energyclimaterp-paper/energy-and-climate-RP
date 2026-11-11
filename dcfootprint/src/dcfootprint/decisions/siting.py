@@ -37,8 +37,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from dcfootprint.io.facilities import _repo_root
 from dcfootprint.account.energy import month_hours
+from dcfootprint.io.facilities import _repo_root
 from dcfootprint.settings import params as _cfg_params
 
 CRITERIA = ["new_scarcity_m3eq", "new_carbon_tco2", "basin_pressure_m3", "grid_fossil_share"]
@@ -61,7 +61,7 @@ def candidate_cells(account: pd.DataFrame, g: dict) -> pd.DataFrame:
 
 
 def score_cells(account: pd.DataFrame, legal: bool = True) -> pd.DataFrame:
-    from dcfootprint.account.build import grid_tables
+    from dcfootprint.account.build import charged_ci, grid_tables
     from dcfootprint.io.gem import state_fossil_share
     from dcfootprint.policy.gap import region_effects
     from dcfootprint.project.recharge import basin_budgets
@@ -70,6 +70,10 @@ def score_cells(account: pd.DataFrame, legal: bool = True) -> pd.DataFrame:
     region = str(account["region"].iloc[0])
     year = int(cfg["region_config"][region]["account_year"])
     g = grid_tables(gcfg["zone"], year, region)
+    # carbon on the basis the account charges (India: consumption CI of the regional grid). Ember's
+    # own-generation CI here ranked hydro-heavy Karnataka at ~396 g/kWh while its facilities are charged
+    # ~543, the same plan-vs-charge mismatch fixed in routing/lyapunov._ci_forecast.
+    g = {**g, "ci": charged_ci(g["ci"], region, year, cfg)[0]}
     cells = candidate_cells(account, g)
 
     t = sc["new_facility_type"]
@@ -114,7 +118,6 @@ def score_cells(account: pd.DataFrame, legal: bool = True) -> pd.DataFrame:
             cells.iloc[i, cells.columns.get_loc("legal_flags")] = ",".join(flags)
     cells["new_scarcity_m3eq"] = (cells["s1_l"] * (1 - zld) + cells["s2_per_pue"] * pue) / 1000.0
     cells["new_carbon_tco2"] = cells["c_per_pue"] * pue * (1 - re)
-    new_onsite_l = float(e_it["e_it_mwh"].sum() * 1000 * wue) * (1 - zld)
 
     # marginal basin pressure: Delta D_b = rise in the peak queue D(t+1) = (D + W - R)^+ over a
     # steady year (one spin-up year), with vs without the new facility's scope-1 draw

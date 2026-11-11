@@ -1,0 +1,9 @@
+forecast,zone_month_coverage,ci_mape_pct,greedy_carbon_change_pct,lyapunov_carbon_change_pct,lyapunov_scarcity_change_pct,lyapunov_penalty,lyapunov_penalty_gap_vs_perfect_pct
+perfect,1.0,0.0,0.139,0.811,-22.387,1.8008658577454912,0.0
+pipeline,1.0,4.9,0.438,1.057,-22.517,1.8020248803104923,0.064
+seasonal_naive,1.0,4.9,0.438,1.057,-22.517,1.8020248803104923,0.064
+sarima_dcf,1.0,4.13,0.217,0.863,-22.413,1.8011335787649823,0.015
+sarima_core,1.0,5.37,0.884,1.474,-22.803,1.803320394266057,0.136
+timesfm_2p5,1.0,4.38,0.22,0.867,-22.417,1.8011352186407734,0.015
+chronos_2,1.0,5.26,0.504,1.174,-22.576,1.8026039681866899,0.097
+xlstm,1.0,6.79,0.065,0.83,-22.372,1.8012166119637516,0.019

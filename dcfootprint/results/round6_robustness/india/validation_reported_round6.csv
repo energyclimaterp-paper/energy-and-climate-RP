@@ -1,0 +1,14 @@
+region,scope,operator,facility_id,period,months_overlap_with_account_year,n_model_facilities,metric,reported,model,ratio_total,ratio_per_mw,model_mw,reported_mw,source
+India,fleet,nxtra,,FY2024-25,9,19,electricity_mwh,771792.0,1237700.7360000003,1.6036713725977987,1.8027986815100443,195.70000000000002,220.0,https://assets.airtel.in/nxtra/pdf/Nxtra-Sustainability-Report-2025.pdf p.32
+India,fleet,nxtra,,FY2024-25,9,19,water_withdrawal_m3,201028.0,1136031.0099923273,5.651108353027078,6.352804484751952,195.70000000000002,220.0,https://assets.airtel.in/nxtra/pdf/Nxtra-Sustainability-Report-2025.pdf p.110
+India,fleet,nxtra,,FY2024-25,9,19,onsite_water_l_per_facility_kwh,0.26046914194498,0.917855970308098,3.5238568509661716,,195.70000000000002,220.0,derived from the water and electricity rows
+India,fleet,nxtra,,FY2024-25,9,19,grid_emission_factor_t_per_mwh,0.7270002881463636,0.5859957630727304,0.8060461221643347,,195.70000000000002,220.0,https://assets.airtel.in/nxtra/pdf/Nxtra-Sustainability-Report-2025.pdf p.37
+India,fleet,ctrls,,FY2023-24,3,8,electricity_mwh,389654.7,976499.712,2.5060642461132896,2.2723380469939154,154.4,140.0,https://www.ctrls.com/wp-content/uploads/2025/03/sustainability-report-2023-24.pdf p.10
+India,fleet,ctrls,,FY2023-24,3,8,it_energy_mwh,259375.3,610312.3200000001,2.3530086326647144,2.133557050343653,154.4,140.0,https://www.ctrls.com/wp-content/uploads/2025/03/sustainability-report-2023-24.pdf p.19
+India,fleet,ctrls,,FY2023-24,3,8,pue,1.466,1.5999999999999999,1.0914051841746248,,154.4,140.0,https://www.ctrls.com/wp-content/uploads/2025/03/sustainability-report-2023-24.pdf p.10
+India,fleet,ctrls,,FY2023-24,3,8,water_consumption_m3,409037.0,919420.8610560105,2.247769421974077,2.0381328955723492,154.4,140.0,https://www.ctrls.com/wp-content/uploads/2025/03/sustainability-report-2023-24.pdf p.20
+India,fleet,ctrls,,FY2023-24,3,8,onsite_water_l_per_facility_kwh,1.0497422461476789,0.9415474984349105,0.8969320820326903,,154.4,140.0,derived from the water and electricity rows
+India,fleet,stt gdc,,FY2024-25,9,20,electricity_mwh,878788.1,1067572.2240000002,1.2148232594410417,,168.8,,https://assets.sttelemediagdc.com/sttgdc/global_en/public/2026-03/STT-GDC-India-ESG-Report-FY2025.pdf p.44
+India,fleet,stt gdc,,FY2024-25,9,20,water_withdrawal_m3,298595.0,991792.396487565,3.321530489417321,,168.8,,https://assets.sttelemediagdc.com/sttgdc/global_en/public/2026-03/STT-GDC-India-ESG-Report-FY2025.pdf p.46
+India,fleet,stt gdc,,FY2024-25,9,20,wue_l_per_kwh,0.58,1.4864266779388449,2.5628046171359395,,168.8,,https://assets.sttelemediagdc.com/sttgdc/global_en/public/2026-03/STT-GDC-India-ESG-Report-FY2025.pdf p.23
+India,fleet,stt gdc,,FY2024-25,9,20,onsite_water_l_per_facility_kwh,0.33978043171044303,0.9290166737117778,2.734167677152977,,168.8,,derived from the water and electricity rows

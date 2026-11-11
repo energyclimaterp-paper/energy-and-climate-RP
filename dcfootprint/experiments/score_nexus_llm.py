@@ -33,8 +33,8 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from forecast_metrics import mase_scale, metrics  # noqa: E402
-from score_core_cached import CORE, LABEL, region_of  # noqa: E402
+from forecast_metrics import mase_scale, metrics
+from score_core_cached import CORE, LABEL, region_of
 
 HOLDOUT = 12
 
@@ -54,7 +54,7 @@ def _records(fc: pd.DataFrame, dump: dict, model_col: str | None = None) -> pd.D
 
 
 def run(run_dir: Path, label: str, files: list[Path]) -> pd.DataFrame:
-    dump = json.load(open(CORE / "work" / "region_series_dump.json"))
+    dump = json.loads((CORE / "work" / "region_series_dump.json").read_text())
     nx = pd.concat([pd.read_csv(f, parse_dates=["timestamp"]) for f in files], ignore_index=True)
     if "rep" not in nx.columns:
         nx["rep"] = 1                                       # single-run files (before repeats existed)

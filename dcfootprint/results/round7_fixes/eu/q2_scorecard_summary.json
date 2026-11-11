@@ -1,0 +1,13 @@
+{
+  "n_flagged": 4,
+  "n_facilities": 21,
+  "flagged_by_state": {
+    "Spain": 1,
+    "France": 1,
+    "Italy": 1,
+    "Belgium": 1
+  },
+  "recommended_lever": {
+    "efficiency_standard": 4
+  }
+}

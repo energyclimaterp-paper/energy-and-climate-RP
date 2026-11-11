@@ -21,6 +21,16 @@ filings and market reports. It is the facility spine of the India account.
 | `confidence` | High / Med / Low, the reliability of the capacity figure |
 | `source_url`, `notes` | where each row comes from |
 
+## Site coordinates (optional)
+
+Facilities are placed at ATLAS city centroids, because the list has no street addresses.
+Researched site coordinates can be added in `geocodes.csv` (columns `facility_name`, `latitude`, `longitude`,
+`precision` = address | campus | locality, `source_url`), one row per facility, keyed by `facility_name`.
+A row replaces the centroid for that facility (`geocode_method = site_<precision>`).
+Every row needs a source; a point outside India, an unknown name or a duplicate fails the build.
+How much the centroids can move the scarcity result is bounded in
+`dcfootprint/results/round6_robustness/india/location_sensitivity.json`.
+
 ## How the account uses it
 
 Of the 194 rows, 129 are operational. Ten hyperscale cloud regions are excluded (capacity not disclosed at the

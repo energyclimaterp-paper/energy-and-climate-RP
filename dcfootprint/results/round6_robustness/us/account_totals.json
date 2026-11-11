@@ -1,0 +1,52 @@
+{
+  "round5_ember_macknick": {
+    "n_facilities": 235,
+    "electricity_twh": 51.88,
+    "carbon_mt": 16.039,
+    "water_onsite_mm3": 56.054,
+    "water_grid_mm3": 140.117,
+    "scarcity_mm3eq": 2513.32,
+    "scarcity_onsite_mm3eq": 801.01
+  },
+  "round6_eia_egrid_constant_wue": {
+    "n_facilities": 235,
+    "electricity_twh": 51.88,
+    "carbon_mt": 16.2,
+    "water_onsite_mm3": 56.054,
+    "water_grid_mm3": 152.196,
+    "scarcity_mm3eq": 2525.31,
+    "scarcity_onsite_mm3eq": 801.01
+  },
+  "round6_eia_egrid_climate_wue": {
+    "n_facilities": 235,
+    "electricity_twh": 51.88,
+    "carbon_mt": 16.2,
+    "water_onsite_mm3": 38.111,
+    "water_grid_mm3": 152.196,
+    "scarcity_mm3eq": 2258.79,
+    "scarcity_onsite_mm3eq": 534.49
+  },
+  "meta": {
+    "account_year": 2024,
+    "grid_zone": "egrid_subregion",
+    "ci_mean_gco2_per_kwh": 312.3,
+    "region": "US",
+    "n_facilities": 235,
+    "n_operational_total": 747,
+    "us_capacity_basis": {
+      "unspecified": 192,
+      "it": 26,
+      "facility": 17
+    },
+    "us_unspecified_basis_treated_as": "it",
+    "n_operational_uncosted": 512,
+    "n_costed_no_basin": 0,
+    "n_costed_no_egrid_subregion": 0,
+    "grid_source": "eia_egrid",
+    "dropped_facility_months_no_cf": 0,
+    "carbon_basis": "generation (eGRID subregion, location-based; EIA-923 x eGRID plant rates)",
+    "ci_state_fill_months": 0,
+    "water_grid_source": "EIA reported cooling water (gaps filled by technology x cooling intensity); Macknick for non-reporting plants; AWARE CF at each plant's basin",
+    "cea_national_ef_crosscheck": null
+  }
+}

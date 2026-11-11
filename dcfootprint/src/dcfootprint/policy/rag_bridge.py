@@ -36,7 +36,7 @@ def cited_constraints() -> pd.DataFrame:
 def corpus_summary() -> dict:
     corp = load_manifest()
     return {
-        "n_documents": int(len(corp)),
+        "n_documents": len(corp),
         "n_in_force": int(corp["in_force"].sum()),
         "n_proposed_or_draft": int((~corp["in_force"]).sum()),
         "jurisdictions": sorted(corp["region"].astype(str).unique().tolist()),   # fine-grained (region)
@@ -55,9 +55,9 @@ def answer_live(question: str, timeout: int = 300) -> str | None:
         return None
     try:
         r = subprocess.run([str(py), "ask.py", question], cwd=str(RAG_DIR),
-                           capture_output=True, text=True, timeout=timeout)
+                           capture_output=True, text=True, timeout=timeout, check=False)
         return r.stdout.strip() or None
-    except Exception:
+    except (OSError, subprocess.SubprocessError):  # external RAG venv absent or timed out: optional
         return None
 
 

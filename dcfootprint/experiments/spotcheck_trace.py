@@ -74,7 +74,7 @@ def main(outdir: Path):
     em["date"] = pd.to_datetime(em["Date"])
     em = em[em["date"].dt.year == 2024]
     plants = pd.read_parquet(ROOT / "data/gem/gem_india_operating_v2.parquet")   # raw GEM subset (cached read)
-    from dcfootprint.io.gem import assign_state_of_record                        # Decision C rule (under test in Step 2)
+    from dcfootprint.io.gem import assign_state_of_record  # Decision C rule (under test in Step 2)
     plants = assign_state_of_record(plants)
     ppts = gpd.GeoDataFrame(plants, crs="EPSG:4326", geometry=gpd.points_from_xy(plants["longitude"], plants["latitude"]))
     pj = gpd.sjoin(ppts, aw.reset_index(names="fid")[["fid", "geometry"] + [f"CF_{m}" for m in
@@ -160,8 +160,8 @@ def main(outdir: Path):
             fy = y if isinstance(y, str) else f"{y:,.6g}"
             lines.append(f"| {name} | {fx} | {fy} | {'yes' if ok else '**NO**'} |")
     head = [f"# Step 5 spot check (relative tolerance {TOL:g})",
-            f"Picks: {picks[0]}, {picks[1]} (random, seed 20260927); {picks[2]} (largest Telangana scope-2 value; "
-            "Telangana moved most under the GADM decision).",
+            (f"Picks: {picks[0]}, {picks[1]} (random, seed 20260927); {picks[2]} (largest Telangana scope-2 value; "
+            "Telangana moved most under the GADM decision)."),
             f"**Discrepancies: {len(problems)}**" + ("".join(f"\n- {p}" for p in problems) if problems else " — every hop matches.")]
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "SPOTCHECK.md").write_text("\n".join(head + lines) + "\n", encoding="utf-8")

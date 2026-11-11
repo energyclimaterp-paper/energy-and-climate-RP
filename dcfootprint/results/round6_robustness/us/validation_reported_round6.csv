@@ -1,0 +1,15 @@
+region,scope,operator,facility_id,period,months_overlap_with_account_year,n_model_facilities,metric,reported,model,ratio_total,ratio_per_mw,model_mw,reported_mw,source
+US,site,meta,us-meta-altoona-ia,2024,12,1,electricity_mwh,1585392.0,2324246.3999999994,1.4660389354809407,,350.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.6
+US,site,meta,us-meta-altoona-ia,2024,12,1,water_withdrawal_m3,242000.0,408895.2,1.6896495867768595,,350.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.9
+US,site,meta,us-meta-altoona-ia,2024,12,1,onsite_water_l_per_facility_kwh,0.15264363640033507,0.17592592592592596,1.1525270890725436,,350.0,,derived from the water and electricity rows
+US,site,meta,us-meta-gallatin-tn,2024,12,1,electricity_mwh,359730.0,1992211.2,5.538073555166375,,300.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.6
+US,site,meta,us-meta-gallatin-tn,2024,12,1,water_withdrawal_m3,205000.0,350481.6,1.7096663414634146,,300.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.9
+US,site,meta,us-meta-gallatin-tn,2024,12,1,onsite_water_l_per_facility_kwh,0.5698718483306925,0.17592592592592593,0.30871138211382115,,300.0,,derived from the water and electricity rows
+US,site,meta,us-meta-mesa-az,2024,12,1,electricity_mwh,24657.0,332035.2,13.466163766881616,,50.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.6
+US,site,meta,us-meta-mesa-az,2024,12,1,water_withdrawal_m3,57000.0,58413.6,1.0248,,50.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.9
+US,site,meta,us-meta-mesa-az,2024,12,1,onsite_water_l_per_facility_kwh,2.3117167538630006,0.17592592592592593,0.07610185185185185,,50.0,,derived from the water and electricity rows
+US,site,meta,us-meta-prineville-or,2024,12,1,electricity_mwh,1728291.0,2656281.6,1.5369411748368764,,400.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.6
+US,site,meta,us-meta-prineville-or,2024,12,1,water_withdrawal_m3,328000.0,467308.8,1.4247219512195122,,400.0,,https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf p.9
+US,site,meta,us-meta-prineville-or,2024,12,1,onsite_water_l_per_facility_kwh,0.18978285485488267,0.17592592592592593,0.9269853489159892,,400.0,,derived from the water and electricity rows
+US,site,google,us-google-the-dalles-or,2024,12,1,water_consumption_m3,1368048.0,2279999.0640715705,1.6666075050521403,,300.0,,https://www.gstatic.com/gumdrop/sustainability/google-2025-environmental-report.pdf p.110
+US,site,google,us-google-the-dalles-or,2024,12,1,water_withdrawal_m3,1745453.0,2279999.0640715705,1.306250620367074,,300.0,,https://www.gstatic.com/gumdrop/sustainability/google-2025-environmental-report.pdf p.110

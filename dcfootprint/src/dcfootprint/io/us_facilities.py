@@ -30,9 +30,9 @@ from dcfootprint.settings import params as _cfg_params
 
 _NUM = r"(\d+(?:\.\d+)?)\s*(?:mw|megawatts?)"
 _IT = re.compile(_NUM + r"\s*(?:of\s+)?(?:critical\s+)?it\b|(?:critical\s+)?it\s+(?:load|capacity|power)\s+(?:of\s+)?"
-                 + _NUM, re.I)
+                 + _NUM, re.IGNORECASE)
 _UTIL = re.compile(_NUM + r"\s*(?:of\s+)?(?:total\s+)?(?:utility|grid|facility|total)\s*(?:power|capacity|feed|service)?"
-                   r"|(?:utility|total|facility)\s+(?:power|capacity)\s+(?:of\s+)?" + _NUM, re.I)
+                   r"|(?:utility|total|facility)\s+(?:power|capacity)\s+(?:of\s+)?" + _NUM, re.IGNORECASE)
 
 
 def _figures(pattern, text: str) -> list[float]:
@@ -50,7 +50,7 @@ def classify_basis(recorded: float, notes: str) -> str:
 
 def load_records() -> pd.DataFrame:
     rc = _cfg_params()["region_config"]["US"]
-    recs = json.load(open(_repo_root() / rc["compute_atlas_path"], encoding="utf-8"))
+    recs = json.loads((_repo_root() / rc["compute_atlas_path"]).read_text(encoding="utf-8"))
     return pd.json_normalize(recs)
 
 
@@ -88,7 +88,7 @@ def build(unspecified_as: str = "it") -> pd.DataFrame:
         "source_url": op["sources"].map(lambda s: s[0]["url"] if s else None),
         "geocode_method": "compute_atlas",
     }).reset_index(drop=True)
-    out.attrs["meta"] = {"n_operational_datacenters": int(n_operational), "n_with_capacity": int(len(out)),
+    out.attrs["meta"] = {"n_operational_datacenters": int(n_operational), "n_with_capacity": len(out),
                          "basis_counts": out["capacity_basis"].value_counts().to_dict(),
                          "unspecified_as": unspecified_as}
     from dcfootprint.validation import schemas
@@ -98,6 +98,7 @@ def build(unspecified_as: str = "it") -> pd.DataFrame:
 def gadm_state_check(fac: pd.DataFrame) -> pd.DataFrame:
     """Report-only: Compute Atlas state vs GADM USA state from coordinates."""
     import geopandas as gpd
+
     from dcfootprint.io.gem import _TO_EMBER
     rc = _cfg_params()["region_config"]["US"]
     adm1 = gpd.read_file(_repo_root() / rc["gadm_path"], layer="ADM_ADM_1")[["NAME_1", "geometry"]]

@@ -24,10 +24,24 @@ All figures below come from the canonical snapshot [`dcfootprint/results/round5_
 Key findings:
 
 - **60–82%** of scarcity-weighted water use occurs off-site, at power plants.
-- **63%** of India's burden falls on over-exploited aquifers.
-- None of the 26 entries in the policy registry mandates carbon intensity, marginal carbon, scarcity-weighted water, or AI-inference attribution.
+- **59%** of the water India's datacenters draw on site (scarcity-weighted) falls on over-exploited aquifers (round 7; round 5 reported 63% by also counting power-plant water drawn in other basins).
+- None of the 22 instruments in the policy registry mandates carbon intensity, marginal carbon, scarcity-weighted water, or AI-inference attribution (the registry's other 4 rows are reference documents).
 
 The paper's tables, figures, and reported values are mapped to their source files in [`docs/results_guide.md`](docs/results_guide.md).
+
+### Corrections since the canonical snapshot
+
+Two later rounds revise the numbers above; `round5_final/` itself is frozen.
+[`round6_robustness/`](dcfootprint/results/round6_robustness/) adds validation against operator reports, US eGRID/EIA plant data, a routing Monte Carlo and climate-dependent WUE.
+[`round7_fixes/`](dcfootprint/results/round7_fixes/) fixes six bugs: India capacities stated as total facility power were treated as IT capacity, zero liquid discharge was credited with 92% of on-site water instead of the recovered blowdown (18%), siting used a different carbon basis from the account, the climate WUE rose in cold weather, the Sobol estimator was biased, and the groundwater overlay counted power-plant water against local aquifers.
+
+| Result (round 7) | India | United States |
+|---|---:|---:|
+| Annual carbon emissions | 3.29 Mt CO₂ | 16.2 Mt CO₂ |
+| Annual scarcity-weighted water | 699 million m³-eq | 2.25 billion m³-eq |
+| Load shifting, Lyapunov: carbon change (90% Monte Carlo interval) | +1.3% (+0.4 to +1.8%) | −2.7% (−4.1 to −1.6%) |
+| Load shifting, Lyapunov: scarcity-weighted water change | −22.6% | −30.0% |
+| Load shifting, offline oracle: carbon change | +0.7% (carbon up in 90% of draws) | −3.4% |
 
 ## Repository Layout
 
@@ -147,7 +161,8 @@ The project includes the following checks and supporting records:
 - **Determinism:** Two clean runs produced identical outputs across 60 text files and six Parquet tables. See [`DETERMINISM.md`](dcfootprint/results/round5_final/DETERMINISM.md).
 - **Independent traceability check:** Three Indian facilities were recomputed directly from source files without using the pipeline's own functions, with zero discrepancies. See [`SPOTCHECK.md`](dcfootprint/results/round5_final/SPOTCHECK.md).
 - **Calibration:** Bottom-up totals were compared with CEEW/JLL for Indian capacity, LBNL for US energy, and EU reporting coverage. See [`docs/results_guide.md`](docs/results_guide.md).
-- **Uncertainty analysis:** 4,000 Monte Carlo draws and first-order Sobol indices were calculated for each region. See `uncertainty.json` in the relevant results.
+- **Uncertainty analysis:** 4,000 Monte Carlo draws per region, with first-order and total Sobol indices from a Saltelli design and bootstrap intervals (round 7). See `uncertainty.json` in the relevant results.
+- **Run manifest:** every pipeline and robustness run writes `run_manifest.json` with the exact `parameters.yaml`, its SHA-256, the commit and the package versions.
 
 ## Scope and Limitations
 

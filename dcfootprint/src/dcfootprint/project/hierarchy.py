@@ -51,7 +51,7 @@ def _sarima_onestep(y: pd.Series, fit_end: pd.Timestamp, pred_start: pd.Timestam
     from statsmodels.tsa.statespace.sarimax import SARIMAX
     # stationarity/invertibility ENFORCED (statsmodels defaults): unconstrained fits produced
     # explosive roots and one-step forecasts up to 1e88 on 2019-2022 data
-    kw = dict(order=(1, 1, 1), seasonal_order=(1, 0, 1, 12))
+    kw = {"order": (1, 1, 1), "seasonal_order": (1, 0, 1, 12)}
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         res = SARIMAX(y[:fit_end], **kw).fit(disp=False, maxiter=MAXITER)
@@ -87,14 +87,14 @@ def _choose_and_forecast(y: pd.Series, year: int) -> dict:
     if y[:b0].std() > 0:
         try:
             err["SARIMA"] = _sarima_onestep(y, b0 - pd.offsets.MonthBegin(1), b0, b1) - truth_b
-        except Exception as e:                                    # SARIMA not eligible for this series
+        except Exception as e:  # noqa: BLE001 - any failed fit makes SARIMA ineligible (the stated rule)
             sarima_fail = f"selection: {type(e).__name__}: {e}"
     rmse = {k: float(np.sqrt(np.nanmean(v ** 2))) for k, v in err.items()}
     model = min(rmse, key=rmse.get)
     if model == "SARIMA":
         try:
             pred = _sarima_onestep(y, f0 - pd.offsets.MonthBegin(1), f0, f1)
-        except Exception as e:                                    # diverged/failed in the forecast year
+        except Exception as e:  # noqa: BLE001 - a fit that fails in the forecast year falls back to seasonal naive
             model, pred = "seasonal_naive(sarima_failed)", _snaive_onestep(y, f0, f1)
             sarima_fail = f"forecast: {type(e).__name__}: {e}"
     else:

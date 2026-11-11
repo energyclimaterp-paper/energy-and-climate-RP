@@ -1,0 +1,11 @@
+{
+  "onsite": {
+    "pct_over_exploited": 59.0,
+    "pct_semicritical_or_worse": 70.6
+  },
+  "total": {
+    "pct_over_exploited": 66.2,
+    "pct_semicritical_or_worse": 82.4
+  },
+  "note": "onsite = the water a facility draws locally (the defensible aquifer claim); total also counts power-plant water drawn in other basins (the round-5 63% / 81%)"
+}

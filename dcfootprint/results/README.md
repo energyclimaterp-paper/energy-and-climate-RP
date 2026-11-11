@@ -3,6 +3,7 @@
 | Folder | What it is |
 |---|---|
 | [`round5_final/`](round5_final/) | **The canonical snapshot quoted in the paper.** India, US and EU. Frozen: never edited. |
+| [`round6_robustness/`](round6_robustness/) | Robustness run: validation against operator reports, US on eGRID + EIA plant data, routing Monte Carlo, forecast value for routing, climate WUE, location sensitivity (`experiments/robustness_round6.py`) |
 | [`generation_basis_check/`](generation_basis_check/) | India rerun with carbon on the generation basis (Ember) instead of the consumption basis, used for the carbon-basis sensitivity |
 
 A new run of the pipeline writes its outputs directly into `results/` (India), `results/us/` and `results/eu/`.

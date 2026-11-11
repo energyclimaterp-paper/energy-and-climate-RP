@@ -14,7 +14,6 @@ from pathlib import Path
 
 import pandas as pd
 
-from dcfootprint.io.facilities import _repo_root
 from dcfootprint.settings import params as _cfg_params
 
 _MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -23,8 +22,8 @@ _MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
 def load_remaining(path: str | Path | None = None) -> pd.DataFrame:
     """[basin_id, month, amd_m3_per_m2, area_m2, remaining_m3]."""
     if path is None:
-        p = _cfg_params()
-        path = _repo_root() / p["routing"]["aware_intermediate_path"]
+        from dcfootprint.settings import data_path
+        path = data_path(_cfg_params()["routing"]["aware_intermediate_path"])
     path = Path(path)
     cache = path.with_name("aware_amd_remaining.parquet")
     if cache.exists() and cache.stat().st_mtime >= path.stat().st_mtime:

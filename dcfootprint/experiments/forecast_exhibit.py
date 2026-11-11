@@ -30,7 +30,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from forecast_metrics import metrics  # noqa: E402
+from forecast_metrics import metrics
 
 REPO = HERE.parents[1]
 RUN = REPO / "runs" / "forecast_benchmark_2026-09-28"
@@ -113,8 +113,8 @@ def main():
          "Dec 2022 / Dec 2023 / Dec 2024, 12 months each (189 windows, the sturdier test).", "",
          "**How to read it.** *Skill* = how much lower the model's RMSE is than seasonal naive's on exactly the same",
          "points (positive = better than naive). MASE is scaled by each series' *in-sample* naive error, so MASE < 1",
-         "does not mean \"beats seasonal naive\" here; the out-of-sample seasonal naive itself scores MASE "
-         f"{g('carbon', 'holdout', 'seasonal_naive', 'MASE'):.2f} (carbon) and {g('electricity', 'holdout', 'seasonal_naive', 'MASE'):.2f} (electricity).", ""]
+         ("does not mean \"beats seasonal naive\" here; the out-of-sample seasonal naive itself scores MASE "
+         f"{g('carbon', 'holdout', 'seasonal_naive', 'MASE'):.2f} (carbon) and {g('electricity', 'holdout', 'seasonal_naive', 'MASE'):.2f} (electricity)."), ""]
     for res, unit in (("carbon", "gCO2/kWh"), ("electricity", "GWh/month")):
         for win in ("rolling", "holdout"):
             L += [f"## {res.capitalize()} ({unit}), {win}", "", md(t[(t.resource == res) & (t.window == win)]), ""]
@@ -131,21 +131,21 @@ def main():
     eh_c = g("electricity", "holdout", "chronos_2", "skill_vs_naive_pct")
     xr, xe = g("carbon", "rolling", "xlstm", "skill_vs_naive_pct"), g("electricity", "rolling", "xlstm", "skill_vs_naive_pct")
     L += ["## Findings", "",
-          f"1. **The deep net is the worst model** in both windows and both resources (rolling skill: carbon {xr:+.0f}%, "
-          f"electricity {xe:+.0f}%): compute-heavy deep learning does not pay here.",
-          f"2. **Carbon intensity, the quantity the account uses, is best forecast by a classical per-zone SARIMA** "
+          (f"1. **The deep net is the worst model** in both windows and both resources (rolling skill: carbon {xr:+.0f}%, "
+          f"electricity {xe:+.0f}%): compute-heavy deep learning does not pay here."),
+          (f"2. **Carbon intensity, the quantity the account uses, is best forecast by a classical per-zone SARIMA** "
           f"(`sarima_dcf`): {cr:.0f}% below seasonal naive on the rolling windows, {ch:.0f}% on the holdout. Forecasting does "
-          "beat seasonal naive for carbon, by a modest but consistent margin.",
-          f"3. **Electricity favours the foundation models on the sturdier test:** on the rolling windows Chronos-2 "
+          "beat seasonal naive for carbon, by a modest but consistent margin."),
+          (f"3. **Electricity favours the foundation models on the sturdier test:** on the rolling windows Chronos-2 "
           f"({er_c:.0f}%) and TimesFM ({er_t:.0f}%) beat seasonal naive, while on the single holdout seasonal naive is "
-          f"best (Chronos-2 {eh_c:+.0f}%). One 12-month window is not enough to call a winner.",
+          f"best (Chronos-2 {eh_c:+.0f}%). One 12-month window is not enough to call a winner."),
           "4. **The hierarchical (bottom-up / MinT) methods give no robust gain at one step:** in India seasonal naive",
           "   is chosen (bottom-up and MinT are worse on 2022-23), in the US bottom-up is chosen by a small margin and",
           "   seasonal naive is best out of sample in 2024. They answer R2 at the horizon Q3 uses.",
-          f"5. **The real LLM agent (Nexus, gemma4:26b) is no better:** holdout skill vs seasonal naive "
+          (f"5. **The real LLM agent (Nexus, gemma4:26b) is no better:** holdout skill vs seasonal naive "
           f"{g('carbon', 'holdout', 'nexus_llm', 'skill_vs_naive_pct'):+.0f}% for carbon (last of all models) and "
           f"{g('electricity', 'holdout', 'nexus_llm', 'skill_vs_naive_pct'):+.0f}% for electricity, and its repeats disagree "
-          "(`runs/nexus_llm_2026-09-28/`).",
+          "(`runs/nexus_llm_2026-09-28/`)."),
           "6. **The GNN adds nothing** (preliminary experiment: graph structure does not beat degree-matched random controls; Appendix B of the paper).", "",
           "## What this means for the paper",
           "- Forecasting is a **supporting projection layer, not a contribution.** Carbon: classical SARIMA; electricity:",

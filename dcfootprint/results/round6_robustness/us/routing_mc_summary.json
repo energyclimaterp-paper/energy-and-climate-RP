@@ -1,0 +1,100 @@
+{
+  "n_draws": 1000,
+  "distribution": "triangular",
+  "legal": true,
+  "sign_convention": "change vs static in %; positive carbon = more carbon, negative scarcity = water saved",
+  "greedy": {
+    "carbon_change_pct": {
+      "mean": -2.833,
+      "p05": -4.086,
+      "p50": -2.8,
+      "p95": -1.654
+    },
+    "scarcity_change_pct": {
+      "mean": -29.426,
+      "p05": -31.819,
+      "p50": -29.44,
+      "p95": -27.006
+    },
+    "share_draws_carbon_up": 0.0,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov": {
+    "carbon_change_pct": {
+      "mean": -2.833,
+      "p05": -4.086,
+      "p50": -2.8,
+      "p95": -1.654
+    },
+    "scarcity_change_pct": {
+      "mean": -29.426,
+      "p05": -31.819,
+      "p50": -29.44,
+      "p95": -27.006
+    },
+    "share_draws_carbon_up": 0.0,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov_pf": {
+    "carbon_change_pct": {
+      "mean": -3.557,
+      "p05": -5.375,
+      "p50": -3.468,
+      "p95": -2.143
+    },
+    "scarcity_change_pct": {
+      "mean": -28.941,
+      "p05": -31.212,
+      "p50": -28.909,
+      "p95": -26.693
+    },
+    "share_draws_carbon_up": 0.0,
+    "share_draws_scarcity_down": 1.0
+  },
+  "oracle": {
+    "carbon_change_pct": {
+      "mean": -3.557,
+      "p05": -5.375,
+      "p50": -3.468,
+      "p95": -2.143
+    },
+    "scarcity_change_pct": {
+      "mean": -28.941,
+      "p05": -31.212,
+      "p50": -28.909,
+      "p95": -26.693
+    },
+    "share_draws_carbon_up": 0.0,
+    "share_draws_scarcity_down": 1.0
+  },
+  "lyapunov_carbon_first_order": {
+    "util_colocation": 0.317,
+    "pue_colocation": 0.201,
+    "ci_SRVC": 0.129,
+    "pue_hyperscale": 0.117,
+    "ci_RFCE": 0.082,
+    "wue": 0.077,
+    "ci_RFCW": 0.073,
+    "ci_NWPP": 0.067,
+    "ci_CAMX": 0.055,
+    "ci_AZNM": 0.051,
+    "ci_ERCT": 0.051,
+    "ci_NYCW": 0.049,
+    "ci_NYUP": 0.048,
+    "ci_SRMV": 0.047,
+    "ci_SRSO": 0.047,
+    "ewif": 0.046,
+    "ci_SPSO": 0.04,
+    "util_hyperscale": 0.039,
+    "ci_MROW": 0.039,
+    "hydro": 0.038,
+    "ci_FRCC": 0.038,
+    "ci_RFCM": 0.037,
+    "ci_NEWE": 0.034,
+    "ci_RMPA": 0.033,
+    "ci_SPNO": 0.033,
+    "ci_SRTV": 0.032,
+    "ci_NYLI": 0.031,
+    "ci_MROE": 0.028
+  }
+}

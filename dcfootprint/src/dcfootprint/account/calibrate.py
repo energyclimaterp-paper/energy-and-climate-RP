@@ -17,7 +17,7 @@ def calibrate_capacity(fac: pd.DataFrame) -> dict:
     ratio = total / CEEW_LOW_MW
     return {
         "bottom_up_operational_mw": round(total, 1),
-        "n_operational_costed": int(len(op)),
+        "n_operational_costed": len(op),
         "ceew_jll_range_mw": [CEEW_LOW_MW, CEEW_HIGH_MW],
         "ratio_vs_low": round(ratio, 2),
         "verdict": "PASS (consistent)" if 0.7 <= total / CEEW_LOW_MW <= 1.2 else "REVIEW",
